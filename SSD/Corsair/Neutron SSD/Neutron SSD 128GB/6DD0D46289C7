@@ -1,0 +1,221 @@
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     Corsair Neutron SSD
+Serial Number:    --
+Firmware Version: M310
+User Capacity:    128,035,676,160 bytes [128 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    Solid State Device
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA8-ACS (minor revision not indicated)
+SATA Version is:  SATA 2.5, 6.0 Gb/s
+Local Time is:    --
+Rd look-ahead is: Enabled
+Write cache is:   Enabled
+ATA Security is:  Disabled, NOT FROZEN [SEC1]
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
+
+General SMART Values:
+Offline data collection status:  (0x02)	Offline data collection activity
+					was completed without error.
+
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(    1) seconds.
+Offline data collection
+capabilities: 			 (0x19) SMART execute Offline immediate.
+
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					No Conveyance Self-test supported.
+					No Selective Self-test supported.
+SMART capabilities:            (0x0002)	Does not save SMART data before
+					entering power-saving mode.
+
+Error logging capability:        (0x01)	Error logging supported.
+					No General Purpose Logging support.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (   5) minutes.
+
+SMART Attributes Data Structure revision number: 0
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
+  1 Raw_Read_Error_Rate     POSR--   001   001   006    NOW  18566212
+  5 Reallocated_Sector_Ct   -O--CK   100   100   036    -    3
+  9 Power_On_Hours          -O--CK   047   047   000    -    46943
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    30
+171 Unknown_Attribute       -O--CK   253   253   000    -    0
+172 Unknown_Attribute       -O--CK   253   253   000    -    0
+181 Program_Fail_Cnt_Total  -O--CK   253   253   000    -    0
+182 Erase_Fail_Count_Total  -O--CK   253   253   000    -    0
+194 Temperature_Celsius     -O----   032   000   000    -    32 (Min/Max 15/38)
+201 Unknown_SSD_Attribute   -OSR--   100   100   000    -    1
+204 Soft_ECC_Correction     -OSR--   001   001   000    -    206374
+231 Temperature_Celsius     PO--CK   089   089   010    -    12
+234 Unknown_Attribute       -O--CK   100   100   000    -    84625
+241 Total_LBAs_Written      -O--CK   100   100   000    -    25109
+242 Total_LBAs_Read         -O--CK   100   100   000    -    15500
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    2420425
+                            ||||||_ K auto-keep
+                            |||||__ C event count
+                            ||||___ R error rate
+                            |||____ S speed/performance
+                            ||_____ O updated online
+                            |______ P prefailure warning
+
+SMART Log Directory Version 1 [multi-sector log support]
+Address    Access  R/W   Size  Description
+0x00           SL  R/O      1  Log Directory
+0x01           SL  R/O      1  Summary SMART error log
+0x02           SL  R/O      4  Comprehensive SMART error log
+0x03           SL  R/O      5  Ext. Comprehensive SMART error log
+0x04           SL  R/O      8  Device Statistics log
+0x06           SL  R/O      1  SMART self-test log
+
+SMART Error Log Version: 1
+ATA Error Count: 306 (device log contains only the most recent five errors)
+	CR = Command Register [HEX]
+	FR = Features Register [HEX]
+	SC = Sector Count Register [HEX]
+	SN = Sector Number Register [HEX]
+	CL = Cylinder Low Register [HEX]
+	CH = Cylinder High Register [HEX]
+	DH = Device/Head Register [HEX]
+	DC = Device Command Register [HEX]
+	ER = Error register [HEX]
+	ST = Status register [HEX]
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 306 occurred at disk power-on lifetime: 46933 hours (1955 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 3f 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 3f 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 a0 c2 e7 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+
+Error 305 occurred at disk power-on lifetime: 46933 hours (1955 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 3f 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 3f 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 a0 c2 e7 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+
+Error 304 occurred at disk power-on lifetime: 46933 hours (1955 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  e7 00 00 00 00 00 a0 a0  40d+ ...          FLUSH CACHE
+  60 00 30 00 08 00 40 40  40d+ ...          READ FPDMA QUEUED
+  60 00 28 00 00 00 40 40  40d+ ...          READ FPDMA QUEUED
+  60 08 98 00 00 00 40 40  40d+ ...          READ FPDMA QUEUED
+  60 08 90 00 18 00 40 40  40d+ ...          READ FPDMA QUEUED
+
+Error 303 occurred at disk power-on lifetime: 46933 hours (1955 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 3f 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 3f 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 a0 c2 e7 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+
+Error 302 occurred at disk power-on lifetime: 46933 hours (1955 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER ST SC SN CL CH DH
+  -- -- -- -- -- -- --
+  00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FR SC SN CL CH DH DC   Powered_Up_Time  Command/Feature_Name
+  -- -- -- -- -- -- -- --  ----------------  --------------------
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 3f 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 3f 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 a0 c2 e7 e0 e0  40d+ ...          READ DMA EXT
+  25 00 01 00 00 00 e0 e0  40d+ ...          READ DMA EXT
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Short offline       Completed without error       00%     41703         -
+# 2  Extended offline    Completed without error       00%     41235         -
+# 3  Short offline       Completed without error       00%     37023         -
+# 4  Short offline       Completed without error       00%     35983         -
+# 5  Short offline       Completed without error       00%     35959         -
+# 6  Short offline       Completed without error       00%     33020         -
+# 7  Short offline       Completed without error       00%     30876         -
+# 8  Short offline       Completed without error       00%     30539         -
+
+Device Statistics (GP Log 0x04)
+Page  Offset Size        Value Flags Description
+
+Read Device Statistics pages 0x00-0x80 failed
+
+SATA Phy Event Counters (GP Log 0x11)
+ID      Size     Value  Description
+0x0001  2            0  Command failed due to ICRC error
+0x0002  2            0  R_ERR response for data FIS
+0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0005  2            0  R_ERR response for non-data FIS
+0x0006  2            0  R_ERR response for device-to-host non-data FIS
+0x0007  2            0  R_ERR response for host-to-device non-data FIS
+0x0008  2            0  Device-to-host non-data FIS retries
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x000b  2            0  CRC errors within host-to-device FIS
+0x000d  2            0  Non-CRC errors within host-to-device FIS
+0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
+0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
+0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
+0x0013  2            0  R_ERR response for host-to-device non-data FIS, non-CRC
+
