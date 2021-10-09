@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -64,12 +64,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
   7 Seek_Error_Rate         PO-R--   100   100   001    -    0
   8 Seek_Time_Performance   P-S---   133   133   020    -    18
-  9 Power_On_Hours          -O--C-   099   099   000    -    10545
+  9 Power_On_Hours          -O--C-   098   098   000    -    14435
  10 Spin_Retry_Count        PO--C-   100   100   001    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    2
  22 Unknown_Attribute       PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    394
-193 Load_Cycle_Count        -O--C-   100   100   000    -    394
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    532
+193 Load_Cycle_Count        -O--C-   100   100   000    -    532
 194 Temperature_Celsius     -O----   055   055   000    -    39 (Min/Max 22/43)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -142,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (106)
+Temperature History Size (Index):    128 (82)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -152,18 +152,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               2  ---  Lifetime Power-On Resets
-0x01  0x010  4           10545  ---  Power-on Hours
-0x01  0x018  6    239226312720  ---  Logical Sectors Written
-0x01  0x020  6       520570927  ---  Number of Write Commands
-0x01  0x028  6    275216817153  ---  Logical Sectors Read
-0x01  0x030  6       905421548  ---  Number of Read Commands
-0x01  0x038  6     37962328150  ---  Date and Time TimeStamp
+0x01  0x010  4           14435  ---  Power-on Hours
+0x01  0x018  6    318504937386  ---  Logical Sectors Written
+0x01  0x020  6       763989286  ---  Number of Write Commands
+0x01  0x028  6    359182965329  ---  Logical Sectors Read
+0x01  0x030  6      1295210523  ---  Number of Read Commands
+0x01  0x038  6     51969233700  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            9497  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            9497  ---  Head Flying Hours
-0x03  0x018  4             394  ---  Head Load Events
+0x03  0x008  4           12861  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           12861  ---  Head Flying Hours
+0x03  0x018  4             532  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4              90  ---  Read Recovery Attempts
+0x03  0x028  4             107  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -183,7 +183,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              87  ---  Number of Hardware Resets
+0x06  0x008  4              95  ---  Number of Hardware Resets
 0x06  0x010  4               4  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
@@ -204,8 +204,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           33  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           34  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           41  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           42  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

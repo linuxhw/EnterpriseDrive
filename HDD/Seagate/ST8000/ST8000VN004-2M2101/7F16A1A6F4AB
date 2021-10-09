@@ -60,28 +60,28 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   084   066   044    -    241530412
+  1 Raw_Read_Error_Rate     POSR--   079   065   044    -    85683240
   3 Spin_Up_Time            PO----   080   080   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    11
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   049   049   045    -    68720831367
-  9 Power_On_Hours          -O--CK   096   096   000    -    3862
+  7 Seek_Error_Rate         POSR--   053   049   045    -    68722461175
+  9 Power_On_Hours          -O--CK   095   095   000    -    5016
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    11
  18 Unknown_Attribute       PO-R--   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   063   053   040    -    37 (Min/Max 34/43)
+190 Airflow_Temperature_Cel -O---K   063   053   040    -    37 (Min/Max 34/44)
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    4
-193 Load_Cycle_Count        -O--CK   100   100   000    -    273
+193 Load_Cycle_Count        -O--CK   100   100   000    -    592
 194 Temperature_Celsius     -O---K   037   047   000    -    37 (0 26 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   084   066   000    -    241530412
+195 Hardware_ECC_Recovered  -O-RC-   079   065   000    -    85683240
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    74 (98 33 0)
-241 Total_LBAs_Written      ------   100   253   000    -    2683082814
-242 Total_LBAs_Read         ------   100   253   000    -    824225
+240 Head_Flying_Hours       ------   100   253   000    -    190 (105 72 0)
+241 Total_LBAs_Written      ------   100   253   000    -    6679806302
+242 Total_LBAs_Read         ------   100   253   000    -    1010832
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -155,9 +155,9 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
 Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     33/43 Celsius
+Power Cycle Min/Max Temperature:     33/44 Celsius
 Lifetime    Min/Max Temperature:     26/47 Celsius
-Under/Over Temperature Limit Count:   0/604
+Under/Over Temperature Limit Count:   0/1747
 SMART Status:                        0xc24f (PASSED)
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -168,7 +168,7 @@ Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     10/25 Celsius
 Min/Max Temperature Limit:            5/70 Celsius
-Temperature History Size (Index):    128 (64)
+Temperature History Size (Index):    128 (54)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -178,16 +178,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4            3862  ---  Power-on Hours
-0x01  0x018  6      2682949356  ---  Logical Sectors Written
-0x01  0x020  6         2931395  ---  Number of Write Commands
-0x01  0x028  6          786887  ---  Logical Sectors Read
-0x01  0x030  6           60700  ---  Number of Read Commands
+0x01  0x010  4            5016  ---  Power-on Hours
+0x01  0x018  6      6679672844  ---  Logical Sectors Written
+0x01  0x020  6         7209456  ---  Number of Write Commands
+0x01  0x028  6          973494  ---  Logical Sectors Read
+0x01  0x030  6           89608  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            3325  ---  Spindle Motor Power-on Hours
-0x03  0x010  4              95  ---  Head Flying Hours
-0x03  0x018  4             273  ---  Head Load Events
+0x03  0x008  4            4479  ---  Spindle Motor Power-on Hours
+0x03  0x010  4             235  ---  Head Flying Hours
+0x03  0x018  4             592  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -199,13 +199,13 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              37  ---  Current Temperature
 0x05  0x010  1              35  ---  Average Short Term Temperature
-0x05  0x018  1              37  ---  Average Long Term Temperature
+0x05  0x018  1              36  ---  Average Long Term Temperature
 0x05  0x020  1              47  ---  Highest Temperature
 0x05  0x028  1              34  ---  Lowest Temperature
 0x05  0x030  1              44  ---  Highest Average Short Term Temperature
 0x05  0x038  1              34  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              38  ---  Highest Average Long Term Temperature
-0x05  0x048  1              37  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              35  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature

@@ -24,8 +24,8 @@ ATA Security is:  Disabled, frozen [SEC2]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,12 +65,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   124   124   020    -    33
-  9 Power_On_Hours          -O--C-   098   098   000    -    15433
+  9 Power_On_Hours          -O--C-   098   098   000    -    16577
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    21
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    132
-193 Load_Cycle_Count        -O--C-   100   100   000    -    132
-194 Temperature_Celsius     -O----   230   230   000    -    26 (Min/Max 22/35)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    172
+193 Load_Cycle_Count        -O--C-   100   100   000    -    172
+194 Temperature_Celsius     -O----   222   222   000    -    27 (Min/Max 22/35)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -107,25 +107,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     15431         -
-# 2  Short offline       Completed without error       00%     15407         -
-# 3  Short offline       Completed without error       00%     15383         -
-# 4  Extended offline    Completed without error       00%     15363         -
-# 5  Short offline       Completed without error       00%     15335         -
-# 6  Short offline       Completed without error       00%     15311         -
-# 7  Short offline       Completed without error       00%     15287         -
-# 8  Short offline       Completed without error       00%     15263         -
-# 9  Short offline       Completed without error       00%     15239         -
-#10  Short offline       Completed without error       00%     15215         -
-#11  Extended offline    Completed without error       00%     15195         -
-#12  Short offline       Completed without error       00%     15167         -
-#13  Short offline       Completed without error       00%     15143         -
-#14  Short offline       Completed without error       00%     15119         -
-#15  Short offline       Completed without error       00%     15095         -
-#16  Short offline       Completed without error       00%     15071         -
-#17  Short offline       Completed without error       00%     15047         -
-#18  Extended offline    Completed without error       00%     15027         -
-#19  Short offline       Completed without error       00%     14999         -
+# 1  Short offline       Completed without error       00%     16559         -
+# 2  Extended offline    Completed without error       00%     16539         -
+# 3  Short offline       Completed without error       00%     16511         -
+# 4  Short offline       Completed without error       00%     16487         -
+# 5  Short offline       Completed without error       00%     16463         -
+# 6  Short offline       Completed without error       00%     16439         -
+# 7  Short offline       Completed without error       00%     16415         -
+# 8  Short offline       Completed without error       00%     16391         -
+# 9  Extended offline    Completed without error       00%     16371         -
+#10  Short offline       Completed without error       00%     16343         -
+#11  Short offline       Completed without error       00%     16319         -
+#12  Short offline       Completed without error       00%     16295         -
+#13  Short offline       Completed without error       00%     16271         -
+#14  Short offline       Completed without error       00%     16247         -
+#15  Short offline       Completed without error       00%     16223         -
+#16  Extended offline    Completed without error       00%     16203         -
+#17  Short offline       Completed without error       00%     16175         -
+#18  Short offline       Completed without error       00%     16151         -
+#19  Short offline       Completed without error       00%     16127         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,9 +140,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     26/29 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     25/29 Celsius
 Lifetime    Min/Max Temperature:     22/35 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -151,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (109)
+Temperature History Size (Index):    128 (79)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -161,15 +161,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x010  4           15433  ---  Power-on Hours
-0x01  0x018  6    115653778901  ---  Logical Sectors Written
-0x01  0x020  6       991792041  ---  Number of Write Commands
-0x01  0x028  6     96686595142  ---  Logical Sectors Read
-0x01  0x030  6       599042771  ---  Number of Read Commands
+0x01  0x010  4           16577  ---  Power-on Hours
+0x01  0x018  6    115740216773  ---  Logical Sectors Written
+0x01  0x020  6      1000554080  ---  Number of Write Commands
+0x01  0x028  6     96686604382  ---  Logical Sectors Read
+0x01  0x030  6       599043896  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           15432  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           15432  ---  Head Flying Hours
-0x03  0x018  4             132  ---  Head Load Events
+0x03  0x008  4           16575  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           16575  ---  Head Flying Hours
+0x03  0x018  4             172  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               9  ---  Read Recovery Attempts
 0x03  0x030  4               6  ---  Number of Mechanical Start Failures
@@ -177,7 +177,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
+0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1              26  N--  Average Short Term Temperature
 0x05  0x018  1              26  N--  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature

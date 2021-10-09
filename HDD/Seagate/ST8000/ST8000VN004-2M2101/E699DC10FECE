@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -60,28 +60,28 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   081   064   044    -    119387264
-  3 Spin_Up_Time            PO----   090   090   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    11
+  1 Raw_Read_Error_Rate     POSR--   081   064   044    -    124913726
+  3 Spin_Up_Time            PO----   088   088   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    13
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   081   060   045    -    114085862
-  9 Power_On_Hours          -O--CK   094   094   000    -    5442
+  7 Seek_Error_Rate         POSR--   083   060   045    -    204322988
+  9 Power_On_Hours          -O--CK   091   091   000    -    8277
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    12
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    14
  18 Unknown_Attribute       PO-R--   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   074   071   040    -    26 (Min/Max 23/28)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    11
-193 Load_Cycle_Count        -O--CK   100   100   000    -    238
-194 Temperature_Celsius     -O---K   026   040   000    -    26 (0 20 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   081   064   000    -    119387264
+190 Airflow_Temperature_Cel -O---K   072   068   040    -    28 (Min/Max 28/29)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    13
+193 Load_Cycle_Count        -O--CK   100   100   000    -    357
+194 Temperature_Celsius     -O---K   028   040   000    -    28 (0 20 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   081   064   000    -    124913726
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    5424 (74 5 0)
-241 Total_LBAs_Written      ------   100   253   000    -    49404786008
-242 Total_LBAs_Read         ------   100   253   000    -    72313023328
+240 Head_Flying_Hours       ------   100   253   000    -    8251 (133 103 0)
+241 Total_LBAs_Written      ------   100   253   000    -    72201473216
+242 Total_LBAs_Read         ------   100   253   000    -    110808472764
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -154,10 +154,10 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     23/28 Celsius
-Lifetime    Min/Max Temperature:     19/29 Celsius
-Under/Over Temperature Limit Count:   0/1079
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     28/29 Celsius
+Lifetime    Min/Max Temperature:     19/32 Celsius
+Under/Over Temperature Limit Count:   0/1
 SMART Status:                        0xc24f (PASSED)
 Vendor specific:
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -168,7 +168,7 @@ Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     10/25 Celsius
 Min/Max Temperature Limit:            5/70 Celsius
-Temperature History Size (Index):    128 (51)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -177,41 +177,41 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              12  ---  Lifetime Power-On Resets
-0x01  0x010  4            5442  ---  Power-on Hours
-0x01  0x018  6     49404786008  ---  Logical Sectors Written
-0x01  0x020  6       132788105  ---  Number of Write Commands
-0x01  0x028  6     72313019511  ---  Logical Sectors Read
-0x01  0x030  6       177987348  ---  Number of Read Commands
+0x01  0x008  4              14  ---  Lifetime Power-On Resets
+0x01  0x010  4            8277  ---  Power-on Hours
+0x01  0x018  6     72199358560  ---  Logical Sectors Written
+0x01  0x020  6       217211324  ---  Number of Write Commands
+0x01  0x028  6    110806650939  ---  Logical Sectors Read
+0x01  0x030  6       273595018  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            5441  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            5441  ---  Head Flying Hours
-0x03  0x018  4             238  ---  Head Load Events
+0x03  0x008  4            8273  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            8273  ---  Head Flying Hours
+0x03  0x018  4             357  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              11  ---  Number of High Priority Unload Events
+0x03  0x040  4              13  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              24  ---  Average Long Term Temperature
-0x05  0x020  1              28  ---  Highest Temperature
+0x05  0x008  1              28  ---  Current Temperature
+0x05  0x010  1              27  ---  Average Short Term Temperature
+0x05  0x018  1              28  ---  Average Long Term Temperature
+0x05  0x020  1              32  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
-0x05  0x030  1              26  ---  Highest Average Short Term Temperature
+0x05  0x030  1              30  ---  Highest Average Short Term Temperature
 0x05  0x038  1              24  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              25  ---  Highest Average Long Term Temperature
+0x05  0x040  1              29  ---  Highest Average Long Term Temperature
 0x05  0x048  1              24  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4               0  ---  Number of Hardware Resets
+0x06  0x008  4               2  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==

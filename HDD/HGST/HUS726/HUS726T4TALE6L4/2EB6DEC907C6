@@ -23,8 +23,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -64,18 +64,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    17896
+  9 Power_On_Hours          -O--C-   097   097   000    -    21483
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    14
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    719
-193 Load_Cycle_Count        -O--C-   100   100   000    -    719
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    850
+193 Load_Cycle_Count        -O--C-   100   100   000    -    850
 194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 25/51)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    49590129462
-242 Total_LBAs_Read         -O--C-   100   100   000    -    626107042689
+241 Total_LBAs_Written      -O--C-   100   100   000    -    59318539326
+242 Total_LBAs_Read         -O--C-   100   100   000    -    762460108549
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     27/42 Celsius
 Lifetime    Min/Max Temperature:     25/51 Celsius
@@ -143,7 +143,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (24)
+Temperature History Size (Index):    128 (102)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,16 +153,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              14  ---  Lifetime Power-On Resets
-0x01  0x010  4           17896  ---  Power-on Hours
-0x01  0x018  6     49590129470  ---  Logical Sectors Written
-0x01  0x020  6      1465031019  ---  Number of Write Commands
-0x01  0x028  6    626107042945  ---  Logical Sectors Read
-0x01  0x030  6      5737130929  ---  Number of Read Commands
-0x01  0x038  6     64428073600  ---  Date and Time TimeStamp
+0x01  0x010  4           21483  ---  Power-on Hours
+0x01  0x018  6     59318539326  ---  Logical Sectors Written
+0x01  0x020  6      1751776077  ---  Number of Write Commands
+0x01  0x028  6    762460116229  ---  Logical Sectors Read
+0x01  0x030  6      6982450564  ---  Number of Read Commands
+0x01  0x038  6     77339316100  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           15497  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           15497  ---  Head Flying Hours
-0x03  0x018  4             719  ---  Head Load Events
+0x03  0x008  4           18636  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           18636  ---  Head Flying Hours
+0x03  0x018  4             850  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -171,7 +171,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
+0x05  0x010  1              29  N--  Average Short Term Temperature
 0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature

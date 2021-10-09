@@ -61,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    46921
+  9 Power_On_Hours          -O--CK   100   100   001    -    47576
  12 Power_Cycle_Count       -O--CK   100   100   001    -    208
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   001    -    0
 172 Unknown_Attribute       -O--CK   100   100   001    -    0
-173 Unknown_Attribute       PO--CK   089   089   001    -    337
+173 Unknown_Attribute       PO--CK   089   089   001    -    352
 174 Unknown_Attribute       -O--CK   100   100   001    -    186
 181 Program_Fail_Cnt_Total  -O---K   100   100   001    -    34359738375
 183 Runtime_Bad_Block       -O--CK   100   100   001    -    0
@@ -145,7 +145,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (455)
+Temperature History Size (Index):    478 (36)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -155,17 +155,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             208  ---  Lifetime Power-On Resets
-0x01  0x010  4           46921  ---  Power-on Hours
-0x01  0x018  6    224049217735  ---  Logical Sectors Written
-0x01  0x020  6      1800422359  ---  Number of Write Commands
-0x01  0x028  6    230243672696  ---  Logical Sectors Read
-0x01  0x030  6      1003188943  ---  Number of Read Commands
+0x01  0x010  4           47576  ---  Power-on Hours
+0x01  0x018  6    234259828031  ---  Logical Sectors Written
+0x01  0x020  6      1979299513  ---  Number of Write Commands
+0x01  0x028  6    244211548120  ---  Logical Sectors Read
+0x01  0x030  6      1100750122  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              28  ---  Current Temperature
-0x05  0x010  1              31  ---  Average Short Term Temperature
+0x05  0x010  1              28  ---  Average Short Term Temperature
 0x05  0x018  1              28  ---  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
@@ -190,5 +190,5 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           12  Device-to-host register FISes sent due to a COMRESET
 

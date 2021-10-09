@@ -1,7 +1,8 @@
-smartctl 7.0 2019-05-21 r4916 [x86_64-linux-3.10.0-957...] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     WD Blue / Red / Green SSDs
 Device Model:     WDC  WDS100T2B0A-00SM50
 Serial Number:    --
 LU WWN Device Id: 5 001b44 ...
@@ -10,7 +11,7 @@ User Capacity:    1,000,204,886,016 bytes [1.00 TB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Form Factor:      2.5 inches
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.3, 6.0 Gb/s (current: 6.0 Gb/s)
 Local Time is:    --
@@ -54,30 +55,30 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    1
-  9 Power_On_Hours          -O--CK   100   100   ---    -    10051
+  9 Power_On_Hours          -O--CK   100   100   ---    -    15563
  12 Power_Cycle_Count       -O--CK   100   100   ---    -    9
-165 Unknown_Attribute       -O--CK   100   100   ---    -    6121525689666
-166 Unknown_Attribute       -O--CK   100   100   ---    -    187
-167 Unknown_Attribute       -O--CK   100   100   ---    -    27
-168 Unknown_Attribute       -O--CK   100   100   ---    -    266
-169 Unknown_Attribute       -O--CK   100   100   ---    -    544
-170 Unknown_Attribute       -O--CK   100   100   ---    -    1
-171 Unknown_Attribute       -O--CK   100   100   ---    -    1
-172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       -O--CK   100   100   ---    -    223
-174 Unknown_Attribute       -O--CK   100   100   ---    -    0
+165 Block_Erase_Count       -O--CK   100   100   ---    -    8235086992124
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    264
+167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    27
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    353
+169 Total_Bad_Blocks        -O--CK   100   100   ---    -    544
+170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    1
+171 Program_Fail_Count      -O--CK   100   100   ---    -    1
+172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    302
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    0
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    1
-194 Temperature_Celsius     -O---K   069   042   ---    -    31 (Min/Max 24/42)
+194 Temperature_Celsius     -O---K   071   042   ---    -    29 (Min/Max 24/42)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   031   031   ---    -    34239850356516
+230 Media_Wearout_Indicator -O--CK   042   042   ---    -    0x2a301e142a30
 232 Available_Reservd_Space PO--CK   099   099   004    -    99
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    226661
-234 Unknown_Attribute       -O--CK   100   100   ---    -    373220
-241 Total_LBAs_Written      ----CK   253   253   ---    -    226651
-242 Total_LBAs_Read         ----CK   253   253   ---    -    470592
-244 Unknown_Attribute       -O--CK   000   100   ---    -    0
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    305767
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    505566
+241 Host_Writes_GiB         ----CK   253   253   ---    -    290419
+242 Host_Reads_GiB          ----CK   253   253   ---    -    523653
+244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,13 +114,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               9  ---  Lifetime Power-On Resets
-0x01  0x010  4           10051  ---  Power-on Hours
-0x01  0x018  6    475323417930  ---  Logical Sectors Written
-0x01  0x020  6      8055082266  ---  Number of Write Commands
-0x01  0x028  6    986903195270  ---  Logical Sectors Read
-0x01  0x030  6     17698199740  ---  Number of Read Commands
+0x01  0x010  4           15563  ---  Power-on Hours
+0x01  0x018  6    609054090217  ---  Logical Sectors Written
+0x01  0x020  6     10761292959  ---  Number of Write Commands
+0x01  0x028  6   1098180143122  ---  Logical Sectors Read
+0x01  0x030  6     19075822745  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              22  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              30  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -129,5 +130,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           13  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
 

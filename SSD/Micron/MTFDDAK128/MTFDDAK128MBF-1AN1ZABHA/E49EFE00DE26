@@ -58,12 +58,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11331
+  9 Power_On_Hours          -O--CK   100   100   000    -    13117
  11 Unknown_SSD_Attribute   -O---K   100   100   000    -    10
  12 Power_Cycle_Count       -O--CK   100   100   000    -    11
 171 Unknown_Attribute       -O---K   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   091   091   010    -    284
+173 Unknown_Attribute       PO--CK   088   088   010    -    380
 174 Unknown_Attribute       -O--CK   100   100   000    -    10
 181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    11
@@ -143,29 +143,29 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (339)
+Temperature History Size (Index):    478 (312)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           11331  ---  Power-on Hours
-0x01  0x018  6      1286837574  ---  Logical Sectors Written
-0x01  0x020  6        74967445  ---  Number of Write Commands
-0x01  0x028  6         2310606  ---  Logical Sectors Read
-0x01  0x030  6           20969  ---  Number of Read Commands
+0x01  0x010  4           13117  ---  Power-on Hours
+0x01  0x018  6      1658038670  ---  Logical Sectors Written
+0x01  0x020  6        96790430  ---  Number of Write Commands
+0x01  0x028  6         2337022  ---  Logical Sectors Read
+0x01  0x030  6           21933  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              10  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
-0x05  0x018  1              31  ---  Average Long Term Temperature
+0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
-0x05  0x030  1              32  ---  Highest Average Short Term Temperature
+0x05  0x030  1              33  ---  Highest Average Short Term Temperature
 0x05  0x038  1              27  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              31  ---  Highest Average Long Term Temperature
+0x05  0x040  1              32  ---  Highest Average Long Term Temperature
 0x05  0x048  1              28  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
@@ -176,7 +176,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              12  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -58,30 +58,30 @@ SCT capabilities: 	       (0x0031)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  9 Power_On_Hours          -O--C-   100   100   000    -    9327
- 12 Power_Cycle_Count       -O--C-   100   100   000    -    113
+  9 Power_On_Hours          -O--C-   100   100   000    -    13022
+ 12 Power_Cycle_Count       -O--C-   100   100   000    -    117
 167 Average_Erase_Count     -O---K   100   100   000    -    0
 168 Max_Erase_Count_of_Spec -O--C-   100   100   000    -    7
 169 Remaining_Lifetime_Perc PO--C-   097   097   010    -    25165836
 171 Unknown_Attribute       -O--CK   000   000   000    -    0
 172 Unknown_Attribute       -O--CK   000   000   000    -    0
-173 Unknown_Attribute       -O--C-   200   200   000    -    137449898061
+173 Unknown_Attribute       -O--C-   200   200   000    -    227644538967
 175 Program_Fail_Count_Chip -O---K   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    13184
 187 Reported_Uncorrect      -O--CK   100   000   000    -    0
-192 Power-Off_Retract_Count -O--C-   100   100   000    -    96
+192 Power-Off_Retract_Count -O--C-   100   100   000    -    100
 194 Temperature_Celsius     -O---K   040   040   000    -    40 (Min/Max 40/40)
-206 Unknown_SSD_Attribute   -O--CK   200   200   000    -    32
-207 Unknown_SSD_Attribute   -O--CK   200   200   000    -    167
-208 Unknown_SSD_Attribute   -O--CK   200   200   000    -    77
-209 Unknown_SSD_Attribute   -O--CK   200   200   000    -    160
-210 Unknown_Attribute       -O--CK   200   200   000    -    609
-211 Unknown_Attribute       -O--CK   200   200   000    -    392
+206 Unknown_SSD_Attribute   -O--CK   200   200   000    -    53
+207 Unknown_SSD_Attribute   -O--CK   200   200   000    -    172
+208 Unknown_SSD_Attribute   -O--CK   200   200   000    -    87
+209 Unknown_SSD_Attribute   -O--CK   200   200   000    -    228
+210 Unknown_Attribute       -O--CK   200   200   000    -    647
+211 Unknown_Attribute       -O--CK   200   200   000    -    438
 231 SSD_Life_Left           PO---K   095   095   005    -    5
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    359084161280
-234 Unknown_Attribute       -O--CK   100   100   000    -    2797755235
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    87082116376
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    60108156420
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    403020871040
+234 Unknown_Attribute       -O--CK   100   100   000    -    3050083624
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    91756397848
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    60118118100
 245 TLC_Writes_32MiB        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -271,18 +271,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -127/127 Celsius
 Min/Max Temperature Limit:           -127/127 Celsius
-Temperature History Size (Index):    478 (284)
+Temperature History Size (Index):    478 (267)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4             113  ---  Lifetime Power-On Resets
-0x01  0x010  4            9327  ---  Power-on Hours
-0x01  0x018  6     87082116376  ---  Logical Sectors Written
-0x01  0x020  6       407260540  ---  Number of Write Commands
-0x01  0x028  6     60108156420  ---  Logical Sectors Read
-0x01  0x030  6       339147872  ---  Number of Read Commands
-0x01  0x038  6   8045845873036  ---  Date and Time TimeStamp
+0x01  0x008  4             117  ---  Lifetime Power-On Resets
+0x01  0x010  4           13022  ---  Power-on Hours
+0x01  0x018  6     91756397848  ---  Logical Sectors Written
+0x01  0x020  6       513639912  ---  Number of Write Commands
+0x01  0x028  6     60118118100  ---  Logical Sectors Read
+0x01  0x030  6       339164768  ---  Number of Read Commands
+0x01  0x038  6  12004067943264  ---  Date and Time TimeStamp
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              22  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -298,7 +298,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

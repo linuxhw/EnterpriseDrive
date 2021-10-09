@@ -66,20 +66,20 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   000    -    0
   8 Seek_Time_Performance   --S---   128   128   000    -    18
-  9 Power_On_Hours          -O--C-   097   097   000    -    24002
+  9 Power_On_Hours          -O--C-   097   097   000    -    26704
  10 Spin_Retry_Count        -O--C-   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    10
  22 Helium_Level            PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1009
-193 Load_Cycle_Count        -O--C-   100   100   000    -    1009
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1122
+193 Load_Cycle_Count        -O--C-   100   100   000    -    1122
 194 Temperature_Celsius     -O----   222   222   000    -    27 (Min/Max 18/40)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
 223 Load_Retry_Count        -O-R--   100   100   000    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    1326986792
-242 Total_LBAs_Read         -O--C-   100   100   000    -    185623076220
+241 Total_LBAs_Written      -O--C-   100   100   000    -    1419086224
+242 Total_LBAs_Read         -O--C-   100   100   000    -    215196685436
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -147,7 +147,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (67)
+Temperature History Size (Index):    128 (33)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -157,16 +157,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              10  ---  Lifetime Power-On Resets
-0x01  0x010  4           24002  ---  Power-on Hours
-0x01  0x018  6      1326986792  ---  Logical Sectors Written
-0x01  0x020  6        13144245  ---  Number of Write Commands
-0x01  0x028  6    185623076220  ---  Logical Sectors Read
-0x01  0x030  6       545078803  ---  Number of Read Commands
-0x01  0x038  6     86410689550  ---  Date and Time TimeStamp
+0x01  0x010  4           26704  ---  Power-on Hours
+0x01  0x018  6      1419086224  ---  Logical Sectors Written
+0x01  0x020  6        13352283  ---  Number of Write Commands
+0x01  0x028  6    215196685436  ---  Logical Sectors Read
+0x01  0x030  6       628473931  ---  Number of Read Commands
+0x01  0x038  6     96134736850  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           23986  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           23986  ---  Head Flying Hours
-0x03  0x018  4            1009  ---  Head Load Events
+0x03  0x008  4           26687  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           26687  ---  Head Flying Hours
+0x03  0x018  4            1122  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -176,7 +176,7 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              27  ---  Current Temperature
 0x05  0x010  1              27  N--  Average Short Term Temperature
-0x05  0x018  1              27  N--  Average Long Term Temperature
+0x05  0x018  1              26  N--  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x030  1              31  N--  Highest Average Short Term Temperature

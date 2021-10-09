@@ -58,24 +58,24 @@ SCT capabilities: 	       (0x003f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   100   099   051    -    3
+  1 Raw_Read_Error_Rate     POSR--   100   099   051    -    0
   3 Spin_Up_Time            POS---   075   075   011    -    8250
   4 Start_Stop_Count        -O--CK   100   100   000    -    29
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         POSR--   100   100   051    -    0
   8 Seek_Time_Performance   P-S--K   100   100   015    -    0
-  9 Power_On_Hours          -O--CK   084   084   000    -    82599
+  9 Power_On_Hours          -O--CK   083   083   000    -    86141
  10 Spin_Retry_Count        PO--CK   100   100   051    -    0
  11 Calibration_Retry_Count -O--C-   100   100   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    29
- 13 Read_Soft_Error_Rate    -OSR--   100   099   000    -    3
+ 13 Read_Soft_Error_Rate    -OSR--   100   099   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    7576
+187 Reported_Uncorrect      -O--CK   100   100   000    -    7581
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   080   076   000    -    20 (Min/Max 17/24)
-194 Temperature_Celsius     -O---K   080   075   000    -    20 (Min/Max 10/33)
-195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    1850083770
+190 Airflow_Temperature_Cel -O---K   079   076   000    -    21 (Min/Max 17/24)
+194 Temperature_Celsius     -O---K   079   075   000    -    21 (Min/Max 10/33)
+195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    2041802229
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    2
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (2 sectors)
-Device Error Count: 3565 (device log contains only the most recent 8 errors)
+Device Error Count: 3566 (device log contains only the most recent 8 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,23 @@ Device Error Count: 3565 (device log contains only the most recent 8 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3566 [5] occurred at disk power-on lifetime: 17658 hours (735 days + 18 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 42 00 00 00 00 48 a0 6f 1b 40 00   at LBA = 0x48a06f1b = 1218473755
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 00 a0 6f 00 40 00 37d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 00 a0 6e 00 40 00 37d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 00 a0 6d 00 40 00 37d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 00 a0 6c 00 40 00 37d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 00 a0 6b 00 40 00 37d+ ...          READ FPDMA QUEUED
 
 Error 3565 [4] occurred at disk power-on lifetime: 14093 hours (587 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -245,23 +262,6 @@ Error 3559 [6] occurred at disk power-on lifetime: 13371 hours (557 days + 3 hou
   60 00 00 00 80 00 00 00 c6 a8 00 40 00  8d+ ...          READ FPDMA QUEUED
   60 00 00 00 80 00 00 00 c6 a7 80 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 3558 [5] occurred at disk power-on lifetime: 11196 hours (466 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 42 00 00 00 00 43 c7 e4 d7 40 00   at LBA = 0x43c7e4d7 = 1137173719
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 60 00 00 00 00 30 00 40 00 17d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 00 4b d3 d0 40 00 17d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 00 b9 ab e8 40 00 17d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 00 e3 ef b0 40 00 17d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 00 e3 eb d8 40 00 17d+ ...          WRITE FPDMA QUEUED
-
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -288,7 +288,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -4/72 Celsius
 Min/Max Temperature Limit:           -9/77 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (39)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -298,7 +298,7 @@ Read Device Statistics page 0x00 failed
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2          188  Device-to-host register FISes sent due to a COMRESET
+0x000a  2          212  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            1  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS

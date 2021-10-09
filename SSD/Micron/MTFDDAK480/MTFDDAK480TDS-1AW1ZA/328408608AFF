@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,33 +59,33 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    366
+  1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    702
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    4
-  9 Power_On_Hours          -O--CK   100   100   000    -    6083
-103 Unknown_Attribute       -O--CK   100   100   000    -    10
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    12
+  9 Power_On_Hours          -O--CK   100   100   000    -    9575
+103 Unknown_Attribute       -O--CK   100   100   000    -    12
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    14
 170 Unknown_Attribute       -O--CK   100   100   000    -    4
 171 Unknown_Attribute       -O--CK   100   100   000    -    1
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-174 Unknown_Attribute       -O--CK   100   100   000    -    10
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    10
+174 Unknown_Attribute       -O--CK   100   100   000    -    12
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    12
 100 Unknown_Attribute       -O--CK   100   100   000    -    13
 184 End-to-End_Error        -O--CK   100   100   097    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    366
-188 Command_Timeout         -O--CK   100   100   000    -    55
-190 Airflow_Temperature_Cel -O---K   077   062   011    -    23 (Min/Max 12/38)
+187 Reported_Uncorrect      -O--CK   100   100   000    -    702
+188 Command_Timeout         -O--CK   100   100   000    -    63
+190 Airflow_Temperature_Cel -O---K   078   062   011    -    22 (Min/Max 12/38)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    4
 198 Offline_Uncorrectable   -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 173 Unknown_Attribute       -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    5353500331
-242 Total_LBAs_Read         -O--CK   100   100   000    -    55632338
+241 Total_LBAs_Written      -O--CK   100   100   000    -    5353944535
+242 Total_LBAs_Read         -O--CK   100   100   000    -    55847729
 232 Available_Reservd_Space -O--CK   000   000   000    -    2157
 231 Temperature_Celsius     PO--CK   100   100   001    -    4
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   000    -    12
-194 Temperature_Celsius     -O--CK   023   038   000    -    23 (Min/Max 12/38)
+194 Temperature_Celsius     -O--CK   022   038   000    -    22 (Min/Max 12/38)
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -125,7 +125,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (16383 sectors)
-Device Error Count: 366
+Device Error Count: 702
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -141,7 +141,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 366 [365] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 702 [701] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -152,13 +152,13 @@ Error 366 [365] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 48d+ ...          READ LOG EXT
-  ec 00 00 00 01 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 48d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 45d+ ...          READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 45d+ ...          READ LOG EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART RETURN STATUS
 
-Error 365 [364] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 701 [700] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -169,13 +169,13 @@ Error 365 [364] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 48d+ ...          READ LOG EXT
-  ec 00 00 00 01 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 48d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 45d+ ...          READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 45d+ ...          READ LOG EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART RETURN STATUS
 
-Error 364 [363] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 700 [699] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -186,13 +186,13 @@ Error 364 [363] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 48d+ ...          READ LOG EXT
-  ec 00 00 00 01 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 48d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 45d+ ...          READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 45d+ ...          READ LOG EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART RETURN STATUS
 
-Error 363 [362] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 699 [698] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -203,13 +203,13 @@ Error 363 [362] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 48d+ ...          READ LOG EXT
-  ec 00 00 00 01 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 48d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 45d+ ...          READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 45d+ ...          READ LOG EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART RETURN STATUS
 
-Error 362 [361] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 698 [697] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -220,13 +220,13 @@ Error 362 [361] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 48d+ ...          READ LOG EXT
-  ec 00 00 00 01 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 48d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 45d+ ...          READ LOG EXT
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 45d+ ...          READ LOG EXT
+  b0 00 da 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART RETURN STATUS
 
-Error 361 [360] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hours)
+Error 697 [696] occurred at disk power-on lifetime: 9450 hours (393 days + 18 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -237,13 +237,13 @@ Error 361 [360] occurred at disk power-on lifetime: 5935 hours (247 days + 7 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 da 00 20 00 00 04 10 50 00 40 00 48d+ ...          READ FPDMA QUEUED
-  e5 00 00 00 00 00 00 00 00 00 00 00 00 48d+ ...          CHECK POWER MODE
-  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00 48d+ ...          SMART READ DATA
-  ec 00 00 00 00 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00 48d+ ...          IDENTIFY DEVICE
+  60 00 da 00 20 00 00 04 10 50 00 40 00 45d+ ...          READ FPDMA QUEUED
+  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00 45d+ ...          SMART READ DATA
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 45d+ ...          IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 45d+ ...          IDENTIFY DEVICE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00 45d+ ...          IDENTIFY DEVICE
 
-Error 360 [359] occurred at disk power-on lifetime: 5059 hours (210 days + 19 hours)
+Error 696 [695] occurred at disk power-on lifetime: 9312 hours (388 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -254,13 +254,13 @@ Error 360 [359] occurred at disk power-on lifetime: 5059 hours (210 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 d5 00 20 00 00 04 10 50 00 40 00 11d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 56 03 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 57 03 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 58 03 e0 00 11d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 40d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 40d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 40d+ ...          READ LOG EXT
+  ec 00 00 00 01 00 00 00 00 00 00 00 00 40d+ ...          IDENTIFY DEVICE
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 40d+ ...          SMART READ DATA
 
-Error 359 [358] occurred at disk power-on lifetime: 5059 hours (210 days + 19 hours)
+Error 695 [694] occurred at disk power-on lifetime: 9312 hours (388 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -271,11 +271,11 @@ Error 359 [358] occurred at disk power-on lifetime: 5059 hours (210 days + 19 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 d5 00 20 00 00 04 10 50 00 40 00 11d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 56 03 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 57 03 e0 00 11d+ ...          READ LOG EXT
-  2f 00 00 00 01 00 00 00 00 58 03 e0 00 11d+ ...          READ LOG EXT
+  60 00 da 00 20 00 00 04 10 50 00 40 00 40d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 e0 00 40d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 e0 e0 00 40d+ ...          READ LOG EXT
+  ec 00 00 00 01 00 00 00 00 00 00 00 00 40d+ ...          IDENTIFY DEVICE
+  b0 00 d0 00 01 00 00 00 c2 4f 00 00 00 40d+ ...          SMART READ DATA
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -294,8 +294,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     14/38 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     19/34 Celsius
 Lifetime    Min/Max Temperature:     12/38 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -305,7 +305,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (80)
+Temperature History Size (Index):    478 (192)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -314,33 +314,33 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 3) ==
-0x01  0x008  4              12  ---  Lifetime Power-On Resets
-0x01  0x010  4            6083  ---  Power-on Hours
-0x01  0x018  6      5353500331  ---  Logical Sectors Written
-0x01  0x020  6       106093827  ---  Number of Write Commands
-0x01  0x028  6      1987322878  ---  Logical Sectors Read
-0x01  0x030  6         9368002  ---  Number of Read Commands
-0x01  0x038  6     21902220000  ---  Date and Time TimeStamp
+0x01  0x008  4              14  ---  Lifetime Power-On Resets
+0x01  0x010  4            9575  ---  Power-on Hours
+0x01  0x018  6      5353944535  ---  Logical Sectors Written
+0x01  0x020  6       106095479  ---  Number of Write Commands
+0x01  0x028  6      1999974206  ---  Logical Sectors Read
+0x01  0x030  6         9419051  ---  Number of Read Commands
+0x01  0x038  6     34471020000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             366  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              55  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x008  4             702  ---  Number of Reported Uncorrectable Errors
+0x04  0x010  4              63  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              23  ---  Current Temperature
-0x05  0x010  1              22  ---  Average Short Term Temperature
-0x05  0x018  1              31  ---  Average Long Term Temperature
+0x05  0x008  1              22  ---  Current Temperature
+0x05  0x010  1              23  ---  Average Short Term Temperature
+0x05  0x018  1              26  ---  Average Long Term Temperature
 0x05  0x020  1              38  ---  Highest Temperature
 0x05  0x028  1              12  ---  Lowest Temperature
 0x05  0x030  1              35  ---  Highest Average Short Term Temperature
 0x05  0x038  1              18  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              31  ---  Highest Average Long Term Temperature
-0x05  0x048  1              22  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              21  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              59  ---  Number of Hardware Resets
-0x06  0x010  4              20  ---  Number of ASR Events
+0x06  0x008  4              67  ---  Number of Hardware Resets
+0x06  0x010  4              23  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -354,7 +354,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

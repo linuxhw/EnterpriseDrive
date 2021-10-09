@@ -62,19 +62,19 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    0
-  3 Spin_Up_Time            POS--K   188   182   021    -    3575
-  4 Start_Stop_Count        -O--CK   100   100   000    -    22
+  3 Spin_Up_Time            POS--K   181   181   021    -    3950
+  4 Start_Stop_Count        -O--CK   100   100   000    -    23
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   075   075   000    -    18878
+  9 Power_On_Hours          -O--CK   070   070   000    -    22248
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    22
- 16 Unknown_Attribute       -O---K   000   200   000    -    37901123181
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    23
+ 16 Unknown_Attribute       -O---K   000   200   000    -    37901145335
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    14
-193 Load_Cycle_Count        -O--CK   002   002   000    -    595775
-194 Temperature_Celsius     -O---K   116   110   000    -    31
+193 Load_Cycle_Count        -O--CK   001   001   000    -    2015193
+194 Temperature_Celsius     -O---K   121   110   000    -    26
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -264,8 +264,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     22/32 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     26/31 Celsius
 Lifetime    Min/Max Temperature:     21/37 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -278,7 +278,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (272)
+Temperature History Size (Index):    478 (339)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -287,18 +287,18 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              22  -D-  Lifetime Power-On Resets
-0x01  0x010  4           18878  -D-  Power-on Hours
-0x01  0x018  6      5710010995  -D-  Logical Sectors Written
-0x01  0x020  6        22990784  -D-  Number of Write Commands
-0x01  0x028  6     32191112186  -D-  Logical Sectors Read
-0x01  0x030  6       167252311  -D-  Number of Read Commands
-0x01  0x038  6      3536290560  -D-  Date and Time TimeStamp
+0x01  0x008  4              23  -D-  Lifetime Power-On Resets
+0x01  0x010  4           22248  -D-  Power-on Hours
+0x01  0x018  6      5710011027  -D-  Logical Sectors Written
+0x01  0x020  6        22990788  -D-  Number of Write Commands
+0x01  0x028  6     32191134308  -D-  Logical Sectors Read
+0x01  0x030  6       167252759  -D-  Number of Read Commands
+0x01  0x038  6      2783388672  -D-  Date and Time TimeStamp
 0x01  0x048  2              70  ND-  Workload Utilization
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           18878  -D-  Spindle Motor Power-on Hours
-0x03  0x010  4             935  -D-  Head Flying Hours
-0x03  0x018  4          595790  -D-  Head Load Events
+0x03  0x008  4           22248  -D-  Spindle Motor Power-on Hours
+0x03  0x010  4            1198  -D-  Head Flying Hours
+0x03  0x018  4         2015208  -D-  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  -D-  Read Recovery Attempts
 0x03  0x030  4               0  -D-  Number of Mechanical Start Failures
@@ -308,22 +308,22 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  -D-  Number of Reported Uncorrectable Errors
 0x04  0x010  4               9  -D-  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  -D-  Current Temperature
-0x05  0x010  1              31  -D-  Average Short Term Temperature
+0x05  0x008  1              26  -D-  Current Temperature
+0x05  0x010  1              26  -D-  Average Short Term Temperature
 0x05  0x018  1              28  -D-  Average Long Term Temperature
 0x05  0x020  1              38  -D-  Highest Temperature
 0x05  0x028  1              21  -D-  Lowest Temperature
 0x05  0x030  1              34  -D-  Highest Average Short Term Temperature
 0x05  0x038  1              23  -D-  Lowest Average Short Term Temperature
-0x05  0x040  1              30  -D-  Highest Average Long Term Temperature
+0x05  0x040  1              31  -D-  Highest Average Long Term Temperature
 0x05  0x048  1              25  -D-  Lowest Average Long Term Temperature
 0x05  0x050  4               0  -D-  Time in Over-Temperature
 0x05  0x058  1              60  -D-  Specified Maximum Operating Temperature
 0x05  0x060  4               0  -D-  Time in Under-Temperature
 0x05  0x068  1               0  -D-  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             169  -D-  Number of Hardware Resets
-0x06  0x010  4              52  -D-  Number of ASR Events
+0x06  0x008  4             172  -D-  Number of Hardware Resets
+0x06  0x010  4              53  -D-  Number of ASR Events
 0x06  0x018  4           19028  -D-  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN

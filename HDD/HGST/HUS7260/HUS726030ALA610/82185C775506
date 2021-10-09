@@ -64,11 +64,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   096   096   000    -    33887
+  9 Power_On_Hours          -O--C-   095   095   000    -    37292
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    20
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1431
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1431
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1573
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1573
 194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 20/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -138,7 +138,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (48)
+Temperature History Size (Index):    128 (56)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -152,13 +152,13 @@ Page  Offset Size        Value Flags Description
 0x01  0x020  6        81677622  ---  Number of Write Commands
 0x01  0x028  6    209477205720  ---  Logical Sectors Read
 0x01  0x030  6       468071086  ---  Number of Read Commands
-0x01  0x038  6    121995635550  ---  Date and Time TimeStamp
+0x01  0x038  6    134254711750  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           33862  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           33862  ---  Head Flying Hours
-0x03  0x018  4            1431  ---  Head Load Events
+0x03  0x008  4           37267  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           37267  ---  Head Flying Hours
+0x03  0x018  4            1573  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4          126459  ---  Read Recovery Attempts
+0x03  0x028  4          127133  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -166,7 +166,7 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              30  ---  Current Temperature
 0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              30  N--  Average Long Term Temperature
+0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              40  N--  Highest Average Short Term Temperature

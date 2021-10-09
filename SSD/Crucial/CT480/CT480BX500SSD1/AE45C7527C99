@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -56,27 +56,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6838
+  9 Power_On_Hours          -O--CK   100   100   000    -    10212
  12 Power_Cycle_Count       -O--CK   100   100   000    -    21
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   010   010   000    -    202
+173 Ave_Block-Erase_Count   -O--CK   019   019   000    -    383
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    19
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    221
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   081   055   000    -    19 (Min/Max 16/45)
+194 Temperature_Celsius     -O---K   075   055   000    -    25 (Min/Max 15/45)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   090   090   001    -    10
+202 Percent_Lifetime_Remain ----CK   081   081   001    -    19
 206 Write_Error_Rate        -OSR--   000   000   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    34728222259
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1085256945
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    1781471232
+246 Total_LBAs_Written      -O--CK   100   100   000    -    68629515554
+247 Host_Program_Page_Count -O--CK   100   100   000    -    2144672361
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    2912827392
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -105,19 +105,18 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x010  4            6838  ---  Power-on Hours
-0x01  0x018  6       368483891  ---  Logical Sectors Written
-0x01  0x020  6       761930189  ---  Number of Write Commands
-0x01  0x028  6      1192408737  ---  Logical Sectors Read
-0x01  0x030  6       196925070  ---  Number of Read Commands
+0x01  0x010  4           10212  ---  Power-on Hours
+0x01  0x018  6      4205006114  ---  Logical Sectors Written
+0x01  0x020  6      1420650357  ---  Number of Write Commands
+0x01  0x028  6      3659570869  ---  Logical Sectors Read
+0x01  0x030  6       418223474  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              19  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -126,6 +125,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            3  R_ERR response for non-data FIS
-0x000a  4           26  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            5  R_ERR response for non-data FIS
+0x000a  4           40  Device-to-host register FISes sent due to a COMRESET
 

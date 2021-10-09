@@ -59,9 +59,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   096   096   000    -    17309
+  9 Power_On_Hours          -O--CK   095   095   000    -    20980
  12 Power_Cycle_Count       -O--CK   099   099   000    -    16
-177 Wear_Leveling_Count     PO--C-   097   097   005    -    158
+177 Wear_Leveling_Count     PO--C-   097   097   005    -    214
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    5821
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -76,14 +76,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    7
-241 Total_LBAs_Written      -O--CK   099   099   000    -    316557909989
-242 Total_LBAs_Read         -O--CK   099   099   000    -    294920676860
+241 Total_LBAs_Written      -O--CK   099   099   000    -    405987701381
+242 Total_LBAs_Read         -O--CK   099   099   000    -    356562950519
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    684759392192
+251 NAND_Writes             -O--CK   100   100   000    -    928518762944
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (60)
+Temperature History Size (Index):    128 (66)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,12 +154,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              16  ---  Lifetime Power-On Resets
-0x01  0x010  4           17309  ---  Power-on Hours
-0x01  0x018  6    316557909989  ---  Logical Sectors Written
-0x01  0x020  6      8233006126  ---  Number of Write Commands
-0x01  0x028  6    294920676860  ---  Logical Sectors Read
-0x01  0x030  6      2834925514  ---  Number of Read Commands
-0x01  0x038  6         3190000  ---  Date and Time TimeStamp
+0x01  0x010  4           20980  ---  Power-on Hours
+0x01  0x018  6    405987701381  ---  Logical Sectors Written
+0x01  0x020  6     10745328746  ---  Number of Write Commands
+0x01  0x028  6    356562950679  ---  Logical Sectors Read
+0x01  0x030  6      3559329801  ---  Number of Read Commands
+0x01  0x038  6          610000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -57,17 +57,17 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   098   006    -    180175576
+  1 Raw_Read_Error_Rate     POSR--   111   098   006    -    34075888
   3 Spin_Up_Time            PO----   096   096   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    5
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    152
-  7 Seek_Error_Rate         POSR--   066   060   030    -    81673561962
-  9 Power_On_Hours          -O--CK   031   031   000    -    61299
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    160
+  7 Seek_Error_Rate         POSR--   066   060   030    -    666377023716
+  9 Power_On_Hours          -O--CK   026   026   000    -    64828
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    5
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   001   001   000    -    223
+187 Reported_Uncorrect      -O--CK   001   001   000    -    224
 188 Command_Timeout         -O--CK   100   099   000    -    0 0 4
 189 High_Fly_Writes         -O-RCK   096   096   000    -    4
 190 Airflow_Temperature_Cel -O---K   067   062   045    -    33 (Min/Max 26/37)
@@ -78,9 +78,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    61299h+15m+55.154s
-241 Total_LBAs_Written      ------   100   253   000    -    383713598240
-242 Total_LBAs_Read         ------   100   253   000    -    1446439738073
+240 Head_Flying_Hours       ------   100   253   000    -    64827h+37m+13.168s
+241 Total_LBAs_Written      ------   100   253   000    -    410799603296
+242 Total_LBAs_Read         ------   100   253   000    -    1481042160359
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,7 +117,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 400 (device log contains only the most recent 20 errors)
+Device Error Count: 402 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -132,6 +132,40 @@ Device Error Count: 400 (device log contains only the most recent 20 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 402 [1] occurred at disk power-on lifetime: 64072 hours (2669 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 1f 38 27 f0 00 00  Error: UNC at LBA = 0x1f3827f0 = 523773936
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 1f 38 27 00 40 00  2d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 26 00 40 00  2d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 1b 00 40 00  2d+ ...          READ FPDMA QUEUED
+  61 00 00 00 08 00 00 b5 99 7f 40 40 00  2d+ ...          WRITE FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 1a 00 40 00  2d+ ...          READ FPDMA QUEUED
+
+Error 401 [0] occurred at disk power-on lifetime: 64072 hours (2669 days + 16 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 1f 38 27 f0 00 00  Error: UNC at LBA = 0x1f3827f0 = 523773936
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 01 00 00 00 1f 38 27 00 40 00  2d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 26 00 40 00  2d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 1b 00 40 00  2d+ ...          READ FPDMA QUEUED
+  61 00 00 00 08 00 00 b5 99 7f 40 40 00  2d+ ...          WRITE FPDMA QUEUED
+  60 00 00 01 00 00 00 1f 38 1a 00 40 00  2d+ ...          READ FPDMA QUEUED
 
 Error 400 [19] occurred at disk power-on lifetime: 57896 hours (2412 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -234,40 +268,6 @@ Error 395 [14] occurred at disk power-on lifetime: 57840 hours (2410 days + 0 ho
   61 00 00 00 08 00 00 85 5d e9 08 40 00 41d+ ...          WRITE FPDMA QUEUED
   61 00 00 00 08 00 00 85 5d e8 58 40 00 41d+ ...          WRITE FPDMA QUEUED
   61 00 00 00 08 00 00 85 5d e7 e8 40 00 41d+ ...          WRITE FPDMA QUEUED
-
-Error 394 [13] occurred at disk power-on lifetime: 56795 hours (2366 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 38 0c 98 00 00  Error: WP at LBA = 0x1f380c98 = 523766936
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 00 84 a6 8b 98 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 89 c7 b2 90 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 89 d2 2e 38 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 8a 8f f8 78 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 8c 7d ca 18 40 00 47d+ ...          WRITE FPDMA QUEUED
-
-Error 393 [12] occurred at disk power-on lifetime: 56795 hours (2366 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 1f 38 0c 98 00 00  Error: WP at LBA = 0x1f380c98 = 523766936
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 00 84 a6 8b 98 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 89 c7 b2 90 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 89 d2 2e 38 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 8a 8f f8 78 40 00 47d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 08 00 00 8c 7d ca 18 40 00 47d+ ...          WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]

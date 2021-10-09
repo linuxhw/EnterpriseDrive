@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -56,27 +56,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6694
+  9 Power_On_Hours          -O--CK   100   100   000    -    10221
  12 Power_Cycle_Count       -O--CK   100   100   000    -    22
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   015   015   000    -    310
+173 Ave_Block-Erase_Count   -O--CK   025   025   000    -    515
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    19
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    227
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   075   054   000    -    25 (Min/Max 15/46)
+194 Temperature_Celsius     -O---K   076   054   000    -    24 (Min/Max 15/46)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   085   085   001    -    15
+202 Percent_Lifetime_Remain ----CK   075   075   001    -    25
 206 Write_Error_Rate        -OSR--   000   000   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    59467681735
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1858365054
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    2747768832
+246 Total_LBAs_Written      -O--CK   100   100   000    -    100521061975
+247 Host_Program_Page_Count -O--CK   100   100   000    -    3141283186
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    4390889472
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,13 +111,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              22  ---  Lifetime Power-On Resets
-0x01  0x010  4            6694  ---  Power-on Hours
-0x01  0x018  6      3633106887  ---  Logical Sectors Written
-0x01  0x020  6      1278537886  ---  Number of Write Commands
-0x01  0x028  6      3296835466  ---  Logical Sectors Read
-0x01  0x030  6       103785842  ---  Number of Read Commands
+0x01  0x010  4           10221  ---  Power-on Hours
+0x01  0x018  6      1736814167  ---  Logical Sectors Written
+0x01  0x020  6      2158255889  ---  Number of Write Commands
+0x01  0x028  6       165751297  ---  Logical Sectors Read
+0x01  0x030  6       123355295  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              15  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              25  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -127,5 +127,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           27  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           41  Device-to-host register FISes sent due to a COMRESET
 

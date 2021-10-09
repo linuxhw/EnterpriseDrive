@@ -59,12 +59,12 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   079   064   006    -    71668424
+  1 Raw_Read_Error_Rate     POSR--   081   064   006    -    120177720
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    69
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   045    -    396864806
-  9 Power_On_Hours          -O--CK   074   074   000    -    22793 (104 18 0)
+  7 Seek_Error_Rate         POSR--   086   060   045    -    398991257
+  9 Power_On_Hours          -O--CK   074   074   000    -    23097 (204 13 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    63
 184 End-to-End_Error        -O--CK   100   100   099    -    0
@@ -74,14 +74,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O---K   077   069   040    -    23 (Min/Max 19/31)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    13
-193 Load_Cycle_Count        -O--CK   001   001   000    -    873016
+193 Load_Cycle_Count        -O--CK   001   001   000    -    883331
 194 Temperature_Celsius     -O---K   023   040   000    -    23 (0 8 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    19955 (227 186 0)
-241 Total_LBAs_Written      ------   100   253   000    -    184343121906
-242 Total_LBAs_Read         ------   100   253   000    -    819688599766
+240 Head_Flying_Hours       ------   100   253   000    -    20024 (46 45 0)
+241 Total_LBAs_Written      ------   100   253   000    -    184725992154
+242 Total_LBAs_Read         ------   100   253   000    -    823261526654
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -157,22 +157,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (6)
+Temperature History Size (Index):    128 (102)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              63  ---  Lifetime Power-On Resets
-0x01  0x010  4           22793  ---  Power-on Hours
-0x01  0x018  6    184343121906  ---  Logical Sectors Written
-0x01  0x020  6       361325731  ---  Number of Write Commands
-0x01  0x028  6    819688599766  ---  Logical Sectors Read
-0x01  0x030  6      1603325869  ---  Number of Read Commands
+0x01  0x010  4           23097  ---  Power-on Hours
+0x01  0x018  6    184725992154  ---  Logical Sectors Written
+0x01  0x020  6       361827905  ---  Number of Write Commands
+0x01  0x028  6    823261526654  ---  Logical Sectors Read
+0x01  0x030  6      1607620875  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           22792  ---  Spindle Motor Power-on Hours
+0x03  0x008  4           23097  ---  Spindle Motor Power-on Hours
 0x03  0x010  4               0  ---  Head Flying Hours
-0x03  0x018  4          873016  ---  Head Load Events
+0x03  0x018  4          883331  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures

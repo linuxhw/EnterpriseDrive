@@ -57,9 +57,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    27860
+  9 Power_On_Hours          -O--CK   093   093   000    -    31175
  12 Power_Cycle_Count       -O--CK   099   099   000    -    103
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    309
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    328
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    3861
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -70,17 +70,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O--CK   069   056   000    -    31
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
-199 CRC_Error_Count         -OSRCK   099   099   000    -    139
+199 CRC_Error_Count         -OSRCK   099   099   000    -    173
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    100
-241 Total_LBAs_Written      -O--CK   099   099   000    -    241505147528
-242 Total_LBAs_Read         -O--CK   099   099   000    -    258387845464
+241 Total_LBAs_Written      -O--CK   099   099   000    -    254951739735
+242 Total_LBAs_Read         -O--CK   099   099   000    -    296585305920
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    312940006584
+251 NAND_Writes             -O--CK   100   100   000    -    331954603984
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,7 +138,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (63)
+Temperature History Size (Index):    128 (111)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -146,16 +146,16 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2          112  Command failed due to ICRC error
-0x0002  2          112  R_ERR response for data FIS
-0x0003  2          112  R_ERR response for device-to-host data FIS
+0x0001  2          146  Command failed due to ICRC error
+0x0002  2          146  R_ERR response for data FIS
+0x0003  2          146  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          115  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          115  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          149  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2          149  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

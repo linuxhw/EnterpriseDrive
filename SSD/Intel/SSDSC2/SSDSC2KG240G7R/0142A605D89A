@@ -59,11 +59,11 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4067790
+  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4754374
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8718
+  9 Power_On_Hours          -O--CK   100   100   000    -    12254
  12 Power_Cycle_Count       -O--CK   100   100   000    -    15
- 13 Read_Soft_Error_Rate    -OSRC-   103   103   000    -    23244367073742
+ 13 Read_Soft_Error_Rate    -OSRC-   103   100   000    -    41897410726854
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    13
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
@@ -71,22 +71,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O-RCK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   000    -    26
+194 Temperature_Celsius     -O---K   100   100   000    -    25
 195 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2653 (69 8944)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2697 (90 9423)
 202 End_of_Life             POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    45682
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    225
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    14
-228 Workload_Minutes        -O--CK   100   100   000    -    522919
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    90943
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    409
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    7
+228 Workload_Minutes        -O--CK   100   100   000    -    735075
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    45682
+233 Total_LBAs_Written      -O--CK   100   100   000    -    90943
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    45682
-242 Total_LBAs_Read         -O--CK   100   100   000    -    7449
+241 Total_LBAs_Written      -O--CK   100   100   000    -    90943
+242 Total_LBAs_Read         -O--CK   100   100   000    -    7460
 245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -128,8 +128,8 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     22/29 Celsius
+Current Temperature:                    25 Celsius
+Power Cycle Min/Max Temperature:     22/30 Celsius
 Lifetime    Min/Max Temperature:     17/33 Celsius
 Specified Max Operating Temperature:    75 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -142,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/75 Celsius
 Min/Max Temperature Limit:            0/75 Celsius
-Temperature History Size (Index):    478 (177)
+Temperature History Size (Index):    478 (105)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -152,24 +152,24 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x018  6      2993845024  ---  Logical Sectors Written
-0x01  0x020  6       178281325  ---  Number of Write Commands
-0x01  0x028  6       488224583  ---  Logical Sectors Read
-0x01  0x030  6          153393  ---  Number of Read Commands
-0x01  0x038  6      1320422570  ---  Date and Time TimeStamp
+0x01  0x018  6      5960091976  ---  Logical Sectors Written
+0x01  0x020  6       351469092  ---  Number of Write Commands
+0x01  0x028  6       488911167  ---  Logical Sectors Read
+0x01  0x030  6          239120  ---  Number of Read Commands
+0x01  0x038  6      1164886207  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              26  ---  Average Long Term Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              25  ---  Average Short Term Temperature
+0x05  0x018  1              25  ---  Average Long Term Temperature
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              22  ---  Lowest Temperature
 0x05  0x030  1              30  ---  Highest Average Short Term Temperature
 0x05  0x038  1              25  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              26  ---  Highest Average Long Term Temperature
-0x05  0x048  1              26  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              25  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              75  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature

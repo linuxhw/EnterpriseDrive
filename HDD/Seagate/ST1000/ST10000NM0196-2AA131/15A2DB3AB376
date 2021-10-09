@@ -59,12 +59,12 @@ SCT capabilities: 	       (0x70bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--+  081   064   044    -    122229040
+  1 Raw_Read_Error_Rate     POSR--+  080   064   044    -    110557144
   3 Spin_Up_Time            PO----+  093   093   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    12
   5 Reallocated_Sector_Ct   PO--CK+  100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   088   060   045    -    636064141
-  9 Power_On_Hours          -O--CK   073   073   000    -    24200 (75 251 0)
+  7 Seek_Error_Rate         POSR--   091   060   045    -    1204980568
+  9 Power_On_Hours          -O--CK   070   070   000    -    26614 (71 137 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    13
 184 End-to-End_Error        -O--CK   100   100   099    -    0
@@ -72,19 +72,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   093   093   000    -    7
 190 Airflow_Temperature_Cel -O---K   071   063   040    -    29 (Min/Max 19/37)
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    339
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    259
-193 Load_Cycle_Count        -O--CK   086   086   000    -    28566
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    381
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    310
+193 Load_Cycle_Count        -O--CK   086   086   000    -    28667
 194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 19 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   081   064   000    -    122229040
+195 Hardware_ECC_Recovered  -O-RC-   080   064   000    -    110557144
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   PO---K   100   100   001    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    20172 (176 186 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1673717496
-242 Total_LBAs_Read         ------   100   253   000    -    169134054850
+240 Head_Flying_Hours       ------   100   253   000    -    22580 (199 244 0)
+241 Total_LBAs_Written      ------   100   253   000    -    1894240576
+242 Total_LBAs_Read         ------   100   253   000    -    195599315594
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -157,14 +157,14 @@ Device State:                        Active (0)
 Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:     19/37 Celsius
 Lifetime    Min/Max Temperature:     19/37 Celsius
-Under/Over Temperature Limit Count:   0/23676
+Under/Over Temperature Limit Count:   0/26130
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (66)
+Temperature History Size (Index):    128 (88)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -174,21 +174,21 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              13  ---  Lifetime Power-On Resets
-0x01  0x010  4           24200  ---  Power-on Hours
-0x01  0x018  6      1673717496  ---  Logical Sectors Written
-0x01  0x020  6        83139473  ---  Number of Write Commands
-0x01  0x028  6    169134052522  ---  Logical Sectors Read
-0x01  0x030  6       416372757  ---  Number of Read Commands
+0x01  0x010  4           26614  ---  Power-on Hours
+0x01  0x018  6      1894240576  ---  Logical Sectors Written
+0x01  0x020  6        97644960  ---  Number of Write Commands
+0x01  0x028  6    195599313266  ---  Logical Sectors Read
+0x01  0x030  6       469029214  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           24199  ---  Spindle Motor Power-on Hours
+0x03  0x008  4           26613  ---  Spindle Motor Power-on Hours
 0x03  0x010  4              69  ---  Head Flying Hours
-0x03  0x018  4           28566  ---  Head Load Events
+0x03  0x018  4           28667  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4             259  ---  Number of High Priority Unload Events
+0x03  0x040  4             310  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion

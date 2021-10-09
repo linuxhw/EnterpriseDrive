@@ -12,7 +12,7 @@ Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2, ATA8-ACS T13/1699-D revision 4c
-SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
+SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)
 Local Time is:    --
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
@@ -57,9 +57,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    38803
+  9 Power_On_Hours          -O--CK   091   091   000    -    42340
  12 Power_Cycle_Count       -O--CK   099   099   000    -    20
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    66
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    72
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    2397
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -67,20 +67,20 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   067   054   000    -    33
+190 Airflow_Temperature_Cel -O--CK   065   054   000    -    35
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
-199 CRC_Error_Count         -OSRCK   099   099   000    -    62
+199 CRC_Error_Count         -OSRCK   099   099   000    -    66
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    16
-241 Total_LBAs_Written      -O--CK   099   099   000    -    20617921404
-242 Total_LBAs_Read         -O--CK   099   099   000    -    50040033461
-243 SATA_Downshift_Ct       -O--CK   099   099   000    -    7
+241 Total_LBAs_Written      -O--CK   099   099   000    -    21649727116
+242 Total_LBAs_Read         -O--CK   099   099   000    -    54497195725
+243 SATA_Downshift_Ct       -O--CK   099   099   000    -    8
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    37691101056
+251 NAND_Writes             -O--CK   100   100   000    -    40368412704
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,7 +127,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SCT command executing in background (5)
-Current Temperature:                    33 Celsius
+Current Temperature:                    35 Celsius
 Power Cycle Min/Max Temperature:     30/45 Celsius
 Lifetime    Min/Max Temperature:      0/70 Celsius
 Under/Over Temperature Limit Count:  4294967295/4294967293
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (85)
+Temperature History Size (Index):    128 (59)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -145,16 +145,16 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2           61  Command failed due to ICRC error
-0x0002  2           61  R_ERR response for data FIS
-0x0003  2           61  R_ERR response for device-to-host data FIS
+0x0001  2           65  Command failed due to ICRC error
+0x0002  2           65  R_ERR response for data FIS
+0x0003  2           65  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            2  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            2  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2          112  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2          112  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          116  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2          116  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

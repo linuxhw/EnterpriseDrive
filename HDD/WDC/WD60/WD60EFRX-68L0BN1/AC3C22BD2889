@@ -64,13 +64,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    6
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   051   051   000    -    36295
+  9 Power_On_Hours          -O--CK   049   049   000    -    37262
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    6
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    4
-193 Load_Cycle_Count        -O--CK   200   200   000    -    487
-194 Temperature_Celsius     -O---K   120   113   000    -    32
+193 Load_Cycle_Count        -O--CK   200   200   000    -    491
+194 Temperature_Celsius     -O---K   121   113   000    -    31
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 6
+Device Error Count: 7
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,6 +124,23 @@ Device Error Count: 6
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 7 [6] occurred at disk power-on lifetime: 36883 hours (1536 days + 19 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 51 00 00 00 01 5d 46 7d a0 c0 00  Error: IDNF at LBA = 0x15d467da0 = 5859868064
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 08 00 00 00 01 5d 46 7d a0 41 00 45d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 40 00 45d+ ...          FLUSH CACHE EXT
+  61 00 20 00 00 00 01 5d 46 7d 80 40 00 45d+ ...          WRITE FPDMA QUEUED
+  61 03 28 00 08 00 00 70 f1 ce 20 40 00 45d+ ...          WRITE FPDMA QUEUED
+  61 04 00 00 30 00 00 70 f1 ca 20 40 00 45d+ ...          WRITE FPDMA QUEUED
 
 Error 6 [5] occurred at disk power-on lifetime: 11696 hours (487 days + 8 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -244,7 +261,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    32 Celsius
+Current Temperature:                    31 Celsius
 Power Cycle Min/Max Temperature:     28/39 Celsius
 Lifetime    Min/Max Temperature:     18/39 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -257,7 +274,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (60)
+Temperature History Size (Index):    478 (216)
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -275,5 +292,5 @@ ID      Size     Value  Description
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4    134921305  Vendor specific
+0x8000  4    138403968  Vendor specific
 

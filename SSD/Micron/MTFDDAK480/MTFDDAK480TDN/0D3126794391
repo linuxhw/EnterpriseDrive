@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -62,20 +62,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    12135
- 12 Power_Cycle_Count       -O--CK   100   100   001    -    20
+  9 Power_On_Hours          -O--CK   100   100   000    -    15594
+ 12 Power_Cycle_Count       -O--CK   100   100   001    -    23
  13 Read_Soft_Error_Rate    -O--CK   100   100   000    -    0
-173 Avg_Block-Erase_Count   -O--CK   098   098   000    -    168
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    14
+173 Avg_Block-Erase_Count   -O--CK   098   098   000    -    230
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    15
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   000    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   000   000   000    -    9898
 181 Program_Fail_Cnt_Total  -O--CK   100   100   001    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   001    -    0
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    49
+188 Command_Timeout         -O--CK   100   100   000    -    56
 193 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   071   055   000    -    29 (Min/Max 20/45)
+194 Temperature_Celsius     -O---K   068   055   000    -    32 (Min/Max 20/45)
 195 Hardware_ECC_Recovered  -OSR-K   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
@@ -85,10 +85,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain PO--CK   098   098   005    -    9677
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    282940119444
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    389416855780
 245 Unknown_Attribute       ----CK   098   098   001    -    98
-247 Host_Program_Page_Count -O--CK   100   100   000    -    8841871644
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    441404020
+247 Host_Program_Page_Count -O--CK   100   100   000    -    12169269528
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    587153056
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,22 +131,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%      7904         -
-# 2  Vendor (0xff)       Completed without error       00%      7695         -
-# 3  Vendor (0xff)       Completed without error       00%      7537         -
-# 4  Vendor (0xff)       Completed without error       00%      6393         -
-# 5  Vendor (0xff)       Completed without error       00%      4885         -
-# 6  Vendor (0xff)       Completed without error       00%      4281         -
-# 7  Vendor (0xff)       Completed without error       00%      4213         -
-# 8  Vendor (0xff)       Completed without error       00%      3343         -
-# 9  Vendor (0xff)       Completed without error       00%      2702         -
-#10  Vendor (0xff)       Completed without error       00%      2254         -
-#11  Vendor (0xff)       Completed without error       00%      1834         -
-#12  Vendor (0xff)       Completed without error       00%      1452         -
-#13  Vendor (0xff)       Completed without error       00%      1019         -
-#14  Vendor (0xff)       Completed without error       00%       507         -
-#15  Extended offline    Completed without error       00%         1         -
-#16  Short offline       Completed without error       00%         1         -
+# 1  Vendor (0xff)       Completed without error       00%     15261         -
+# 2  Vendor (0xff)       Completed without error       00%     14719         -
+# 3  Vendor (0xff)       Completed without error       00%     13708         -
+# 4  Vendor (0xff)       Completed without error       00%     12317         -
+# 5  Vendor (0xff)       Completed without error       00%      7904         -
+# 6  Vendor (0xff)       Completed without error       00%      7695         -
+# 7  Vendor (0xff)       Completed without error       00%      7537         -
+# 8  Vendor (0xff)       Completed without error       00%      6393         -
+# 9  Vendor (0xff)       Completed without error       00%      4885         -
+#10  Vendor (0xff)       Completed without error       00%      4281         -
+#11  Vendor (0xff)       Completed without error       00%      4213         -
+#12  Vendor (0xff)       Completed without error       00%      3343         -
+#13  Vendor (0xff)       Completed without error       00%      2702         -
+#14  Vendor (0xff)       Completed without error       00%      2254         -
+#15  Vendor (0xff)       Completed without error       00%      1834         -
+#16  Vendor (0xff)       Completed without error       00%      1452         -
+#17  Vendor (0xff)       Completed without error       00%      1019         -
+#18  Vendor (0xff)       Completed without error       00%       507         -
+#19  Extended offline    Completed without error       00%         1         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -162,8 +165,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     26/30 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     26/34 Celsius
 Lifetime    Min/Max Temperature:     20/45 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -172,7 +175,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (415)
+Temperature History Size (Index):    478 (308)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -181,33 +184,33 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              20  ---  Lifetime Power-On Resets
-0x01  0x010  4           12135  ---  Power-on Hours
-0x01  0x018  6    282940119444  ---  Logical Sectors Written
-0x01  0x020  6      3537674932  ---  Number of Write Commands
-0x01  0x028  6    186251690574  ---  Logical Sectors Read
-0x01  0x030  6      1873986569  ---  Number of Read Commands
-0x01  0x038  6     43686300000  ---  Date and Time TimeStamp
+0x01  0x008  4              23  ---  Lifetime Power-On Resets
+0x01  0x010  4           15594  ---  Power-on Hours
+0x01  0x018  6    389416855860  ---  Logical Sectors Written
+0x01  0x020  6      6428567613  ---  Number of Write Commands
+0x01  0x028  6    251050477238  ---  Logical Sectors Read
+0x01  0x030  6      2865351842  ---  Number of Read Commands
+0x01  0x038  6     56139180000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              49  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              56  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1              29  ---  Average Short Term Temperature
-0x05  0x018  1              33  ---  Average Long Term Temperature
+0x05  0x008  1              32  ---  Current Temperature
+0x05  0x010  1              27  ---  Average Short Term Temperature
+0x05  0x018  1              28  ---  Average Long Term Temperature
 0x05  0x020  1              45  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              41  ---  Highest Average Short Term Temperature
 0x05  0x038  1              25  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              38  ---  Highest Average Long Term Temperature
-0x05  0x048  1              33  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              28  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              98  ---  Number of Hardware Resets
-0x06  0x010  4              31  ---  Number of ASR Events
+0x06  0x008  4             111  ---  Number of Hardware Resets
+0x06  0x010  4              35  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               2  N--  Percentage Used Endurance Indicator

@@ -60,31 +60,31 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    27065
+  9 Power_On_Hours          -O--CK   100   100   000    -    29473
  12 Power_Cycle_Count       -O--CK   100   100   000    -    4
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    2
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    25 (165 9722)
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    25 (180 3011)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error_Count  PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Drive_Temperature       -O---K   070   062   000    -    30 (Min/Max 21/38)
+190 Drive_Temperature       -O---K   067   062   000    -    33 (Min/Max 21/38)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    2
-194 Temperature_Celsius     -O---K   100   100   000    -    30
+194 Temperature_Celsius     -O---K   100   100   000    -    33
 197 Pending_Sector_Count    -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    16612159
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    14315
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    1
-228 Workload_Minutes        -O--CK   100   100   000    -    1623896
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    19432258
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    16752
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    2
+228 Workload_Minutes        -O--CK   100   100   000    -    1768382
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   087   087   000    -    0
+233 Media_Wearout_Indicator -O--CK   084   084   000    -    0
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    16612159
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    329555
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    19263915
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    19432258
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    572717
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    22524793
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -135,7 +135,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
+Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     21/38 Celsius
 Lifetime    Min/Max Temperature:     19/38 Celsius
 Specified Max Operating Temperature:    75 Celsius
@@ -149,7 +149,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/75 Celsius
 Min/Max Temperature Limit:            0/75 Celsius
-Temperature History Size (Index):    478 (174)
+Temperature History Size (Index):    478 (306)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -159,18 +159,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x018  6   1088694494960  ---  Logical Sectors Written
-0x01  0x020  6      4677370399  ---  Number of Write Commands
-0x01  0x028  6     21597735425  ---  Logical Sectors Read
-0x01  0x030  6       679295602  ---  Number of Read Commands
-0x01  0x038  6      2945238002  ---  Date and Time TimeStamp
+0x01  0x018  6   1273512496304  ---  Logical Sectors Written
+0x01  0x020  6      5455087627  ---  Number of Write Commands
+0x01  0x028  6     37533596604  ---  Logical Sectors Read
+0x01  0x030  6      1013871639  ---  Number of Read Commands
+0x01  0x038  6      3024468581  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              28  ---  Average Short Term Temperature
-0x05  0x018  1              30  ---  Average Long Term Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x010  1              33  ---  Average Short Term Temperature
+0x05  0x018  1              32  ---  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x030  1              35  ---  Highest Average Short Term Temperature
@@ -186,7 +186,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              13  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              16  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

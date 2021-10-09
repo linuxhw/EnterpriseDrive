@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -56,27 +56,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   000   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6858
+  9 Power_On_Hours          -O--CK   100   100   000    -    10006
  12 Power_Cycle_Count       -O--CK   100   100   000    -    48
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   010   010   000    -    201
+173 Ave_Block-Erase_Count   -O--CK   019   019   000    -    392
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    40
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    226
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   063   038   000    -    37 (Min/Max 17/62)
+194 Temperature_Celsius     -O---K   065   038   000    -    35 (Min/Max 17/62)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   090   090   001    -    10
+202 Percent_Lifetime_Remain ----CK   081   081   001    -    19
 206 Write_Error_Rate        -OSR--   000   000   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    44735733076
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1397991658
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    1859770368
+246 Total_LBAs_Written      -O--CK   100   100   000    -    84819983620
+247 Host_Program_Page_Count -O--CK   100   100   000    -    2650624488
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    3602092032
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -102,7 +102,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
+Device Error Count: 2
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -118,6 +118,23 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 2 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 00 00 00 00 00 00 00 40 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.000  IDENTIFY DEVICE
+  ea 00 00 00 00 00 00 00 00 00 00 00 00     00:00:00.000  FLUSH CACHE EXT
+  b0 00 d0 01 01 00 00 4f 00 c2 00 00 00     00:00:00.000  SMART READ DATA
+  ec 00 00 01 01 00 00 00 00 00 00 00 00     00:00:00.000  IDENTIFY DEVICE
+  ec 00 00 01 01 00 00 00 00 00 00 00 00     00:00:00.000  IDENTIFY DEVICE
+
 Error 1 [0] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -126,21 +143,21 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              48  ---  Lifetime Power-On Resets
-0x01  0x010  4            6858  ---  Power-on Hours
-0x01  0x018  6      1786060116  ---  Logical Sectors Written
-0x01  0x020  6       680431179  ---  Number of Write Commands
-0x01  0x028  6      2681781331  ---  Logical Sectors Read
-0x01  0x030  6        62054519  ---  Number of Read Commands
+0x01  0x010  4           10006  ---  Power-on Hours
+0x01  0x018  6      3215604996  ---  Logical Sectors Written
+0x01  0x020  6      1559792200  ---  Number of Write Commands
+0x01  0x028  6       468740043  ---  Logical Sectors Read
+0x01  0x030  6       126002054  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              19  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4            0  Command failed due to ICRC error
-0x0002  4            0  R_ERR response for data FIS
-0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
+0x0001  4            1  Command failed due to ICRC error
+0x0002  4            1  R_ERR response for data FIS
+0x0005  4            2  R_ERR response for non-data FIS
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 

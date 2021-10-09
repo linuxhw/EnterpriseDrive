@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,11 +59,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   097   097   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    43438
+  9 Power_On_Hours          -O--CK   100   100   000    -    46243
 173 Unknown_Attribute       PO--CK   072   072   001    -    0
-175 Program_Fail_Count_Chip PO--CK   100   100   010    -    1057001439863
+175 Program_Fail_Count_Chip PO--CK   100   100   010    -    1129816195705
 180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   130   130   039    -    4294967295
-194 Temperature_Celsius     -O---K   100   100   000    -    21
+194 Temperature_Celsius     -O---K   100   100   000    -    20
 196 Reallocated_Event_Count PO--CK   100   100   010    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -114,41 +114,58 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 65535 [64] occurred at disk power-on lifetime: 42947 hours (1789 days + 11 hours)
+Error 65535 [0] occurred at disk power-on lifetime: 46037 hours (1918 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 03 6b 00 cc e8 40 00  Error: ICRC, ABRT at LBA = 0x36b00cce8 = 14680116456
+  84 -- 41 00 08 00 1a 26 00 6f 08 40 00  Error: ICRC, ABRT at LBA = 0x1a26006f08 = 112306712328
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 03 6b 00 cc e8 40 00 42d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 42d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 03 6b 00 cc e0 40 00 42d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 42d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 03 6b 00 cc d8 40 00 42d+ ...          WRITE FPDMA QUEUED
+  61 00 00 00 08 00 1a 26 00 6f 08 40 00 22d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 22d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 1a 26 00 6f 00 40 00 22d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 22d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 1a 25 00 6f f8 40 00 22d+ ...          WRITE FPDMA QUEUED
 
-Error 65534 [63] occurred at disk power-on lifetime: 42904 hours (1787 days + 16 hours)
+Error 65534 [79] occurred at disk power-on lifetime: 45827 hours (1909 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 02 a7 00 fa a8 40 00  Error: ICRC, ABRT at LBA = 0x2a700faa8 = 11391793832
+  84 -- 41 00 08 00 16 50 00 5e 18 40 00  Error: ICRC, ABRT at LBA = 0x1650005e18 = 95831481880
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 02 a7 00 fa a8 40 00 41d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 41d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 02 a7 00 fa a0 40 00 41d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 41d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 02 a7 00 fa 98 40 00 41d+ ...          WRITE FPDMA QUEUED
+  61 00 00 00 08 00 16 50 00 5e 18 40 00 13d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 13d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 16 50 00 5e 10 40 00 13d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 13d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 16 50 00 5e 08 40 00 13d+ ...          WRITE FPDMA QUEUED
 
-Error 65533 [62] occurred at disk power-on lifetime: 42826 hours (1784 days + 10 hours)
+Error 65533 [78] occurred at disk power-on lifetime: 45764 hours (1906 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 08 00 14 04 00 a2 80 40 00  Error: ICRC, ABRT at LBA = 0x140400a280 = 85966496384
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 14 04 00 a2 80 40 00 11d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 11d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 14 04 00 a2 78 40 00 11d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 11d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 14 04 00 a2 70 40 00 11d+ ...          WRITE FPDMA QUEUED
+
+Error 65532 [77] occurred at disk power-on lifetime: 45749 hours (1906 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -159,96 +176,79 @@ Error 65533 [62] occurred at disk power-on lifetime: 42826 hours (1784 days + 10
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 47 00 7d 20 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 47 00 7d 18 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 10d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 17 ba 00 d8 20 40 00 10d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 10d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 17 ba 00 d8 18 40 00 10d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 10d+ ...          FLUSH CACHE EXT
 
-Error 65532 [61] occurred at disk power-on lifetime: 42824 hours (1784 days + 8 hours)
+Error 65531 [76] occurred at disk power-on lifetime: 45726 hours (1905 days + 6 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 01 67 00 71 80 40 00  Error: ICRC, ABRT at LBA = 0x167007180 = 6023049600
+  84 -- 41 00 08 00 17 fe 00 68 68 40 00  Error: ICRC, ABRT at LBA = 0x17fe006868 = 103045687400
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 01 67 00 71 80 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 67 00 71 78 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 67 00 71 70 40 00 37d+ ...          WRITE FPDMA QUEUED
+  61 00 00 00 08 00 17 fe 00 68 68 40 00  9d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  9d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 17 fe 00 68 60 40 00  9d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  9d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 17 fe 00 68 58 40 00  9d+ ...          WRITE FPDMA QUEUED
 
-Error 65531 [60] occurred at disk power-on lifetime: 42814 hours (1783 days + 22 hours)
+Error 65530 [75] occurred at disk power-on lifetime: 45614 hours (1900 days + 14 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 01 7e 00 3c 20 40 00  Error: ICRC, ABRT at LBA = 0x17e003c20 = 6408911904
+  84 -- 41 00 08 00 14 90 00 fa d0 40 00  Error: ICRC, ABRT at LBA = 0x149000fad0 = 88315329232
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 01 7e 00 3c 20 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 7e 00 3c 18 40 00 37d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 37d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 01 7e 00 3c 10 40 00 37d+ ...          WRITE FPDMA QUEUED
+  61 00 00 00 08 00 14 90 00 fa d0 40 00  4d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  4d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 14 90 00 fa c8 40 00  4d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  4d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 14 90 00 fa c0 40 00  4d+ ...          WRITE FPDMA QUEUED
 
-Error 65530 [59] occurred at disk power-on lifetime: 42801 hours (1783 days + 9 hours)
+Error 65529 [74] occurred at disk power-on lifetime: 45576 hours (1899 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 00 08 00 00 74 00 f6 20 40 00  Error: ICRC, ABRT at LBA = 0x7400f620 = 1946220064
+  84 -- 41 00 08 00 27 9a 00 11 30 40 00  Error: ICRC, ABRT at LBA = 0x279a001130 = 170087420208
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 00 74 00 f6 20 40 00 36d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 36d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 00 74 00 f6 18 40 00 36d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 36d+ ...          FLUSH CACHE EXT
-  61 00 00 00 08 00 00 74 00 f6 10 40 00 36d+ ...          WRITE FPDMA QUEUED
+  61 00 00 00 08 00 27 9a 00 11 30 40 00  3d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 27 9a 00 11 28 40 00  3d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 27 9a 00 11 20 40 00  3d+ ...          WRITE FPDMA QUEUED
 
-Error 65529 [58] occurred at disk power-on lifetime: 42755 hours (1781 days + 11 hours)
+Error 65528 [73] occurred at disk power-on lifetime: 45484 hours (1895 days + 4 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 01 00 00 00 6b 00 5a a8 40 00  Error: ICRC, ABRT at LBA = 0x6b005aa8 = 1795185320
+  10 -- 01 00 00 00 00 00 00 00 00 00 00
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 6b 00 5a a8 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 6c 00 5a a8 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 6a 00 5a a8 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 69 00 5a a8 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 68 00 5a a8 40 00 34d+ ...          READ FPDMA QUEUED
-
-Error 65528 [57] occurred at disk power-on lifetime: 42755 hours (1781 days + 11 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  84 -- 41 01 00 00 00 f4 00 d6 c0 40 00  Error: ICRC, ABRT at LBA = 0xf400d6c0 = 4093695680
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 f4 00 d6 c0 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 f3 00 d6 c0 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 f2 00 d6 c0 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 f1 00 d6 c0 40 00 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 f0 00 d6 c0 40 00 34d+ ...          READ FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 49d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 25 bb 00 ac 68 40 00 49d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 49d+ ...          FLUSH CACHE EXT
+  61 00 00 00 08 00 25 bb 00 ac 60 40 00 49d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 49d+ ...          FLUSH CACHE EXT
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -267,7 +267,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    21 Celsius
+Current Temperature:                    20 Celsius
 Power Cycle Min/Max Temperature:     15/28 Celsius
 Lifetime    Min/Max Temperature:      7/28 Celsius
 Specified Max Operating Temperature:    55 Celsius
@@ -278,7 +278,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/55 Celsius
 Min/Max Temperature Limit:            0/55 Celsius
-Temperature History Size (Index):    478 (446)
+Temperature History Size (Index):    478 (25)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -288,16 +288,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             165  ---  Lifetime Power-On Resets
-0x01  0x018  6    888082252950  ---  Logical Sectors Written
-0x01  0x020  6      9235916967  ---  Number of Write Commands
-0x01  0x028  6    701690478106  ---  Logical Sectors Read
-0x01  0x030  6     10222233575  ---  Number of Read Commands
+0x01  0x018  6    889801801110  ---  Logical Sectors Written
+0x01  0x020  6      9335370562  ---  Number of Write Commands
+0x01  0x028  6    701692886588  ---  Logical Sectors Read
+0x01  0x030  6     10222257452  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4            2907  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              21  ---  Current Temperature
-0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x008  1              20  ---  Current Temperature
+0x05  0x010  1              19  ---  Average Short Term Temperature
 0x05  0x018  1              19  ---  Average Long Term Temperature
 0x05  0x020  1              28  ---  Highest Temperature
 0x05  0x028  1              14  ---  Lowest Temperature
@@ -310,9 +310,9 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           37578  ---  Number of Hardware Resets
-0x06  0x010  4           10240  ---  Number of ASR Events
-0x06  0x018  4         2369492  ---  Number of Interface CRC Errors
+0x06  0x008  4           37602  ---  Number of Hardware Resets
+0x06  0x010  4           10264  ---  Number of ASR Events
+0x06  0x018  4         2369507  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              28  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -321,11 +321,11 @@ Page  Offset Size        Value Flags Description
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4      2369492  Command failed due to ICRC error
+0x0001  4      2369507  Command failed due to ICRC error
 0x0003  4        65535  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4           33  R_ERR response for device-to-host non-data FIS
-0x000a  4         8436  Device-to-host register FISes sent due to a COMRESET
+0x000a  4         8460  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

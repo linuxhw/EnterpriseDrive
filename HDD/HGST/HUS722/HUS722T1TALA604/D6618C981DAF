@@ -66,15 +66,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    7
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   064   064   000    -    26640
+  9 Power_On_Hours          -O--CK   060   060   000    -    29243
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    7
- 16 Gas_Gauge               -O---K   003   197   000    -    195240670787
+ 16 Gas_Gauge               -O---K   003   197   000    -    204501416787
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    4
 193 Load_Cycle_Count        -O--CK   200   200   000    -    13
-194 Temperature_Celsius     -O---K   112   109   000    -    35
+194 Temperature_Celsius     -O---K   110   109   000    -    37
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -134,7 +134,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
+Current Temperature:                    37 Celsius
 Power Cycle Min/Max Temperature:     30/38 Celsius
 Lifetime    Min/Max Temperature:     15/38 Celsius
 Specified Max Operating Temperature:    60 Celsius
@@ -148,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (119)
+Temperature History Size (Index):    478 (131)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -158,16 +158,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               7  -D-  Lifetime Power-On Resets
-0x01  0x010  4           26640  -D-  Power-on Hours
-0x01  0x018  6     76283135244  -D-  Logical Sectors Written
-0x01  0x020  6      1215266050  -D-  Number of Write Commands
-0x01  0x028  6    118957535543  -D-  Logical Sectors Read
-0x01  0x030  6      1787854756  -D-  Number of Read Commands
-0x01  0x038  6      1414719488  -D-  Date and Time TimeStamp
-0x01  0x048  2             363  ND-  Workload Utilization
+0x01  0x010  4           29243  -D-  Power-on Hours
+0x01  0x018  6     78108041732  -D-  Logical Sectors Written
+0x01  0x020  6      1256648989  -D-  Number of Write Commands
+0x01  0x028  6    126393375055  -D-  Logical Sectors Read
+0x01  0x030  6      1817689519  -D-  Number of Read Commands
+0x01  0x038  6      2195584896  -D-  Date and Time TimeStamp
+0x01  0x048  2             380  ND-  Workload Utilization
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           26640  -D-  Spindle Motor Power-on Hours
-0x03  0x010  4           26361  -D-  Head Flying Hours
+0x03  0x008  4           29243  -D-  Spindle Motor Power-on Hours
+0x03  0x010  4           28965  -D-  Head Flying Hours
 0x03  0x018  4              18  -D-  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  -D-  Read Recovery Attempts
@@ -178,8 +178,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  -D-  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  -D-  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  -D-  Current Temperature
-0x05  0x010  1              36  -D-  Average Short Term Temperature
+0x05  0x008  1              37  -D-  Current Temperature
+0x05  0x010  1              37  -D-  Average Short Term Temperature
 0x05  0x018  1              36  -D-  Average Long Term Temperature
 0x05  0x020  1              39  -D-  Highest Temperature
 0x05  0x028  1              21  -D-  Lowest Temperature

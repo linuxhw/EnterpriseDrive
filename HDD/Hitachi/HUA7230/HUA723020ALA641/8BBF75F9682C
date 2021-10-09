@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -60,17 +60,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   134   134   054    -    89
-  3 Spin_Up_Time            POS---   120   120   024    -    513 (Average 521)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    49
+  3 Spin_Up_Time            POS---   120   120   024    -    518 (Average 523)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    59
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   123   123   020    -    31
-  9 Power_On_Hours          -O--C-   097   097   000    -    23031
+  9 Power_On_Hours          -O--C-   097   097   000    -    26787
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    49
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    164
-193 Load_Cycle_Count        -O--C-   100   100   000    -    164
-194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 23/58)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    59
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    191
+193 Load_Cycle_Count        -O--C-   100   100   000    -    191
+194 Temperature_Celsius     -O----   193   193   000    -    31 (Min/Max 18/58)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -125,9 +125,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     27/38 Celsius
-Lifetime    Min/Max Temperature:     23/58 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     29/33 Celsius
+Lifetime    Min/Max Temperature:     18/58 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -135,7 +135,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (125)
+Temperature History Size (Index):    128 (23)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -144,28 +144,28 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              49  ---  Lifetime Power-On Resets
-0x01  0x010  4           23031  ---  Power-on Hours
-0x01  0x018  6    164140446469  ---  Logical Sectors Written
-0x01  0x020  6       763554383  ---  Number of Write Commands
-0x01  0x028  6    380578309510  ---  Logical Sectors Read
-0x01  0x030  6      2370608644  ---  Number of Read Commands
+0x01  0x008  4              59  ---  Lifetime Power-On Resets
+0x01  0x010  4           26787  ---  Power-on Hours
+0x01  0x018  6    187353389606  ---  Logical Sectors Written
+0x01  0x020  6       809698180  ---  Number of Write Commands
+0x01  0x028  6    426129805879  ---  Logical Sectors Read
+0x01  0x030  6      2426109998  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           23026  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           23026  ---  Head Flying Hours
-0x03  0x018  4             164  ---  Head Load Events
+0x03  0x008  4           26782  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           26782  ---  Head Flying Hours
+0x03  0x018  4             191  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             160  ---  Read Recovery Attempts
+0x03  0x028  4             164  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              29  N--  Average Short Term Temperature
-0x05  0x018  1              29  N--  Average Long Term Temperature
+0x05  0x008  1              31  ---  Current Temperature
+0x05  0x010  1              31  N--  Average Short Term Temperature
+0x05  0x018  1              30  N--  Average Long Term Temperature
 0x05  0x020  1              58  ---  Highest Temperature
-0x05  0x028  1              23  ---  Lowest Temperature
+0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x030  1              56  N--  Highest Average Short Term Temperature
 0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
 0x05  0x040  1              53  N--  Highest Average Long Term Temperature
@@ -175,8 +175,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            1267  ---  Number of Hardware Resets
-0x06  0x010  4             425  ---  Number of ASR Events
+0x06  0x008  4            1395  ---  Number of Hardware Resets
+0x06  0x010  4             513  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN

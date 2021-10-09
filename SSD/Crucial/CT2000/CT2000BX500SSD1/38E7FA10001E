@@ -54,17 +54,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    0
+  9 Power_On_Hours          -O--CK   100   100   000    -    243
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   100   100   000    -    1
+173 Unknown_Attribute       -O--CK   100   100   000    -    5
 174 Unknown_Attribute       -O--CK   100   100   000    -    1
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    12
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   074   073   000    -    26 (Min/Max 24/27)
+194 Temperature_Celsius     -O---K   076   063   000    -    24 (Min/Max 22/37)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -72,16 +72,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Unknown_SSD_Attribute   ----CK   100   100   001    -    0
 206 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
 210 Unknown_Attribute       -O--CK   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    58802730
-247 Unknown_Attribute       -O--CK   100   100   000    -    1837585
-248 Unknown_Attribute       -O--CK   100   100   000    -    0
+246 Unknown_Attribute       -O--CK   100   100   000    -    4898146298
+247 Unknown_Attribute       -O--CK   100   100   000    -    153067071
+248 Unknown_Attribute       -O--CK   100   100   000    -    184320000
 249 Unknown_Attribute       -O--CK   100   100   000    -    0
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    0
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    86218
 251 Unknown_Attribute       -O--CK   100   100   000    -    0
 252 Unknown_Attribute       -O--CK   100   100   000    -    0
-253 Unknown_Attribute       -O--CK   100   100   000    -    0
-254 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
-223 Unknown_SSD_Attribute   -O--CK   100   100   000    -    0
+253 Unknown_Attribute       -O--CK   100   100   000    -    5
+254 Unknown_SSD_Attribute   -O--CK   100   100   000    -    157
+223 Unknown_SSD_Attribute   -O--CK   100   100   000    -    6
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,11 +115,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               1  ---  Lifetime Power-On Resets
-0x01  0x010  4               0  ---  Power-on Hours
-0x01  0x018  6        58802730  ---  Logical Sectors Written
-0x01  0x020  6          176606  ---  Number of Write Commands
-0x01  0x028  6         1845479  ---  Logical Sectors Read
-0x01  0x030  6           11498  ---  Number of Read Commands
+0x01  0x010  4             243  ---  Power-on Hours
+0x01  0x018  6       603179002  ---  Logical Sectors Written
+0x01  0x020  6       118579948  ---  Number of Write Commands
+0x01  0x028  6        73147100  ---  Logical Sectors Read
+0x01  0x030  6        28535142  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met

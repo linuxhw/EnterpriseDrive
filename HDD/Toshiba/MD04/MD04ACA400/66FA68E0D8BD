@@ -65,10 +65,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   044   044   000    -    22637
+  9 Power_On_Hours          -O--CK   035   035   000    -    26054
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    6
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    9
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    11
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    3
 193 Load_Cycle_Count        -O--CK   100   100   000    -    32
 194 Temperature_Celsius     -O---K   100   100   000    -    29 (Min/Max 21/34)
@@ -77,7 +77,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   044   044   000    -    22597
+222 Loaded_Hours            -O--CK   035   035   000    -    26014
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    575
@@ -140,7 +140,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (197)
+Temperature History Size (Index):    478 (150)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -150,16 +150,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4               6  ---  Lifetime Power-On Resets
-0x01  0x010  4           22637  ---  Power-on Hours
-0x01  0x018  6    121331835272  ---  Logical Sectors Written
-0x01  0x020  6       519924741  ---  Number of Write Commands
-0x01  0x028  6    381959659328  ---  Logical Sectors Read
-0x01  0x030  6       592273685  ---  Number of Read Commands
+0x01  0x010  4           26054  ---  Power-on Hours
+0x01  0x018  6    138842984151  ---  Logical Sectors Written
+0x01  0x020  6       762097737  ---  Number of Write Commands
+0x01  0x028  6    425556541512  ---  Logical Sectors Read
+0x01  0x030  6       670789699  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4               9  ---  Overlimit Shock Events
+0x02  0x010  4              11  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           22637  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           22597  ---  Head Flying Hours
+0x03  0x008  4           26054  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           26014  ---  Head Flying Hours
 0x03  0x018  4              32  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
@@ -169,8 +169,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1              28  N--  Average Short Term Temperature
-0x05  0x018  1              28  N--  Average Long Term Temperature
+0x05  0x010  1              29  N--  Average Short Term Temperature
+0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              34  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              31  N--  Highest Average Short Term Temperature

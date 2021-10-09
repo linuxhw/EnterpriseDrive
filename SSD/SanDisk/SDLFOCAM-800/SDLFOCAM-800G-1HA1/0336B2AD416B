@@ -59,10 +59,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 UECC_Ct                 POSR--   100   100   032    -    2
   2 Internal_File_Check     -O--C-   100   100   001    -    0
   5 Retried_Blk_Ct          PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   089   089   000    -    10359 (8 142 0)
+  9 Power_On_Hours          -O--CK   085   085   000    -    13864 (12 129 0)
  12 Power_Cycle_Count       -O--CK   100   100   000    -    3
  13 Read_Soft_Error_Rate    -O--C-   100   100   001    -    0
- 32 Write_Ampflication      -O----   100   100   000    -    939
+ 32 Write_Ampflication      -O----   100   100   000    -    990
 170 Reserve_Blk_Remaining   -O--CK   100   100   000    -    0
 171 Program_Fail_Ct         -O--CK   100   100   000    -    0
 172 Erase_Fail_Ct           -O--CK   100   100   000    -    0
@@ -73,15 +73,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 180 End_to_End_Err_Detect   PO-RCK   100   100   032    -    0
 181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
-190 Drive_Temp_Warning      -O--CK   076   035   035    Past 437649432
-194 Temperature_Celsius     -O---K   076   065   031    -    24 (Min/Max 21/35)
+190 Drive_Temp_Warning      -O--CK   077   035   035    Past 504758295
+194 Temperature_Celsius     -O---K   077   065   031    -    23 (Min/Max 21/35)
 196 Reallocated_Event_Count PO-RC-   100   100   010    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   -OSRC-   100   100   000    -    100
-233 Number_Of_Write_Ct      -O--CK   100   100   000    -    10
-241 Total_LBAs_Written      -O--CK   100   100   000    -    2304
+233 Number_Of_Write_Ct      -O--CK   100   100   000    -    15
+241 Total_LBAs_Written      -O--CK   100   100   000    -    2368
 242 Total_LBAs_Read         -O--CK   100   100   000    -    128
 245 DriveLife_Used%         -O--C-   100   100   001    -    0
                             ||||||_ K auto-keep
@@ -129,20 +129,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     22/26 Celsius
+Current Temperature:                    23 Celsius
+Power Cycle Min/Max Temperature:     22/30 Celsius
 Lifetime    Min/Max Temperature:     21/35 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 51 00 51 00 00 00 01 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d4
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 d1
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:            0/69 Celsius
-Temperature History Size (Index):    478 (427)
+Temperature History Size (Index):    478 (364)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -152,19 +152,19 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x010  4           10359  ---  Power-on Hours
-0x01  0x018  6      4571770461  ---  Logical Sectors Written
-0x01  0x020  6     12930359815  ---  Number of Write Commands
-0x01  0x028  6       266988414  ---  Logical Sectors Read
-0x01  0x030  6     51585871862  ---  Number of Read Commands
-0x01  0x038  6      2932661632  ---  Date and Time TimeStamp
+0x01  0x010  4           13864  ---  Power-on Hours
+0x01  0x018  6      4675947717  ---  Logical Sectors Written
+0x01  0x020  6     17228864042  ---  Number of Write Commands
+0x01  0x028  6       267042950  ---  Logical Sectors Read
+0x01  0x030  6     60175806446  ---  Number of Read Commands
+0x01  0x038  6      2665759744  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4            1304  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  ---  Current Temperature
-0x05  0x010  1              24  ---  Average Short Term Temperature
-0x05  0x018  1              24  ---  Average Long Term Temperature
+0x05  0x008  1              23  ---  Current Temperature
+0x05  0x010  1              23  ---  Average Short Term Temperature
+0x05  0x018  1              22  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              52  ---  Highest Average Short Term Temperature
@@ -176,8 +176,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4              20  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              41  ---  Number of Hardware Resets
-0x06  0x010  4              16  ---  Number of ASR Events
+0x06  0x008  4              44  ---  Number of Hardware Resets
+0x06  0x010  4              19  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -188,7 +188,7 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS

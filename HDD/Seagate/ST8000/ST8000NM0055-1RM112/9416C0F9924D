@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,30 +59,30 @@ SCT capabilities: 	       (0x70bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   080   064   044    -    101978200
+  1 Raw_Read_Error_Rate     POSR--   078   064   044    -    56787102
   3 Spin_Up_Time            PO----   091   091   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    15
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   095   060   045    -    3347130033
-  9 Power_On_Hours          -O--CK   064   064   000    -    31965
+  4 Start_Stop_Count        -O--CK   100   100   020    -    17
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    58
+  7 Seek_Error_Rate         POSR--   096   060   045    -    4105365116
+  9 Power_On_Hours          -O--CK   060   060   000    -    35658
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    15
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    17
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   065   057   040    -    35 (Min/Max 33/43)
-191 G-Sense_Error_Rate      -O--CK   022   022   000    -    157437
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1253
-193 Load_Cycle_Count        -O--CK   100   100   000    -    1342
-194 Temperature_Celsius     -O---K   035   043   000    -    35 (0 24 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   080   064   000    -    101978200
-197 Current_Pending_Sector  -O--C-   100   100   000    -    0
-198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+190 Airflow_Temperature_Cel -O---K   061   057   040    -    39 (Min/Max 39/39)
+191 G-Sense_Error_Rate      -O--CK   018   018   000    -    164714
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1384
+193 Load_Cycle_Count        -O--CK   100   100   000    -    1493
+194 Temperature_Celsius     -O---K   039   043   000    -    39 (0 24 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   078   064   000    -    56787102
+197 Current_Pending_Sector  -O--C-   100   100   000    -    16
+198 Offline_Uncorrectable   ----C-   100   100   000    -    16
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    31928h+27m+13.275s
-241 Total_LBAs_Written      ------   100   253   000    -    158781610512
-242 Total_LBAs_Read         ------   100   253   000    -    368445578123
+240 Head_Flying_Hours       ------   100   253   000    -    35533h+52m+38.324s
+241 Total_LBAs_Written      ------   100   253   000    -    191506877946
+242 Total_LBAs_Read         ------   100   253   000    -    413492807893
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -149,54 +149,54 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     33/43 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     39/39 Celsius
 Lifetime    Min/Max Temperature:     24/43 Celsius
-Under/Over Temperature Limit Count:   0/1545
+Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     10/40 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (11)
+Temperature History Size (Index):    128 (99)
 
 SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+           Read:    100 (10.0 seconds)
+          Write:    100 (10.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4           31965  ---  Power-on Hours
-0x01  0x018  6    158780334024  ---  Logical Sectors Written
-0x01  0x020  6      1430082143  ---  Number of Write Commands
-0x01  0x028  6    368445045780  ---  Logical Sectors Read
-0x01  0x030  6       941068245  ---  Number of Read Commands
+0x01  0x008  4              17  ---  Lifetime Power-On Resets
+0x01  0x010  4           35658  ---  Power-on Hours
+0x01  0x018  6    191503939818  ---  Logical Sectors Written
+0x01  0x020  6      1618261891  ---  Number of Write Commands
+0x01  0x028  6    413491246328  ---  Logical Sectors Read
+0x01  0x030  6      1061010833  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4       107821336  N--  Spindle Motor Power-on Hours
-0x03  0x010  4       107821331  N--  Head Flying Hours
-0x03  0x018  4            1342  ---  Head Load Events
-0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
+0x03  0x008  4      3659544852  N--  Spindle Motor Power-on Hours
+0x03  0x010  4      3659544847  N--  Head Flying Hours
+0x03  0x018  4            1493  ---  Head Load Events
+0x03  0x020  4              58  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
-0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4            1253  ---  Number of High Priority Unload Events
+0x03  0x038  4              16  ---  Number of Realloc. Candidate Logical Sectors
+0x03  0x040  4            1384  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              35  ---  Current Temperature
-0x05  0x010  1              35  ---  Average Short Term Temperature
-0x05  0x018  1              36  ---  Average Long Term Temperature
+0x05  0x008  1              39  ---  Current Temperature
+0x05  0x010  1              39  ---  Average Short Term Temperature
+0x05  0x018  1              38  ---  Average Long Term Temperature
 0x05  0x020  1              43  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1              41  ---  Highest Average Short Term Temperature
-0x05  0x038  1              35  ---  Lowest Average Short Term Temperature
+0x05  0x038  1              34  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              40  ---  Highest Average Long Term Temperature
-0x05  0x048  1              36  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              35  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4              40  ---  Time in Under-Temperature
@@ -210,7 +210,23 @@ Page  Offset Size        Value Flags Description
                                 |___ N normalized value
 
 Pending Defects log (GP Log 0x0c)
-No Defects Logged
+Index                LBA    Hours
+    0           54529120    35638
+    1           54529121    35638
+    2           54529122    35638
+    3           54529123    35638
+    4           54529124    35638
+    5           54529125    35638
+    6           54529126    35638
+    7           54529127    35638
+    8           54529128    35638
+    9           54529129    35638
+   10           54529130    35638
+   11           54529131    35638
+   12           54529132    35638
+   13           54529133    35638
+   14           54529134    35638
+   15           54529135    35638
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

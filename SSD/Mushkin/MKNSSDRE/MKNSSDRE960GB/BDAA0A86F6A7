@@ -22,8 +22,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -60,34 +60,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    10443
+  9 Power_On_Hours          ------   100   100   000    -    10586
  12 Power_Cycle_Count       ------   100   100   000    -    26
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    37
 163 Unknown_Attribute       ------   100   100   000    -    39
-164 Unknown_Attribute       ------   100   100   000    -    49069
-165 Unknown_Attribute       ------   100   100   000    -    130
-166 Unknown_Attribute       ------   100   100   000    -    29
-167 Unknown_Attribute       ------   100   100   000    -    97
+164 Unknown_Attribute       ------   100   100   000    -    49987
+165 Unknown_Attribute       ------   100   100   000    -    132
+166 Unknown_Attribute       ------   100   100   000    -    32
+167 Unknown_Attribute       ------   100   100   000    -    99
 168 Unknown_Attribute       ------   100   100   000    -    3000
 169 Unknown_Attribute       ------   100   100   000    -    97
 175 Program_Fail_Count_Chip ------   100   100   000    -    12
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    203
+177 Wear_Leveling_Count     ------   100   100   050    -    206
 178 Used_Rsvd_Blk_Cnt_Chip  ------   100   100   000    -    0
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    12
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 192 Power-Off_Retract_Count ------   100   100   000    -    6
-194 Temperature_Celsius     ------   100   100   000    -    35
+194 Temperature_Celsius     ------   100   100   000    -    31
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    1598397
-242 Total_LBAs_Read         ------   100   100   000    -    4264612
-245 Unknown_Attribute       ------   100   100   000    -    3140416
+241 Total_LBAs_Written      ------   100   100   000    -    1617828
+242 Total_LBAs_Read         ------   100   100   000    -    4286910
+245 Unknown_Attribute       ------   100   100   000    -    3199168
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,20 +117,7 @@ SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
 No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
-Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     10424         -
-# 2  Abort offline test  Aborted by host               00%     10424         -
-# 3  Short offline       Completed without error       00%      6858         -
-# 4  Short offline       Completed without error       00%      1991         -
-# 5  Abort offline test  Aborted by host               00%      1991         -
-# 6  Short offline       Completed without error       00%      1982         -
-# 7  Abort offline test  Aborted by host               00%      1982         -
-# 8  Short offline       Completed without error       00%      1981         -
-# 9  Abort offline test  Aborted by host               00%      1981         -
-#10  Short offline       Completed without error       00%       831         -
-#11  Abort offline test  Aborted by host               00%       831         -
-#12  Short offline       Completed without error       00%         0         -
-#13  Abort offline test  Aborted by host               00%         0         -
+No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -139,7 +126,7 @@ SMART Selective self-test log data structure revision number 1
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
-    7        0    65535  Read_scanning was completed without error
+    7        0    65535  Read_scanning was never started
 Selective self-test flags (0x0):
   After scanning selected spans, do NOT read-scan remainder of disk.
 If Selective self-test is pending on power-up, resume after 0 minute delay.
@@ -148,8 +135,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
-Power Cycle Min/Max Temperature:     127/ 0 Celsius
-Lifetime    Min/Max Temperature:      0/ 0 Celsius
+Power Cycle Min/Max Temperature:     31/36 Celsius
+Lifetime    Min/Max Temperature:      0/36 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -157,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (39)
+Temperature History Size (Index):    128 (49)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -167,11 +154,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              26  ---  Lifetime Power-On Resets
-0x01  0x010  4           10443  ---  Power-on Hours
-0x01  0x018  6    104752597926  ---  Logical Sectors Written
-0x01  0x020  6      2652139163  ---  Number of Write Commands
-0x01  0x028  6    279485626650  ---  Logical Sectors Read
-0x01  0x030  6      1106133634  ---  Number of Read Commands
+0x01  0x010  4           10586  ---  Power-on Hours
+0x01  0x018  6    106026040766  ---  Logical Sectors Written
+0x01  0x020  6      2670880572  ---  Number of Write Commands
+0x01  0x028  6    280946936845  ---  Logical Sectors Read
+0x01  0x030  6      1114980208  ---  Number of Read Commands
 
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors

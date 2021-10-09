@@ -57,29 +57,29 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   118   118   050    -    0/180085772
-  5 Retired_Block_Count     PO--CK   100   100   003    -    60
-  9 Power_On_Hours_and_Msec -O--CK   030   030   000    -    61894h+49m+58.850s
+  1 Raw_Read_Error_Rate     POSR--   116   116   050    -    0/130293605
+  5 Retired_Block_Count     PO--CK   100   100   003    -    80
+  9 Power_On_Hours_and_Msec -O--CK   024   024   000    -    67102h+12m+55.050s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    21
-171 Program_Fail_Count      -O--CK   000   000   000    -    29
+171 Program_Fail_Count      -O--CK   000   000   000    -    39
 172 Erase_Fail_Count        -O--CK   000   000   000    -    1
 174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    13
-177 Wear_Range_Delta        ------   000   000   000    -    6
-181 Program_Fail_Count      -O--CK   000   000   000    -    29
+177 Wear_Range_Delta        ------   000   000   000    -    7
+181 Program_Fail_Count      -O--CK   000   000   000    -    39
 182 Erase_Fail_Count        -O--CK   000   000   000    -    1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   039   074   000    -    39 (Min/Max 15/74)
-194 Temperature_Celsius     -O---K   039   074   000    -    39 (Min/Max 15/74)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/180085772
-196 Reallocated_Event_Count PO--CK   099   099   003    -    60
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/180085772
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/180085772
+189 Airflow_Temperature_Cel ------   034   074   000    -    34 (Min/Max 15/74)
+194 Temperature_Celsius     -O---K   034   074   000    -    34 (Min/Max 15/74)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/130293605
+196 Reallocated_Event_Count PO--CK   099   099   003    -    80
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/130293605
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/130293605
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           PO--C-   065   065   010    -    0
-233 SandForce_Internal      ------   000   000   000    -    176138
-234 SandForce_Internal      -O--CK   000   000   000    -    68378
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    68378
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    44128
+231 SSD_Life_Left           PO--C-   060   060   010    -    0
+233 SandForce_Internal      ------   000   000   000    -    197570
+234 SandForce_Internal      -O--CK   000   000   000    -    83540
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    83540
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    53955
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -107,8 +107,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     32/43 Celsius
+Current Temperature:                    34 Celsius
+Power Cycle Min/Max Temperature:     32/45 Celsius
 Lifetime    Min/Max Temperature:     15/74 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -117,7 +117,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    0 (409)
+Temperature History Size (Index):    0 (105)
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -127,8 +127,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           18  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           38  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           36  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -58,17 +58,17 @@ SCT capabilities: 	       (0x703d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    16
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    30
   3 Spin_Up_Time            POS--K   187   183   021    -    7616
   4 Start_Stop_Count        -O--CK   100   100   000    -    24
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   030   030   000    -    51581
+  9 Power_On_Hours          -O--CK   025   025   000    -    55205
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    24
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    22
-193 Load_Cycle_Count        -O--CK   182   182   000    -    56900
+193 Load_Cycle_Count        -O--CK   181   181   000    -    57593
 194 Temperature_Celsius     -O---K   123   110   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (338)
+Temperature History Size (Index):    478 (131)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -148,17 +148,17 @@ SCT Error Recovery Control:
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x0002  2           11  R_ERR response for data FIS
+0x0002  2           16  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2           11  R_ERR response for host-to-device data FIS
-0x0005  2            1  R_ERR response for non-data FIS
-0x0006  2            1  R_ERR response for device-to-host non-data FIS
+0x0004  2           16  R_ERR response for host-to-device data FIS
+0x0005  2            7  R_ERR response for non-data FIS
+0x0006  2            7  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           30  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           31  Device-to-host register FISes sent due to a COMRESET
-0x000b  2           11  CRC errors within host-to-device FIS
-0x000f  2           11  R_ERR response for host-to-device data FIS, CRC
+0x0009  2           59  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           60  Device-to-host register FISes sent due to a COMRESET
+0x000b  2           16  CRC errors within host-to-device FIS
+0x000f  2           16  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4     38881062  Vendor specific
+0x8000  4     51927516  Vendor specific
 

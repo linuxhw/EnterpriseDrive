@@ -61,9 +61,9 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11219
+  9 Power_On_Hours          -O--CK   100   100   000    -    14656
  12 Power_Cycle_Count       -O--CK   100   100   000    -    23
- 13 Read_Soft_Error_Rate    -OSRC-   080   079   000    -    281474976710655
+ 13 Read_Soft_Error_Rate    -OSRC-   079   079   000    -    281474976710655
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    19
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
@@ -71,23 +71,23 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O-RCK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   000    -    24
+194 Temperature_Celsius     -O---K   100   100   000    -    21
 195 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2443 (98 3626)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2409 (118 8201)
 202 End_of_Life             POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    1767434
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    901
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    60
-228 Workload_Minutes        -O--CK   100   100   000    -    673054
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    2281731
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    1126
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    61
+228 Workload_Minutes        -O--CK   100   100   000    -    879226
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    1767434
+233 Total_LBAs_Written      -O--CK   100   100   000    -    2281731
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    1767434
-242 Total_LBAs_Read         -O--CK   100   100   000    -    2778874
-245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
+241 Total_LBAs_Written      -O--CK   100   100   000    -    2281731
+242 Total_LBAs_Read         -O--CK   100   100   000    -    3711187
+245 Percent_Life_Remaining  -O--CK   099   099   000    -    99
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
+Current Temperature:                    21 Celsius
 Power Cycle Min/Max Temperature:     17/29 Celsius
 Lifetime    Min/Max Temperature:     11/39 Celsius
 Specified Max Operating Temperature:    75 Celsius
@@ -146,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/75 Celsius
 Min/Max Temperature Limit:            0/75 Celsius
-Temperature History Size (Index):    478 (210)
+Temperature History Size (Index):    478 (368)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -156,18 +156,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              23  ---  Lifetime Power-On Resets
-0x01  0x018  6    115830572196  ---  Logical Sectors Written
-0x01  0x020  6       585553014  ---  Number of Write Commands
-0x01  0x028  6    182116330969  ---  Logical Sectors Read
-0x01  0x030  6       858522791  ---  Number of Read Commands
-0x01  0x038  6      1737281191  ---  Date and Time TimeStamp
+0x01  0x018  6    149535565628  ---  Logical Sectors Written
+0x01  0x020  6       902605334  ---  Number of Write Commands
+0x01  0x028  6    243216411905  ---  Logical Sectors Read
+0x01  0x030  6      1193886320  ---  Number of Read Commands
+0x01  0x038  6      1222678880  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  ---  Current Temperature
-0x05  0x010  1              22  ---  Average Short Term Temperature
-0x05  0x018  1              22  ---  Average Long Term Temperature
+0x05  0x008  1              21  ---  Current Temperature
+0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x018  1              21  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x030  1              26  ---  Highest Average Short Term Temperature
@@ -183,7 +183,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4              48  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

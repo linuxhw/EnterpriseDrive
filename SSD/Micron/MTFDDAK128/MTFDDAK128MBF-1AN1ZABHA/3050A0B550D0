@@ -58,12 +58,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11316
+  9 Power_On_Hours          -O--CK   100   100   000    -    12939
  11 Unknown_SSD_Attribute   -O---K   100   100   000    -    16
  12 Power_Cycle_Count       -O--CK   100   100   000    -    17
 171 Unknown_Attribute       -O---K   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   091   091   010    -    285
+173 Unknown_Attribute       PO--CK   088   088   010    -    376
 174 Unknown_Attribute       -O--CK   100   100   000    -    16
 181 Program_Fail_Cnt_Total  -O---K   100   100   000    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    46
@@ -135,7 +135,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     29/35 Celsius
+Power Cycle Min/Max Temperature:     29/36 Celsius
 Lifetime    Min/Max Temperature:     19/36 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -145,17 +145,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (357)
+Temperature History Size (Index):    478 (152)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              17  ---  Lifetime Power-On Resets
-0x01  0x010  4           11316  ---  Power-on Hours
-0x01  0x018  6      1236441131  ---  Logical Sectors Written
-0x01  0x020  6        74709556  ---  Number of Write Commands
-0x01  0x028  6         1792071  ---  Logical Sectors Read
-0x01  0x030  6           15331  ---  Number of Read Commands
+0x01  0x010  4           12939  ---  Power-on Hours
+0x01  0x018  6      1593316595  ---  Logical Sectors Written
+0x01  0x020  6        95675365  ---  Number of Write Commands
+0x01  0x028  6         1802151  ---  Logical Sectors Read
+0x01  0x030  6           16521  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              41  ---  Resets Between Cmd Acceptance and Completion
@@ -178,7 +178,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4              49  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              12  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

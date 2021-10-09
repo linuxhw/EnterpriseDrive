@@ -1,8 +1,8 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1062...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     Micron 5100 Pro / 5200 SSDs
+Model Family:     Micron 5100 Pro / 5200 / 5300 SSDs
 Device Model:     Micron_5100_MTFDDAK1T9TBY
 Serial Number:    --
 LU WWN Device Id: 5 00a075 ...
@@ -61,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    26980
+  9 Power_On_Hours          -O--CK   100   100   001    -    30531
  12 Power_Cycle_Count       -O--CK   100   100   001    -    41
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   098   098   000    -    128
+173 Avg_Block-Erase_Count   -O--CK   098   098   000    -    167
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    38
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   098   098   001    -    2
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    249520445375
-247 Host_Program_Page_Count -O--CK   100   100   000    -    7834749874
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    11007249639
+246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    301232694335
+247 Host_Program_Page_Count -O--CK   100   100   000    -    9449804633
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    15105568979
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    13363
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -162,18 +162,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (200)
+Temperature History Size (Index):    478 (369)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              41  ---  Lifetime Power-On Resets
-0x01  0x010  4           26980  ---  Power-on Hours
-0x01  0x018  6    249520445375  ---  Logical Sectors Written
-0x01  0x020  6      6068594138  ---  Number of Write Commands
-0x01  0x028  6    608333258392  ---  Logical Sectors Read
-0x01  0x030  6      3818921783  ---  Number of Read Commands
-0x01  0x038  6     97131540000  ---  Date and Time TimeStamp
+0x01  0x010  4           30531  ---  Power-on Hours
+0x01  0x018  6    301232694567  ---  Logical Sectors Written
+0x01  0x020  6      7634301910  ---  Number of Write Commands
+0x01  0x028  6    717737766080  ---  Logical Sectors Read
+0x01  0x030  6      4995660860  ---  Number of Read Commands
+0x01  0x038  6    109911900000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               9  ---  Resets Between Cmd Acceptance and Completion

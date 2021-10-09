@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,24 +59,24 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   081   063   044    -    150921026
-  3 Spin_Up_Time            PO----   093   093   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    6
+  1 Raw_Read_Error_Rate     POSR--   080   063   044    -    113654241
+  3 Spin_Up_Time            PO----   092   092   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    7
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   091   060   030    -    5708217034
-  9 Power_On_Hours          -O--CK   049   049   000    -    44880
+  7 Seek_Error_Rate         POSR--   091   060   030    -    5783045117
+  9 Power_On_Hours          -O--CK   045   045   000    -    48431
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    6
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    7
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   061   050   045    -    39 (Min/Max 19/41)
-191 G-Sense_Error_Rate      -O--CK   067   067   000    -    67172
+190 Airflow_Temperature_Cel -O---K   061   050   045    -    39 (Min/Max 21/41)
+191 G-Sense_Error_Rate      -O--CK   064   064   000    -    72148
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    0
-193 Load_Cycle_Count        -O--CK   099   099   000    -    2885
+193 Load_Cycle_Count        -O--CK   099   099   000    -    3384
 194 Temperature_Celsius     -O---K   039   050   000    -    39 (0 19 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   067   041   000    -    150921026
+195 Hardware_ECC_Recovered  -O-RC-   069   041   000    -    113654241
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -143,16 +143,16 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
 Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     19/40 Celsius
+Power Cycle Min/Max Temperature:     21/40 Celsius
 Lifetime    Min/Max Temperature:     19/48 Celsius
-Under/Over Temperature Limit Count:   0/8490
+Under/Over Temperature Limit Count:   0/1244
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (88)
+Temperature History Size (Index):    128 (106)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -161,17 +161,17 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4               6  ---  Lifetime Power-On Resets
-0x01  0x010  4           44880  ---  Power-on Hours
-0x01  0x018  6    506362630808  ---  Logical Sectors Written
-0x01  0x020  6      1323805947  ---  Number of Write Commands
-0x01  0x028  6   7307272755774  ---  Logical Sectors Read
-0x01  0x030  6      2119327718  ---  Number of Read Commands
+0x01  0x008  4               7  ---  Lifetime Power-On Resets
+0x01  0x010  4           48431  ---  Power-on Hours
+0x01  0x018  6    549333844992  ---  Logical Sectors Written
+0x01  0x020  6      1388940825  ---  Number of Write Commands
+0x01  0x028  6   7410077086684  ---  Logical Sectors Read
+0x01  0x030  6      2239213076  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           44611  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4137  ---  Head Flying Hours
-0x03  0x018  4            2885  ---  Head Load Events
+0x03  0x008  4           48162  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            4606  ---  Head Flying Hours
+0x03  0x018  4            3384  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -181,12 +181,12 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              39  N--  Current Temperature
 0x05  0x010  1              39  N--  Average Short Term Temperature
-0x05  0x018  1              37  N--  Average Long Term Temperature
+0x05  0x018  1              38  N--  Average Long Term Temperature
 0x05  0x020  1              50  N--  Highest Temperature
 0x05  0x028  1              19  N--  Lowest Temperature
 0x05  0x030  1              39  N--  Highest Average Short Term Temperature
 0x05  0x038  1              10  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              37  N--  Highest Average Long Term Temperature
+0x05  0x040  1              39  N--  Highest Average Long Term Temperature
 0x05  0x048  1               0  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              55  ---  Specified Maximum Operating Temperature

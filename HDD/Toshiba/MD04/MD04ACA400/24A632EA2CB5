@@ -62,22 +62,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   2 Throughput_Performance  P-S---   100   100   050    -    0
   3 Spin_Up_Time            POS--K   100   100   001    -    7059
   4 Start_Stop_Count        -O--CK   100   100   000    -    42
-  5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    8
+  5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    16
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   064   064   000    -    14735
+  9 Power_On_Hours          -O--CK   055   055   000    -    18025
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    42
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    13
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    31
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    30
 193 Load_Cycle_Count        -O--CK   100   100   000    -    232
-194 Temperature_Celsius     -O---K   100   100   000    -    37 (Min/Max 21/44)
-196 Reallocated_Event_Count -O--CK   100   100   000    -    1
+194 Temperature_Celsius     -O---K   100   100   000    -    36 (Min/Max 21/49)
+196 Reallocated_Event_Count -O--CK   100   100   000    -    2
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   064   064   000    -    14658
+222 Loaded_Hours            -O--CK   056   056   000    -    17948
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    559
@@ -111,29 +111,60 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (64 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 14961 hours (623 days + 9 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 80 00 01 8a 09 f4 20 40 00  Error: WP at LBA = 0x18a09f420 = 6610875424
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 a0 00 f0 00 01 2d ee 02 a0 40 00 44d+ ...          WRITE FPDMA QUEUED
+  61 00 08 00 e8 00 01 5d 57 47 20 40 00 44d+ ...          WRITE FPDMA QUEUED
+  60 04 00 00 e0 00 01 8a 0a 24 00 40 00 44d+ ...          READ FPDMA QUEUED
+  60 04 00 00 d8 00 01 8a 0a 00 00 40 00 44d+ ...          READ FPDMA QUEUED
+  60 01 98 00 d0 00 00 9d 79 1c 00 40 00 44d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     14725         -
-# 2  Short offline       Completed without error       00%     14701         -
-# 3  Extended offline    Completed without error       00%     14688         -
-# 4  Short offline       Completed without error       00%     14653         -
-# 5  Short offline       Completed without error       00%     14629         -
-# 6  Short offline       Completed without error       00%     14605         -
-# 7  Short offline       Completed without error       00%     14581         -
-# 8  Short offline       Completed without error       00%     14557         -
-# 9  Short offline       Completed without error       00%     14533         -
-#10  Extended offline    Completed without error       00%     14518         -
-#11  Short offline       Completed without error       00%     14485         -
-#12  Short offline       Completed without error       00%     14461         -
-#13  Short offline       Completed without error       00%     14437         -
-#14  Short offline       Completed without error       00%     14413         -
-#15  Short offline       Completed without error       00%     14389         -
-#16  Short offline       Completed without error       00%     14365         -
-#17  Extended offline    Completed without error       00%     14352         -
-#18  Short offline       Completed without error       00%     14317         -
-#19  Short offline       Completed without error       00%     14293         -
+# 1  Short offline       Completed without error       00%     18013         -
+# 2  Short offline       Completed without error       00%     17989         -
+# 3  Short offline       Completed without error       00%     17965         -
+# 4  Short offline       Completed without error       00%     17941         -
+# 5  Short offline       Completed without error       00%     17917         -
+# 6  Short offline       Completed without error       00%     17893         -
+# 7  Extended offline    Completed without error       00%     17880         -
+# 8  Short offline       Completed without error       00%     17845         -
+# 9  Short offline       Completed without error       00%     17821         -
+#10  Short offline       Completed without error       00%     17797         -
+#11  Short offline       Completed without error       00%     17773         -
+#12  Short offline       Completed without error       00%     17749         -
+#13  Short offline       Completed without error       00%     17725         -
+#14  Extended offline    Completed without error       00%     17716         -
+#15  Short offline       Completed without error       00%     17677         -
+#16  Short offline       Completed without error       00%     17653         -
+#17  Short offline       Completed without error       00%     17629         -
+#18  Short offline       Completed without error       00%     17605         -
+#19  Short offline       Completed without error       00%     17581         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -149,9 +180,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     34/44 Celsius
-Lifetime    Min/Max Temperature:     21/44 Celsius
+Current Temperature:                    36 Celsius
+Power Cycle Min/Max Temperature:     34/49 Celsius
+Lifetime    Min/Max Temperature:     21/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -159,7 +190,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (440)
+Temperature History Size (Index):    478 (418)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -169,30 +200,30 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              42  ---  Lifetime Power-On Resets
-0x01  0x010  4           14735  ---  Power-on Hours
-0x01  0x018  6     54856184733  ---  Logical Sectors Written
-0x01  0x020  6       579831794  ---  Number of Write Commands
-0x01  0x028  6    176079136186  ---  Logical Sectors Read
-0x01  0x030  6       421353546  ---  Number of Read Commands
+0x01  0x010  4           18025  ---  Power-on Hours
+0x01  0x018  6     66552146045  ---  Logical Sectors Written
+0x01  0x020  6       826833273  ---  Number of Write Commands
+0x01  0x028  6    315793992770  ---  Logical Sectors Read
+0x01  0x030  6       668768617  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4              13  ---  Overlimit Shock Events
+0x02  0x010  4              31  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           14735  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           14658  ---  Head Flying Hours
+0x03  0x008  4           18025  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           17948  ---  Head Flying Hours
 0x03  0x018  4             232  ---  Head Load Events
-0x03  0x020  4               8  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            1065  ---  Read Recovery Attempts
+0x03  0x020  4              16  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4            2183  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
+0x05  0x008  1              36  ---  Current Temperature
 0x05  0x010  1              36  N--  Average Short Term Temperature
-0x05  0x018  1              35  N--  Average Long Term Temperature
-0x05  0x020  1              44  ---  Highest Temperature
+0x05  0x018  1              36  N--  Average Long Term Temperature
+0x05  0x020  1              49  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
-0x05  0x030  1              40  N--  Highest Average Short Term Temperature
+0x05  0x030  1              44  N--  Highest Average Short Term Temperature
 0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
 0x05  0x040  1              38  N--  Highest Average Long Term Temperature
 0x05  0x048  1              29  N--  Lowest Average Long Term Temperature

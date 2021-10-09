@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -60,7 +60,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    1
-  9 Power_On_Hours_and_Msec -O--CK   058   058   000    -    37426h+34m+16.430s
+  9 Power_On_Hours_and_Msec -O--CK   053   053   000    -    41175h+27m+02.400s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    39
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
@@ -69,19 +69,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O-R--   100   100   000    -    0
 182 Erase_Fail_Count        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   022   034   000    -    22 (Min/Max 15/34)
-194 Temperature_Celsius     -O---K   022   034   000    -    22 (Min/Max 15/34)
+189 Airflow_Temperature_Cel ------   025   034   000    -    25 (Min/Max 15/34)
+194 Temperature_Celsius     -O---K   025   034   000    -    25 (Min/Max 15/34)
 195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/0
 196 Reallocated_Event_Count PO--CK   100   100   003    -    1
 201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
 204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           ------   094   094   011    -    47244640257
-233 SandForce_Internal      -O--CK   000   000   000    -    30973
-234 SandForce_Internal      -O--CK   000   000   000    -    17529
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    17529
+231 SSD_Life_Left           ------   095   095   011    -    47244640257
+233 SandForce_Internal      -O--CK   000   000   000    -    34227
+234 SandForce_Internal      -O--CK   000   000   000    -    19049
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    19049
 242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    18233
-244 Unknown_Attribute       ------   098   098   010    -    4915275
+244 Unknown_Attribute       ------   098   098   010    -    5439571
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -121,7 +121,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    22 Celsius
+Current Temperature:                    25 Celsius
 Power Cycle Min/Max Temperature:     15/34 Celsius
 Lifetime    Min/Max Temperature:     15/79 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -131,22 +131,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (329)
+Temperature History Size (Index):    478 (456)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              39  ---  Lifetime Power-On Resets
-0x01  0x010  4           37426  ---  Power-on Hours
-0x01  0x018  6     36762452748  ---  Logical Sectors Written
-0x01  0x028  6     38237776086  ---  Logical Sectors Read
+0x01  0x010  4           41175  ---  Power-on Hours
+0x01  0x018  6     39950039916  ---  Logical Sectors Written
+0x01  0x028  6     38238457151  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              22  ---  Current Temperature
-0x05  0x010  1              22  ---  Average Short Term Temperature
-0x05  0x018  1              22  ---  Average Long Term Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x018  1              24  ---  Average Long Term Temperature
 0x05  0x020  1              69  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              33  ---  Highest Average Short Term Temperature

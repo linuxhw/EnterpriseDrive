@@ -64,14 +64,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   097   097   000    -    25095
+  9 Power_On_Hours          -O--C-   097   097   000    -    27547
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    14
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    957
-193 Load_Cycle_Count        -O--C-   100   100   000    -    957
-194 Temperature_Celsius     -O----   122   122   000    -    49 (Min/Max 25/52)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1048
+193 Load_Cycle_Count        -O--C-   100   100   000    -    1048
+194 Temperature_Celsius     -O----   133   133   000    -    45 (Min/Max 25/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O---K   100   100   000    -    64
+197 Current_Pending_Sector  -O---K   100   100   000    -    104
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -129,7 +129,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    49 Celsius
+Current Temperature:                    45 Celsius
 Power Cycle Min/Max Temperature:     31/51 Celsius
 Lifetime    Min/Max Temperature:     25/52 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (93)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,26 +149,26 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              14  ---  Lifetime Power-On Resets
-0x01  0x010  4           25095  ---  Power-on Hours
-0x01  0x018  6    494746086565  ---  Logical Sectors Written
-0x01  0x020  6      9115386099  ---  Number of Write Commands
-0x01  0x028  6      7455010811  ---  Logical Sectors Read
-0x01  0x030  6       192243736  ---  Number of Read Commands
-0x01  0x038  6     90342588250  ---  Date and Time TimeStamp
+0x01  0x010  4           27547  ---  Power-on Hours
+0x01  0x018  6    544173471333  ---  Logical Sectors Written
+0x01  0x020  6     10001245076  ---  Number of Write Commands
+0x01  0x028  6      7545397195  ---  Logical Sectors Read
+0x01  0x030  6       198030313  ---  Number of Read Commands
+0x01  0x038  6     99169869100  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           21956  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           21956  ---  Head Flying Hours
-0x03  0x018  4             957  ---  Head Load Events
+0x03  0x008  4           24154  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           24154  ---  Head Flying Hours
+0x03  0x018  4            1048  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            5370  ---  Read Recovery Attempts
+0x03  0x028  4            8112  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              49  ---  Current Temperature
-0x05  0x010  1              47  N--  Average Short Term Temperature
-0x05  0x018  1              46  N--  Average Long Term Temperature
+0x05  0x008  1              45  ---  Current Temperature
+0x05  0x010  1              45  N--  Average Short Term Temperature
+0x05  0x018  1              45  N--  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x030  1              50  N--  Highest Average Short Term Temperature
@@ -190,37 +190,37 @@ Page  Offset Size        Value Flags Description
 
 Pending Defects log (GP Log 0x0c)
 Index                LBA    Hours
-    0        10848245976        -
-    1        10848245977        -
-    2        10848245978        -
-    3        10848245979        -
-    4        10848245980        -
-    5        10848245981        -
-    6        10848245982        -
-    7        10848245983        -
-    8        10848245984        -
-    9        10848245985        -
-   10        10848245986        -
-   11        10848245987        -
-   12        10848245988        -
-   13        10848245989        -
-   14        10848245990        -
-   15        10848245991        -
-   16        10848248344        -
-   17        10848248345        -
-   18        10848248346        -
-   19        10848248347        -
-   20        10848248348        -
-   21        10848248349        -
-   22        10848248350        -
-   23        10848248351        -
-   24        10848899088        -
-   25        10848899089        -
-   26        10848899090        -
-   27        10848899091        -
-   28        10848899092        -
-   29        10848899093        -
-   30        10848899094        -
+    0         2755107712        -
+    1         2755107713        -
+    2         2755107714        -
+    3         2755107715        -
+    4         2755107716        -
+    5         2755107717        -
+    6         2755107718        -
+    7         2755107719        -
+    8         4705037232        -
+    9         4705037233        -
+   10         4705037234        -
+   11         4705037235        -
+   12         4705037236        -
+   13         4705037237        -
+   14         4705037238        -
+   15         4705037239        -
+   16        10848245976        -
+   17        10848245977        -
+   18        10848245978        -
+   19        10848245979        -
+   20        10848245980        -
+   21        10848245981        -
+   22        10848245982        -
+   23        10848245983        -
+   24        10848245984        -
+   25        10848245985        -
+   26        10848245986        -
+   27        10848245987        -
+   28        10848245988        -
+   29        10848245989        -
+   30        10848245990        -
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

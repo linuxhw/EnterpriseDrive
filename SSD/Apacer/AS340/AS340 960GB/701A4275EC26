@@ -59,22 +59,22 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    2
-  9 Power_On_Hours          ------   100   100   000    -    5702
- 12 Power_Cycle_Count       ------   100   100   000    -    4
+  9 Power_On_Hours          ------   100   100   000    -    1143
+ 12 Power_Cycle_Count       ------   100   100   000    -    5
 160 Unknown_Attribute       ------   100   100   000    -    0
 161 Unknown_Attribute       ------   100   100   000    -    329
 163 Max_Erase_Count         ------   100   100   000    -    19
-164 Average_Erase_Count     ------   100   100   000    -    53851
-165 Unknown_Attribute       ------   100   100   000    -    39
+164 Average_Erase_Count     ------   100   100   000    -    156964
+165 Unknown_Attribute       ------   100   100   000    -    93
 166 Later_Bad_Block_Count   ------   100   100   000    -    1
-167 SSD_Protect_Mode        ------   100   100   000    -    15
+167 SSD_Protect_Mode        ------   100   100   000    -    43
 168 SATA_PHY_Error_Count    ------   100   100   000    -    1000
-169 Unknown_Attribute       ------   100   100   000    -    99
-175 Bad_Cluster_Table_Count ------   100   100   000    -    1
+169 Unknown_Attribute       ------   100   100   000    -    96
+175 Bad_Cluster_Table_Count ------   100   100   000    -    0
 176 Erase_Fail_Count_Chip   ------   100   100   000    -    0
-177 Wear_Leveling_Count     ------   100   100   050    -    328
+177 Wear_Leveling_Count     ------   100   100   050    -    77
 178 Used_Rsvd_Blk_Cnt_Chip  ------   100   100   000    -    0
-181 Program_Fail_Cnt_Total  ------   100   100   000    -    1
+181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 192 Unexpect_Power_Loss_Ct  ------   100   100   000    -    1
 194 Temperature_Celsius     ------   100   100   000    -    40
@@ -84,9 +84,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Total_LBAs_Written      ------   100   100   000    -    272077
-242 Total_LBAs_Read         ------   100   100   000    -    239332
-245 Unknown_Attribute       ------   100   100   000    -    430808
+241 Total_LBAs_Written      ------   100   100   000    -    189566
+242 Total_LBAs_Read         ------   100   100   000    -    205320
+245 Unknown_Attribute       ------   100   100   000    -    1255712
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,7 +136,7 @@ SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                     0 Celsius
 Power Cycle Min/Max Temperature:     40/40 Celsius
-Lifetime    Min/Max Temperature:      0/40 Celsius
+Lifetime    Min/Max Temperature:     40/40 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -144,25 +144,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (126)
+Temperature History Size (Index):    128 (106)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x010  4            5702  ---  Power-on Hours
-0x01  0x018  6       650972573  ---  Logical Sectors Written
-0x01  0x020  6       217524494  ---  Number of Write Commands
-0x01  0x028  6      2799965796  ---  Logical Sectors Read
-0x01  0x030  6       119670110  ---  Number of Read Commands
+0x01  0x008  4               5  ---  Lifetime Power-On Resets
+0x01  0x010  4            1143  ---  Power-on Hours
+0x01  0x018  6      3833520630  ---  Logical Sectors Written
+0x01  0x020  6       145647062  ---  Number of Write Commands
+0x01  0x028  6       571010481  ---  Logical Sectors Read
+0x01  0x030  6       141539900  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              69  ---  Number of Hardware Resets
-0x06  0x018  4               1  ---  Number of Interface CRC Errors
+0x06  0x008  4              13  ---  Number of Hardware Resets
+0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -178,7 +178,7 @@ ID      Size     Value  Description
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
 0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           32  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

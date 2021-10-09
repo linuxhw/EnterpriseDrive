@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    5623
+  9 Power_On_Hours          -O--CK   098   098   000    -    9036
  12 Power_Cycle_Count       -O--CK   099   099   000    -    5
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    3
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    22
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    2862
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -75,14 +75,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    2
-241 Total_LBAs_Written      -O--CK   099   099   000    -    6551534806
-242 Total_LBAs_Read         -O--CK   099   099   000    -    12344552856
+241 Total_LBAs_Written      -O--CK   099   099   000    -    40140646335
+242 Total_LBAs_Read         -O--CK   099   099   000    -    48611394583
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    6770944448
+251 NAND_Writes             -O--CK   100   100   000    -    44429044160
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -133,7 +133,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     26/37 Celsius
+Power Cycle Min/Max Temperature:     25/37 Celsius
 Lifetime    Min/Max Temperature:     21/37 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -143,7 +143,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (79)
+Temperature History Size (Index):    128 (80)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -153,12 +153,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               5  ---  Lifetime Power-On Resets
-0x01  0x010  4            5623  ---  Power-on Hours
-0x01  0x018  6      6551534806  ---  Logical Sectors Written
-0x01  0x020  6       116187874  ---  Number of Write Commands
-0x01  0x028  6     12344552856  ---  Logical Sectors Read
-0x01  0x030  6        32684189  ---  Number of Read Commands
-0x01  0x038  6          201000  ---  Date and Time TimeStamp
+0x01  0x010  4            9036  ---  Power-on Hours
+0x01  0x018  6     40140646335  ---  Logical Sectors Written
+0x01  0x020  6       706498903  ---  Number of Write Commands
+0x01  0x028  6     48611394583  ---  Logical Sectors Read
+0x01  0x030  6       127736993  ---  Number of Read Commands
+0x01  0x038  6         2400000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion

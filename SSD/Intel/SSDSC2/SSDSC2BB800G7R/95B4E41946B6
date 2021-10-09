@@ -62,7 +62,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    35264
+  9 Power_On_Hours          -O--CK   100   100   000    -    38662
  12 Power_Cycle_Count       -O--CK   100   100   000    -    21
  13 Read_Soft_Error_Rate    -OSRC-   130   130   000    -    4294967295
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
@@ -77,17 +77,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    14370 (233 1962)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    14310 (253 4256)
 202 End_of_Life             POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    477521
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    549976
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    102400
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    3811182690
+228 Workload_Minutes        -O--CK   100   100   000    -    3811386580
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    477521
+233 Total_LBAs_Written      -O--CK   100   100   000    -    549976
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    477521
-242 Total_LBAs_Read         -O--CK   100   100   000    -    258665
+241 Total_LBAs_Written      -O--CK   100   100   000    -    549976
+242 Total_LBAs_Read         -O--CK   100   100   000    -    292877
 245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -158,7 +158,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (161)
+Temperature History Size (Index):    478 (414)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -168,16 +168,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x018  6     31294850950  ---  Logical Sectors Written
-0x01  0x020  6       842814065  ---  Number of Write Commands
-0x01  0x028  6     16951884560  ---  Logical Sectors Read
-0x01  0x030  6       810526040  ---  Number of Read Commands
+0x01  0x018  6     36043275881  ---  Logical Sectors Written
+0x01  0x020  6      1020187997  ---  Number of Write Commands
+0x01  0x028  6     19194013198  ---  Logical Sectors Read
+0x01  0x030  6      1049470361  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              21  ---  Current Temperature
-0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x010  1              21  ---  Average Short Term Temperature
 0x05  0x018  1              20  ---  Average Long Term Temperature
 0x05  0x020  1              43  ---  Highest Temperature
 0x05  0x028  1              14  ---  Lowest Temperature

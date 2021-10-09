@@ -60,31 +60,31 @@ SMART Attributes Data Structure revision number: 16443
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    44146
+  9 Power_On_Hours          -O--CK   100   100   000    -    47603
  12 Power_Cycle_Count       -O--CK   100   100   000    -    24
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    23
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    8910 (261 3460)
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    8850 (281 9281)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Temperature_Case        -O---K   074   071   000    -    26 (Min/Max 20/30)
+190 Temperature_Case        -O---K   076   070   000    -    24 (Min/Max 20/31)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    23
-194 Temperature_Internal    -O---K   100   100   000    -    26
+194 Temperature_Internal    -O---K   100   100   000    -    24
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    21743309
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    23797859
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    65535
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   074   074   000    -    0
+233 Media_Wearout_Indicator -O--CK   071   071   000    -    0
 234 Thermal_Throttle        -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    21743309
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    29300531
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    43354883
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    23797859
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    30872323
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    47550905
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,9 +137,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     20/30 Celsius
-Lifetime    Min/Max Temperature:     20/30 Celsius
+Current Temperature:                    24 Celsius
+Power Cycle Min/Max Temperature:     20/31 Celsius
+Lifetime    Min/Max Temperature:     20/31 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -151,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (453)
+Temperature History Size (Index):    478 (422)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -161,20 +161,20 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              24  ---  Lifetime Power-On Resets
-0x01  0x018  6   1424969541985  ---  Logical Sectors Written
-0x01  0x020  6      4598253035  ---  Number of Write Commands
-0x01  0x028  6   1920239658669  ---  Logical Sectors Read
-0x01  0x030  6      3459211590  ---  Number of Read Commands
+0x01  0x018  6   1559616493633  ---  Logical Sectors Written
+0x01  0x020  6      5332657548  ---  Number of Write Commands
+0x01  0x028  6   2023248594509  ---  Logical Sectors Read
+0x01  0x030  6      4251932577  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              24  ---  Average Long Term Temperature
-0x05  0x020  1              29  ---  Highest Temperature
+0x05  0x008  1              24  ---  Current Temperature
+0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x018  1              23  ---  Average Long Term Temperature
+0x05  0x020  1              30  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
-0x05  0x030  1              27  ---  Highest Average Short Term Temperature
+0x05  0x030  1              28  ---  Highest Average Short Term Temperature
 0x05  0x038  1              21  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              26  ---  Highest Average Long Term Temperature
 0x05  0x048  1              22  ---  Lowest Average Long Term Temperature
@@ -187,7 +187,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4              51  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              26  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              29  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

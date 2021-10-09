@@ -60,12 +60,12 @@ SCT capabilities: 	       (0x10bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--+  079   063   044    -    94600714
+  1 Raw_Read_Error_Rate     POSR--+  073   063   044    -    24379475
   3 Spin_Up_Time            PO----+  096   096   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    41
   5 Reallocated_Sector_Ct   PO--CK+  100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   090   060   030    -    1326563449
-  9 Power_On_Hours          -O--CK   056   056   000    -    38918
+  7 Seek_Error_Rate         POSR--   091   060   030    -    1449691370
+  9 Power_On_Hours          -O--CK   052   052   000    -    42330
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    41
 184 End-to-End_Error        -O--CK   100   100   099    -    0
@@ -75,15 +75,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O---K   069   056   045    -    31 (Min/Max 27/36)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    40
-193 Load_Cycle_Count        -O--CK   100   100   000    -    1660
+193 Load_Cycle_Count        -O--CK   100   100   000    -    1803
 194 Temperature_Celsius     -O---K   031   044   000    -    31 (0 15 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   115   099   000    -    94600714
+195 Hardware_ECC_Recovered  -O-RC-   109   099   000    -    24379475
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    38874 (60 225 0)
-241 Total_LBAs_Written      ------   100   253   000    -    1357281180
-242 Total_LBAs_Read         ------   100   253   000    -    2714375843
+240 Head_Flying_Hours       ------   100   253   000    -    42286 (191 240 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3788510940
+242 Total_LBAs_Read         ------   100   253   000    -    1535784619
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -148,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (64)
+Temperature History Size (Index):    128 (107)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -156,7 +156,7 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            8  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

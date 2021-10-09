@@ -52,36 +52,36 @@ recommended polling time: 	 (  10) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
-  5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    1
-  9 Power_On_Hours          -O--CK   100   100   050    -    10551
+  1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    3
+  5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    6
+  9 Power_On_Hours          -O--CK   100   100   050    -    13100
  12 Power_Cycle_Count       -O--CK   100   100   050    -    30
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
-161 Unknown_Attribute       PO--CK   100   100   050    -    97
+161 Unknown_Attribute       PO--CK   100   100   050    -    85
 163 Unknown_Attribute       -O--CK   100   100   050    -    10
-164 Unknown_Attribute       -O--CK   100   100   050    -    8125
-165 Unknown_Attribute       -O--CK   100   100   050    -    25
+164 Unknown_Attribute       -O--CK   100   100   050    -    10261
+165 Unknown_Attribute       -O--CK   100   100   050    -    29
 166 Unknown_Attribute       -O--CK   100   100   050    -    1
-167 Unknown_Attribute       -O--CK   100   100   050    -    16
+167 Unknown_Attribute       -O--CK   100   100   050    -    21
 168 Unknown_Attribute       -O--CK   100   100   050    -    7000
 169 Unknown_Attribute       -O--CK   100   100   050    -    100
 175 Program_Fail_Count_Chip -O--CK   100   100   050    -    0
 176 Erase_Fail_Count_Chip   -O--CK   100   100   050    -    0
 177 Wear_Leveling_Count     -O--CK   100   100   050    -    0
-178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    1
+178 Used_Rsvd_Blk_Cnt_Chip  -O--CK   100   100   050    -    6
 181 Program_Fail_Cnt_Total  -O--CK   100   100   050    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   050    -    30
 194 Temperature_Celsius     -O---K   100   100   050    -    40
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    460653
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    711738
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
-197 Current_Pending_Sector  -O--CK   100   100   050    -    1
+197 Current_Pending_Sector  -O--CK   100   100   050    -    6
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
-232 Available_Reservd_Space -O--CK   100   100   050    -    97
-241 Total_LBAs_Written      ----CK   100   100   050    -    102276
-242 Total_LBAs_Read         ----CK   100   100   050    -    8333
-245 Unknown_Attribute       -O--CK   100   100   050    -    207216
+232 Available_Reservd_Space -O--CK   100   100   050    -    85
+241 Total_LBAs_Written      ----CK   100   100   050    -    126247
+242 Total_LBAs_Read         ----CK   100   100   050    -    14003
+245 Unknown_Attribute       -O--CK   100   100   050    -    279000
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,11 +115,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              30  ---  Lifetime Power-On Resets
-0x01  0x010  4           10551  ---  Power-on Hours
-0x01  0x018  6      2407800873  ---  Logical Sectors Written
-0x01  0x020  6        22069077  ---  Number of Write Commands
-0x01  0x028  6       546121359  ---  Logical Sectors Read
-0x01  0x030  6         6354653  ---  Number of Read Commands
+0x01  0x010  4           13100  ---  Power-on Hours
+0x01  0x018  6      3978769089  ---  Logical Sectors Written
+0x01  0x020  6        38632230  ---  Number of Write Commands
+0x01  0x028  6       917739366  ---  Logical Sectors Read
+0x01  0x030  6        12298024  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -131,5 +131,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           10  Device-to-host register FISes sent due to a COMRESET
 

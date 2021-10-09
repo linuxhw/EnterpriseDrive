@@ -61,33 +61,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    1768
+  9 Power_On_Hours          ------   100   100   000    -    3048
  12 Power_Cycle_Count       ------   100   100   000    -    7
-148 Total_SLC_Erase_Ct      ------   100   100   000    -    1429
-149 Max_SLC_Erase_Ct        ------   100   100   000    -    184
-150 Min_SLC_Erase_Ct        ------   100   100   000    -    142
-151 Average_SLC_Erase_Ct    ------   100   100   000    -    158
+148 Total_SLC_Erase_Ct      ------   100   100   000    -    4327
+149 Max_SLC_Erase_Ct        ------   100   100   000    -    499
+150 Min_SLC_Erase_Ct        ------   100   100   000    -    445
+151 Average_SLC_Erase_Ct    ------   100   100   000    -    480
 159 DRAM_1_Bit_Error_Count  ------   100   100   000    -    0
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    25
-164 Total_Erase_Count       ------   100   100   000    -    149979
-165 Max_Erase_Count         ------   100   100   000    -    735
-166 Min_Erase_Count         ------   100   100   000    -    635
-167 Average_Erase_Count     ------   100   100   000    -    684
-169 Remaining_Lifetime_Perc ------   066   066   000    -    66
-177 Wear_Leveling_Count     ------   100   100   050    -    851
+164 Total_Erase_Count       ------   100   100   000    -    210413
+165 Max_Erase_Count         ------   100   100   000    -    988
+166 Min_Erase_Count         ------   100   100   000    -    893
+167 Average_Erase_Count     ------   100   100   000    -    960
+169 Remaining_Lifetime_Perc ------   052   052   000    -    52
+177 Wear_Leveling_Count     ------   100   100   050    -    1117
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 192 Power-Off_Retract_Count ------   100   100   000    -    0
-194 Temperature_Celsius     ------   055   063   000    -    55
+194 Temperature_Celsius     ------   032   063   000    -    32
 195 Hardware_ECC_Recovered  ------   100   100   000    -    0
 196 Reallocated_Event_Count ------   100   100   016    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   050    -    0
-231 SSD_Life_Left           ------   066   066   000    -    66
+231 SSD_Life_Left           ------   052   052   000    -    52
 232 Available_Reservd_Space ------   100   100   000    -    100
-241 Host_Writes_32MiB       ------   100   100   000    -    469251
-242 Host_Reads_32MiB        ------   100   100   000    -    627257
-245 TLC_Writes_32MiB        ------   100   100   000    -    24296598
+241 Host_Writes_32MiB       ------   100   100   000    -    792484
+242 Host_Reads_32MiB        ------   100   100   000    -    1080107
+245 TLC_Writes_32MiB        ------   100   100   000    -    34086906
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,7 +137,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    55 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     25/63 Celsius
 Lifetime    Min/Max Temperature:     23/63 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -147,41 +147,41 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (41)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               7  ---  Lifetime Power-On Resets
-0x01  0x010  4            1768  ---  Power-on Hours
-0x01  0x018  6       688089890  ---  Logical Sectors Written
-0x01  0x020  6       419101014  ---  Number of Write Commands
-0x01  0x028  6      2453218466  ---  Logical Sectors Read
-0x01  0x030  6       292726901  ---  Number of Read Commands
-0x01  0x038  6      2072859813  ---  Date and Time TimeStamp
+0x01  0x010  4            3048  ---  Power-on Hours
+0x01  0x018  6       396679872  ---  Logical Sectors Written
+0x01  0x020  6       740113790  ---  Number of Write Commands
+0x01  0x028  6      2066441052  ---  Logical Sectors Read
+0x01  0x030  6       524902586  ---  Number of Read Commands
+0x01  0x038  6      2386176317  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              56  ---  Current Temperature
-0x05  0x010  1              44  ---  Average Short Term Temperature
-0x05  0x018  1              44  ---  Average Long Term Temperature
+0x05  0x008  1              32  ---  Current Temperature
+0x05  0x010  1              29  ---  Average Short Term Temperature
+0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              63  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
-0x05  0x030  1              45  ---  Highest Average Short Term Temperature
-0x05  0x038  1              39  ---  Lowest Average Short Term Temperature
+0x05  0x030  1              44  ---  Highest Average Short Term Temperature
+0x05  0x038  1              27  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              53  ---  Highest Average Long Term Temperature
-0x05  0x048  1              39  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              27  ---  Lowest Average Long Term Temperature
 0x05  0x050  4              40  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
-0x05  0x060  4              43  ---  Time in Under-Temperature
+0x05  0x060  4              36  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4              12  ---  Number of Hardware Resets
 0x06  0x010  4               2  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              34  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              48  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

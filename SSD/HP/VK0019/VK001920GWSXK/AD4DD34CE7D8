@@ -21,14 +21,14 @@ Write cache is:   Disabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x00)	Offline data collection activity
-					was never started.
+Offline data collection status:  (0x04)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 3777) seconds.
+data collection: 		( 2717) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 
@@ -58,19 +58,19 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    6834
+  9 Power_On_Hours          -O--CK   100   100   000    -    10259
  11 Unknown_SSD_Attribute   -O--C-   100   100   000    -    3
  12 Power_Cycle_Count       -O--CK   100   100   000    -    4
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   100   100   010    -    2
+173 Unknown_Attribute       PO--CK   100   100   010    -    5
 174 Unknown_Attribute       -O--CK   100   100   000    -    3
 175 Program_Fail_Count_Chip PO--CK   100   100   001    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   100   100   001    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    15
-194 Temperature_Celsius     -O---K   074   065   000    -    26 (Min/Max 15/35)
+194 Temperature_Celsius     -O---K   079   065   000    -    21 (Min/Max 15/35)
 196 Reallocated_Event_Count PO--CK   100   100   001    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
@@ -119,15 +119,16 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%      6545         -
-# 2  Vendor (0xff)       Completed without error       00%      2103         -
-# 3  Vendor (0xff)       Completed without error       00%      1299         -
-# 4  Vendor (0xff)       Completed without error       00%       526         -
+# 1  Vendor (0xff)       Completed without error       00%      9575         -
+# 2  Vendor (0xff)       Completed without error       00%      6545         -
+# 3  Vendor (0xff)       Completed without error       00%      2103         -
+# 4  Vendor (0xff)       Completed without error       00%      1299         -
+# 5  Vendor (0xff)       Completed without error       00%       526         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
-    2        0        0  Completed [00% left] (82-65617)
+    2        0        0  Not_testing
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
@@ -137,8 +138,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        Active (0)
-Current Temperature:                    26 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    21 Celsius
 Power Cycle Min/Max Temperature:     15/35 Celsius
 Lifetime    Min/Max Temperature:     15/35 Celsius
 Specified Max Operating Temperature:    60 Celsius
@@ -149,25 +150,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (426)
+Temperature History Size (Index):    478 (308)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x010  4            6834  ---  Power-on Hours
-0x01  0x018  6     10990052672  ---  Logical Sectors Written
-0x01  0x020  6        86335856  ---  Number of Write Commands
-0x01  0x028  6     65370467859  ---  Logical Sectors Read
-0x01  0x030  6       102143934  ---  Number of Read Commands
-0x01  0x038  6     24605491150  ---  Date and Time TimeStamp
+0x01  0x010  4           10259  ---  Power-on Hours
+0x01  0x018  6     21927761168  ---  Logical Sectors Written
+0x01  0x020  6       240021984  ---  Number of Write Commands
+0x01  0x028  6    100308376347  ---  Logical Sectors Read
+0x01  0x030  6       163675677  ---  Number of Read Commands
+0x01  0x038  6     36932807150  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              15  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              23  ---  Average Long Term Temperature
+0x05  0x008  1              21  ---  Current Temperature
+0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x018  1              20  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              15  ---  Lowest Temperature
 0x05  0x030  1              34  ---  Highest Average Short Term Temperature

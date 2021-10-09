@@ -60,12 +60,12 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   102   099   006    -    2600
+  1 Raw_Read_Error_Rate     POSR--   102   099   006    -    6520
   3 Spin_Up_Time            PO----   100   100   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    3
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   088   060   030    -    780751046
-  9 Power_On_Hours          -O--CK   033   033   000    -    58954
+  7 Seek_Error_Rate         POSR--   078   060   030    -    62277998
+  9 Power_On_Hours          -O--CK   030   030   000    -    61696
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    3
 183 Runtime_Bad_Block       -O--CK   099   099   000    -    1
@@ -73,15 +73,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   072   052   045    -    28 (Min/Max 19/38)
-194 Temperature_Celsius     -O---K   028   048   000    -    28 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   054   010   000    -    2600
+190 Airflow_Temperature_Cel -O---K   073   052   045    -    27 (Min/Max 19/38)
+194 Temperature_Celsius     -O---K   027   048   000    -    27 (0 16 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   057   010   000    -    6520
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    58955h+03m+55.206s
-241 Total_LBAs_Written      ------   100   253   000    -    1091996688
-242 Total_LBAs_Read         ------   100   253   000    -    4038474636
+240 Head_Flying_Hours       ------   100   253   000    -    61696h+45m+00.338s
+241 Total_LBAs_Written      ------   100   253   000    -    1017128561
+242 Total_LBAs_Read         ------   100   253   000    -    1548324855
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,7 +136,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    27 Celsius
 Power Cycle Min/Max Temperature:     19/38 Celsius
 Lifetime    Min/Max Temperature:     16/48 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -146,7 +146,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (43)
+Temperature History Size (Index):    128 (14)
 
 SCT Error Recovery Control:
            Read: Disabled

@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,11 +59,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   097   097   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    43441
-173 Unknown_Attribute       PO--CK   085   085   001    -    0
-175 Program_Fail_Count_Chip PO--CK   100   100   010    -    1061270192797
+  9 Power_On_Hours          -O--CK   100   100   000    -    46282
+173 Unknown_Attribute       PO--CK   084   084   001    -    0
+175 Program_Fail_Count_Chip PO--CK   100   100   010    -    1134227817121
 180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   130   130   039    -    4294967295
-194 Temperature_Celsius     -O---K   100   100   000    -    24
+194 Temperature_Celsius     -O---K   100   100   000    -    23
 196 Reallocated_Event_Count PO--CK   100   100   010    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -117,7 +117,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
+Current Temperature:                    23 Celsius
 Power Cycle Min/Max Temperature:     17/29 Celsius
 Lifetime    Min/Max Temperature:      7/30 Celsius
 Specified Max Operating Temperature:    55 Celsius
@@ -128,7 +128,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/55 Celsius
 Min/Max Temperature Limit:            0/55 Celsius
-Temperature History Size (Index):    478 (179)
+Temperature History Size (Index):    478 (25)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -138,16 +138,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4             167  ---  Lifetime Power-On Resets
-0x01  0x018  6    325478088537  ---  Logical Sectors Written
-0x01  0x020  6      8996798904  ---  Number of Write Commands
-0x01  0x028  6    610840233855  ---  Logical Sectors Read
-0x01  0x030  6     16392374484  ---  Number of Read Commands
+0x01  0x018  6    337114551568  ---  Logical Sectors Written
+0x01  0x020  6      9387654726  ---  Number of Write Commands
+0x01  0x028  6    644885986959  ---  Logical Sectors Read
+0x01  0x030  6     16440948874  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  ---  Current Temperature
-0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x008  1              23  ---  Current Temperature
+0x05  0x010  1              22  ---  Average Short Term Temperature
 0x05  0x018  1              22  ---  Average Long Term Temperature
 0x05  0x020  1              30  ---  Highest Temperature
 0x05  0x028  1              14  ---  Lowest Temperature
@@ -160,11 +160,11 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4           46433  ---  Number of Hardware Resets
-0x06  0x010  4            1847  ---  Number of ASR Events
+0x06  0x008  4           46439  ---  Number of Hardware Resets
+0x06  0x010  4            1851  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              15  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              16  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -175,7 +175,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           14  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           18  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

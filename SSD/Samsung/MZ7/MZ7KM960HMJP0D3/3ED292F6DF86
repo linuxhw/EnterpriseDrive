@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -60,31 +60,31 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-RC-   200   200   000    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   093   093   000    -    31612
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    71
+  9 Power_On_Hours          -O--CK   093   093   000    -    35295
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    72
  13 Read_Soft_Error_Rate    -O-RC-   200   200   000    -    0
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    195
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    358
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--C-   100   100   000    -    5494
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
-194 Temperature_Celsius     -O---K   072   060   000    -    28
+194 Temperature_Celsius     -O---K   073   044   000    -    27
 195 ECC_Error_Rate          -O-RC-   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 201 Supercap_Status         PO--CK   100   100   001    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   099   099   000    -    246359452632
-235 POR_Recovery_Count      -O--C-   099   099   000    -    65
-242 Total_LBAs_Read         -O--CK   099   099   000    -    216082920999
+233 Media_Wearout_Indicator -O--CK   099   099   000    -    426382711416
+235 POR_Recovery_Count      -O--C-   099   099   000    -    66
+242 Total_LBAs_Read         -O--CK   099   099   000    -    278643189952
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O-RCK   099   099   000    -    99
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
 248 Unknown_Attribute       -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    410555817984
+251 NAND_Writes             -O--CK   100   100   000    -    753195854848
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,9 +138,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SCT command executing in background (5)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     27/39 Celsius
-Lifetime    Min/Max Temperature:     21/40 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     25/56 Celsius
+Lifetime    Min/Max Temperature:     21/56 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -148,28 +148,28 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (47)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+           Read:     80 (8.0 seconds)
+          Write:     80 (8.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              71  ---  Lifetime Power-On Resets
-0x01  0x010  4           31612  ---  Power-on Hours
-0x01  0x018  6    246359452632  ---  Logical Sectors Written
-0x01  0x020  6       662244070  ---  Number of Write Commands
-0x01  0x028  6    216082930247  ---  Logical Sectors Read
-0x01  0x030  6       470880921  ---  Number of Read Commands
-0x01  0x038  6          893000  ---  Date and Time TimeStamp
+0x01  0x008  4              72  ---  Lifetime Power-On Resets
+0x01  0x010  4           35295  ---  Power-on Hours
+0x01  0x018  6    426382711416  ---  Logical Sectors Written
+0x01  0x020  6      1087088901  ---  Number of Write Commands
+0x01  0x028  6    278643189952  ---  Logical Sectors Read
+0x01  0x030  6       663574824  ---  Number of Read Commands
+0x01  0x038  6         2991000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
-0x05  0x020  1              40  ---  Highest Temperature
+0x05  0x008  1              27  ---  Current Temperature
+0x05  0x020  1              56  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==

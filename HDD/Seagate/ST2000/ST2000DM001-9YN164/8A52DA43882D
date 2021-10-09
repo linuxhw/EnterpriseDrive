@@ -56,12 +56,12 @@ SCT capabilities: 	       (0x3085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   113   099   006    -    54368968
+  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    202875016
   3 Spin_Up_Time            PO----   095   095   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    77
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   030    -    448682732
-  9 Power_On_Hours          -O--CK   028   028   000    -    63222
+  7 Seek_Error_Rate         POSR--   087   060   030    -    591269328
+  9 Power_On_Hours          -O--CK   024   024   000    -    66970
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    77
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -76,10 +76,10 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 22 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
-199 UDMA_CRC_Error_Count    -OSRCK   200   191   000    -    17
-240 Head_Flying_Hours       ------   100   253   000    -    59081h+03m+00.306s
-241 Total_LBAs_Written      ------   100   253   000    -    155028364749009
-242 Total_LBAs_Read         ------   100   253   000    -    279239447026679
+199 UDMA_CRC_Error_Count    -OSRCK   200   191   000    -    18
+240 Head_Flying_Hours       ------   100   253   000    -    62829h+51m+11.344s
+241 Total_LBAs_Written      ------   100   253   000    -    241892330373075
+242 Total_LBAs_Read         ------   100   253   000    -    10197625499341
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -119,25 +119,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     63199         -
-# 2  Short offline       Completed without error       00%     63175         -
-# 3  Short offline       Completed without error       00%     63151         -
-# 4  Short offline       Completed without error       00%     63127         -
-# 5  Short offline       Completed without error       00%     63103         -
-# 6  Short offline       Completed without error       00%     63079         -
-# 7  Extended offline    Completed without error       00%     63062         -
-# 8  Short offline       Completed without error       00%     63031         -
-# 9  Short offline       Completed without error       00%     63007         -
-#10  Short offline       Completed without error       00%     62983         -
-#11  Short offline       Completed without error       00%     62959         -
-#12  Short offline       Completed without error       00%     62935         -
-#13  Short offline       Completed without error       00%     62911         -
-#14  Extended offline    Completed without error       00%     62895         -
-#15  Short offline       Completed without error       00%     62863         -
-#16  Short offline       Completed without error       00%     62839         -
-#17  Short offline       Completed without error       00%     62815         -
-#18  Short offline       Completed without error       00%     62791         -
-#19  Short offline       Completed without error       00%     62767         -
+# 1  Short offline       Completed without error       00%      1432         -
+# 2  Short offline       Completed without error       00%      1408         -
+# 3  Extended offline    Completed without error       00%      1401         -
+# 4  Short offline       Completed without error       00%      1360         -
+# 5  Short offline       Completed without error       00%      1336         -
+# 6  Short offline       Completed without error       00%      1312         -
+# 7  Short offline       Completed without error       00%      1288         -
+# 8  Short offline       Completed without error       00%      1264         -
+# 9  Short offline       Completed without error       00%      1240         -
+#10  Extended offline    Completed without error       00%      1233         -
+#11  Short offline       Completed without error       00%      1192         -
+#12  Short offline       Completed without error       00%      1168         -
+#13  Short offline       Completed without error       00%      1144         -
+#14  Short offline       Completed without error       00%      1120         -
+#15  Short offline       Completed without error       00%      1096         -
+#16  Short offline       Completed without error       00%      1072         -
+#17  Extended offline    Completed without error       00%      1056         -
+#18  Short offline       Completed without error       00%      1024         -
+#19  Short offline       Completed without error       00%      1000         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -153,17 +153,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:     23/34 Celsius
 Lifetime    Min/Max Temperature:     21/37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           41  Device-to-host register FISes sent due to a COMRESET
-0x0001  2            0  Command failed due to ICRC error
+0x000a  2           43  Device-to-host register FISes sent due to a COMRESET
+0x0001  2            1  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
-0x0004  2            0  R_ERR response for host-to-device data FIS
+0x0004  2            1  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 

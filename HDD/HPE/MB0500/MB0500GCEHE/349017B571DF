@@ -58,12 +58,12 @@ SCT capabilities: 	       (0x303d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    10
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    11
   3 Spin_Up_Time            POS--K   171   170   021    -    2450
   4 Start_Stop_Count        -O--CK   100   100   000    -    15
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         POSR-K   200   200   051    -    0
-  9 Power_On_Hours          -O--CK   060   060   000    -    29530
+  9 Power_On_Hours          -O--CK   055   055   000    -    33238
  10 Spin_Retry_Count        PO--CK   100   253   051    -    0
  11 Calibration_Retry_Count PO--CK   100   253   051    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    15
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0x80-0x9f  GPL,SL  R/W     16  Host vendor specific log
 0xa0-0xa7  GPL,SL  VS      16  Device vendor specific log
 0xa8-0xb5  GPL,SL  VS       1  Device vendor specific log
-0xb6       GPL     VS    3694  Device vendor specific log
+0xb6       GPL     VS    4157  Device vendor specific log
 0xb7       GPL,SL  VS       1  Device vendor specific log
 0xbd       GPL,SL  VS       1  Device vendor specific log
 0xc0       GPL,SL  VS       1  Device vendor specific log
@@ -134,7 +134,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
 Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     27/35 Celsius
+Power Cycle Min/Max Temperature:     27/36 Celsius
 Lifetime    Min/Max Temperature:      0/39 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -144,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (153)
+Temperature History Size (Index):    478 (238)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -154,17 +154,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4           29530  ---  Power-on Hours
-0x01  0x018  6     19100256819  ---  Logical Sectors Written
-0x01  0x020  6       509887956  ---  Number of Write Commands
-0x01  0x028  6      5443197562  ---  Logical Sectors Read
-0x01  0x030  6       126091972  ---  Number of Read Commands
+0x01  0x010  4           33238  ---  Power-on Hours
+0x01  0x018  6     20973668239  ---  Logical Sectors Written
+0x01  0x020  6       570869569  ---  Number of Write Commands
+0x01  0x028  6      6409125701  ---  Logical Sectors Read
+0x01  0x030  6       145645525  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           27388  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           27387  ---  Head Flying Hours
+0x03  0x008  4           30802  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           30801  ---  Head Flying Hours
 0x03  0x018  4              15  ---  Head Load Events
 0x03  0x020  4             200  N--  Number of Reallocated Logical Sectors
-0x03  0x028  4             258  ---  Read Recovery Attempts
+0x03  0x028  4             268  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             100  N--  Number of Reported Uncorrectable Errors
@@ -206,5 +206,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4      5964454  Vendor specific
+0x8000  4     19314824  Vendor specific
 

@@ -63,26 +63,26 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--C-   100   100   050    -    0
   7 Unknown_SSD_Attribute   PO-R--   100   100   050    -    0
   8 Unknown_SSD_Attribute   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    42589
+  9 Power_On_Hours          -O--C-   100   100   000    -    45972
  10 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
  12 Power_Cycle_Count       -O--C-   100   100   000    -    28
 167 Unknown_Attribute       -O---K   100   100   000    -    0
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 169 Unknown_Attribute       PO--C-   100   100   010    -    100
 170 Unknown_Attribute       PO--C-   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   189   189   000    -    9942878436967
-174 Unknown_Attribute       -O--C-   175   175   000    -    27595233472383
+173 Unknown_Attribute       -O--C-   186   186   000    -    12154792644850
+174 Unknown_Attribute       -O--C-   173   173   000    -    29802852774596
 175 Program_Fail_Count_Chip PO--C-   100   100   010    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    20
-194 Temperature_Celsius     -O---K   067   062   000    -    33 (Min/Max 27/38)
+194 Temperature_Celsius     -O---K   068   062   000    -    32 (Min/Max 27/38)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 232 Available_Reservd_Space -O---K   100   100   000    -    0
 240 Unknown_SSD_Attribute   PO--C-   100   100   050    -    0
-241 Total_LBAs_Written      -O--C-   100   100   000    -    14843177
-242 Total_LBAs_Read         -O--C-   100   100   000    -    17206321
+241 Total_LBAs_Written      -O--C-   100   100   000    -    17168098
+242 Total_LBAs_Read         -O--C-   100   100   000    -    19720172
 243 Unknown_Attribute       -O--C-   100   100   000    -    0
-249 Unknown_Attribute       -O---K   100   100   000    -    1443523
+249 Unknown_Attribute       -O---K   100   100   000    -    1743177
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -128,20 +128,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 Device State:                        Active (0)
-Current Temperature:                    33 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     30/37 Celsius
 Lifetime    Min/Max Temperature:     27/38 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 67 87 23 09 04 04 00 00 00 00 00 07
+00 01 00 00 09 5c dd 09 04 04 00 00 00 00 00 07
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/40 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (69)
+Temperature History Size (Index):    128 (37)
 
 SCT Error Recovery Control:
            Read:    600 (60.0 seconds)
@@ -151,17 +151,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              28  ---  Lifetime Power-On Resets
-0x01  0x018  6    972762482223  ---  Logical Sectors Written
-0x01  0x020  6     14193043216  ---  Number of Write Commands
-0x01  0x028  6   1127633493825  ---  Logical Sectors Read
-0x01  0x030  6      7120010372  ---  Number of Read Commands
+0x01  0x018  6   1125128484871  ---  Logical Sectors Written
+0x01  0x020  6     16202916170  ---  Number of Write Commands
+0x01  0x028  6   1292381231842  ---  Logical Sectors Read
+0x01  0x030  6      8887950575  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              33  ---  Current Temperature
+0x05  0x008  1              32  ---  Current Temperature
 0x05  0x010  1              32  ---  Average Short Term Temperature
-0x05  0x018  1              32  ---  Average Long Term Temperature
+0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              27  ---  Lowest Temperature
 0x05  0x030  1              33  ---  Highest Average Short Term Temperature
@@ -176,7 +176,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x008  4            1444  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              25  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              27  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
