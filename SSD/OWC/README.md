@@ -24,7 +24,7 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | OWC       | Mercury Accelsi... | 240 GB | 1       | 2002  | 1     | 2.74   |
-| OWC       | Mercury Electra... | 250 GB | 2       | 462   | 0     | 1.27   |
+| OWC       | Mercury Electra... | 250 GB | 2       | 774   | 0     | 2.12   |
 
 SSD by Family
 -------------
@@ -40,4 +40,4 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | OWC       | Unknown                | 1      | 1       | 2002  | 1     | 2.74   |
-| OWC       | SandForce Driven SSDs  | 1      | 2       | 462   | 0     | 1.27   |
+| OWC       | SandForce Driven SSDs  | 1      | 2       | 774   | 0     | 2.12   |

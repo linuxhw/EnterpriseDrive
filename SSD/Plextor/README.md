@@ -23,9 +23,10 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Plextor   | PX-128M5S          | 128 GB | 1       | 1838  | 0     | 5.04   |
-| Plextor   | PX-256M6S+         | 256 GB | 2       | 505   | 0     | 1.39   |
-| Plextor   | PX-128S3C          | 128 GB | 1       | 363   | 0     | 1.00   |
+| Plextor   | PX-128M5S          | 128 GB | 1       | 1971  | 0     | 5.40   |
+| Plextor   | PH6-CE120-L1       | 120 GB | 1       | 674   | 0     | 1.85   |
+| Plextor   | PX-256M6S+         | 256 GB | 2       | 527   | 0     | 1.44   |
+| Plextor   | PX-128S3C          | 128 GB | 1       | 490   | 0     | 1.34   |
 
 SSD by Family
 -------------
@@ -40,6 +41,6 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| Plextor   | M3/M5/M6 Series SSDs   | 1      | 1       | 1838  | 0     | 5.04   |
-| Plextor   | M3/M5/M6/M7 Series ... | 1      | 2       | 505   | 0     | 1.39   |
-| Plextor   | Unknown                | 1      | 1       | 363   | 0     | 1.00   |
+| Plextor   | M3/M5/M6 Series SSDs   | 1      | 1       | 1971  | 0     | 5.40   |
+| Plextor   | Unknown                | 2      | 2       | 582   | 0     | 1.60   |
+| Plextor   | M3/M5/M6/M7 Series ... | 1      | 2       | 527   | 0     | 1.44   |

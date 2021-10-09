@@ -25,21 +25,22 @@ MTBF — avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Samsung   | HD250HJ            | 250 GB | 1       | 2882  | 0     | 7.90   |
 | Samsung   | HD753LJ            | 752 GB | 1       | 2559  | 0     | 7.01   |
-| Samsung   | HD103UJ            | 1 TB   | 25      | 2856  | 150   | 4.50   |
+| Samsung   | HD103UJ            | 1 TB   | 26      | 2880  | 144   | 4.60   |
 | Samsung   | SP0812C            | 80 GB  | 1       | 1426  | 0     | 3.91   |
-| Samsung   | HD103SI            | 1 TB   | 2       | 2961  | 506   | 3.40   |
-| Samsung   | HD154UI            | 1.5 TB | 2       | 1850  | 1     | 3.36   |
+| Samsung   | HD154UI            | 1.5 TB | 2       | 1879  | 1     | 3.44   |
+| Samsung   | HD103SJ            | 1 TB   | 23      | 2119  | 4     | 3.34   |
 | Samsung   | HD161GJ            | 160 GB | 3       | 1200  | 0     | 3.29   |
-| Samsung   | HD103SJ            | 1 TB   | 23      | 2090  | 4     | 3.28   |
-| Samsung   | HD204UI            | 2 TB   | 3       | 1825  | 3     | 2.70   |
+| Samsung   | HD204UI            | 2 TB   | 3       | 1876  | 3     | 2.71   |
+| Samsung   | HD103SI            | 1 TB   | 3       | 3325  | 806   | 2.38   |
 | Samsung   | HD502HJ            | 500 GB | 2       | 800   | 0     | 2.19   |
 | Samsung   | HE103SJ            | 1 TB   | 1       | 637   | 0     | 1.75   |
 | Samsung   | HD322GJ            | 320 GB | 1       | 477   | 0     | 1.31   |
 | Samsung   | HD080HJ            | 80 GB  | 2       | 1964  | 841   | 1.17   |
-| Samsung   | HD501LJ            | 500 GB | 3       | 2138  | 676   | 1.14   |
-| Samsung   | HD252HJ            | 250 GB | 1       | 2689  | 12    | 0.57   |
-| Samsung   | HM641JI            | 640 GB | 1       | 112   | 0     | 0.31   |
-| Samsung   | HD322HJ            | 320 GB | 1       | 3324  | 1015  | 0.01   |
+| Samsung   | HD501LJ            | 500 GB | 3       | 2183  | 676   | 1.14   |
+| Samsung   | HD252HJ            | 250 GB | 1       | 2827  | 12    | 0.60   |
+| Samsung   | HM641JI            | 640 GB | 1       | 132   | 0     | 0.36   |
+| Samsung   | HD502HI            | 500 GB | 3       | 3726  | 807   | 0.02   |
+| Samsung   | HD322HJ            | 320 GB | 1       | 3471  | 1015  | 0.01   |
 | Samsung   | SP2004C            | 200 GB | 1       | 1212  | 1105  | 0.00   |
 
 HDD by Family
@@ -56,14 +57,14 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
 | Samsung   | SpinPoint S250         | 1      | 1       | 2882  | 0     | 7.90   |
-| Samsung   | SpinPoint F1 DT        | 5      | 31      | 2696  | 154   | 4.19   |
+| Samsung   | SpinPoint F1 DT        | 5      | 32      | 2729  | 149   | 4.29   |
 | Samsung   | SpinPoint P80          | 1      | 1       | 1426  | 0     | 3.91   |
-| Samsung   | SpinPoint F2 EG        | 2      | 4       | 2405  | 253   | 3.38   |
-| Samsung   | SpinPoint F3           | 2      | 25      | 1987  | 4     | 3.19   |
-| Samsung   | SpinPoint F4 EG (AF)   | 1      | 3       | 1825  | 3     | 2.70   |
+| Samsung   | SpinPoint F3           | 2      | 25      | 2013  | 4     | 3.25   |
+| Samsung   | SpinPoint F4 EG (AF)   | 1      | 3       | 1876  | 3     | 2.71   |
+| Samsung   | SpinPoint F2 EG        | 3      | 8       | 3114  | 605   | 1.76   |
 | Samsung   | SpinPoint F3 RE        | 1      | 1       | 637   | 0     | 1.75   |
 | Samsung   | SpinPoint F4           | 1      | 1       | 477   | 0     | 1.31   |
 | Samsung   | SpinPoint P80 SD       | 1      | 2       | 1964  | 841   | 1.17   |
-| Samsung   | SpinPoint T166         | 1      | 3       | 2138  | 676   | 1.14   |
-| Samsung   | SpinPoint M7E (AF)     | 1      | 1       | 112   | 0     | 0.31   |
+| Samsung   | SpinPoint T166         | 1      | 3       | 2183  | 676   | 1.14   |
+| Samsung   | SpinPoint M7E (AF)     | 1      | 1       | 132   | 0     | 0.36   |
 | Samsung   | SpinPoint P120         | 1      | 1       | 1212  | 1105  | 0.00   |

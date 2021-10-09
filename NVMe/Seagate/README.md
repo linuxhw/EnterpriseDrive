@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Seagate   | FireCuda 520 SS... | 500 GB | 10      | 147   | 0     | 0.40   |
+| Seagate   | FireCuda 520 SS... | 500 GB | 10      | 287   | 0     | 0.79   |

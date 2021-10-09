@@ -23,8 +23,9 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| MediaMax  | WL2000GSA6472E     | 2 TB   | 1       | 817   | 0     | 2.24   |
-| MediaMax  | WL4000GSA6472      | 4 TB   | 2       | 511   | 0     | 1.40   |
+| MediaMax  | WL2000GSA6472E     | 2 TB   | 1       | 948   | 0     | 2.60   |
+| MediaMax  | WL500GSA3272       | 500 GB | 1       | 920   | 0     | 2.52   |
+| MediaMax  | WL4000GSA6472      | 4 TB   | 2       | 649   | 0     | 1.78   |
 | MediaMax  | WL4000GSA6472E     | 4.9 TB | 1       | 1617  | 1054  | 0.00   |
 
 HDD by Family
@@ -40,5 +41,6 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| MediaMax  | WL2000                 | 1      | 1       | 817   | 0     | 2.24   |
-| MediaMax  | WL4000                 | 2      | 3       | 880   | 352   | 0.94   |
+| MediaMax  | WL2000                 | 1      | 1       | 948   | 0     | 2.60   |
+| MediaMax  | WL500                  | 1      | 1       | 920   | 0     | 2.52   |
+| MediaMax  | WL4000                 | 2      | 3       | 972   | 352   | 1.19   |

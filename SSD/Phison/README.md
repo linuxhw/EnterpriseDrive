@@ -18,6 +18,7 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | Phison    | SATA SSD           | 480 GB | 3       | 578   | 0     | 1.59   |
-| Phison    | SATA SSD           | 64 GB  | 8       | 194   | 0     | 0.53   |
+| Phison    | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
+| Phison    | SATA SSD           | 64 GB  | 9       | 218   | 0     | 0.60   |
 | Phison    | SATA SSD           | 32 GB  | 1       | 161   | 0     | 0.44   |
-| Phison    | SATA SSD           | 960 GB | 4       | 123   | 0     | 0.34   |
+| Phison    | SATA SSD           | 1 TB   | 6       | 72    | 0     | 0.20   |

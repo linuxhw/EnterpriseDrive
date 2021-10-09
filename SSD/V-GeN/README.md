@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| V-GeN     | V-GEN12SM20AR10... | 1 TB   | 1       | 16    | 0     | 0.04   |
+| V-GeN     | V-GEN12SM20AR10... | 1 TB   | 1       | 190   | 2     | 0.17   |

@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| KingDian  | S280               | 240 GB | 3       | 433   | 1     | 1.00   |
+| KingDian  | S280               | 240 GB | 3       | 476   | 1     | 1.12   |

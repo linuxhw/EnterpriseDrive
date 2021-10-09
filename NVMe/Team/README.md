@@ -1,10 +1,10 @@
-Maxtor Solid State Drives
-=========================
+Team NVMe Drives
+================
 
-This is a list of all tested Maxtor solid state drive models and their MTBFs. See
-more info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
+This is a list of all tested Team NVMe drive models and their MTBFs. See more
+info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
 
-SSD by Model
+NVME by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,5 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Maxtor    | Z1 SSD             | 240 GB | 1       | 302   | 0     | 0.83   |
-| Maxtor    | Z1 SSD             | 960 GB | 2       | 172   | 0     | 0.47   |
+| Team      | TM8FP6128G         | 128 GB | 1       | 45    | 0     | 0.13   |

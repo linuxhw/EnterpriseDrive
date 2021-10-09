@@ -17,4 +17,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
+| Silico... | NVME SSD           | 512 GB | 1       | 177   | 0     | 0.49   |
 | Silico... | NV900-1T           | 1 TB   | 1       | 30    | 0     | 0.08   |

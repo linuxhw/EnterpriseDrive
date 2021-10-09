@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| HGST      | HUSMR7638BDP3Y1    | 3.8 TB | 24      | 135   | 0     | 0.37   |
+| HGST      | HUSMR7638BDP3Y1    | 3.8 TB | 24      | 290   | 0     | 0.80   |

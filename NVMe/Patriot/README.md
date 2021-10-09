@@ -17,5 +17,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| Patriot   | P300               | 256 GB | 2       | 44    | 0     | 0.12   |
-| Patriot   | P300               | 128 GB | 4       | 19    | 0     | 0.05   |
+| Patriot   | P300               | 256 GB | 2       | 196   | 0     | 0.54   |
+| Patriot   | P300               | 128 GB | 4       | 163   | 0     | 0.45   |

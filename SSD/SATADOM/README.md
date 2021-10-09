@@ -24,8 +24,10 @@ MTBF — avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
 | SATADOM   | D150SV             | 2 GB   | 1       | 2697  | 0     | 7.39   |
-| SATADOM   | SL 3IE3 V2         | 64 GB  | 3       | 625   | 0     | 1.71   |
 | SATADOM   | SL 3SE             | 32 GB  | 3       | 556   | 0     | 1.52   |
+| SATADOM   | SL 3IE3 V2         | 64 GB  | 4       | 485   | 0     | 1.33   |
+| SATADOM   | SH Type D 3TE7     | 120 GB | 5       | 75    | 0     | 0.21   |
+| SATADOM   | SL 3TE7            | 120 GB | 2       | 55    | 0     | 0.15   |
 | SATADOM   | ML 3MG2-P          | 248 GB | 1       | 47    | 0     | 0.13   |
 | SATADOM   | SV 3ME3            | 64 GB  | 4       | 10    | 0     | 0.03   |
 
@@ -42,5 +44,5 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| SATADOM   | Unknown                | 3      | 5       | 882   | 0     | 2.42   |
-| SATADOM   | Innodisk 3IE3/3ME3/... | 2      | 7       | 274   | 0     | 0.75   |
+| SATADOM   | Unknown                | 5      | 12      | 408   | 0     | 1.12   |
+| SATADOM   | Innodisk 3IE3/3ME3/... | 2      | 8       | 248   | 0     | 0.68   |

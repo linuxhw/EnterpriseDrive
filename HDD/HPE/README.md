@@ -23,18 +23,21 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| HPE       | MB0500GCEHE        | 500 GB | 5       | 1180  | 0     | 3.23   |
+| HPE       | MB0500GCEHE        | 500 GB | 6       | 1073  | 0     | 2.94   |
 | HPE       | MM1000GFJTE        | 1 TB   | 4       | 862   | 0     | 2.36   |
 | HPE       | MB0500EBNCR        | 500 GB | 5       | 1525  | 18    | 2.26   |
-| HPE       | MM2000GEFRA        | 2 TB   | 237     | 816   | 1     | 2.09   |
-| HPE       | MM1000GBKAL        | 1 TB   | 18      | 909   | 1     | 1.92   |
+| HPE       | MM1000GBKAL        | 1 TB   | 21      | 1099  | 1     | 2.19   |
+| HPE       | MM2000GEFRA        | 2 TB   | 241     | 824   | 1     | 2.11   |
 | HPE       | MB004000GWFWB      | 4 TB   | 15      | 564   | 0     | 1.55   |
-| HPE       | MB8000GFECR        | 8 TB   | 55      | 296   | 0     | 0.81   |
-| HPE       | MB0500EBZQA        | 500 GB | 1       | 2634  | 8     | 0.80   |
-| HPE       | MB001000GWFGF      | 1 TB   | 1       | 283   | 0     | 0.78   |
-| HPE       | MB012000GWDFE      | 12 TB  | 23      | 255   | 0     | 0.70   |
+| HPE       | MB001000GWFGF      | 1 TB   | 1       | 431   | 0     | 1.18   |
+| HPE       | MB8000GFECR        | 8 TB   | 56      | 353   | 28    | 0.90   |
+| HPE       | MB0500EBZQA        | 500 GB | 1       | 2783  | 8     | 0.85   |
+| HPE       | MB012000GWDFE      | 12 TB  | 35      | 281   | 0     | 0.77   |
 | HPE       | MB008000GWRTC      | 8 TB   | 1       | 252   | 0     | 0.69   |
 | HPE       | MB010000GWRTK      | 10 TB  | 24      | 190   | 0     | 0.52   |
+| HPE       | MB008000GWJRT      | 8 TB   | 4       | 83    | 0     | 0.23   |
+| HPE       | MB006000GWKGR      | 6 TB   | 1       | 51    | 0     | 0.14   |
+| HPE       | MB006000GWWQT      | 6 TB   | 1       | 36    | 0     | 0.10   |
 
 HDD by Family
 -------------
@@ -49,7 +52,7 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
 |-----------|------------------------|--------|---------|-------|-------|--------|
-| HPE       | WDC Enterprise         | 2      | 10      | 1353  | 9     | 2.75   |
-| HPE       | Proliant HardDrive     | 6      | 281     | 753   | 1     | 1.94   |
-| HPE       | Seagate Constellati... | 1      | 18      | 909   | 1     | 1.92   |
-| HPE       | Seagate Enterprise     | 3      | 80      | 293   | 1     | 0.72   |
+| HPE       | WDC Enterprise         | 2      | 11      | 1278  | 8     | 2.63   |
+| HPE       | Seagate Constellati... | 1      | 21      | 1099  | 1     | 2.19   |
+| HPE       | Proliant HardDrive     | 9      | 303     | 731   | 1     | 1.89   |
+| HPE       | Seagate Enterprise     | 3      | 81      | 335   | 19    | 0.79   |

@@ -17,4 +17,4 @@ MTBF — avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
 |-----------|--------------------|--------|---------|-------|-------|--------|
-| ORTIAL    | SSD                | 1 TB   | 12      | 432   | 1     | 0.98   |
+| ORTIAL    | SSD                | 1 TB   | 12      | 455   | 2     | 1.00   |
