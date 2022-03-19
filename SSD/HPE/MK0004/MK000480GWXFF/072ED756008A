@@ -55,7 +55,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   100   100   006    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  9 Power_On_Hours          -O--CK   088   088   000    -    11172
+  9 Power_On_Hours          -O--CK   084   084   000    -    14584
  11 Unknown_SSD_Attribute   -O--C-   100   100   000    -    20
  12 Power_Cycle_Count       -O--CK   100   100   020    -    24
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
@@ -67,15 +67,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   057   000    -    38 (Min/Max 23/43)
-194 Temperature_Celsius     -O---K   062   057   000    -    38 (Min/Max 23/43)
+190 Airflow_Temperature_Cel -O---K   065   056   000    -    35 (Min/Max 23/44)
+194 Temperature_Celsius     -O---K   065   056   000    -    35 (Min/Max 23/44)
 195 Hardware_ECC_Recovered  -O-RC-   100   100   000    -    0
 196 Reallocated_Event_Count PO--CK   100   100   036    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-234 Unknown_Attribute       -O--CK   100   100   000    -    13734
-241 Total_LBAs_Written      -O--CK   100   100   000    -    13597
+234 Unknown_Attribute       -O--CK   100   100   000    -    17613
+241 Total_LBAs_Written      -O--CK   100   100   000    -    17439
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -125,9 +125,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     23/43 Celsius
-Lifetime    Min/Max Temperature:     23/43 Celsius
+Current Temperature:                    35 Celsius
+Power Cycle Min/Max Temperature:     23/44 Celsius
+Lifetime    Min/Max Temperature:     23/44 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -136,24 +136,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -20/60 Celsius
 Min/Max Temperature Limit:           -20/125 Celsius
-Temperature History Size (Index):    192 (42)
+Temperature History Size (Index):    192 (73)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              24  ---  Lifetime Power-On Resets
-0x01  0x010  4           11172  ---  Power-on Hours
-0x01  0x018  6     28515638457  ---  Logical Sectors Written
-0x01  0x020  6       187494899  ---  Number of Write Commands
-0x01  0x028  6      3220461680  ---  Logical Sectors Read
-0x01  0x030  6        15685828  ---  Number of Read Commands
-0x01  0x038  6     40219200000  ---  Date and Time TimeStamp
+0x01  0x010  4           14584  ---  Power-on Hours
+0x01  0x018  6     36573962849  ---  Logical Sectors Written
+0x01  0x020  6       235938612  ---  Number of Write Commands
+0x01  0x028  6      4273359056  ---  Logical Sectors Read
+0x01  0x030  6        21647126  ---  Number of Read Commands
+0x01  0x038  6     52502400000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              38  ---  Current Temperature
-0x05  0x020  1              43  ---  Highest Temperature
+0x05  0x008  1              35  ---  Current Temperature
+0x05  0x020  1              44  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x038  1               0  ---  Lowest Average Short Term Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature

@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -23,14 +23,14 @@ ATA Security is:  Disabled, frozen [SEC2]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x02)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		( 2930) seconds.
+data collection: 		( 2097) seconds.
 Offline data collection
 capabilities: 			 (0x7f) SMART execute Offline immediate.
 
@@ -58,24 +58,24 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    945609h+54m+27.400s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    30
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    956704h+21m+49.570s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    31
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    29
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    30
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    29
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    5716770
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    30
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    6486809
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    33
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    35
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   095   095   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    5716770
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    2923510
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    100234
+233 Media_Wearout_Indicator -O--CK   093   093   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    6486809
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    3524501
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    123013
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -149,16 +149,16 @@ Temperature History Size (Index):    0 (0)
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              36  ---  Lifetime Power-On Resets
-0x01  0x010  4           50815  ---  Power-on Hours
-0x01  0x018  6    374861831283  ---  Logical Sectors Written
-0x01  0x028  6    191779939582  ---  Logical Sectors Read
+0x01  0x008  4              37  ---  Lifetime Power-On Resets
+0x01  0x010  4           61910  ---  Power-on Hours
+0x01  0x018  6    425327090646  ---  Logical Sectors Written
+0x01  0x028  6    231166512536  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             288  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             302  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             288  ---  Number of Hardware Resets
-0x06  0x010  4             120  ---  Number of ASR Events
+0x06  0x008  4             302  ---  Number of Hardware Resets
+0x06  0x010  4              87  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
@@ -174,8 +174,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           43  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           39  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           10  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

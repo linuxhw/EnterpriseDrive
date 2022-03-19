@@ -55,11 +55,11 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    10159
+  9 Power_On_Hours          -O--C-   100   100   000    -    12802
  12 Power_Cycle_Count       -O--C-   100   100   000    -    25
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO--C-   100   100   010    -    21
-173 Unknown_Attribute       ------   100   100   000    -    6291531
+173 Unknown_Attribute       ------   100   100   000    -    7012434
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    23
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       ------   100   100   000    -    0
@@ -108,9 +108,9 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              25  ---  Lifetime Power-On Resets
-0x01  0x010  4           10159  ---  Power-on Hours
-0x01  0x018  6     10286381558  ---  Logical Sectors Written
-0x01  0x028  6      9432450107  ---  Logical Sectors Read
+0x01  0x010  4           12802  ---  Power-on Hours
+0x01  0x018  6     11251399384  ---  Logical Sectors Written
+0x01  0x028  6      9584955769  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -120,7 +120,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

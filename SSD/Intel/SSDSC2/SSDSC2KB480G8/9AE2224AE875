@@ -60,7 +60,7 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    26629
+  9 Power_On_Hours          -O--CK   100   100   000    -    30215
  12 Power_Cycle_Count       -O--CK   100   100   000    -    76
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -70,22 +70,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error_Count  PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Drive_Temperature       -O---K   073   072   000    -    27 (Min/Max 25/38)
+190 Drive_Temperature       -O---K   073   070   000    -    27 (Min/Max 25/38)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    67
 194 Temperature_Celsius     -O---K   100   100   000    -    27
 197 Pending_Sector_Count    -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    1449361
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    3584
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    25
-228 Workload_Minutes        -O--CK   100   100   000    -    1597704
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    1486801
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    3860
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    27
+228 Workload_Minutes        -O--CK   100   100   000    -    1812898
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   097   097   000    -    0
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
 235 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2607 (76 65535)
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    1449361
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    490382
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    6252297
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    1486801
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    561725
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    6727428
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -152,7 +152,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/73 Celsius
 Min/Max Temperature Limit:            0/73 Celsius
-Temperature History Size (Index):    478 (178)
+Temperature History Size (Index):    478 (58)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -162,18 +162,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              76  ---  Lifetime Power-On Resets
-0x01  0x018  6     94985378570  ---  Logical Sectors Written
-0x01  0x020  6      3106801524  ---  Number of Write Commands
-0x01  0x028  6     32137705770  ---  Logical Sectors Read
-0x01  0x030  6       163076801  ---  Number of Read Commands
-0x01  0x038  6      1375590958  ---  Date and Time TimeStamp
+0x01  0x018  6     97439007505  ---  Logical Sectors Written
+0x01  0x020  6      3266523875  ---  Number of Write Commands
+0x01  0x028  6     36813241194  ---  Logical Sectors Read
+0x01  0x030  6       181343356  ---  Number of Read Commands
+0x01  0x038  6      1402296226  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              27  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              27  ---  Average Long Term Temperature
+0x05  0x010  1              27  ---  Average Short Term Temperature
+0x05  0x018  1              26  ---  Average Long Term Temperature
 0x05  0x020  1              36  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              32  ---  Highest Average Short Term Temperature

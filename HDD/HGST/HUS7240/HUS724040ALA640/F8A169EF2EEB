@@ -64,13 +64,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--C-   100   100   000    -    36
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   140   140   020    -    26
-  9 Power_On_Hours          -O--C-   096   096   000    -    30190
+  8 Seek_Time_Performance   P-S---   142   142   020    -    25
+  9 Power_On_Hours          -O--C-   096   096   000    -    33758
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    36
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    1245
-193 Load_Cycle_Count        -O--C-   099   099   000    -    1245
-194 Temperature_Celsius     -O----   230   230   000    -    26 (Min/Max 17/41)
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1394
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1394
+194 Temperature_Celsius     -O----   222   222   000    -    27 (Min/Max 17/41)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -154,7 +154,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     24/29 Celsius
+Power Cycle Min/Max Temperature:     23/33 Celsius
 Lifetime    Min/Max Temperature:     17/41 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -163,7 +163,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (95)
+Temperature History Size (Index):    128 (119)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -175,12 +175,12 @@ Page  Offset Size        Value Flags Description
 0x01  0x008  4              36  ---  Lifetime Power-On Resets
 0x01  0x018  6     47849197869  ---  Logical Sectors Written
 0x01  0x020  6       450896359  ---  Number of Write Commands
-0x01  0x028  6     24473670978  ---  Logical Sectors Read
-0x01  0x030  6       364782818  ---  Number of Read Commands
+0x01  0x028  6     24474133922  ---  Logical Sectors Read
+0x01  0x030  6       364797173  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           30183  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           30183  ---  Head Flying Hours
-0x03  0x018  4            1245  ---  Head Load Events
+0x03  0x008  4           33750  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           33750  ---  Head Flying Hours
+0x03  0x018  4            1394  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -188,9 +188,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               6  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
-0x05  0x010  1              25  N--  Average Short Term Temperature
-0x05  0x018  1              25  N--  Average Long Term Temperature
+0x05  0x008  1              27  ---  Current Temperature
+0x05  0x010  1              27  N--  Average Short Term Temperature
+0x05  0x018  1              26  N--  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              33  N--  Highest Average Short Term Temperature

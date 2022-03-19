@@ -54,29 +54,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    10076
+  9 Power_On_Hours          -O--CK   100   100   ---    -    12376
  12 Power_Cycle_Count       -O--CK   100   100   ---    -    3
-165 Unknown_Attribute       -O--CK   100   100   ---    -    210571691554
+165 Unknown_Attribute       -O--CK   100   100   ---    -    249241405169
 166 Unknown_Attribute       -O--CK   100   100   ---    -    1
 167 Unknown_Attribute       -O--CK   100   100   ---    -    29
-168 Unknown_Attribute       -O--CK   100   100   ---    -    21
+168 Unknown_Attribute       -O--CK   100   100   ---    -    22
 169 Unknown_Attribute       -O--CK   100   100   ---    -    334
 170 Unknown_Attribute       -O--CK   100   100   ---    -    0
 171 Unknown_Attribute       -O--CK   100   100   ---    -    0
 172 Unknown_Attribute       -O--CK   100   100   ---    -    0
-173 Unknown_Attribute       -O--CK   100   100   ---    -    8
+173 Unknown_Attribute       -O--CK   100   100   ---    -    10
 174 Unknown_Attribute       -O--CK   100   100   ---    -    0
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   059   053   ---    -    41 (Min/Max 24/53)
+194 Temperature_Celsius     -O---K   064   053   ---    -    36 (Min/Max 24/53)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Unknown_SSD_Attribute   -O--CK   003   003   ---    -    3358669669134
+230 Unknown_SSD_Attribute   -O--CK   003   003   ---    -    3534774862647
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 Media_Wearout_Indicator -O--CK   100   100   ---    -    4526
-234 Unknown_Attribute       -O--CK   100   100   ---    -    18691
-241 Total_LBAs_Written      ----CK   253   253   ---    -    14395
-242 Total_LBAs_Read         ----CK   253   253   ---    -    9099
+233 Media_Wearout_Indicator -O--CK   100   100   ---    -    5124
+234 Unknown_Attribute       -O--CK   100   100   ---    -    21154
+241 Total_LBAs_Written      ----CK   253   253   ---    -    16175
+242 Total_LBAs_Read         ----CK   253   253   ---    -    9691
 244 Unknown_Attribute       -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -113,13 +113,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x010  4           10076  ---  Power-on Hours
-0x01  0x018  6     30188540390  ---  Logical Sectors Written
-0x01  0x020  6       948257070  ---  Number of Write Commands
-0x01  0x028  6     19083474016  ---  Logical Sectors Read
-0x01  0x030  6       218467006  ---  Number of Read Commands
+0x01  0x010  4           12376  ---  Power-on Hours
+0x01  0x018  6     33921937167  ---  Logical Sectors Written
+0x01  0x020  6      1073328455  ---  Number of Write Commands
+0x01  0x028  6     20324961343  ---  Logical Sectors Read
+0x01  0x030  6       233445499  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -129,5 +129,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           66  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           69  Device-to-host register FISes sent due to a COMRESET
 

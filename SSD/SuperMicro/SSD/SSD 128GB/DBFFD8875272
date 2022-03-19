@@ -57,33 +57,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    12136
+  9 Power_On_Hours          ------   100   100   000    -    15414
  12 Power_Cycle_Count       ------   100   100   000    -    19
  15 Unknown_Attribute       ------   100   100   000    -    247463936
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    155
 163 Initial_Bad_Block_Count ------   100   100   000    -    22
-164 Total_Erase_Count       ------   100   100   000    -    71408
+164 Total_Erase_Count       ------   100   100   000    -    143245
 165 Max_Erase_Count         ------   100   100   000    -    138
-166 Min_Erase_Count         ------   100   100   000    -    2
-167 Average_Erase_Count     ------   100   100   000    -    34
+166 Min_Erase_Count         ------   100   100   000    -    11
+167 Average_Erase_Count     ------   100   100   000    -    69
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
 172 Unknown_Attribute       ------   100   100   000    -    0
 175 Program_Fail_Count_Chip ------   100   100   000    -    22
-177 Wear_Leveling_Count     ------   100   100   000    -    10
+177 Wear_Leveling_Count     ------   100   100   000    -    602
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
 192 Power-Off_Retract_Count ------   100   100   000    -    1
-194 Temperature_Celsius     ------   100   100   000    -    44 (Min/Max 19/69)
-195 Hardware_ECC_Recovered  ------   100   100   000    -    13319
+194 Temperature_Celsius     ------   100   100   000    -    41 (Min/Max 19/69)
+195 Hardware_ECC_Recovered  ------   100   100   000    -    24797
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
 231 Temperature_Celsius     ------   100   100   000    -    100
-232 Available_Reservd_Space ------   100   100   000    -    99
-233 Media_Wearout_Indicator ------   100   100   000    -    4463
-241 Host_Writes_32MiB       ------   100   100   000    -    2080
-242 Host_Reads_32MiB        ------   100   100   000    -    2738
+232 Available_Reservd_Space ------   100   100   000    -    98
+233 Media_Wearout_Indicator ------   100   100   000    -    8952
+241 Host_Writes_32MiB       ------   100   100   000    -    3802
+242 Host_Reads_32MiB        ------   100   100   000    -    3211
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,11 +127,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              19  ---  Lifetime Power-On Resets
-0x01  0x010  4           12136  ---  Power-on Hours
-0x01  0x018  6        68434932  ---  Logical Sectors Written
-0x01  0x020  6       236207863  ---  Number of Write Commands
-0x01  0x028  6      1447202521  ---  Logical Sectors Read
-0x01  0x030  6        78597928  ---  Number of Read Commands
+0x01  0x010  4           15414  ---  Power-on Hours
+0x01  0x018  6      3679383684  ---  Logical Sectors Written
+0x01  0x020  6       373504451  ---  Number of Write Commands
+0x01  0x028  6      2440704551  ---  Logical Sectors Read
+0x01  0x030  6        82484302  ---  Number of Read Commands
 
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -141,7 +141,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x008  4             156  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               1  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

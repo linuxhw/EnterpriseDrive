@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -61,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    40485
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    19
+  9 Power_On_Hours          -O--CK   100   100   000    -    41795
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    20
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   089   089   000    -    338
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    17
+173 Ave_Block-Erase_Count   -O--CK   089   089   000    -    339
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    18
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    16523
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
@@ -79,9 +79,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain P---CK   089   089   000    -    11
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   ---    -    191415650678
-247 Host_Program_Page_Count -O--CK   100   100   ---    -    1694829655
-248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2469112840
+246 Total_LBAs_Written      -O--CK   100   100   ---    -    191420750054
+247 Host_Program_Page_Count -O--CK   100   100   ---    -    1695189837
+248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2508253386
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,7 +138,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     32/36 Celsius
+Power Cycle Min/Max Temperature:     31/34 Celsius
 Lifetime    Min/Max Temperature:      0/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -147,20 +147,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (143)
+Temperature History Size (Index):    478 (261)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              19  ---  Lifetime Power-On Resets
-0x01  0x010  4           40485  ---  Power-on Hours
-0x01  0x018  6    191415650678  ---  Logical Sectors Written
-0x01  0x020  6      4467783089  ---  Number of Write Commands
-0x01  0x028  6    201099020356  ---  Logical Sectors Read
-0x01  0x030  6      3248244178  ---  Number of Read Commands
+0x01  0x008  4              20  ---  Lifetime Power-On Resets
+0x01  0x010  4           41795  ---  Power-on Hours
+0x01  0x018  6    191420750054  ---  Logical Sectors Written
+0x01  0x020  6      4468208034  ---  Number of Write Commands
+0x01  0x028  6    201100535762  ---  Logical Sectors Read
+0x01  0x030  6      3248304696  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              18  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              19  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              34  ---  Current Temperature
 0x05  0x010  1              34  ---  Average Short Term Temperature
@@ -188,5 +188,5 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 

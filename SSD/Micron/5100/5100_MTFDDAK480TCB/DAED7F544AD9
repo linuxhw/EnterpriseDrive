@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,32 +59,32 @@ SCT capabilities: 	       (0x0035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    111
-  5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    30
-  9 Power_On_Hours          -O--CK   100   100   001    -    25085
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    124
+  5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    35
+  9 Power_On_Hours          -O--CK   100   100   001    -    29839
  12 Power_Cycle_Count       -O--CK   100   100   001    -    2
-170 Reserved_Block_Pct      PO--CK   100   100   010    -    30
+170 Reserved_Block_Pct      PO--CK   100   100   010    -    35
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   100   100   000    -    34
+173 Avg_Block-Erase_Count   -O--CK   099   099   000    -    43
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    103
+187 Reported_Uncorrect      -O--CK   100   100   000    -    115
 188 Command_Timeout         -O--CK   100   100   000    -    2
-194 Temperature_Celsius     -O---K   058   051   000    -    42 (Min/Max 28/49)
-195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    8
-196 Reallocated_Event_Count -O--CK   100   100   000    -    30
+194 Temperature_Celsius     -O---K   059   051   000    -    41 (Min/Max 28/49)
+195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    9
+196 Reallocated_Event_Count -O--CK   100   100   000    -    35
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
+202 Percent_Lifetime_Remain ----CK   099   099   001    -    1
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    22729596644
-247 Host_Program_Page_Count -O--CK   100   100   000    -    758343804
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    740550418
-180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    7735
-210 RAIN_Success_Recovered  -O--CK   100   100   000    -    2380
+246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    27578481046
+247 Host_Program_Page_Count -O--CK   100   100   000    -    920914762
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    956804740
+180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    7730
+210 RAIN_Success_Recovered  -O--CK   100   100   000    -    2526
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -123,7 +123,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (16383 sectors)
-Device Error Count: 103
+Device Error Count: 115
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -139,141 +139,141 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 103 [102] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 115 [114] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f ea 00 40 08  Error: UNC at LBA = 0x051fea00 = 85977600
+  40 -- 51 01 00 00 00 07 92 24 00 40 08  Error: UNC at LBA = 0x07922400 = 127017984
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f ea 00 40 08 34d+ ...          READ FPDMA QUEUED
-  61 00 00 00 08 00 00 0e 92 59 c8 40 08 34d+ ...          WRITE FPDMA QUEUED
-  61 00 00 01 00 00 00 05 1f e9 00 40 08 34d+ ...          WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08 34d+ ...          SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08 34d+ ...          IDENTIFY DEVICE
+  60 00 00 01 00 00 00 07 92 24 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 92 23 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 92 22 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 92 21 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 92 20 00 40 08     04:09:39.488  READ FPDMA QUEUED
 
-Error 102 [101] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 114 [113] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f e9 00 40 08  Error: UNC at LBA = 0x051fe900 = 85977344
+  40 -- 51 01 00 00 00 07 90 c7 00 40 08  Error: UNC at LBA = 0x0790c700 = 126928640
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f e9 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f e8 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f e7 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f e6 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f e5 00 40 08 34d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 90 c7 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 90 c6 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 90 c5 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 90 c4 00 40 08     04:09:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 07 90 c3 00 40 08     04:09:39.488  READ FPDMA QUEUED
 
-Error 101 [100] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 113 [112] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f cf 00 40 08  Error: UNC at LBA = 0x051fcf00 = 85970688
+  40 -- 51 01 00 00 00 05 90 39 00 40 08  Error: UNC at LBA = 0x05903900 = 93337856
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f cf 00 40 08 34d+ ...          READ FPDMA QUEUED
-  61 00 00 01 00 00 00 05 1f ce 00 40 08 34d+ ...          WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08 34d+ ...          SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08 34d+ ...          IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08 34d+ ...          SET FEATURES [Set transfer mode]
+  60 00 00 01 00 00 00 05 90 39 00 40 08     04:08:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 05 90 38 00 40 08     04:08:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 05 90 37 00 40 08     04:08:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 05 90 36 00 40 08     04:08:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 05 90 35 00 40 08     04:08:39.488  READ FPDMA QUEUED
 
-Error 100 [99] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 112 [111] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f ce 00 40 08  Error: UNC at LBA = 0x051fce00 = 85970432
+  40 -- 51 01 00 00 00 01 91 00 00 40 08  Error: UNC at LBA = 0x01910000 = 26279936
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f ce 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f cd 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f cc 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f cb 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f ca 00 40 08 34d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 91 00 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 ff 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 fe 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 fd 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 fc 00 40 08     04:05:39.488  READ FPDMA QUEUED
 
-Error 99 [98] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 111 [110] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 08 00 00 05 1f c6 00 40 08  Error: WP at LBA = 0x051fc600 = 85968384
+  40 -- 51 01 00 00 00 01 90 e0 00 40 08  Error: UNC at LBA = 0x0190e000 = 26271744
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  61 00 00 00 08 00 00 0e 92 1c 20 40 08 34d+ ...          WRITE FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f c6 00 40 08 34d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 e0 08 34d+ ...          FLUSH CACHE EXT
-  61 00 00 00 80 00 00 05 1f c5 80 40 08 34d+ ...          WRITE FPDMA QUEUED
-  61 00 00 00 03 00 00 00 08 10 10 40 08 34d+ ...          WRITE FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 e0 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 df 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 de 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 dd 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 dc 00 40 08     04:05:39.488  READ FPDMA QUEUED
 
-Error 98 [97] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 110 [109] occurred at disk power-on lifetime: 26251 hours (1093 days + 19 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f c5 00 40 08  Error: UNC at LBA = 0x051fc500 = 85968128
+  40 -- 51 01 00 00 00 01 90 c3 00 40 08  Error: UNC at LBA = 0x0190c300 = 26264320
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f c5 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f c4 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f c3 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f c2 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f c1 00 40 08 34d+ ...          READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 c3 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 c2 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 c1 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 c0 00 40 08     04:05:39.488  READ FPDMA QUEUED
+  60 00 00 01 00 00 00 01 90 bf 00 40 08     04:05:39.488  READ FPDMA QUEUED
 
-Error 97 [96] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 109 [108] occurred at disk power-on lifetime: 26234 hours (1093 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f b9 00 40 08  Error: UNC at LBA = 0x051fb900 = 85965056
+  40 -- 51 00 08 00 00 00 0e 23 b0 40 08  Error: UNC at LBA = 0x000e23b0 = 926640
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f b9 00 40 08 34d+ ...          READ FPDMA QUEUED
-  61 00 00 00 80 00 00 05 1f b8 80 40 08 34d+ ...          WRITE FPDMA QUEUED
-  ef 00 10 00 02 00 00 00 00 00 00 a0 08 34d+ ...          SET FEATURES [Enable SATA feature]
-  ec 00 00 00 00 00 00 00 00 00 00 a0 08 34d+ ...          IDENTIFY DEVICE
-  ef 00 03 00 46 00 00 00 00 00 00 a0 08 34d+ ...          SET FEATURES [Set transfer mode]
+  60 00 00 00 08 00 00 00 0e 23 b0 40 08 49d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 0e 23 a8 40 08 49d+ ...          READ FPDMA QUEUED
+  61 00 00 00 08 00 00 00 0e 23 a8 40 08 49d+ ...          WRITE FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08 49d+ ...          SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08 49d+ ...          IDENTIFY DEVICE
 
-Error 96 [95] occurred at disk power-on lifetime: 7988 hours (332 days + 20 hours)
+Error 108 [107] occurred at disk power-on lifetime: 26234 hours (1093 days + 2 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 01 00 00 00 05 1f b8 00 40 08  Error: UNC at LBA = 0x051fb800 = 85964800
+  40 -- 51 00 08 00 00 00 0e 23 a8 40 08  Error: UNC at LBA = 0x000e23a8 = 926632
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 00 01 00 00 00 05 1f b8 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f b7 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f b6 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f b5 00 40 08 34d+ ...          READ FPDMA QUEUED
-  60 00 00 01 00 00 00 05 1f b4 00 40 08 34d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 0e 23 a8 40 08 49d+ ...          READ FPDMA QUEUED
+  60 00 00 00 38 00 00 00 0e 23 e8 40 08 49d+ ...          READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08 49d+ ...          SET FEATURES [Enable SATA feature]
+  ec 00 00 00 00 00 00 00 00 00 00 a0 08 49d+ ...          IDENTIFY DEVICE
+  ef 00 03 00 46 00 00 00 00 00 00 a0 08 49d+ ...          SET FEATURES [Set transfer mode]
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -310,7 +310,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    42 Celsius
+Current Temperature:                    41 Celsius
 Power Cycle Min/Max Temperature:     35/49 Celsius
 Lifetime    Min/Max Temperature:     28/49 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -320,25 +320,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (73)
+Temperature History Size (Index):    478 (279)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               2  ---  Lifetime Power-On Resets
-0x01  0x010  4           25085  ---  Power-on Hours
-0x01  0x018  6     22729596899  ---  Logical Sectors Written
-0x01  0x020  6       740102320  ---  Number of Write Commands
-0x01  0x028  6     32465970808  ---  Logical Sectors Read
-0x01  0x030  6       160437005  ---  Number of Read Commands
-0x01  0x038  6     90307800000  ---  Date and Time TimeStamp
+0x01  0x010  4           29839  ---  Power-on Hours
+0x01  0x018  6     27578481046  ---  Logical Sectors Written
+0x01  0x020  6       907388187  ---  Number of Write Commands
+0x01  0x028  6     37569000090  ---  Logical Sectors Read
+0x01  0x030  6       190191243  ---  Number of Read Commands
+0x01  0x038  6    107423160000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             103  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             115  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              42  ---  Current Temperature
+0x05  0x008  1              41  ---  Current Temperature
 0x05  0x010  1              41  ---  Average Short Term Temperature
-0x05  0x018  1              41  ---  Average Long Term Temperature
+0x05  0x018  1              40  ---  Average Long Term Temperature
 0x05  0x020  1              49  ---  Highest Temperature
 0x05  0x028  1              28  ---  Lowest Temperature
 0x05  0x030  1              44  ---  Highest Average Short Term Temperature
@@ -350,11 +350,11 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              53  ---  Number of Hardware Resets
-0x06  0x010  4              17  ---  Number of ASR Events
+0x06  0x008  4              62  ---  Number of Hardware Resets
+0x06  0x010  4              20  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -365,7 +365,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           52  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           61  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

@@ -23,8 +23,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,22 +58,22 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   001    -    0
-  2 Throughput_Performance  P-S---   138   138   054    -    93
+  2 Throughput_Performance  P-S---   138   138   054    -    96
   3 Spin_Up_Time            POS---   093   093   001    -    313
   4 Start_Stop_Count        -O--C-   100   100   000    -    4
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
   7 Seek_Error_Rate         PO-R--   100   100   001    -    0
   8 Seek_Time_Performance   P-S---   133   133   020    -    18
-  9 Power_On_Hours          -O--C-   099   099   000    -    13796
+  9 Power_On_Hours          -O--C-   098   098   000    -    17620
  10 Spin_Retry_Count        PO--C-   100   100   001    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    4
  22 Unknown_Attribute       PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    528
-193 Load_Cycle_Count        -O--C-   100   100   000    -    528
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    639
+193 Load_Cycle_Count        -O--C-   100   100   000    -    639
 194 Temperature_Celsius     -O----   056   056   000    -    38 (Min/Max 22/47)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O---K   100   100   000    -    0
-198 Offline_Uncorrectable   ---R--   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    8
+198 Offline_Uncorrectable   ---R--   100   100   000    -    1
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -130,7 +130,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
+Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    38 Celsius
 Power Cycle Min/Max Temperature:     24/43 Celsius
 Lifetime    Min/Max Temperature:     22/47 Celsius
@@ -142,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (102)
+Temperature History Size (Index):    128 (6)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -152,18 +152,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x010  4           13796  ---  Power-on Hours
-0x01  0x018  6    202191948620  ---  Logical Sectors Written
-0x01  0x020  6       509212568  ---  Number of Write Commands
-0x01  0x028  6    226245976875  ---  Logical Sectors Read
-0x01  0x030  6       816610240  ---  Number of Read Commands
-0x01  0x038  6     49667093100  ---  Date and Time TimeStamp
+0x01  0x010  4           17620  ---  Power-on Hours
+0x01  0x018  6    262009357625  ---  Logical Sectors Written
+0x01  0x020  6       716568181  ---  Number of Write Commands
+0x01  0x028  6    293235789399  ---  Logical Sectors Read
+0x01  0x030  6      1122364069  ---  Number of Read Commands
+0x01  0x038  6     63434277800  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           12789  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           12789  ---  Head Flying Hours
-0x03  0x018  4             528  ---  Head Load Events
+0x03  0x008  4           16217  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           16217  ---  Head Flying Hours
+0x03  0x018  4             639  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             377  ---  Read Recovery Attempts
+0x03  0x028  4             765  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -183,7 +183,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             124  ---  Number of Hardware Resets
+0x06  0x008  4             130  ---  Number of Hardware Resets
 0x06  0x010  4               6  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
@@ -192,7 +192,15 @@ Page  Offset Size        Value Flags Description
                                 |___ N normalized value
 
 Pending Defects log (GP Log 0x0c)
-No Defects Logged
+Index                LBA    Hours
+    0        26136398040    16423
+    1        26136398041    16423
+    2        26136398042    16423
+    3        26136398043    16423
+    4        26136398044    16423
+    5        26136398045    16423
+    6        26136398046    16423
+    7        26136398047    16423
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -204,8 +212,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           39  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           40  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           45  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           46  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

@@ -21,8 +21,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Apple     | HDD HTS541010A9... | 1 TB   | 1       | 220   | 0     | 0.60   |
 | Apple     | HDD HTS545050A7... | 500 GB | 1       | 141   | 0     | 0.39   |
 | Apple     | HDD ST1000DM003    | 1 TB   | 1       | 254   | 8     | 0.08   |
@@ -38,8 +38,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | Apple     | Travelstar 5K1000      | 1      | 1       | 220   | 0     | 0.60   |
 | Apple     | HGST Travelstar Z5K500 | 1      | 1       | 141   | 0     | 0.39   |
 | Apple     | Barracuda              | 1      | 1       | 254   | 8     | 0.08   |

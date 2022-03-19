@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    7543
+  9 Power_On_Hours          -O--CK   097   097   000    -    10977
  12 Power_Cycle_Count       -O--CK   099   099   000    -    15
-177 Wear_Leveling_Count     PO--C-   098   098   005    -    89
+177 Wear_Leveling_Count     PO--C-   098   098   005    -    120
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    2855
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -68,21 +68,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   073   065   000    -    27
-194 Temperature_Celsius     -O---K   073   060   000    -    27 (Min/Max 20/35)
+190 Airflow_Temperature_Cel -O--CK   070   065   000    -    30
+194 Temperature_Celsius     -O---K   070   060   000    -    30 (Min/Max 20/36)
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    13
-241 Total_LBAs_Written      -O--CK   099   099   000    -    114459382945
-242 Total_LBAs_Read         -O--CK   099   099   000    -    50815517656
+241 Total_LBAs_Written      -O--CK   099   099   000    -    148769893979
+242 Total_LBAs_Read         -O--CK   099   099   000    -    76806589091
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    189911245120
+251 NAND_Writes             -O--CK   100   100   000    -    256629464320
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,9 +132,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     25/34 Celsius
-Lifetime    Min/Max Temperature:     20/35 Celsius
+Current Temperature:                    30 Celsius
+Power Cycle Min/Max Temperature:     25/36 Celsius
+Lifetime    Min/Max Temperature:     20/36 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -153,18 +153,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4            7543  ---  Power-on Hours
-0x01  0x018  6    114459382945  ---  Logical Sectors Written
-0x01  0x020  6      4304791364  ---  Number of Write Commands
-0x01  0x028  6     50815517656  ---  Logical Sectors Read
-0x01  0x030  6       769408169  ---  Number of Read Commands
-0x01  0x038  6          841000  ---  Date and Time TimeStamp
+0x01  0x010  4           10977  ---  Power-on Hours
+0x01  0x018  6    148769893979  ---  Logical Sectors Written
+0x01  0x020  6      5647346773  ---  Number of Write Commands
+0x01  0x028  6     76806589091  ---  Logical Sectors Read
+0x01  0x030  6       993388014  ---  Number of Read Commands
+0x01  0x038  6         3550000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
-0x05  0x020  1              35  ---  Highest Temperature
+0x05  0x008  1              30  ---  Current Temperature
+0x05  0x020  1              36  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==

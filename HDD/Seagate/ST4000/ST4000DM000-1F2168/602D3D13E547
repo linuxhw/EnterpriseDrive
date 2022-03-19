@@ -1,5 +1,5 @@
-smartctl 7.0 2019-05-21 r4916 [x86_64-linux-3.10.0-957...] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Family:     Seagate Desktop HDD.15
@@ -21,8 +21,7 @@ Write cache is:   Enabled
 ATA Security is:  Disabled, frozen [SEC2]
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: FAILED!
-Drive failure expected in less than 24 hours. SAVE ALL DATA.
+SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -58,12 +57,12 @@ SCT capabilities: 	       (0x1085)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   099   006    -    147221728
+  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    201647928
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    1
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   028   021   030    NOW  281470728298263
-  9 Power_On_Hours          -O--CK   086   086   000    -    12993
+  7 Seek_Error_Rate         POSR--   031   021   030    Past 281470778017681
+  9 Power_On_Hours          -O--CK   082   082   000    -    15990
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    1
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
@@ -71,17 +70,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
 189 High_Fly_Writes         -O-RCK   098   098   000    -    2
-190 Airflow_Temperature_Cel -O---K   085   067   045    -    15 (Min/Max 13/33)
+190 Airflow_Temperature_Cel -O---K   085   067   045    -    15 (Min/Max 12/33)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1
-193 Load_Cycle_Count        -O--CK   001   001   000    -    222301
-194 Temperature_Celsius     -O---K   015   040   000    -    15 (0 13 0 0 0)
+193 Load_Cycle_Count        -O--CK   001   001   000    -    264539
+194 Temperature_Celsius     -O---K   015   040   000    -    15 (0 12 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    5800h+23m+50.090s
-241 Total_LBAs_Written      ------   100   253   000    -    108425823488
-242 Total_LBAs_Read         ------   100   253   000    -    171842543497
+240 Head_Flying_Hours       ------   100   253   000    -    6956h+06m+38.030s
+241 Total_LBAs_Written      ------   100   253   000    -    165831361296
+242 Total_LBAs_Read         ------   100   253   000    -    222205299582
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -142,13 +141,13 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
 Current Temperature:                    15 Celsius
-Power Cycle Min/Max Temperature:     13/33 Celsius
-Lifetime    Min/Max Temperature:     13/33 Celsius
-Under/Over Temperature Limit Count:  649/0
+Power Cycle Min/Max Temperature:     12/33 Celsius
+Lifetime    Min/Max Temperature:     12/33 Celsius
+Under/Over Temperature Limit Count:  29465/0
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           24  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

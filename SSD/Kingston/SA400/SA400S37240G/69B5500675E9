@@ -54,8 +54,8 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    100
-  9 Power_On_Hours          -O--CK   100   100   000    -    14802
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    15
+  9 Power_On_Hours          -O--CK   100   100   000    -    18189
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    18
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -67,18 +67,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    13
-194 Temperature_Celsius     -O---K   042   054   000    -    42 (Min/Max 28/54)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    16
+194 Temperature_Celsius     -O---K   030   054   000    -    30 (Min/Max 28/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         -O--CK   100   100   000    -    0
-231 SSD_Life_Left           ------   100   100   000    -    100
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    109
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    464
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    2157
-244 Average_Erase_Count     ------   100   100   000    -    6
-245 Max_Erase_Count         ------   100   100   000    -    9
-246 Total_Erase_Count       ------   100   100   000    -    3406
+231 SSD_Life_Left           ------   098   098   000    -    98
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    1067
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    869
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    3216
+244 Average_Erase_Count     ------   100   100   000    -    20
+245 Max_Erase_Count         ------   100   100   000    -    35
+246 Total_Erase_Count       ------   100   100   000    -    10173
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -103,7 +103,7 @@ Address    Access  R/W   Size  Description
 0xde       GPL     VS       8  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 13 (device log contains only the most recent 4 errors)
+Device Error Count: 26 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -119,10 +119,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 13 [0] log entry is empty
-Error 12 [3] log entry is empty
-Error 11 [2] log entry is empty
-Error 10 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+Error 26 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -133,11 +130,30 @@ Error 10 [1] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
   2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
   2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
   b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  ec 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  IDENTIFY DEVICE
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+
+Error 25 [0] log entry is empty
+Error 24 [3] log entry is empty
+Error 23 [2] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 51 00 00 00 00 00 00 00 00 00 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
+  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
+  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
+  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
+  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -146,22 +162,22 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4           14802  ---  Power-on Hours
-0x01  0x018  6       975113631  ---  Logical Sectors Written
-0x01  0x020  6          136443  ---  Number of Write Commands
-0x01  0x028  6       230471067  ---  Logical Sectors Read
-0x01  0x030  6         1037008  ---  Number of Read Commands
+0x01  0x008  4              18  ---  Lifetime Power-On Resets
+0x01  0x010  4           18189  ---  Power-on Hours
+0x01  0x018  6      1823797567  ---  Logical Sectors Written
+0x01  0x020  6        67451568  ---  Number of Write Commands
+0x01  0x028  6      2450417052  ---  Logical Sectors Read
+0x01  0x030  6         6917688  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  4           10  Command failed due to ICRC error
-0x0002  4            8  R_ERR response for data FIS
+0x0001  4           11  Command failed due to ICRC error
+0x0002  4            9  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
 0x000a  4           16  Device-to-host register FISes sent due to a COMRESET
 

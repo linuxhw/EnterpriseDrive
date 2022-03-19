@@ -21,9 +21,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Mushkin   | MKNSSDRE120GB      | 120 GB | 1       | 846   | 0     | 2.32   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Mushkin   | MKNSSDRE120GB      | 120 GB | 1       | 949   | 0     | 2.60   |
 | Mushkin   | MKNSSDRE960GB      | 960 GB | 5       | 514   | 2     | 0.85   |
 | Mushkin   | MKNSSDRE500GB      | 500 GB | 1       | 308   | 0     | 0.84   |
 | Mushkin   | MKNSSDSR500GB      | 500 GB | 8       | 262   | 0     | 0.72   |
@@ -39,7 +39,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Mushkin   | Unknown                | 3      | 14      | 394   | 1     | 0.88   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Mushkin   | Unknown                | 3      | 14      | 401   | 1     | 0.90   |
 | Mushkin   | Silicon Motion base... | 1      | 1       | 308   | 0     | 0.84   |

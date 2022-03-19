@@ -63,11 +63,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   067    -    0
   8 Seek_Time_Performance   --S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   100   100   000    -    6419
+  9 Power_On_Hours          -O--C-   099   099   000    -    8599
  10 Spin_Retry_Count        -O--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    201
-193 Load_Cycle_Count        -O--C-   100   100   000    -    201
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    262
+193 Load_Cycle_Count        -O--C-   100   100   000    -    262
 194 Temperature_Celsius     -O----   189   189   000    -    29 (Min/Max 21/37)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -110,7 +110,38 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 6821 hours (284 days + 5 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  10 -- 43 00 00 00 00 00 00 00 00 00 00  Error: IDNF at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 38 00 68 00 00 91 8c 71 88 40 08 35d+ ...          READ FPDMA QUEUED
+  60 00 80 00 b8 00 00 c0 90 bb 38 40 08 35d+ ...          READ FPDMA QUEUED
+  60 00 30 00 b0 00 00 91 8c 73 18 40 08 35d+ ...          READ FPDMA QUEUED
+  60 00 38 00 a8 00 00 91 8c 72 d8 40 08 35d+ ...          READ FPDMA QUEUED
+  60 00 30 00 a0 00 00 91 8c 72 a0 40 08 35d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -139,27 +170,27 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/55 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (67)
+Temperature History Size (Index):    128 (3)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               1  ---  Lifetime Power-On Resets
-0x01  0x010  4            6419  ---  Power-on Hours
-0x01  0x018  6    446675462221  ---  Logical Sectors Written
-0x01  0x020  6      1123348482  ---  Number of Write Commands
-0x01  0x028  6    214026307217  ---  Logical Sectors Read
-0x01  0x030  6      3646518276  ---  Number of Read Commands
-0x01  0x038  6     23111836050  ---  Date and Time TimeStamp
+0x01  0x010  4            8599  ---  Power-on Hours
+0x01  0x018  6    643616152740  ---  Logical Sectors Written
+0x01  0x020  6      1574901498  ---  Number of Write Commands
+0x01  0x028  6    343237117519  ---  Logical Sectors Read
+0x01  0x030  6      5903752391  ---  Number of Read Commands
+0x01  0x038  6     30958566300  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            4973  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            4973  ---  Head Flying Hours
-0x03  0x018  4             201  ---  Head Load Events
+0x03  0x008  4            6541  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            6541  ---  Head Flying Hours
+0x03  0x018  4             262  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              29  ---  Current Temperature

@@ -58,17 +58,17 @@ SCT capabilities: 	       (0x703d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    152
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    256
   3 Spin_Up_Time            POS--K   179   177   021    -    8041
   4 Start_Stop_Count        -O--CK   100   100   000    -    161
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   069   068   000    -    23167
+  9 Power_On_Hours          -O--CK   069   068   000    -    23275
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    75
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    70
-193 Load_Cycle_Count        -O--CK   198   198   000    -    8362
+193 Load_Cycle_Count        -O--CK   197   197   000    -    9709
 194 Temperature_Celsius     -O---K   129   108   000    -    23
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    9
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 72 (device log contains only the most recent 24 errors)
+Device Error Count: 128 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,7 +123,109 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 72 [23] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
+Error 128 [7] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 127 [6] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 126 [5] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 20 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 18 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 125 [4] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 08 00 00 00 00 07 2b 96 28 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 20 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 18 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 10 40 00 48d+ ...          READ FPDMA QUEUED
+  60 00 08 00 00 00 00 07 2b 96 08 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 124 [3] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 00 00 00 07 2b 96 00 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 40 00 48d+ ...          READ LOG EXT
+  60 01 00 00 28 00 00 07 2b 96 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 07 2b 95 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 18 00 00 07 2b 94 00 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 123 [2] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 00 00 00 07 2b 96 28 40 00  Error: UNC at LBA = 0x072b9628 = 120297000
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 28 00 00 07 2b 96 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 07 2b 95 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 18 00 00 07 2b 94 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 10 00 00 07 2b 93 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 08 00 00 07 2b 92 00 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 122 [1] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -134,13 +236,13 @@ Error 72 [23] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
+  60 01 00 00 10 00 00 07 04 a0 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 07 04 9f 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 30 00 00 07 04 9e 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 28 00 00 07 04 9d 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 07 04 9c 00 40 00 48d+ ...          READ FPDMA QUEUED
 
-Error 71 [22] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
+Error 121 [0] occurred at disk power-on lifetime: 23363 hours (973 days + 11 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -151,113 +253,11 @@ Error 71 [22] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-
-Error 70 [21] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 78 40 40 00  Error: UNC at LBA = 0x06be7840 = 113145920
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 38 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 30 40 00 43d+ ...          READ FPDMA QUEUED
-
-Error 69 [20] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 78 40 40 00  Error: UNC at LBA = 0x06be7840 = 113145920
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 00 00 00 06 be 78 40 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 38 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 30 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 28 40 00 43d+ ...          READ FPDMA QUEUED
-  60 00 08 00 00 00 00 06 be 78 20 40 00 43d+ ...          READ FPDMA QUEUED
-
-Error 68 [19] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 78 40 40 00  Error: UNC at LBA = 0x06be7840 = 113145920
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 10 00 00 06 be 78 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 08 00 00 06 be 7b 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 06 be 7a 00 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 01 00 00 08 00 00 06 be 79 00 40 00 43d+ ...          READ FPDMA QUEUED
-
-Error 67 [18] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 78 40 40 00  Error: UNC at LBA = 0x06be7840 = 113145920
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 08 00 00 06 be 79 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 06 be 78 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 18 00 00 06 be 77 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 10 00 00 06 be 76 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 06 be 75 00 40 00 43d+ ...          READ FPDMA QUEUED
-
-Error 66 [17] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 50 00 40 00  Error: UNC at LBA = 0x06be5000 = 113135616
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 00 08 00 08 00 00 06 be 50 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 06 be 51 00 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 06 be 50 00 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-
-Error 65 [16] occurred at disk power-on lifetime: 23248 hours (968 days + 16 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  40 -- 51 00 00 00 00 06 be 50 00 40 00  Error: UNC at LBA = 0x06be5000 = 113135616
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 06 be 50 00 40 00 43d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 40 00 43d+ ...          READ LOG EXT
-  60 01 00 00 28 00 00 06 be 51 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 20 00 00 06 be 50 00 40 00 43d+ ...          READ FPDMA QUEUED
-  60 01 00 00 18 00 00 06 be 4f 00 40 00 43d+ ...          READ FPDMA QUEUED
+  60 01 00 00 10 00 00 07 04 77 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 07 04 76 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 30 00 00 07 04 75 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 28 00 00 07 04 74 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 07 04 73 00 40 00 48d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -289,7 +289,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (225)
+Temperature History Size (Index):    478 (280)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -310,5 +310,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4     42112019  Vendor specific
+0x8000  4     46793557  Vendor specific
 

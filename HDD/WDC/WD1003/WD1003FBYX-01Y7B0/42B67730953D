@@ -25,8 +25,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x85)	Offline data collection activity
-					was aborted by an interrupting command from host.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -61,12 +61,12 @@ SCT capabilities: 	       (0x303f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    17
+  1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    22
   3 Spin_Up_Time            POS--K   185   174   021    -    3716
   4 Start_Stop_Count        -O--CK   100   100   000    -    87
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   043   043   000    -    42145
+  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
+  9 Power_On_Hours          -O--CK   040   040   000    -    44406
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    86
@@ -109,7 +109,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 2
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -124,6 +124,40 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 43519 hours (1813 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 80 00 00 13 9d fd 74 40 00  Error: UNC at LBA = 0x139dfd74 = 329121140
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 70 00 28 00 00 73 cd 0e 40 40 08 32d+ ...          READ FPDMA QUEUED
+  60 00 10 00 18 00 00 13 9d fd f0 40 08 32d+ ...          READ FPDMA QUEUED
+  60 00 80 00 10 00 00 13 9d fd 70 40 08 32d+ ...          READ FPDMA QUEUED
+  60 00 10 00 00 00 00 04 d7 f6 c8 40 08 32d+ ...          READ FPDMA QUEUED
+  ef 00 10 00 02 00 00 00 00 00 00 a0 08 32d+ ...          SET FEATURES [Enable SATA feature]
+
+Error 3 [2] occurred at disk power-on lifetime: 43519 hours (1813 days + 7 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 01 00 00 00 13 9d fd 74 40 00  Error: UNC at LBA = 0x139dfd74 = 329121140
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 10 00 e0 00 00 04 d7 f6 c8 40 08 32d+ ...          READ FPDMA QUEUED
+  60 01 00 00 d8 00 00 13 9d fd 00 40 08 32d+ ...          READ FPDMA QUEUED
+  60 01 00 00 d0 00 00 13 9d fc 00 40 08 32d+ ...          READ FPDMA QUEUED
+  60 01 00 00 c8 00 00 13 9d fb 00 40 08 32d+ ...          READ FPDMA QUEUED
+  60 01 00 00 c0 00 00 13 9d fa 00 40 08 32d+ ...          READ FPDMA QUEUED
 
 Error 2 [1] occurred at disk power-on lifetime: 39637 hours (1651 days + 13 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -187,7 +221,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (381)
+Temperature History Size (Index):    478 (24)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -202,7 +236,7 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            6  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           11  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4      6425302  Vendor specific
+0x8000  4     14612452  Vendor specific
 

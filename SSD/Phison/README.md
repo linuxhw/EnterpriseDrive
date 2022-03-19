@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Phison    | SATA SSD           | 480 GB | 3       | 578   | 0     | 1.59   |
 | Phison    | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
 | Phison    | SATA SSD           | 64 GB  | 9       | 218   | 0     | 0.60   |

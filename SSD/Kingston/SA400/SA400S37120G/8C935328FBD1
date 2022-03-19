@@ -54,8 +54,8 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    9461
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    18
+  9 Power_On_Hours          -O--CK   100   100   000    -    13933
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    21
 148 Unknown_Attribute       ------   255   255   000    -    0
 149 Unknown_Attribute       ------   255   255   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
@@ -63,22 +63,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Bad_Block_Rate          ------   100   100   000    -    17
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/12
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    559 (Average 501)
+173 MaxAvgErase_Ct          ------   100   100   000    -    766 (Average 704)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   255   255   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    17
-194 Temperature_Celsius     -O---K   073   063   000    -    27 (Min/Max 23/37)
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    20
+194 Temperature_Celsius     -O---K   076   063   000    -    24 (Min/Max 20/37)
 196 Reallocated_Event_Count ------   100   100   000    -    0
 199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 CRC_Error_Count         ------   100   100   000    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    49
-233 Flash_Writes_GiB        PO--C-   100   100   000    -    55942
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    47442
-242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    210
-244 Average_Erase_Count     ------   100   100   000    -    501
-245 Max_Erase_Count         ------   100   100   000    -    559
-246 Total_Erase_Count       ------   100   100   000    -    1931384
+231 SSD_Life_Left           PO--C-   100   100   000    -    29
+233 Flash_Writes_GiB        PO--C-   100   100   000    -    81538
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    53982
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    1032
+244 Average_Erase_Count     ------   100   100   000    -    704
+245 Max_Erase_Count         ------   100   100   000    -    766
+246 Total_Erase_Count       ------   100   100   000    -    2710744
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -115,20 +115,20 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              18  ---  Lifetime Power-On Resets
-0x01  0x010  4            9461  ---  Power-on Hours
-0x01  0x018  6     99494664808  ---  Logical Sectors Written
-0x01  0x028  6       441503067  ---  Logical Sectors Read
+0x01  0x008  4              21  ---  Lifetime Power-On Resets
+0x01  0x010  4           13933  ---  Power-on Hours
+0x01  0x018  6    113210302897  ---  Logical Sectors Written
+0x01  0x028  6      2164783080  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
+0x05  0x008  1              24  ---  Current Temperature
 0x05  0x020  1              37  ---  Highest Temperature
-0x05  0x028  1              23  ---  Lowest Temperature
+0x05  0x028  1              20  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              50  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              70  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -58,7 +58,7 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    941862h+59m+40.090s
+  9 Power_On_Hours_and_Msec -O--CK   000   000   000    -    946898h+13m+47.600s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    120
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -67,15 +67,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    120
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    4549856
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    4562614
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
-227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    62
+227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    63
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   095   095   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    4549856
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    7720881
-249 NAND_Writes_1GiB        PO--C-   100   100   000    -    95864
+233 Media_Wearout_Indicator -O--CK   094   094   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    4562614
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    7772963
+249 NAND_Writes_1GiB        PO--C-   100   100   000    -    97290
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,15 +131,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             126  ---  Lifetime Power-On Resets
-0x01  0x010  4           47067  ---  Power-on Hours
-0x01  0x018  6    298386879950  ---  Logical Sectors Written
-0x01  0x028  6    506180460349  ---  Logical Sectors Read
+0x01  0x010  4           52104  ---  Power-on Hours
+0x01  0x018  6    299222946680  ---  Logical Sectors Written
+0x01  0x028  6    509593716898  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4          270040  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4          270146  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4          270040  ---  Number of Hardware Resets
-0x06  0x010  4             161  ---  Number of ASR Events
+0x06  0x008  4          270146  ---  Number of Hardware Resets
+0x06  0x010  4             228  ---  Number of ASR Events
 0x06  0x018  4              33  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1             255  ---  Percentage Used Endurance Indicator
@@ -155,8 +155,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           59  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           47  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          126  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2          100  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

@@ -15,8 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Phison    | PCIe SSD           | 256 GB | 1       | 362   | 0     | 0.99   |
-| Phison    | Sabrent Rocket Q   | 1 TB   | 3       | 333   | 0     | 0.91   |
-| Phison    | Viper M.2 VPN100   | 2 TB   | 7       | 330   | 0     | 0.91   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Phison    | Viper M.2 VPN100   | 2 TB   | 7       | 417   | 0     | 1.14   |
+| Phison    | Sabrent Rocket Q   | 1 TB   | 5       | 306   | 0     | 0.84   |
+| Phison    | PCIe SSD           | 4 TB   | 7       | 105   | 0     | 0.29   |

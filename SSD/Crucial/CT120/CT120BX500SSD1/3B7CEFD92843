@@ -56,27 +56,27 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    4497
+  9 Power_On_Hours          -O--CK   100   100   050    -    6412
  12 Power_Cycle_Count       -O--CK   100   100   050    -    9
 171 Program_Fail_Count      -O--CK   100   100   050    -    0
 172 Erase_Fail_Count        -O--CK   100   100   050    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    1021
+173 Ave_Block-Erase_Count   -O--CK   100   100   050    -    1773
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   050    -    7
 180 Unused_Reserve_NAND_Blk -O--CK   100   100   050    -    100
 183 SATA_Interfac_Downshift -O--CK   100   100   050    -    0
 184 Error_Correction_Count  -O--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   050    -    0
-194 Temperature_Celsius     -O---K   051   029   050    Past 49 (Min/Max 32/71)
+194 Temperature_Celsius     -O---K   041   029   050    NOW  59 (Min/Max 32/71)
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   ----CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
-202 Percent_Lifetime_Remain ----CK   032   032   001    -    32
+202 Percent_Lifetime_Remain ----CK   000   000   001    NOW  0
 206 Write_Error_Rate        -OSR-K   100   100   050    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   050    -    0
-246 Total_LBAs_Written      -O--CK   100   100   050    -    64443442889
-247 Host_Program_Page_Count -O--CK   100   100   050    -    2013857590
-248 FTL_Program_Page_Count  -O--CK   100   100   050    -    7212589056
+246 Total_LBAs_Written      -O--CK   100   100   050    -    102265009977
+247 Host_Program_Page_Count -O--CK   100   100   050    -    3195781561
+248 FTL_Program_Page_Count  -O--CK   100   100   050    -    13116859240
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -111,13 +111,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               9  ---  Lifetime Power-On Resets
-0x01  0x010  4            4497  ---  Power-on Hours
-0x01  0x018  6        18933449  ---  Logical Sectors Written
-0x01  0x020  6       519598570  ---  Number of Write Commands
-0x01  0x028  6      1202381995  ---  Logical Sectors Read
-0x01  0x030  6       123695498  ---  Number of Read Commands
+0x01  0x010  4            6412  ---  Power-on Hours
+0x01  0x018  6      3480767865  ---  Logical Sectors Written
+0x01  0x020  6       847938692  ---  Number of Write Commands
+0x01  0x028  6      2962347753  ---  Logical Sectors Read
+0x01  0x030  6       190253421  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1             113  ---  Percentage Used Endurance Indicator
+0x07  0x008  1             193  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -127,5 +127,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           29  Device-to-host register FISes sent due to a COMRESET
 

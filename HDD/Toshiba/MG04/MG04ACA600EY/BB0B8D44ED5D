@@ -64,7 +64,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   026   026   000    -    29654
+  9 Power_On_Hours          -O--CK   021   021   000    -    31919
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    32
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    2
@@ -76,7 +76,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   016   016   000    -    33655
+222 Loaded_Hours            -O--CK   011   011   000    -    35927
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    633
@@ -159,7 +159,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (36)
+Temperature History Size (Index):    478 (56)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -169,16 +169,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              32  ---  Lifetime Power-On Resets
-0x01  0x010  4           29654  ---  Power-on Hours
-0x01  0x018  6    609898663887  ---  Logical Sectors Written
-0x01  0x020  6      4322090967  ---  Number of Write Commands
-0x01  0x028  6    554928184509  ---  Logical Sectors Read
-0x01  0x030  6      1243921533  ---  Number of Read Commands
+0x01  0x010  4           31919  ---  Power-on Hours
+0x01  0x018  6    639413431892  ---  Logical Sectors Written
+0x01  0x020  6      4362860038  ---  Number of Write Commands
+0x01  0x028  6    611214334597  ---  Logical Sectors Read
+0x01  0x030  6      1463639603  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               2  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           29654  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           33655  ---  Head Flying Hours
+0x03  0x008  4           31919  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           35927  ---  Head Flying Hours
 0x03  0x018  4              86  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               1  ---  Read Recovery Attempts
@@ -188,7 +188,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              36  ---  Current Temperature
-0x05  0x010  1              36  N--  Average Short Term Temperature
+0x05  0x010  1              35  N--  Average Short Term Temperature
 0x05  0x018  1              35  N--  Average Long Term Temperature
 0x05  0x020  1              69  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
@@ -221,7 +221,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4    581610633  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4    706272750  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

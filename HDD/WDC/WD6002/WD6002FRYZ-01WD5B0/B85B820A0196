@@ -62,16 +62,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   138   138   054    -    100
   3 Spin_Up_Time            POS---   157   157   024    -    439 (Average 398)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    56
+  4 Start_Stop_Count        -O--C-   100   100   000    -    57
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   095   095   000    -    40317
+  9 Power_On_Hours          -O--C-   094   094   000    -    43612
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    56
-192 Power-Off_Retract_Count -O--CK   097   097   000    -    3704
-193 Load_Cycle_Count        -O--C-   097   097   000    -    3704
-194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 20/43)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    57
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    3842
+193 Load_Cycle_Count        -O--C-   097   097   000    -    3842
+194 Temperature_Celsius     -O----   181   181   000    -    33 (Min/Max 20/43)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -210,8 +210,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     29/32 Celsius
+Current Temperature:                    33 Celsius
+Power Cycle Min/Max Temperature:     31/43 Celsius
 Lifetime    Min/Max Temperature:     20/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -220,31 +220,31 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (96)
+Temperature History Size (Index):    128 (26)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              56  ---  Lifetime Power-On Resets
-0x01  0x018  6    268786794585  ---  Logical Sectors Written
-0x01  0x020  6       442959167  ---  Number of Write Commands
-0x01  0x028  6    617175692026  ---  Logical Sectors Read
-0x01  0x030  6      1425886708  ---  Number of Read Commands
-0x01  0x038  6    145141634700  ---  Date and Time TimeStamp
+0x01  0x008  4              57  ---  Lifetime Power-On Resets
+0x01  0x018  6    284507742331  ---  Logical Sectors Written
+0x01  0x020  6       459613128  ---  Number of Write Commands
+0x01  0x028  6    661214018194  ---  Logical Sectors Read
+0x01  0x030  6      1498700165  ---  Number of Read Commands
+0x01  0x038  6    157003702100  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           40142  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           40142  ---  Head Flying Hours
-0x03  0x018  4            3704  ---  Head Load Events
+0x03  0x008  4           43435  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           43435  ---  Head Flying Hours
+0x03  0x018  4            3842  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4         3968530  ---  Read Recovery Attempts
+0x03  0x028  4         4271383  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              58  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              29  N--  Average Long Term Temperature
+0x05  0x008  1              33  ---  Current Temperature
+0x05  0x010  1              33  N--  Average Short Term Temperature
+0x05  0x018  1              32  N--  Average Long Term Temperature
 0x05  0x020  1              43  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              35  N--  Highest Average Short Term Temperature

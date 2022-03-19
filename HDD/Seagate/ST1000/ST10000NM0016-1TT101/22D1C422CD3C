@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,30 +59,30 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   072   060   044    -    14381248
+  1 Raw_Read_Error_Rate     POSR--   068   060   044    -    86211552
   3 Spin_Up_Time            PO----   094   092   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    49
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1777
-  7 Seek_Error_Rate         POSR--   081   060   045    -    135905523
-  9 Power_On_Hours          -O--CK   052   052   000    -    42102
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    2170
+  7 Seek_Error_Rate         POSR--   087   060   045    -    495239893
+  9 Power_On_Hours          -O--CK   048   048   000    -    45832
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    47
 184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   100   100   000    -    0
+187 Reported_Uncorrect      -O--CK   097   097   000    -    3
 188 Command_Timeout         -O--CK   100   100   000    -    0 0 0
-189 High_Fly_Writes         -O-RCK   005   005   000    -    95
-190 Airflow_Temperature_Cel -O---K   071   066   040    -    29 (Min/Max 27/30)
-191 G-Sense_Error_Rate      -O--CK   084   084   000    -    33973
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    757
-193 Load_Cycle_Count        -O--CK   099   099   000    -    2512
-194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 21 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   031   004   000    -    14381248
-197 Current_Pending_Sector  -O--C-   100   100   000    -    16
-198 Offline_Uncorrectable   ----C-   100   100   000    -    16
+189 High_Fly_Writes         -O-RCK   001   001   000    -    100
+190 Airflow_Temperature_Cel -O---K   072   066   040    -    28 (Min/Max 26/30)
+191 G-Sense_Error_Rate      -O--CK   083   083   000    -    35148
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    797
+193 Load_Cycle_Count        -O--CK   095   095   000    -    11524
+194 Temperature_Celsius     -O---K   028   040   000    -    28 (0 21 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   030   004   000    -    86211552
+197 Current_Pending_Sector  -O--C-   100   100   000    -    32
+198 Offline_Uncorrectable   ----C-   100   100   000    -    32
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    41678h+51m+38.372s
-241 Total_LBAs_Written      ------   100   253   000    -    312472847163
-242 Total_LBAs_Read         ------   100   253   000    -    1067192191187
+240 Head_Flying_Hours       ------   100   253   000    -    45404h+43m+15.411s
+241 Total_LBAs_Written      ------   100   253   000    -    321044941998
+242 Total_LBAs_Read         ------   100   253   000    -    1102394410477
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,72 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-No Errors Logged
+Device Error Count: 3
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 43605 hours (1816 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 10 89 55 00 00 00  Error: WP at LBA = 0x10895500 = 277435648
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  61 00 00 00 08 00 00 00 97 60 f0 40 00 23d+ ...          WRITE FPDMA QUEUED
+  60 00 00 00 08 00 00 10 89 55 00 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 00 97 47 48 40 00 23d+ ...          READ FPDMA QUEUED
+  61 00 00 00 08 00 02 46 04 9f 60 40 00 23d+ ...          WRITE FPDMA QUEUED
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 23d+ ...          FLUSH CACHE EXT
+
+Error 2 [1] occurred at disk power-on lifetime: 43605 hours (1816 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 10 89 55 00 00 00  Error: UNC at LBA = 0x10895500 = 277435648
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 97 47 48 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 10 89 55 00 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 10 89 54 f8 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 10 89 54 f0 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 00 10 89 54 e8 40 00 23d+ ...          READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 43605 hours (1816 days + 21 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 53 00 00 00 00 10 89 55 00 00 00  Error: UNC at LBA = 0x10895500 = 277435648
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 00 00 08 00 00 00 97 4b 60 40 00 23d+ ...          READ FPDMA QUEUED
+  61 00 00 00 08 00 00 00 97 60 d8 40 00 23d+ ...          WRITE FPDMA QUEUED
+  60 00 00 00 08 00 02 ba f5 97 60 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 00 08 00 02 ba f5 97 58 40 00 23d+ ...          READ FPDMA QUEUED
+  60 00 00 04 00 00 00 10 89 54 00 40 00 23d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -156,17 +221,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     27/30 Celsius
+Current Temperature:                    28 Celsius
+Power Cycle Min/Max Temperature:     26/30 Celsius
 Lifetime    Min/Max Temperature:     21/51 Celsius
-Under/Over Temperature Limit Count:   0/257
+Under/Over Temperature Limit Count:   0/4012
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (30)
+Temperature History Size (Index):    128 (73)
 
 SCT Error Recovery Control:
            Read:    100 (10.0 seconds)
@@ -176,28 +241,28 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              47  ---  Lifetime Power-On Resets
-0x01  0x010  4           42102  ---  Power-on Hours
-0x01  0x018  6    312475087179  ---  Logical Sectors Written
-0x01  0x020  6       815611807  ---  Number of Write Commands
-0x01  0x028  6   1067195078786  ---  Logical Sectors Read
-0x01  0x030  6      4301049237  ---  Number of Read Commands
+0x01  0x010  4           45832  ---  Power-on Hours
+0x01  0x018  6    321047182014  ---  Logical Sectors Written
+0x01  0x020  6       858370709  ---  Number of Write Commands
+0x01  0x028  6   1102397296564  ---  Logical Sectors Read
+0x01  0x030  6      4456687441  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4      3131567859  N--  Spindle Motor Power-on Hours
+0x03  0x008  4      3131571589  N--  Spindle Motor Power-on Hours
 0x03  0x010  4      3131526149  N--  Head Flying Hours
-0x03  0x018  4            2512  ---  Head Load Events
-0x03  0x020  4            1777  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4               0  ---  Read Recovery Attempts
+0x03  0x018  4           11525  ---  Head Load Events
+0x03  0x020  4            2170  ---  Number of Reallocated Logical Sectors
+0x03  0x028  4              12  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
-0x03  0x038  4              16  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4             757  ---  Number of High Priority Unload Events
+0x03  0x038  4              32  ---  Number of Realloc. Candidate Logical Sectors
+0x03  0x040  4             797  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4              14  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4              33  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1              29  ---  Average Short Term Temperature
-0x05  0x018  1              28  ---  Average Long Term Temperature
+0x05  0x008  1              28  ---  Current Temperature
+0x05  0x010  1              28  ---  Average Short Term Temperature
+0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              34  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1              31  ---  Highest Average Short Term Temperature
@@ -209,7 +274,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              56  ---  Number of Hardware Resets
+0x06  0x008  4              57  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
@@ -220,26 +285,41 @@ Page  Offset Size        Value Flags Description
 
 Pending Defects log (GP Log 0x0c)
 Index                LBA    Hours
-    0          277435648    42004
-    1          277435649    42004
-    2          277435650    42004
-    3          277435651    42004
-    4          277435652    42004
-    5          277435653    42004
-    6          277435654    42004
-    7          277435655    42004
-    8          277435656    42004
-    9          277435657    42004
-   10          277435658    42004
-   11          277435659    42004
-   12          277435660    42004
-   13          277435661    42004
-   14          277435662    42004
-   15          277435663    42004
+    0          268739696    42978
+    1          268739697    42978
+    2          268739698    42978
+    3          268739699    42978
+    4          268739700    42978
+    5          268739701    42978
+    6          268739702    42978
+    7          268739703    42978
+    8          268855240    42342
+    9          268855241    42342
+   10          268855242    42342
+   11          268855243    42342
+   12          268855244    42342
+   13          268855245    42342
+   14          268855246    42342
+   15          268855247    42342
+   16          277435648    42004
+   17          277435649    42004
+   18          277435650    42004
+   19          277435651    42004
+   20          277435652    42004
+   21          277435653    42004
+   22          277435654    42004
+   23          277435655    42004
+   24          277435656    42004
+   25          277435657    42004
+   26          277435658    42004
+   27          277435659    42004
+   28          277435660    42004
+   29          277435661    42004
+   30          277435662    42004
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

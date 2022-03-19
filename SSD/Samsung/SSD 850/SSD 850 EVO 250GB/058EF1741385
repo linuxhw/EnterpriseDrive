@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -57,19 +57,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   092   092   000    -    36680
- 12 Power_Cycle_Count       -O--CK   098   098   000    -    1036
-177 Wear_Leveling_Count     PO--C-   044   044   000    -    1181
+  9 Power_On_Hours          -O--CK   092   092   000    -    39143
+ 12 Power_Cycle_Count       -O--CK   098   098   000    -    1037
+177 Wear_Leveling_Count     PO--C-   033   033   000    -    1424
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
-187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   061   039   000    -    39
-195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
+187 Uncorrectable_Error_Cnt -O--CK   099   099   000    -    1076
+190 Airflow_Temperature_Cel -O--CK   068   039   000    -    32
+195 ECC_Error_Rate          -O-RC-   199   199   000    -    1076
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    54
-241 Total_LBAs_Written      -O--CK   099   099   000    -    76951680147
+241 Total_LBAs_Written      -O--CK   099   099   000    -    88021269015
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -99,7 +99,89 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-No Errors Logged
+Device Error Count: 1076 (device log contains only the most recent 4 errors)
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1076 [3] occurred at disk power-on lifetime: 38588 hours (1607 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 16 ba bb 98 e0 00  Error: UNC 8 sectors at LBA = 0x16babb98 = 381336472
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 16 ba bb 98 e0 00 20d+ ...          READ DMA EXT
+  2f 00 00 00 01 00 00 00 00 08 30 e0 00 20d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 13 e0 00 20d+ ...          READ LOG EXT
+  ef 00 10 00 02 00 00 00 00 00 00 e0 00 20d+ ...          SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 20d+ ...          READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1075 [2] occurred at disk power-on lifetime: 38588 hours (1607 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 16 ba bb 98 e0 00  Error: UNC 8 sectors at LBA = 0x16babb98 = 381336472
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  25 00 00 00 08 00 00 16 ba bb 98 e0 00 20d+ ...          READ DMA EXT
+  2f 00 00 00 01 00 00 00 00 08 30 e0 00 20d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 13 e0 00 20d+ ...          READ LOG EXT
+  ef 00 10 00 02 00 00 00 00 00 00 e0 00 20d+ ...          SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 e0 00 20d+ ...          READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1074 [1] occurred at disk power-on lifetime: 38588 hours (1607 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 5d bf c0 ea 00  Error: UNC 8 sectors at LBA = 0x0a5dbfc0 = 173916096
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 0a 5d bf c0 ea 00 20d+ ...          READ DMA
+  2f 00 00 00 01 00 00 00 00 08 30 ea 00 20d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 13 ea 00 20d+ ...          READ LOG EXT
+  ef 00 10 00 02 00 00 00 00 00 00 ea 00 20d+ ...          SET FEATURES [Enable SATA feature]
+  27 00 00 00 00 00 00 00 00 00 00 ea 00 20d+ ...          READ NATIVE MAX ADDRESS EXT [OBS-ACS-3]
+
+Error 1073 [0] occurred at disk power-on lifetime: 38588 hours (1607 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 51 00 08 00 00 00 5d bf c0 ea 00  Error: UNC 8 sectors at LBA = 0x0a5dbfc0 = 173916096
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  c8 00 00 00 08 00 00 0a 5d bf c0 ea 00 20d+ ...          READ DMA
+  35 00 00 00 08 00 00 11 64 27 58 ea 00 20d+ ...          WRITE DMA EXT
+  ca 00 00 00 18 00 00 05 30 b7 40 ea 00 20d+ ...          WRITE DMA
+  ca 00 00 00 08 00 00 06 83 b9 f0 ea 00 20d+ ...          WRITE DMA
+  35 00 00 00 08 00 00 1a 23 a9 98 ea 00 20d+ ...          WRITE DMA EXT
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -119,8 +201,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SCT command executing in background (5)
-Current Temperature:                    39 Celsius
-Power Cycle Min/Max Temperature:     32/52 Celsius
+Current Temperature:                    32 Celsius
+Power Cycle Min/Max Temperature:     32/50 Celsius
 Lifetime    Min/Max Temperature:      0/70 Celsius
 Under/Over Temperature Limit Count:  4294967295/4294901760
 SMART Status:                        0xffff (Reserved)
@@ -130,7 +212,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (124)
+Temperature History Size (Index):    128 (16)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -146,8 +228,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            3  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           10  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           10  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

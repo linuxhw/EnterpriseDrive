@@ -57,25 +57,25 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    3991
+  9 Power_On_Hours          -O--CK   098   098   000    -    7413
  12 Power_Cycle_Count       -O--CK   099   099   000    -    10
 170 Unknown_Attribute       -O--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   010    -    0
 172 Unknown_Attribute       -O--CK   100   100   010    -    0
-173 Unknown_Attribute       PO--CK   099   099   005    -    4
+173 Unknown_Attribute       PO--CK   099   099   005    -    6
 174 Unknown_Attribute       -O--CK   099   099   000    -    5
 178 Used_Rsvd_Blk_Cnt_Chip  PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    2004
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O--CK   041   035   000    -    59
+194 Temperature_Celsius     -O--CK   043   035   000    -    57
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
-233 Media_Wearout_Indicator PO--C-   099   099   000    -    16737970
-241 Total_LBAs_Written      -O--CK   099   099   000    -    1551
-242 Total_LBAs_Read         -O--CK   099   099   000    -    4895
-249 Unknown_Attribute       -O--CK   099   099   000    -    1936
-250 Read_Error_Retry_Rate   -O--CK   099   099   000    -    3254388288
-251 Unknown_Attribute       -O--CK   099   099   000    -    4060666240
+233 Media_Wearout_Indicator PO--C-   099   099   000    -    16718347
+241 Total_LBAs_Written      -O--CK   099   099   000    -    3572
+242 Total_LBAs_Read         -O--CK   099   099   000    -    16334
+249 Unknown_Attribute       -O--CK   099   099   000    -    3584
+250 Read_Error_Retry_Rate   -O--CK   099   099   000    -    7492752832
+251 Unknown_Attribute       -O--CK   099   099   000    -    7518085696
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,9 +126,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    59 Celsius
-Power Cycle Min/Max Temperature:     40/64 Celsius
-Lifetime    Min/Max Temperature:     35/64 Celsius
+Current Temperature:                    57 Celsius
+Power Cycle Min/Max Temperature:     40/65 Celsius
+Lifetime    Min/Max Temperature:     35/65 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -138,7 +138,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (31)
+Temperature History Size (Index):    128 (85)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -148,18 +148,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              10  ---  Lifetime Power-On Resets
-0x01  0x010  4            3991  ---  Power-on Hours
-0x01  0x018  6      3254388288  ---  Logical Sectors Written
-0x01  0x020  6       137175136  ---  Number of Write Commands
-0x01  0x028  6     10267040731  ---  Logical Sectors Read
-0x01  0x030  6        74994885  ---  Number of Read Commands
-0x01  0x038  6          379000  ---  Date and Time TimeStamp
+0x01  0x010  4            7413  ---  Power-on Hours
+0x01  0x018  6      7492752832  ---  Logical Sectors Written
+0x01  0x020  6       319358187  ---  Number of Write Commands
+0x01  0x028  6     34256593339  ---  Logical Sectors Read
+0x01  0x030  6       260113913  ---  Number of Read Commands
+0x01  0x038  6         1468000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              59  ---  Current Temperature
-0x05  0x020  1              64  ---  Highest Temperature
+0x05  0x008  1              57  ---  Current Temperature
+0x05  0x020  1              65  ---  Highest Temperature
 0x05  0x028  1              35  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==

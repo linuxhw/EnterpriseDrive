@@ -15,12 +15,12 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| ADATA     | SX8200PNP          | 1 TB   | 1       | 341   | 0     | 0.94   |
-| ADATA     | SX8200PNP          | 256 GB | 2       | 264   | 0     | 0.72   |
-| ADATA     | SX8200PNP          | 512 GB | 5       | 111   | 0     | 0.30   |
-| ADATA     | SX8200PNP          | 2 TB   | 2       | 45    | 0     | 0.13   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| ADATA     | SX8200PNP          | 256 GB | 2       | 418   | 0     | 1.15   |
+| ADATA     | SX8200PNP          | 1 TB   | 2       | 243   | 0     | 0.67   |
+| ADATA     | SX8200PNP          | 512 GB | 5       | 114   | 0     | 0.31   |
+| ADATA     | SX8200PNP          | 2 TB   | 3       | 96    | 0     | 0.26   |
+| ADATA     | SX6000PNP          | 256 GB | 2       | 70    | 0     | 0.19   |
 | ADATA     | SX6000LNP          | 512 GB | 1       | 30    | 0     | 0.08   |
-| ADATA     | SX6000PNP          | 256 GB | 2       | 22    | 0     | 0.06   |
 | ADATA     | SX6000NP           | 128 GB | 1       | 615   | 142   | 0.01   |

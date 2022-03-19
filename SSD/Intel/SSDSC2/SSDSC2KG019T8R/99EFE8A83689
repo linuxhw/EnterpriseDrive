@@ -59,15 +59,15 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    1633790343
+  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2632
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    20
- 13 Read_Soft_Error_Rate    -OSRC-   090   090   000    -    37144510966151
+  9 Power_On_Hours          -O--CK   100   100   000    -    5911
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    24
+ 13 Read_Soft_Error_Rate    -OSRC-   085   083   000    -    281474976710655
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   100   100   000    -    4
-174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    20
-175 Program_Fail_Count_Chip -O--C-   100   100   010    -    0
+173 Unknown_Attribute       -O--C-   100   100   000    -    43
+174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    24
+175 Program_Fail_Count_Chip -O--C-   100   100   010    -    39
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    20595
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
@@ -78,13 +78,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2347 (24 65535)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2386 (28 65535)
 202 End_of_Life             POS--K   100   100   000    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    6019
+233 Total_LBAs_Written      -O--CK   100   100   000    -    1275811
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-235 Unknown_Attribute       PO-R--   100   100   000    -    6019
-241 Total_LBAs_Written      -O--CK   100   100   000    -    6019
-242 Total_LBAs_Read         -O--CK   100   100   000    -    82341
+235 Unknown_Attribute       PO-R--   100   100   000    -    1275811
+241 Total_LBAs_Written      -O--CK   100   100   000    -    1275811
+242 Total_LBAs_Read         -O--CK   100   100   000    -    998907
 245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -128,7 +128,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    20 Celsius
-Power Cycle Min/Max Temperature:     16/24 Celsius
+Power Cycle Min/Max Temperature:     18/25 Celsius
 Lifetime    Min/Max Temperature:     13/30 Celsius
 Specified Max Operating Temperature:    73 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -141,7 +141,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/73 Celsius
 Min/Max Temperature Limit:            0/73 Celsius
-Temperature History Size (Index):    478 (29)
+Temperature History Size (Index):    478 (247)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -150,12 +150,12 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              20  ---  Lifetime Power-On Resets
-0x01  0x018  6       394496434  ---  Logical Sectors Written
-0x01  0x020  6         7907618  ---  Number of Write Commands
-0x01  0x028  6      5396364476  ---  Logical Sectors Read
-0x01  0x030  6        11387090  ---  Number of Read Commands
-0x01  0x038  6       885741787  ---  Date and Time TimeStamp
+0x01  0x008  4              24  ---  Lifetime Power-On Resets
+0x01  0x018  6     83611570540  ---  Logical Sectors Written
+0x01  0x020  6       194912149  ---  Number of Write Commands
+0x01  0x028  6     65464370372  ---  Logical Sectors Read
+0x01  0x030  6       468465936  ---  Number of Read Commands
+0x01  0x038  6      4100917515  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -165,7 +165,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x018  1              19  ---  Average Long Term Temperature
 0x05  0x020  1              24  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
-0x05  0x030  1              20  ---  Highest Average Short Term Temperature
+0x05  0x030  1              21  ---  Highest Average Short Term Temperature
 0x05  0x038  1              19  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              19  ---  Highest Average Long Term Temperature
 0x05  0x048  1              19  ---  Lowest Average Long Term Temperature
@@ -174,8 +174,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              11  ---  Number of Hardware Resets
-0x06  0x010  4              10  ---  Number of ASR Events
+0x06  0x008  4              20  ---  Number of Hardware Resets
+0x06  0x010  4              19  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

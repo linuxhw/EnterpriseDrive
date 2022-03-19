@@ -21,12 +21,12 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Gigabyte  | GP-GSTFS30512GTTD  | 512 GB | 2       | 410   | 0     | 1.13   |
 | Gigabyte  | GP-GSTFS31480GNTD  | 480 GB | 1       | 238   | 0     | 0.65   |
+| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 10      | 189   | 0     | 0.52   |
 | Gigabyte  | GP-GSTFS31240GNTD  | 240 GB | 1       | 181   | 0     | 0.50   |
-| Gigabyte  | GP-GSTFS31120GNTD  | 120 GB | 6       | 15    | 0     | 0.04   |
 
 SSD by Family
 -------------
@@ -39,7 +39,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | Gigabyte  | Unknown                | 1      | 2       | 410   | 0     | 1.13   |
-| Gigabyte  | Phison Driven SSDs     | 3      | 8       | 63    | 0     | 0.17   |
+| Gigabyte  | Phison Driven SSDs     | 3      | 12      | 192   | 0     | 0.53   |

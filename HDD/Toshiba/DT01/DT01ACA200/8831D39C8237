@@ -24,12 +24,11 @@ ATA Security is:  Disabled, frozen [SEC2]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x85)	Offline data collection activity
+					was aborted by an interrupting command from host.
 
-Self-test execution status:      (   0)	The previous self-test routine completed
-					without error or no self-test has ever 
-					been run.
+Self-test execution status:      ( 248)	Self-test routine in progress...
+					80% of test remaining.
 Total time to complete Offline 
 data collection: 		(14344) seconds.
 Offline data collection
@@ -65,11 +64,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   124   124   020    -    33
-  9 Power_On_Hours          -O--C-   092   092   000    -    60483
+  9 Power_On_Hours          -O--C-   092   092   000    -    62861
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    57
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    955
-193 Load_Cycle_Count        -O--C-   100   100   000    -    955
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    1032
+193 Load_Cycle_Count        -O--C-   100   100   000    -    1032
 194 Temperature_Celsius     -O----   214   214   000    -    28 (Min/Max 14/37)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -107,25 +106,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     60460         -
-# 2  Short offline       Completed without error       00%     60436         -
-# 3  Short offline       Completed without error       00%     60412         -
-# 4  Short offline       Completed without error       00%     60388         -
-# 5  Short offline       Completed without error       00%     60364         -
-# 6  Extended offline    Completed without error       00%     60345         -
-# 7  Short offline       Completed without error       00%     60316         -
-# 8  Short offline       Completed without error       00%     60292         -
-# 9  Short offline       Completed without error       00%     60268         -
-#10  Short offline       Completed without error       00%     60244         -
-#11  Short offline       Completed without error       00%     60220         -
-#12  Short offline       Completed without error       00%     60196         -
-#13  Extended offline    Completed without error       00%     60178         -
-#14  Short offline       Completed without error       00%     60148         -
-#15  Short offline       Completed without error       00%     60124         -
-#16  Short offline       Completed without error       00%     60100         -
-#17  Short offline       Completed without error       00%     60076         -
-#18  Short offline       Completed without error       00%     60052         -
-#19  Short offline       Completed without error       00%     60028         -
+# 1  Short offline       Completed without error       00%     62836         -
+# 2  Short offline       Completed without error       00%     62812         -
+# 3  Short offline       Completed without error       00%     62788         -
+# 4  Short offline       Completed without error       00%     62764         -
+# 5  Short offline       Completed without error       00%     62740         -
+# 6  Short offline       Completed without error       00%     62716         -
+# 7  Extended offline    Completed without error       00%     62701         -
+# 8  Short offline       Completed without error       00%     62668         -
+# 9  Short offline       Completed without error       00%     62644         -
+#10  Short offline       Completed without error       00%     62620         -
+#11  Short offline       Completed without error       00%     62596         -
+#12  Short offline       Completed without error       00%     62572         -
+#13  Short offline       Completed without error       00%     62548         -
+#14  Extended offline    Completed without error       00%     62531         -
+#15  Short offline       Completed without error       00%     62500         -
+#16  Short offline       Completed without error       00%     62476         -
+#17  Short offline       Completed without error       00%     62452         -
+#18  Short offline       Completed without error       00%     62428         -
+#19  Short offline       Completed without error       00%     62404         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -140,9 +139,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        SMART Off-line Data Collection executing in background (4)
+Device State:                        DST executing in background (3)
 Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     26/35 Celsius
+Power Cycle Min/Max Temperature:     25/35 Celsius
 Lifetime    Min/Max Temperature:     14/37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -151,7 +150,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (4)
+Temperature History Size (Index):    128 (71)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -161,15 +160,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              57  ---  Lifetime Power-On Resets
-0x01  0x010  4           60483  ---  Power-on Hours
-0x01  0x018  6     97211123060  ---  Logical Sectors Written
-0x01  0x020  6       479668225  ---  Number of Write Commands
-0x01  0x028  6   1180616591405  ---  Logical Sectors Read
-0x01  0x030  6      7871186131  ---  Number of Read Commands
+0x01  0x010  4           62861  ---  Power-on Hours
+0x01  0x018  6    100413755534  ---  Logical Sectors Written
+0x01  0x020  6       516105345  ---  Number of Write Commands
+0x01  0x028  6   1199592771520  ---  Logical Sectors Read
+0x01  0x030  6      7924641903  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           60475  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           60475  ---  Head Flying Hours
-0x03  0x018  4             955  ---  Head Load Events
+0x03  0x008  4           62852  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           62852  ---  Head Flying Hours
+0x03  0x018  4            1032  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               1  ---  Read Recovery Attempts
 0x03  0x030  4               6  ---  Number of Mechanical Start Failures
@@ -177,9 +176,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1              28  N--  Average Short Term Temperature
-0x05  0x018  1              27  N--  Average Long Term Temperature
+0x05  0x008  1              28  ---  Current Temperature
+0x05  0x010  1              26  N--  Average Short Term Temperature
+0x05  0x018  1              26  N--  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
 0x05  0x028  1              14  ---  Lowest Temperature
 0x05  0x030  1              33  N--  Highest Average Short Term Temperature

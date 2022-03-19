@@ -15,34 +15,36 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| WDC       | PC SN720 SDAPNT... | 1 TB   | 1       | 824   | 0     | 2.26   |
-| WDC       | WUS3BA196C7P3E3    | 960 GB | 83      | 513   | 0     | 1.41   |
-| WDC       | WUS3BA138C7P3E3    | 3.8 TB | 20      | 503   | 0     | 1.38   |
-| WDC       | WUS3CA116C7P3E3    | 1.6 TB | 178     | 479   | 0     | 1.31   |
-| WDC       | CL SN720 SDAQNT... | 1 TB   | 46      | 383   | 0     | 1.05   |
-| WDC       | WUS4CB016D7P3E3    | 1.6 TB | 152     | 375   | 0     | 1.03   |
-| WDC       | CL SN720 SDAQNT... | 512 GB | 96      | 375   | 9     | 0.99   |
-| WDC       | WUS4BB096D7P3E3    | 960 GB | 534     | 361   | 0     | 0.99   |
-| WDC       | WDS250G3X0C-00SJG0 | 250 GB | 4       | 309   | 0     | 0.85   |
-| WDC       | PC SN720 SDAPNT... | 256 GB | 15      | 296   | 0     | 0.81   |
-| WDC       | WDS500G3X0C-00SJG0 | 500 GB | 23      | 252   | 0     | 0.69   |
-| WDC       | WDS500G3XHC-00SJG0 | 500 GB | 6       | 239   | 0     | 0.66   |
-| WDC       | WUS4BB038D7P3E1    | 3.8 TB | 71      | 198   | 0     | 0.54   |
-| WDC       | WUS4BB038D7P3E3    | 3.8 TB | 37      | 197   | 0     | 0.54   |
-| WDC       | WUS4BB076D7P3E1    | 7.6 TB | 12      | 191   | 0     | 0.53   |
-| WDC       | WUS4BB096D7P3E1    | 960 GB | 365     | 165   | 0     | 0.45   |
-| WDC       | WDS250G2B0C-00PXH0 | 250 GB | 3       | 153   | 0     | 0.42   |
-| WDC       | WUS4BB019D7P3E1    | 1.9 TB | 465     | 144   | 0     | 0.40   |
-| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 17      | 128   | 0     | 0.35   |
-| WDC       | PC SN520 SDAPNU... | 128 GB | 2       | 126   | 0     | 0.35   |
-| WDC       | WUS3BA119C7P3E3    | 1.9 TB | 7       | 107   | 0     | 0.29   |
-| WDC       | PC SN530 NVMe      | 512 GB | 1       | 103   | 0     | 0.28   |
-| WDC       | WUS4BB019D7P3E3    | 1.9 TB | 54      | 69    | 0     | 0.19   |
-| WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 47    | 0     | 0.13   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| WDC       | PC SN720 SDAPNT... | 1 TB   | 1       | 892   | 0     | 2.44   |
+| WDC       | WUS3CA116C7P3E3    | 1.6 TB | 178     | 648   | 0     | 1.78   |
+| WDC       | WUS3BA196C7P3E3    | 960 GB | 83      | 623   | 0     | 1.71   |
+| WDC       | WUS3BA138C7P3E3    | 3.8 TB | 28      | 512   | 0     | 1.41   |
+| WDC       | WDS250G3X0C-00SJG0 | 250 GB | 4       | 486   | 0     | 1.33   |
+| WDC       | WUS4CB016D7P3E3    | 1.6 TB | 152     | 468   | 0     | 1.28   |
+| WDC       | PC SN720 SDAPNT... | 256 GB | 15      | 431   | 0     | 1.18   |
+| WDC       | CL SN720 SDAQNT... | 1 TB   | 51      | 425   | 0     | 1.16   |
+| WDC       | WUS4BB096D7P3E3    | 960 GB | 553     | 423   | 0     | 1.16   |
+| WDC       | WUS4BB038D7P3E3    | 3.8 TB | 37      | 379   | 0     | 1.04   |
+| WDC       | WDS500G3XHC-00SJG0 | 500 GB | 6       | 361   | 0     | 0.99   |
+| WDC       | CL SN720 SDAQNT... | 512 GB | 133     | 360   | 6     | 0.96   |
+| WDC       | WDS500G3X0C-00SJG0 | 500 GB | 27      | 341   | 0     | 0.94   |
+| WDC       | WDS250G2B0C-00PXH0 | 250 GB | 3       | 326   | 0     | 0.89   |
+| WDC       | PC SN530 NVMe      | 512 GB | 1       | 313   | 0     | 0.86   |
+| WDC       | WUS4BB019D7P3E1    | 1.9 TB | 474     | 241   | 0     | 0.66   |
+| WDC       | WUS4BB096D7P3E1    | 960 GB | 487     | 241   | 0     | 0.66   |
+| WDC       | WUS4BB038D7P3E1    | 3.8 TB | 154     | 183   | 0     | 0.50   |
+| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 1       | 174   | 0     | 0.48   |
+| WDC       | WUS4BB076D7P3E1    | 7.6 TB | 33      | 163   | 0     | 0.45   |
+| WDC       | PC SN520 SDAPNU... | 128 GB | 2       | 157   | 0     | 0.43   |
+| WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 80      | 150   | 0     | 0.41   |
+| WDC       | WUS4BB038D7P3E4    | 3.8 TB | 18      | 148   | 0     | 0.41   |
+| WDC       | WUS4BB019D7P3E3    | 1.9 TB | 54      | 146   | 0     | 0.40   |
+| WDC       | WUS3BA119C7P3E3    | 1.9 TB | 8       | 126   | 0     | 0.35   |
+| WDC       | WUS4BB076D7P3E3    | 7.6 TB | 4       | 90    | 0     | 0.25   |
+| WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 87    | 0     | 0.24   |
+| WDC       | WUS4CB032D7P3E4    | 3.2 TB | 5       | 45    | 0     | 0.12   |
 | WDC       | WUS4BB096D7P3E4    | 960 GB | 4       | 43    | 0     | 0.12   |
-| WDC       | WDS500G2B0C-00PXH0 | 500 GB | 1       | 24    | 0     | 0.07   |
-| WDC       | WUS4BB038D7P3E4    | 3.8 TB | 6       | 24    | 0     | 0.07   |
-| WDC       | WUS4CB032D7P3E4    | 3.2 TB | 5       | 9     | 0     | 0.03   |
 | WDC       | PC SN730 SDBQNT... | 256 GB | 1       | 4     | 0     | 0.01   |
+| WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 4     | 0     | 0.01   |

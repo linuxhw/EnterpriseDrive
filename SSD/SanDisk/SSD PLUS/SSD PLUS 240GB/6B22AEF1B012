@@ -54,29 +54,29 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    15769
+  9 Power_On_Hours          -O--CK   100   100   000    -    24238
  12 Power_Cycle_Count       -O--CK   100   100   000    -    3
-165 Total_Write/Erase_Count -O--CK   100   100   000    -    9266
-166 Min_W/E_Cycle           -O--CK   100   100   ---    -    20
+165 Total_Write/Erase_Count -O--CK   100   100   000    -    15097
+166 Min_W/E_Cycle           -O--CK   100   100   ---    -    44
 167 Min_Bad_Block/Die       -O--CK   100   100   ---    -    0
-168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    46
+168 Maximum_Erase_Cycle     -O--CK   100   100   ---    -    94
 169 Total_Bad_Block         -O--CK   100   100   ---    -    145
 170 Unknown_Attribute       -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    20
+173 Avg_Write/Erase_Count   -O--CK   100   100   000    -    44
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   069   045   000    -    31 (Min/Max 18/45)
+194 Temperature_Celsius     -O---K   075   045   000    -    25 (Min/Max 18/45)
 199 SATA_CRC_Error          -O--CK   100   100   ---    -    0
-230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    6703 1024 6703
+230 Perc_Write/Erase_Count  -O--CK   100   100   000    -    11021 2128 11021
 232 Perc_Avail_Resrvd_Space PO--CK   100   100   005    -    100
-233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    4927
-234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    70657
-241 Total_Writes_GiB        ----CK   100   100   000    -    24044
-242 Total_Reads_GiB         ----CK   100   100   000    -    11192
+233 Total_NAND_Writes_GiB   -O--CK   100   100   ---    -    11039
+234 Perc_Write/Erase_Ct_BC  -O--CK   100   100   000    -    115113
+241 Total_Writes_GiB        ----CK   100   100   000    -    35788
+242 Total_Reads_GiB         ----CK   100   100   000    -    14345
 244 Thermal_Throttle        -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -134,16 +134,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x010  4           15769  ---  Power-on Hours
-0x01  0x018  6     50424633066  ---  Logical Sectors Written
-0x01  0x028  6     23471621587  ---  Logical Sectors Read
-0x01  0x038  6           15769  ---  Date and Time TimeStamp
+0x01  0x010  4           24238  ---  Power-on Hours
+0x01  0x018  6     75054449642  ---  Logical Sectors Written
+0x01  0x028  6     30084689298  ---  Logical Sectors Read
+0x01  0x038  6           24238  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
-0x05  0x010  1              30  ---  Average Short Term Temperature
-0x05  0x018  1              30  ---  Average Long Term Temperature
+0x05  0x008  1              25  ---  Current Temperature
+0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x018  1              24  ---  Average Long Term Temperature
 0x05  0x020  1              44  ---  Highest Temperature
-0x05  0x028  1              26  ---  Lowest Temperature
+0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1              33  ---  Highest Average Short Term Temperature
 0x05  0x038  1              33  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              33  ---  Highest Average Long Term Temperature
@@ -153,7 +153,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               8  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -164,8 +164,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           14  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           14  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           17  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           17  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

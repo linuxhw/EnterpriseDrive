@@ -15,9 +15,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| SuperM... | SSD                | 64 GB  | 27      | 930   | 1     | 2.48   |
-| SuperM... | SSD                | 128 GB | 131     | 721   | 11    | 1.92   |
-| SuperM... | SSD                | 16 GB  | 29      | 641   | 0     | 1.76   |
-| SuperM... | SSD                | 32 GB  | 6       | 457   | 0     | 1.25   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| SuperM... | SSD                | 32 GB  | 16      | 1121  | 0     | 3.07   |
+| SuperM... | SSD                | 64 GB  | 27      | 1022  | 1     | 2.73   |
+| SuperM... | SSD                | 128 GB | 134     | 815   | 11    | 2.18   |
+| SuperM... | SSD                | 16 GB  | 29      | 708   | 0     | 1.94   |

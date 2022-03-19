@@ -15,10 +15,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Team      | T2535T120G         | 120 GB | 2       | 846   | 0     | 2.32   |
-| Team      | T253X1960G         | 960 GB | 3       | 780   | 0     | 2.14   |
-| Team      | T253X6001T         | 1 TB   | 4       | 137   | 0     | 0.38   |
-| Team      | T253X1480G         | 480 GB | 1       | 118   | 0     | 0.33   |
-| Team      | T253A3001T         | 1 TB   | 30      | 46    | 0     | 0.13   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Team      | T2535T120G         | 120 GB | 2       | 933   | 0     | 2.56   |
+| Team      | T253X1960G         | 960 GB | 3       | 830   | 0     | 2.28   |
+| Team      | T253X1480G         | 480 GB | 1       | 229   | 0     | 0.63   |
+| Team      | T253X6001T         | 1 TB   | 4       | 163   | 0     | 0.45   |
+| Team      | T253A3001T         | 1 TB   | 31      | 88    | 0     | 0.24   |

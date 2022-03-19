@@ -60,17 +60,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   132   132   054    -    112
-  3 Spin_Up_Time            POS---   238   238   024    -    291 (Average 191)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    144
+  3 Spin_Up_Time            POS---   169   169   024    -    386 (Average 291)
+  4 Start_Stop_Count        -O--C-   100   100   000    -    147
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    1
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   123   123   020    -    34
-  9 Power_On_Hours          -O--C-   089   089   000    -    81609
+  9 Power_On_Hours          -O--C-   089   089   000    -    83854
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    135
-192 Power-Off_Retract_Count -O--CK   099   099   000    -    2202
-193 Load_Cycle_Count        -O--C-   099   099   000    -    2202
-194 Temperature_Celsius     -O----   162   162   000    -    37 (Min/Max 17/49)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    138
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    2206
+193 Load_Cycle_Count        -O--C-   099   099   000    -    2206
+194 Temperature_Celsius     -O----   153   153   000    -    39 (Min/Max 17/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    1
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -120,8 +120,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     35/48 Celsius
+Current Temperature:                    39 Celsius
+Power Cycle Min/Max Temperature:     34/44 Celsius
 Lifetime    Min/Max Temperature:     17/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -130,7 +130,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (18)
+Temperature History Size (Index):    128 (77)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -140,7 +140,7 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
 0x0009  2        65535+ Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

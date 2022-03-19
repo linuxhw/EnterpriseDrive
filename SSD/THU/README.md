@@ -15,6 +15,6 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| THU       | SSD 240G           | 240 GB | 1       | 197   | 0     | 0.54   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| THU       | SSD 240G           | 240 GB | 1       | 422   | 0     | 1.16   |

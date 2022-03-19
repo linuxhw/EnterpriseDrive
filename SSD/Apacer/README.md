@@ -21,12 +21,12 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | Apacer    | AS510S             | 128 GB | 1       | 1444  | 0     | 3.96   |
-| Apacer    | AS330              | 240 GB | 1       | 799   | 0     | 2.19   |
+| Apacer    | AS330              | 240 GB | 1       | 796   | 0     | 2.18   |
 | Apacer    | AS340              | 480 GB | 1       | 348   | 0     | 0.96   |
-| Apacer    | AS340              | 960 GB | 43      | 322   | 20    | 0.59   |
+| Apacer    | AS340              | 960 GB | 43      | 356   | 21    | 0.63   |
 | Apacer    | 480GB SATA Flas... | 480 GB | 3       | 157   | 0     | 0.43   |
 
 SSD by Family
@@ -40,8 +40,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Apacer    | Unknown                | 2      | 2       | 1122  | 0     | 3.07   |
-| Apacer    | AS340 SSDs             | 2      | 44      | 323   | 20    | 0.60   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Apacer    | Unknown                | 2      | 2       | 1120  | 0     | 3.07   |
+| Apacer    | AS340 SSDs             | 2      | 44      | 356   | 21    | 0.64   |
 | Apacer    | SSDs                   | 1      | 3       | 157   | 0     | 0.43   |

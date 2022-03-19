@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,24 +59,24 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   082   063   044    -    182730467
-  3 Spin_Up_Time            PO----   094   092   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    30
+  1 Raw_Read_Error_Rate     POSR--   082   063   044    -    174499137
+  3 Spin_Up_Time            PO----   095   092   000    -    0
+  4 Start_Stop_Count        -O--CK   100   100   020    -    32
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   093   060   030    -    2017055604
-  9 Power_On_Hours          -O--CK   035   035   000    -    57544
+  7 Seek_Error_Rate         POSR--   094   060   030    -    3171886890
+  9 Power_On_Hours          -O--CK   029   029   000    -    62327
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    30
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    32
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   062   058   045    -    38 (Min/Max 36/42)
+190 Airflow_Temperature_Cel -O---K   062   058   045    -    38 (Min/Max 37/40)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    29
-193 Load_Cycle_Count        -O--CK   092   092   000    -    16495
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    31
+193 Load_Cycle_Count        -O--CK   091   091   000    -    19065
 194 Temperature_Celsius     -O---K   038   042   000    -    38 (0 20 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   061   009   000    -    182730467
+195 Hardware_ECC_Recovered  -O-RC-   063   009   000    -    174499137
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -143,40 +143,40 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
 Current Temperature:                    38 Celsius
-Power Cycle Min/Max Temperature:     36/42 Celsius
+Power Cycle Min/Max Temperature:     37/40 Celsius
 Lifetime    Min/Max Temperature:     20/42 Celsius
-Under/Over Temperature Limit Count:   0/73982
+Under/Over Temperature Limit Count:   0/5878
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (123)
+Temperature History Size (Index):    128 (11)
 
 SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+           Read:    100 (10.0 seconds)
+          Write:    100 (10.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              30  ---  Lifetime Power-On Resets
-0x01  0x010  4           57544  ---  Power-on Hours
-0x01  0x018  6     94877468056  ---  Logical Sectors Written
-0x01  0x020  6       263492014  ---  Number of Write Commands
-0x01  0x028  6    208243342704  ---  Logical Sectors Read
-0x01  0x030  6       498387197  ---  Number of Read Commands
+0x01  0x008  4              32  ---  Lifetime Power-On Resets
+0x01  0x010  4           62327  ---  Power-on Hours
+0x01  0x018  6    122392401049  ---  Logical Sectors Written
+0x01  0x020  6       344023839  ---  Number of Write Commands
+0x01  0x028  6    267444889538  ---  Logical Sectors Read
+0x01  0x030  6       633383354  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           14904  ---  Spindle Motor Power-on Hours
-0x03  0x010  4              49  ---  Head Flying Hours
-0x03  0x018  4           16495  ---  Head Load Events
+0x03  0x008  4           19686  ---  Spindle Motor Power-on Hours
+0x03  0x010  4              74  ---  Head Flying Hours
+0x03  0x018  4           19065  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              30  ---  Number of High Priority Unload Events
+0x03  0x040  4              32  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -198,7 +198,7 @@ Page  Offset Size        Value Flags Description
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            2  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

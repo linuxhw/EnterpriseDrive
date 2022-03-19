@@ -65,11 +65,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   135   135   020    -    26
-  9 Power_On_Hours          -O--C-   095   095   000    -    37445
+  9 Power_On_Hours          -O--C-   095   095   000    -    37606
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    26
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    370
-193 Load_Cycle_Count        -O--C-   100   100   000    -    370
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    374
+193 Load_Cycle_Count        -O--C-   100   100   000    -    374
 194 Temperature_Celsius     -O----   130   130   000    -    46 (Min/Max 20/55)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -197,25 +197,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (94)
+Temperature History Size (Index):    128 (54)
 
 SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+           Read:     70 (7.0 seconds)
+          Write:     70 (7.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              26  ---  Lifetime Power-On Resets
-0x01  0x010  4           37445  ---  Power-on Hours
-0x01  0x018  6    104000981532  ---  Logical Sectors Written
-0x01  0x020  6       601119985  ---  Number of Write Commands
-0x01  0x028  6   2420646578719  ---  Logical Sectors Read
-0x01  0x030  6      2494256290  ---  Number of Read Commands
+0x01  0x010  4           37606  ---  Power-on Hours
+0x01  0x018  6    104033923576  ---  Logical Sectors Written
+0x01  0x020  6       601155646  ---  Number of Write Commands
+0x01  0x028  6   2444088941081  ---  Logical Sectors Read
+0x01  0x030  6      2494260170  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           37439  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           37439  ---  Head Flying Hours
-0x03  0x018  4             370  ---  Head Load Events
+0x03  0x008  4           37600  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           37600  ---  Head Flying Hours
+0x03  0x018  4             374  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4             572  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -224,13 +224,13 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               7  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              46  ---  Current Temperature
-0x05  0x010  1              47  N--  Average Short Term Temperature
-0x05  0x018  1              38  N--  Average Long Term Temperature
+0x05  0x010  1              46  N--  Average Short Term Temperature
+0x05  0x018  1              39  N--  Average Long Term Temperature
 0x05  0x020  1              55  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              47  N--  Highest Average Short Term Temperature
 0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              38  N--  Highest Average Long Term Temperature
+0x05  0x040  1              39  N--  Highest Average Long Term Temperature
 0x05  0x048  1              25  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature

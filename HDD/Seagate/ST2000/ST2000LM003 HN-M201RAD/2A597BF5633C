@@ -61,17 +61,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    25
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   088   087   025    -    3917
-  4 Start_Stop_Count        -O--CK   100   100   000    -    39
+  3 Spin_Up_Time            PO---K   087   087   025    -    3944
+  4 Start_Stop_Count        -O--CK   100   100   000    -    44
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    41630
+  9 Power_On_Hours          -O--CK   100   100   000    -    42710
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    40
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    46
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    35
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
-194 Temperature_Celsius     -O----   064   064   000    -    20 (Min/Max 17/28)
+194 Temperature_Celsius     -O----   064   064   000    -    19 (Min/Max 17/28)
 195 Hardware_ECC_Recovered  -O-RCK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   252   252   000    -    0
 197 Current_Pending_Sector  -O--CK   252   252   000    -    0
@@ -79,9 +79,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    4032
 223 Load_Retry_Count        -O--CK   100   100   000    -    245
-225 Load_Cycle_Count        -O--CK   001   001   000    -    2421550
+225 Load_Cycle_Count        -O--CK   001   001   000    -    2432391
 241 Total_LBAs_Written      -O--CK   097   094   000    -    4301660
-242 Total_LBAs_Read         -O--CK   099   094   000    -    2625240
+242 Total_LBAs_Read         -O--CK   098   094   000    -    3421476
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -139,7 +139,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (12)
+Temperature History Size (Index):    128 (45)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -156,7 +156,7 @@ ID      Size     Value  Description
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
 0x0009  4            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4          219  Device-to-host register FISes sent due to a COMRESET
+0x000a  4          131  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

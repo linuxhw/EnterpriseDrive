@@ -55,16 +55,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    70
+  9 Power_On_Hours          -O--C-   100   100   000    -    2012
  12 Power_Cycle_Count       -O--C-   100   100   000    -    9
 168 Unknown_Attribute       -O--C-   100   100   000    -    0
 170 Unknown_Attribute       PO----   061   061   010    -    1443
-173 Unknown_Attribute       -O--C-   100   100   000    -    1
+173 Unknown_Attribute       -O--C-   100   100   000    -    2687041
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    7
 194 Temperature_Celsius     PO---K   067   067   000    -    33 (Min/Max 33/33)
 218 Unknown_Attribute       PO-R--   100   100   050    -    0
-231 Temperature_Celsius     PO--C-   100   100   000    -    100
-241 Total_LBAs_Written      -O--C-   100   100   000    -    192
+231 Temperature_Celsius     PO--C-   100   100   000    -    95
+241 Total_LBAs_Written      -O--C-   100   100   000    -    10093
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -110,9 +110,9 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               9  ---  Lifetime Power-On Resets
-0x01  0x010  4              70  ---  Power-on Hours
-0x01  0x018  6       404253402  ---  Logical Sectors Written
-0x01  0x028  6       101946172  ---  Logical Sectors Read
+0x01  0x010  4            2012  ---  Power-on Hours
+0x01  0x018  6     21168316398  ---  Logical Sectors Written
+0x01  0x028  6      9350026988  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -122,7 +122,7 @@ Page  Offset Size        Value Flags Description
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

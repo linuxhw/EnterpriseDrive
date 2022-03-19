@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -39,7 +39,7 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   000   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    14824
+  9 Power_On_Hours          -O--CK   100   100   000    -    19690
  12 Power_Cycle_Count       -O--CK   100   100   000    -    10
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
@@ -48,22 +48,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 169 Unknown_Attribute       ------   100   100   000    -    9
 170 Unknown_Attribute       ------   100   100   010    -    20
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       ------   100   100   000    -    9240737
+173 Unknown_Attribute       ------   100   100   000    -    14156023
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
 182 Erase_Fail_Count_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--C-   100   100   000    -    7
-194 Temperature_Celsius     -O---K   056   046   000    -    44 (Min/Max 20/54)
+194 Temperature_Celsius     -O---K   055   044   000    -    45 (Min/Max 20/56)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 218 Unknown_Attribute       -O--CK   100   100   000    -    0
-231 Temperature_Celsius     ------   015   015   000    -    85
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    11425
-241 Total_LBAs_Written      -O--CK   100   100   000    -    6232
-242 Total_LBAs_Read         -O--CK   100   100   000    -    3952
-244 Unknown_Attribute       ------   100   100   000    -    141
-245 Unknown_Attribute       ------   100   100   000    -    161
-246 Unknown_Attribute       ------   100   100   000    -    1552136
+231 Temperature_Celsius     ------   022   022   000    -    78
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    17911
+241 Total_LBAs_Written      -O--CK   100   100   000    -    10037
+242 Total_LBAs_Read         -O--CK   100   100   000    -    5826
+244 Unknown_Attribute       ------   100   100   000    -    216
+245 Unknown_Attribute       ------   100   100   000    -    247
+246 Unknown_Attribute       ------   100   100   000    -    2373904
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -97,19 +97,19 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              10  ---  Lifetime Power-On Resets
-0x01  0x010  4           14824  ---  Power-on Hours
-0x01  0x018  6     13070983536  ---  Logical Sectors Written
-0x01  0x028  6      8288405956  ---  Logical Sectors Read
+0x01  0x010  4           19690  ---  Power-on Hours
+0x01  0x018  6     21050138320  ---  Logical Sectors Written
+0x01  0x028  6     12219134411  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              44  ---  Current Temperature
-0x05  0x020  1              54  ---  Highest Temperature
+0x05  0x008  1              45  ---  Current Temperature
+0x05  0x020  1              56  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              14  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              21  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -122,8 +122,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4            8  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4            9  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           42  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           43  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

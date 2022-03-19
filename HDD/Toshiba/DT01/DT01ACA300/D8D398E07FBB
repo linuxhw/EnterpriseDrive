@@ -58,18 +58,18 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   093   093   016    -    2031617
-  2 Throughput_Performance  P-S---   140   140   054    -    67
+  1 Raw_Read_Error_Rate     PO-R--   098   098   016    -    4
+  2 Throughput_Performance  P-S---   140   140   054    -    69
   3 Spin_Up_Time            POS---   132   132   024    -    435 (Average 436)
   4 Start_Stop_Count        -O--C-   100   100   000    -    54
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   119   119   020    -    35
-  9 Power_On_Hours          -O--C-   092   092   000    -    59262
+  8 Seek_Time_Performance   P-S---   117   117   020    -    36
+  9 Power_On_Hours          -O--C-   092   092   000    -    61495
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    53
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    322
-193 Load_Cycle_Count        -O--C-   100   100   000    -    322
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    323
+193 Load_Cycle_Count        -O--C-   100   100   000    -    323
 194 Temperature_Celsius     -O----   206   206   000    -    29 (Min/Max 22/35)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -132,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (71)
+Temperature History Size (Index):    128 (4)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -142,17 +142,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              53  ---  Lifetime Power-On Resets
-0x01  0x010  4           59262  ---  Power-on Hours
-0x01  0x018  6   2275732367915  ---  Logical Sectors Written
-0x01  0x020  6      3689150058  ---  Number of Write Commands
-0x01  0x028  6    107579034521  ---  Logical Sectors Read
-0x01  0x030  6       677087726  ---  Number of Read Commands
+0x01  0x010  4           61495  ---  Power-on Hours
+0x01  0x018  6   2276109218349  ---  Logical Sectors Written
+0x01  0x020  6      3704697759  ---  Number of Write Commands
+0x01  0x028  6    108587825979  ---  Logical Sectors Read
+0x01  0x030  6       690456605  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           59254  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           59254  ---  Head Flying Hours
-0x03  0x018  4             322  ---  Head Load Events
+0x03  0x008  4           61486  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           61486  ---  Head Flying Hours
+0x03  0x018  4             323  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            7999  ---  Read Recovery Attempts
+0x03  0x028  4            8159  ---  Read Recovery Attempts
 0x03  0x030  4               6  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors

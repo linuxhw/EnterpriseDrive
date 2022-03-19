@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -55,20 +55,20 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O----   100   100   000    -    0
-  9 Power_On_Hours          -O----   100   100   000    -    59422
+  9 Power_On_Hours          -O----   100   100   000    -    64656
  12 Power_Cycle_Count       -O----   100   100   000    -    15
-165 Total_Write/Erase_Count -O----   100   100   000    -    569668
+165 Total_Write/Erase_Count -O----   100   100   000    -    577843
 171 Program_Fail_Count      -O----   100   100   000    -    0
 172 Erase_Fail_Count        -O----   100   100   000    -    0
-173 Avg_Write/Erase_Count   -O----   100   100   000    -    146
+173 Avg_Write/Erase_Count   -O----   100   100   000    -    148
 174 Unexpect_Power_Loss_Ct  -O----   100   100   000    -    9
-187 Reported_Uncorrect      -O----   100   100   000    -    0
-194 Temperature_Celsius     -O---K   063   037   000    -    37 (Min/Max 19/53)
-230 Perc_Write/Erase_Count  -O----   100   100   000    -    486
+187 Reported_Uncorrect      -O----   100   100   000    -    33
+194 Temperature_Celsius     -O---K   062   038   000    -    38 (Min/Max 19/53)
+230 Perc_Write/Erase_Count  -O----   100   100   000    -    493
 232 Perc_Avail_Resrvd_Space PO----   100   100   005    -    0
-234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    567
-241 Total_LBAs_Written      -O----   100   100   000    -    7746624175
-242 Total_LBAs_Read         -O----   100   100   000    -    5607819421
+234 Perc_Write/Erase_Ct_BC  -O----   100   100   000    -    611
+241 Total_LBAs_Written      -O----   100   100   000    -    8296654343
+242 Total_LBAs_Read         -O----   100   100   000    -    5870063647
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -95,7 +95,157 @@ Address    Access  R/W   Size  Description
 0xa6-0xa7  GPL,SL  VS     255  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (16 sectors)
-No Errors Logged
+Device Error Count: 33
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 33 [32] occurred at disk power-on lifetime: 43981 hours (1832 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 15 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 14 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 13  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 12  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 11  3d+ ...          NOP [Abort queued commands]
+
+Error 32 [31] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 45 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 44 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 43  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 42  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 41  3d+ ...          NOP [Abort queued commands]
+
+Error 31 [30] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 35 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 34 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 33  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 32  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 31  3d+ ...          NOP [Abort queued commands]
+
+Error 30 [29] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 25 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 24 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 23  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 22  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 21  3d+ ...          NOP [Abort queued commands]
+
+Error 29 [28] occurred at disk power-on lifetime: 43981 hours (1832 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 15 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 14 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 13  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 12  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 11  3d+ ...          NOP [Abort queued commands]
+
+Error 28 [27] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 45 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 44 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 43  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 42  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 41  3d+ ...          NOP [Abort queued commands]
+
+Error 27 [26] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 35 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 34 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 33  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 32  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 31  3d+ ...          NOP [Abort queued commands]
+
+Error 26 [25] occurred at disk power-on lifetime: 61166 hours (2548 days + 14 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  00 00 00 00 00 00 00 00 00 00 00 00 25 16d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 24 13d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 23  9d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 22  6d+ ...          NOP [Abort queued commands]
+  00 00 00 00 00 00 00 00 00 00 00 00 21  3d+ ...          NOP [Abort queued commands]
 
 SMART Self-test log structure revision number 1
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -114,8 +264,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              37  ---  Current Temperature
-0x05  0x010  1              36  ---  Average Short Term Temperature
+0x05  0x008  1              38  ---  Current Temperature
+0x05  0x010  1              38  ---  Average Short Term Temperature
 0x05  0x018  1              38  ---  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              26  ---  Lowest Temperature
@@ -139,8 +289,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2           35  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           36  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           43  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           44  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

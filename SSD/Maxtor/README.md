@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Maxtor    | Z1 SSD             | 240 GB | 1       | 302   | 0     | 0.83   |
-| Maxtor    | Z1 SSD             | 960 GB | 2       | 172   | 0     | 0.47   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Maxtor    | Z1 SSD             | 240 GB | 1       | 418   | 0     | 1.15   |
+| Maxtor    | Z1 SSD             | 960 GB | 2       | 203   | 0     | 0.56   |

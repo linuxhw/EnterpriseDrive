@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -55,34 +55,34 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    10141
+  9 Power_On_Hours          -O--CK   100   100   000    -    13654
  12 Power_Cycle_Count       -O--CK   100   100   000    -    11
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   097   097   000    -    52
+173 Ave_Block-Erase_Count   -O--CK   094   094   000    -    101
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    9
 180 Unused_Reserve_NAND_Blk PO--CK   100   100   000    -    11
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   066   057   000    -    34 (Min/Max 23/43)
+194 Temperature_Celsius     -O---K   069   055   000    -    31 (Min/Max 23/45)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   097   097   001    -    3
+202 Percent_Lifetime_Remain ----CK   094   094   001    -    6
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    32544982479
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1017030702
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    1182007296
+246 Total_LBAs_Written      -O--CK   100   100   000    -    72720943332
+247 Host_Program_Page_Count -O--CK   100   100   000    -    2272529479
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    2684436480
 249 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    1858906
-251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    8
+250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    2521353
+251 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    16
 252 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    0
-253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    573
-254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    251
-223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    14
+253 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    859
+254 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    265
+223 Unkn_CrucialMicron_Attr -O--CK   100   100   000    -    15
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -116,13 +116,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           10141  ---  Power-on Hours
-0x01  0x018  6      2480211407  ---  Logical Sectors Written
-0x01  0x020  6       272501768  ---  Number of Write Commands
-0x01  0x028  6      3995361945  ---  Logical Sectors Read
-0x01  0x030  6        59406492  ---  Number of Read Commands
+0x01  0x010  4           13654  ---  Power-on Hours
+0x01  0x018  6      4001466596  ---  Logical Sectors Written
+0x01  0x020  6       871517502  ---  Number of Write Commands
+0x01  0x028  6      3698655161  ---  Logical Sectors Read
+0x01  0x030  6       598955220  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              14  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -131,6 +131,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            2  R_ERR response for non-data FIS
-0x000a  4           61  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            4  R_ERR response for non-data FIS
+0x000a  4           98  Device-to-host register FISes sent due to a COMRESET
 

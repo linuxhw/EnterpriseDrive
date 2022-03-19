@@ -61,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    2
   5 Reallocate_NAND_Blk_Cnt PO--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    40488
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    31
+  9 Power_On_Hours          -O--CK   100   100   000    -    41645
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    32
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   059   059   000    -    1230
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    29
+173 Ave_Block-Erase_Count   -O--CK   059   059   000    -    1231
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    30
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    16523
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
@@ -79,9 +79,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain P---CK   059   059   000    -    41
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   ---    -    328589970507
-247 Host_Program_Page_Count -O--CK   100   100   ---    -    3838677297
-248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2679252187
+246 Total_LBAs_Written      -O--CK   100   100   ---    -    328594392483
+247 Host_Program_Page_Count -O--CK   100   100   ---    -    3838992544
+248 FTL_Program_Page_Count  -O--CK   100   100   ---    -    2724711636
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,7 +137,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    35 Celsius
-Power Cycle Min/Max Temperature:     33/39 Celsius
+Power Cycle Min/Max Temperature:     34/36 Celsius
 Lifetime    Min/Max Temperature:      0/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -146,20 +146,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (64)
+Temperature History Size (Index):    478 (81)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              31  ---  Lifetime Power-On Resets
-0x01  0x010  4           40488  ---  Power-on Hours
-0x01  0x018  6    328589970507  ---  Logical Sectors Written
-0x01  0x020  6      7804369555  ---  Number of Write Commands
-0x01  0x028  6    272582913574  ---  Logical Sectors Read
-0x01  0x030  6      6564329700  ---  Number of Read Commands
+0x01  0x008  4              32  ---  Lifetime Power-On Resets
+0x01  0x010  4           41645  ---  Power-on Hours
+0x01  0x018  6    328594392483  ---  Logical Sectors Written
+0x01  0x020  6      7804739478  ---  Number of Write Commands
+0x01  0x028  6    272585139507  ---  Logical Sectors Read
+0x01  0x030  6      6564401422  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4             189  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4             194  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              35  ---  Current Temperature
 0x05  0x010  1              35  ---  Average Short Term Temperature
@@ -187,5 +187,5 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
-0x000a  4           26  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 

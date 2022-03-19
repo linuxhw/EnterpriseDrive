@@ -59,20 +59,20 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-R--   100   100   000    -    0
   5 Reallocated_Sector_Ct   PO--C-   100   100   010    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    30289
+  9 Power_On_Hours          -O--C-   100   100   000    -    34011
  12 Power_Cycle_Count       -O--CK   100   100   000    -    24
  13 Read_Soft_Error_Rate    -O-R--   100   100   000    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--C-   100   100   000    -    100
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   082   066   000    -    18 (Min/Max 13/34)
+194 Temperature_Celsius     -O---K   079   065   000    -    21 (Min/Max 13/35)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   100   100   000    -    0
 201 Unknown_SSD_Attribute   PO---K   100   100   004    -    0
 202 Unknown_SSD_Attribute   PO----   100   100   099    -    0
-233 Media_Wearout_Indicator -O--C-   100   100   000    -    312886
+233 Media_Wearout_Indicator -O--C-   100   100   000    -    335744
 245 Unknown_Attribute       -O--C-   099   099   000    -    99
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -171,20 +171,20 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       3 (0x0003)
 Device State:                        Active (0)
-Current Temperature:                    18 Celsius
-Power Cycle Min/Max Temperature:     13/34 Celsius
-Lifetime    Min/Max Temperature:     13/34 Celsius
+Current Temperature:                    21 Celsius
+Power Cycle Min/Max Temperature:     13/35 Celsius
+Lifetime    Min/Max Temperature:     13/35 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 04 00 01 01 00 05 05 00 00 00 00 00 00 00
-00 01 00 00 d8 da 7f 06 02 02 00 00 00 00 00 0b
+00 01 00 00 3a 4b 4c 07 02 02 00 00 00 00 00 0b
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            0/80 Celsius
-Temperature History Size (Index):    128 (25)
+Temperature History Size (Index):    128 (95)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -194,23 +194,23 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              24  ---  Lifetime Power-On Resets
-0x01  0x010  4           30289  ---  Power-on Hours
-0x01  0x018  6     20505335581  ---  Logical Sectors Written
-0x01  0x020  6       828771316  ---  Number of Write Commands
-0x01  0x028  6     24947398286  ---  Logical Sectors Read
-0x01  0x030  6       289540274  ---  Number of Read Commands
+0x01  0x010  4           34011  ---  Power-on Hours
+0x01  0x018  6     22003335485  ---  Logical Sectors Written
+0x01  0x020  6       881903693  ---  Number of Write Commands
+0x01  0x028  6     24958135022  ---  Logical Sectors Read
+0x01  0x030  6       290050267  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               2  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              18  ---  Current Temperature
-0x05  0x010  1              18  ---  Average Short Term Temperature
-0x05  0x018  1              18  ---  Average Long Term Temperature
+0x05  0x008  1              21  ---  Current Temperature
+0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x018  1              20  ---  Average Long Term Temperature
 0x05  0x020  1              29  ---  Highest Temperature
 0x05  0x028  1              13  ---  Lowest Temperature
 0x05  0x030  1              22  ---  Highest Average Short Term Temperature
 0x05  0x038  1              15  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              19  ---  Highest Average Long Term Temperature
+0x05  0x040  1              20  ---  Highest Average Long Term Temperature
 0x05  0x048  1              15  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              55  ---  Specified Maximum Operating Temperature

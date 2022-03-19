@@ -64,15 +64,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    14056
+  9 Power_On_Hours          -O--C-   098   098   000    -    17495
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    9
-192 Power-Off_Retract_Count -O--CK   098   098   000    -    3417
-193 Load_Cycle_Count        -O--C-   098   098   000    -    3417
+192 Power-Off_Retract_Count -O--CK   097   097   000    -    4427
+193 Load_Cycle_Count        -O--C-   097   097   000    -    4427
 194 Temperature_Celsius     -O----   166   166   000    -    36 (Min/Max 16/48)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
-198 Offline_Uncorrectable   ---R--   100   100   000    -    2
+198 Offline_Uncorrectable   ---R--   100   100   000    -    4
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -110,7 +110,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 2
+Device Error Count: 3
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -125,6 +125,23 @@ Device Error Count: 2
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 3 [2] occurred at disk power-on lifetime: 15458 hours (644 days + 2 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 43 00 00 00 00 00 00 00 00 00 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 30 00 00 00 04 2c 00 40 08 12d+ ...          READ FPDMA QUEUED
+  60 01 00 00 28 00 00 00 04 2b 00 40 08 12d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 00 04 2a 00 40 08 12d+ ...          READ FPDMA QUEUED
+  60 01 00 00 18 00 00 00 04 29 00 40 08 12d+ ...          READ FPDMA QUEUED
+  60 01 00 00 10 00 00 00 04 28 00 40 08 12d+ ...          READ FPDMA QUEUED
 
 Error 2 [1] occurred at disk power-on lifetime: 13996 hours (583 days + 4 hours)
   When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
@@ -181,7 +198,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     32/48 Celsius
+Power Cycle Min/Max Temperature:     30/48 Celsius
 Lifetime    Min/Max Temperature:     16/48 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -190,7 +207,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (90)
+Temperature History Size (Index):    128 (63)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -200,26 +217,26 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               9  ---  Lifetime Power-On Resets
-0x01  0x010  4           14056  ---  Power-on Hours
-0x01  0x018  6     44909417219  ---  Logical Sectors Written
-0x01  0x020  6        73575793  ---  Number of Write Commands
-0x01  0x028  6    148789663890  ---  Logical Sectors Read
-0x01  0x030  6       580989836  ---  Number of Read Commands
-0x01  0x038  6     50602951950  ---  Date and Time TimeStamp
+0x01  0x010  4           17495  ---  Power-on Hours
+0x01  0x018  6     66377976073  ---  Logical Sectors Written
+0x01  0x020  6        98353475  ---  Number of Write Commands
+0x01  0x028  6    180067007166  ---  Logical Sectors Read
+0x01  0x030  6       703588406  ---  Number of Read Commands
+0x01  0x038  6     62983707950  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4            2327  ---  Spindle Motor Power-on Hours
-0x03  0x010  4            2327  ---  Head Flying Hours
-0x03  0x018  4            3417  ---  Head Load Events
+0x03  0x008  4            2774  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2774  ---  Head Flying Hours
+0x03  0x018  4            4427  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             278  ---  Read Recovery Attempts
+0x03  0x028  4             376  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               2  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               3  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              36  ---  Current Temperature
-0x05  0x010  1              36  N--  Average Short Term Temperature
-0x05  0x018  1              36  N--  Average Long Term Temperature
+0x05  0x010  1              38  N--  Average Short Term Temperature
+0x05  0x018  1              33  N--  Average Long Term Temperature
 0x05  0x020  1              48  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              44  N--  Highest Average Short Term Temperature

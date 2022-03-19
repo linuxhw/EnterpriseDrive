@@ -61,15 +61,15 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   051    -    65
   2 Throughput_Performance  -OS--K   252   252   000    -    0
-  3 Spin_Up_Time            PO---K   072   070   025    -    8656
-  4 Start_Stop_Count        -O--CK   100   100   000    -    55
+  3 Spin_Up_Time            PO---K   071   070   025    -    8877
+  4 Start_Stop_Count        -O--CK   100   100   000    -    226
   5 Reallocated_Sector_Ct   PO--CK   252   252   010    -    0
   7 Seek_Error_Rate         -OSR-K   252   252   051    -    0
   8 Seek_Time_Performance   --S--K   252   252   015    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    64322
+  9 Power_On_Hours          -O--CK   100   100   000    -    66426
  10 Spin_Retry_Count        -O--CK   252   252   051    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    2
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    63
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    299
 191 G-Sense_Error_Rate      -O---K   100   100   000    -    3
 192 Power-Off_Retract_Count -O---K   252   252   000    -    0
 194 Temperature_Celsius     -O----   064   058   000    -    28 (Min/Max 15/48)
@@ -80,7 +80,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OS-CK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   -O-R-K   100   100   000    -    131
 223 Load_Retry_Count        -O--CK   100   100   000    -    2
-225 Load_Cycle_Count        -O--CK   078   078   000    -    226485
+225 Load_Cycle_Count        -O--CK   078   078   000    -    226721
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,7 +127,7 @@ SCT Status Version:                  2
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     24/30 Celsius
+Power Cycle Min/Max Temperature:     26/29 Celsius
 Lifetime    Min/Max Temperature:     17/63 Celsius
 Specified Max Operating Temperature:    80 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -137,7 +137,7 @@ Temperature Sampling Period:         5 minutes
 Temperature Logging Interval:        5 minutes
 Min/Max recommended Temperature:     -5/80 Celsius
 Min/Max Temperature Limit:           -10/85 Celsius
-Temperature History Size (Index):    128 (71)
+Temperature History Size (Index):    128 (84)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,7 +153,7 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4            2  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4            4  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS

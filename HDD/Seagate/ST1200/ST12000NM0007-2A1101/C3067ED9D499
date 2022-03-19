@@ -59,28 +59,28 @@ SCT capabilities: 	       (0x70bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   072   064   044    -    14556928
+  1 Raw_Read_Error_Rate     POSR--   083   064   044    -    214015896
   3 Spin_Up_Time            PO----   099   099   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    1
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   083   060   045    -    200884993
-  9 Power_On_Hours          -O--CK   092   092   000    -    7322
+  7 Seek_Error_Rate         POSR--   084   060   045    -    276745353
+  9 Power_On_Hours          -O--CK   088   088   000    -    10839
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    1
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O---K   071   068   040    -    29 (Min/Max 16/32)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    35
-193 Load_Cycle_Count        -O--CK   097   097   000    -    6567
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    36
+193 Load_Cycle_Count        -O--CK   094   094   000    -    13761
 194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 16 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   072   064   000    -    14556928
+195 Hardware_ECC_Recovered  -O-RC-   083   064   000    -    214015896
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
 200 Multi_Zone_Error_Rate   PO---K   100   100   001    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    6689h+28m+47.275s
-241 Total_LBAs_Written      ------   100   253   000    -    162428630912
-242 Total_LBAs_Read         ------   100   253   000    -    114056069836
+240 Head_Flying_Hours       ------   100   253   000    -    9476h+07m+21.007s
+241 Total_LBAs_Written      ------   100   253   000    -    231701291232
+242 Total_LBAs_Read         ------   100   253   000    -    154641128640
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -160,7 +160,7 @@ Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     10/40 Celsius
 Min/Max Temperature Limit:            5/60 Celsius
-Temperature History Size (Index):    128 (19)
+Temperature History Size (Index):    128 (8)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -170,21 +170,21 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               1  ---  Lifetime Power-On Resets
-0x01  0x010  4            7322  ---  Power-on Hours
-0x01  0x018  6    162428630912  ---  Logical Sectors Written
-0x01  0x020  6       207000716  ---  Number of Write Commands
-0x01  0x028  6    114056069836  ---  Logical Sectors Read
-0x01  0x030  6       249599896  ---  Number of Read Commands
+0x01  0x010  4           10839  ---  Power-on Hours
+0x01  0x018  6    231701291232  ---  Logical Sectors Written
+0x01  0x020  6       292936951  ---  Number of Write Commands
+0x01  0x028  6    154641128640  ---  Logical Sectors Read
+0x01  0x030  6       306561497  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4      2337651528  N--  Spindle Motor Power-on Hours
-0x03  0x010  4      2337651439  N--  Head Flying Hours
-0x03  0x018  4            6567  ---  Head Load Events
+0x03  0x008  4      2337655045  N--  Spindle Motor Power-on Hours
+0x03  0x010  4      2337654881  N--  Head Flying Hours
+0x03  0x018  4           13761  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4              35  ---  Number of High Priority Unload Events
+0x03  0x040  4              36  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -203,8 +203,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4              10  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              21  ---  Number of Hardware Resets
-0x06  0x010  4              10  ---  Number of ASR Events
+0x06  0x008  4              25  ---  Number of Hardware Resets
+0x06  0x010  4              12  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
 0xff  0x008  7               0  ---  Vendor Specific
@@ -218,7 +218,7 @@ No Defects Logged
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           22  Device-to-host register FISes sent due to a COMRESET
+0x000a  2           26  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

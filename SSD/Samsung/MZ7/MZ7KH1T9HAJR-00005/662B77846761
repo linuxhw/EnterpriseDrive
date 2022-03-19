@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    11628
+  9 Power_On_Hours          -O--CK   097   097   000    -    15051
  12 Power_Cycle_Count       -O--CK   099   099   000    -    16
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    141
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    178
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    8510
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -75,14 +75,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    12
-241 Total_LBAs_Written      -O--CK   099   099   000    -    203575185798
-242 Total_LBAs_Read         -O--CK   099   099   000    -    219380472212
+241 Total_LBAs_Written      -O--CK   099   099   000    -    251278974686
+242 Total_LBAs_Read         -O--CK   099   099   000    -    302991453222
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    601075098752
+251 NAND_Writes             -O--CK   100   100   000    -    759378800128
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,7 +117,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%     11519         -
+# 1  Short offline       Completed without error       00%     14377         -
+# 2  Short offline       Completed without error       00%     11519         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -143,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (20)
+Temperature History Size (Index):    128 (78)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -153,12 +154,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              16  ---  Lifetime Power-On Resets
-0x01  0x010  4           11628  ---  Power-on Hours
-0x01  0x018  6    203575185798  ---  Logical Sectors Written
-0x01  0x020  6      3759577495  ---  Number of Write Commands
-0x01  0x028  6    219380472212  ---  Logical Sectors Read
-0x01  0x030  6      1655978283  ---  Number of Read Commands
-0x01  0x038  6         2271000  ---  Date and Time TimeStamp
+0x01  0x010  4           15051  ---  Power-on Hours
+0x01  0x018  6    251278974686  ---  Logical Sectors Written
+0x01  0x020  6      4786253501  ---  Number of Write Commands
+0x01  0x028  6    302991453254  ---  Logical Sectors Read
+0x01  0x030  6      2819994780  ---  Number of Read Commands
+0x01  0x038  6         1731000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion

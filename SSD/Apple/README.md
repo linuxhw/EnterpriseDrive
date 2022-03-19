@@ -15,6 +15,6 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Apple     | SSD SM256E         | 256 GB | 2       | 2325  | 0     | 6.37   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Apple     | SSD SM256E         | 256 GB | 2       | 2543  | 0     | 6.97   |

@@ -57,9 +57,9 @@ SCT capabilities: 	       (0x0025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO--CK   095   095   050    -    0/179198644
+  1 Raw_Read_Error_Rate     PO--CK   095   095   050    -    0/155640122
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   068   068   000    -    28637h+50m+43.050s
+  9 Power_On_Hours_and_Msec -O--CK   068   068   000    -    28775h+03m+00.120s
  12 Power_Cycle_Count       -O--CK   099   099   000    -    1107
 171 Program_Fail_Count      -O-R--   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
@@ -68,18 +68,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Count      -O-R--   000   000   000    -    0
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   029   041   000    -    29 (Min/Max -21/41)
-194 Temperature_Celsius     -O---K   029   041   000    -    29 (Min/Max -21/41)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/179198644
+189 Airflow_Temperature_Cel ------   032   041   000    -    32 (Min/Max -21/41)
+194 Temperature_Celsius     -O---K   032   041   000    -    32 (Min/Max -21/41)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/155640122
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/179198644
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/179198644
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/155640122
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/155640122
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   099   099   010    -    0
-233 SandForce_Internal      -O--CK   000   000   000    -    33183
-234 SandForce_Internal      -O--CK   000   000   000    -    15369
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    15369
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    25270
+233 SandForce_Internal      -O--CK   000   000   000    -    33367
+234 SandForce_Internal      -O--CK   000   000   000    -    16091
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    16091
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    33332
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -118,7 +118,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
+Current Temperature:                    32 Celsius
 Power Cycle Min/Max Temperature:     127/-127 Celsius
 Lifetime    Min/Max Temperature:     -21/-127 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -128,20 +128,20 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (218)
+Temperature History Size (Index):    478 (86)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4            1107  ---  Lifetime Power-On Resets
-0x01  0x018  6     32232169244  ---  Logical Sectors Written
-0x01  0x028  6     52996104593  ---  Logical Sectors Read
+0x01  0x018  6     33746735444  ---  Logical Sectors Written
+0x01  0x028  6     69902548971  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
-0x05  0x010  1              30  ---  Average Short Term Temperature
+0x05  0x008  1              32  ---  Current Temperature
+0x05  0x010  1              31  ---  Average Short Term Temperature
 0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              41  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature

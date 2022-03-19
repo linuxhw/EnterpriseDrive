@@ -60,21 +60,21 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  --S---   129   129   054    -    112
+  2 Throughput_Performance  --S---   130   130   054    -    109
   3 Spin_Up_Time            POS---   100   100   024    -    0
   4 Start_Stop_Count        -O--C-   100   100   000    -    1
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   067    -    0
   8 Seek_Time_Performance   --S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    19982
+  9 Power_On_Hours          -O--C-   097   097   000    -    23206
  10 Spin_Retry_Count        -O--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1
  22 Helium_Level            PO---K   100   100   025    -    100
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    756
-193 Load_Cycle_Count        -O--C-   100   100   000    -    756
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    881
+193 Load_Cycle_Count        -O--C-   100   100   000    -    881
 194 Temperature_Celsius     -O----   203   203   000    -    32 (Min/Max 23/37)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-197 Current_Pending_Sector  -O---K   100   100   000    -    0
+197 Current_Pending_Sector  -O---K   100   100   000    -    24
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O-R--   200   200   000    -    0
                             ||||||_ K auto-keep
@@ -113,7 +113,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 1
+Device Error Count: 4
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -128,6 +128,57 @@ Device Error Count: 1
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 22630 hours (942 days + 22 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 00 00 00 00 00 00 00 00 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 00 00 04 25 3c 5e 00 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00 48d+ ...          READ LOG EXT
+  ea 00 00 00 00 00 00 00 00 00 00 00 00 48d+ ...          FLUSH CACHE EXT
+  2f 00 00 00 01 00 00 00 00 00 10 00 00 48d+ ...          READ LOG EXT
+  2f 00 00 00 01 00 00 00 00 00 10 00 00 48d+ ...          READ LOG EXT
+
+Error 3 [2] occurred at disk power-on lifetime: 22630 hours (942 days + 22 hours)
+  When the command that caused the error occurred, the device was doing SMART Offline or Self-test.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 00 00 00 00 00 00 00 00 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 08 00 04 25 3c 5e 00 40 00 48d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00 48d+ ...          READ LOG EXT
+  61 00 08 00 10 00 00 0a 08 53 50 40 00 48d+ ...          WRITE FPDMA QUEUED
+  60 02 00 00 00 00 04 25 3c 5c 00 40 00 48d+ ...          READ FPDMA QUEUED
+  60 02 00 00 08 00 04 25 3c 5a 00 40 00 48d+ ...          READ FPDMA QUEUED
+
+Error 2 [1] occurred at disk power-on lifetime: 20235 hours (843 days + 3 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 00 00 00 00 00 00 00 00 00  Error: UNC at LBA = 0x00000000 = 0
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 02 00 00 08 00 04 25 3c 5e 00 40 00 47d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00 47d+ ...          READ LOG EXT
+  60 00 38 00 f8 00 03 49 ba d2 98 40 00 47d+ ...          READ FPDMA QUEUED
+  60 00 08 00 f0 00 03 49 b8 ff c8 40 00 47d+ ...          READ FPDMA QUEUED
+  60 00 20 00 e8 00 03 49 b8 ff 98 40 00 47d+ ...          READ FPDMA QUEUED
 
 Error 1 [0] occurred at disk power-on lifetime: 17016 hours (709 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -173,27 +224,27 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (110)
+Temperature History Size (Index):    128 (63)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               1  ---  Lifetime Power-On Resets
-0x01  0x010  4           19982  ---  Power-on Hours
-0x01  0x018  6    333020959528  ---  Logical Sectors Written
-0x01  0x020  6      1622960651  ---  Number of Write Commands
-0x01  0x028  6    430851459076  ---  Logical Sectors Read
-0x01  0x030  6      1496134780  ---  Number of Read Commands
-0x01  0x038  6     71938742900  ---  Date and Time TimeStamp
+0x01  0x010  4           23206  ---  Power-on Hours
+0x01  0x018  6    374297757871  ---  Logical Sectors Written
+0x01  0x020  6      1817831648  ---  Number of Write Commands
+0x01  0x028  6    486765594624  ---  Logical Sectors Read
+0x01  0x030  6      1701389209  ---  Number of Read Commands
+0x01  0x038  6     83544532050  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           18317  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           18317  ---  Head Flying Hours
-0x03  0x018  4             756  ---  Head Load Events
+0x03  0x008  4           21354  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           21354  ---  Head Flying Hours
+0x03  0x018  4             881  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4            3142  ---  Read Recovery Attempts
+0x03  0x028  4            3534  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               4  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
@@ -219,7 +270,31 @@ Page  Offset Size        Value Flags Description
                                 |___ N normalized value
 
 Pending Defects log (GP Log 0x0c)
-No Defects Logged
+Index                LBA    Hours
+    0        17804412640        -
+    1        17804412641        -
+    2        17804412642        -
+    3        17804412643        -
+    4        17804412644        -
+    5        17804412645        -
+    6        17804412646        -
+    7        17804412647        -
+    8        17804582584        -
+    9        17804582585        -
+   10        17804582586        -
+   11        17804582587        -
+   12        17804582588        -
+   13        17804582589        -
+   14        17804582590        -
+   15        17804582591        -
+   16        17804582592        -
+   17        17804582593        -
+   18        17804582594        -
+   19        17804582595        -
+   20        17804582596        -
+   21        17804582597        -
+   22        17804582598        -
+   23        17804582599        -
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description

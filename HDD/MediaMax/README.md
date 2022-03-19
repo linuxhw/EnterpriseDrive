@@ -21,11 +21,11 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| MediaMax  | WL2000GSA6472E     | 2 TB   | 1       | 948   | 0     | 2.60   |
-| MediaMax  | WL500GSA3272       | 500 GB | 1       | 920   | 0     | 2.52   |
-| MediaMax  | WL4000GSA6472      | 4 TB   | 2       | 649   | 0     | 1.78   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| MediaMax  | WL2000GSA6472E     | 2 TB   | 1       | 1053  | 0     | 2.89   |
+| MediaMax  | WL500GSA3272       | 500 GB | 1       | 1018  | 0     | 2.79   |
+| MediaMax  | WL4000GSA6472      | 4 TB   | 2       | 747   | 0     | 2.05   |
 | MediaMax  | WL4000GSA6472E     | 4.9 TB | 1       | 1617  | 1054  | 0.00   |
 
 HDD by Family
@@ -39,8 +39,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| MediaMax  | WL2000                 | 1      | 1       | 948   | 0     | 2.60   |
-| MediaMax  | WL500                  | 1      | 1       | 920   | 0     | 2.52   |
-| MediaMax  | WL4000                 | 2      | 3       | 972   | 352   | 1.19   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| MediaMax  | WL2000                 | 1      | 1       | 1053  | 0     | 2.89   |
+| MediaMax  | WL500                  | 1      | 1       | 1018  | 0     | 2.79   |
+| MediaMax  | WL4000                 | 2      | 3       | 1037  | 352   | 1.37   |

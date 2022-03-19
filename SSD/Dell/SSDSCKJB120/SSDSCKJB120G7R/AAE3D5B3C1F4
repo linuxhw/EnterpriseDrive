@@ -61,7 +61,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    28560
+  9 Power_On_Hours          -O--CK   100   100   000    -    32233
  12 Power_Cycle_Count       -O--CK   100   100   000    -    37
  13 Read_Soft_Error_Rate    -OSRC-   130   130   000    -    4294967295
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
@@ -71,23 +71,23 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O-RCK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   090   000    -    48
+194 Temperature_Celsius     -O---K   100   090   000    -    43
 195 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    17940 (210 4220)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    17780 (232 2840)
 202 End_of_Life             POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    596580
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    670682
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    102400
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    362501564
+228 Workload_Minutes        -O--CK   100   100   000    -    362721940
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    596580
+233 Total_LBAs_Written      -O--CK   100   100   000    -    670682
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    596580
-242 Total_LBAs_Read         -O--CK   100   100   000    -    590260
-245 Percent_Life_Remaining  -O--CK   097   097   000    -    97
+241 Total_LBAs_Written      -O--CK   100   100   000    -    670682
+242 Total_LBAs_Read         -O--CK   100   100   000    -    648844
+245 Percent_Life_Remaining  -O--CK   096   096   000    -    96
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -112,10 +112,10 @@ Address    Access  R/W   Size  Description
 0x85       GPL     R/W  13028  Host vendor specific log
 0x85       SL      R/W    228  Host vendor specific log
 0x86       GPL     R/W  25600  Host vendor specific log
-0x87       GPL     R/W  48228  Host vendor specific log
+0x87       GPL     R/W  37988  Host vendor specific log
 0x87       SL      R/W    100  Host vendor specific log
-0x88       GPL     R/W  39765  Host vendor specific log
-0x88       SL      R/W     85  Host vendor specific log
+0x88       GPL     R/W  40626  Host vendor specific log
+0x88       SL      R/W    178  Host vendor specific log
 0x89       GPL,SL  R/W     21  Host vendor specific log
 0x8b       GPL     R/W  13288  Host vendor specific log
 0x8b       SL      R/W    232  Host vendor specific log
@@ -124,10 +124,10 @@ Address    Access  R/W   Size  Description
 0x91       GPL     R/W  13033  Host vendor specific log
 0x91       SL      R/W    233  Host vendor specific log
 0x92       GPL     R/W  25600  Host vendor specific log
-0x93       GPL     R/W  25700  Host vendor specific log
+0x93       GPL     R/W  55908  Host vendor specific log
 0x93       SL      R/W    100  Host vendor specific log
-0x94       GPL     R/W   2330  Host vendor specific log
-0x94       SL      R/W     26  Host vendor specific log
+0x94       GPL     R/W   2619  Host vendor specific log
+0x94       SL      R/W     59  Host vendor specific log
 0x97       GPL     R/W  13034  Host vendor specific log
 0x97       SL      R/W    234  Host vendor specific log
 0x98       GPL     R/W  25600  Host vendor specific log
@@ -135,22 +135,22 @@ Address    Access  R/W   Size  Description
 0x9d       GPL     R/W  13041  Host vendor specific log
 0x9d       SL      R/W    241  Host vendor specific log
 0x9e       GPL     R/W  25600  Host vendor specific log
-0x9f       GPL     R/W  25700  Host vendor specific log
+0x9f       GPL     R/W  55908  Host vendor specific log
 0x9f       SL      R/W    100  Host vendor specific log
-0xa0       GPL     VS    2330  Device vendor specific log
-0xa0       SL      VS      26  Device vendor specific log
+0xa0       GPL     VS    2619  Device vendor specific log
+0xa0       SL      VS      59  Device vendor specific log
 0xa3       GPL     VS   13042  Device vendor specific log
 0xa3       SL      VS     242  Device vendor specific log
 0xa4       GPL     VS   25600  Device vendor specific log
-0xa5       GPL     VS   46180  Device vendor specific log
+0xa5       GPL     VS   35940  Device vendor specific log
 0xa5       SL      VS     100  Device vendor specific log
-0xa6       GPL     VS    2305  Device vendor specific log
-0xa6       SL      VS       1  Device vendor specific log
+0xa6       GPL     VS    2534  Device vendor specific log
+0xa6       SL      VS     230  Device vendor specific log
 0xa9       GPL     VS   13045  Device vendor specific log
 0xa9       SL      VS     245  Device vendor specific log
-0xaa       GPL     VS   24832  Device vendor specific log
-0xab       GPL     VS   24929  Device vendor specific log
-0xab       SL      VS      97  Device vendor specific log
+0xaa       GPL     VS   24576  Device vendor specific log
+0xab       GPL     VS   24672  Device vendor specific log
+0xab       SL      VS      96  Device vendor specific log
 0xb5-0xb6  GPL,SL  VS       2  Device vendor specific log
 0xb7       GPL     VS   30976  Device vendor specific log
 0xb8       GPL,SL  VS       1  Device vendor specific log
@@ -160,7 +160,7 @@ Address    Access  R/W   Size  Description
 0xbb       GPL,SL  VS      60  Device vendor specific log
 0xe0       GPL,SL  R/W      1  SCT Command/Status
 0xe1       GPL,SL  R/W      8  SCT Data Transfer
-0xff       GPL     -    62208  Reserved
+0xff       GPL     -    51968  Reserved
 
 SMART Extended Comprehensive Error Log Version: 1 (20 sectors)
 No Errors Logged
@@ -188,7 +188,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    39 Celsius
+Current Temperature:                    34 Celsius
 Power Cycle Min/Max Temperature:     22/51 Celsius
 Lifetime    Min/Max Temperature:     13/51 Celsius
 Specified Max Operating Temperature:    70 Celsius
@@ -202,7 +202,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (36)
+Temperature History Size (Index):    478 (57)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -214,7 +214,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           32  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           38  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

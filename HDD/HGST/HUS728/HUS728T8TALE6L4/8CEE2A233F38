@@ -64,11 +64,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    15791
+  9 Power_On_Hours          -O--C-   098   098   000    -    18395
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    41
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    579
-193 Load_Cycle_Count        -O--C-   100   100   000    -    579
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    643
+193 Load_Cycle_Count        -O--C-   100   100   000    -    643
 194 Temperature_Celsius     -O----   162   162   000    -    37 (Min/Max 19/54)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -130,7 +130,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    37 Celsius
-Power Cycle Min/Max Temperature:     30/38 Celsius
+Power Cycle Min/Max Temperature:     30/42 Celsius
 Lifetime    Min/Max Temperature:     19/54 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (86)
+Temperature History Size (Index):    128 (84)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,16 +149,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              41  ---  Lifetime Power-On Resets
-0x01  0x010  4           15791  ---  Power-on Hours
-0x01  0x018  6    550273144335  ---  Logical Sectors Written
-0x01  0x020  6     10093759739  ---  Number of Write Commands
-0x01  0x028  6    482677939557  ---  Logical Sectors Read
-0x01  0x030  6      2598323293  ---  Number of Read Commands
-0x01  0x038  6     56850184150  ---  Date and Time TimeStamp
+0x01  0x010  4           18395  ---  Power-on Hours
+0x01  0x018  6    641780404655  ---  Logical Sectors Written
+0x01  0x020  6     12280273393  ---  Number of Write Commands
+0x01  0x028  6    521337307053  ---  Logical Sectors Read
+0x01  0x030  6      2884140750  ---  Number of Read Commands
+0x01  0x038  6     66222519750  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           13664  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           13664  ---  Head Flying Hours
-0x03  0x018  4             579  ---  Head Load Events
+0x03  0x008  4           15521  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           15521  ---  Head Flying Hours
+0x03  0x018  4             643  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               5  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x030  1              41  N--  Highest Average Short Term Temperature
 0x05  0x038  1              25  N--  Lowest Average Short Term Temperature
-0x05  0x040  1              38  N--  Highest Average Long Term Temperature
+0x05  0x040  1              39  N--  Highest Average Long Term Temperature
 0x05  0x048  1              25  N--  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature

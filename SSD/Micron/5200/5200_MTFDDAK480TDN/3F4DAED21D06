@@ -31,7 +31,7 @@ Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  992) seconds.
+data collection: 		(  699) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 
@@ -61,18 +61,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16277
+  9 Power_On_Hours          -O--CK   100   100   000    -    19976
  12 Power_Cycle_Count       -O--CK   100   100   001    -    4
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   100   100   000    -    26
+173 Avg_Block-Erase_Count   -O--CK   100   100   000    -    34
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    3
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    10
-194 Temperature_Celsius     -O---K   081   067   000    -    19 (Min/Max 17/33)
+194 Temperature_Celsius     -O---K   081   067   000    -    19 (Min/Max 16/33)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
@@ -80,12 +80,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    41568502048
-247 Host_Program_Page_Count -O--CK   100   100   000    -    1299015686
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    152977484
+246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    53703725808
+247 Host_Program_Page_Count -O--CK   100   100   000    -    1678241428
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    203699610
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    9898
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
-211 Integ_Scan_Complete_Cnt -O--CK   100   100   000    -    77
+211 Integ_Scan_Complete_Cnt -O--CK   100   100   000    -    90
 212 Integ_Scan_Folding_Cnt  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -129,7 +129,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%     15795         -
+# 1  Vendor (0xff)       Completed without error       00%     19489         -
 # 2  Vendor (0xff)       Completed without error       00%     13108         -
 # 3  Vendor (0xff)       Completed without error       00%      5269         -
 
@@ -148,8 +148,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    19 Celsius
-Power Cycle Min/Max Temperature:     17/33 Celsius
-Lifetime    Min/Max Temperature:     17/33 Celsius
+Power Cycle Min/Max Temperature:     16/33 Celsius
+Lifetime    Min/Max Temperature:     16/33 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -157,18 +157,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (454)
+Temperature History Size (Index):    478 (19)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x010  4           16277  ---  Power-on Hours
-0x01  0x018  6     41568502048  ---  Logical Sectors Written
-0x01  0x020  6       272309334  ---  Number of Write Commands
-0x01  0x028  6      2794110293  ---  Logical Sectors Read
-0x01  0x030  6        11919124  ---  Number of Read Commands
-0x01  0x038  6     58597860000  ---  Date and Time TimeStamp
+0x01  0x010  4           19976  ---  Power-on Hours
+0x01  0x018  6     53703725808  ---  Logical Sectors Written
+0x01  0x020  6       366346245  ---  Number of Write Commands
+0x01  0x028  6      2991453437  ---  Logical Sectors Read
+0x01  0x030  6        14421233  ---  Number of Read Commands
+0x01  0x038  6     71914860000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              10  ---  Resets Between Cmd Acceptance and Completion
@@ -177,7 +177,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x010  1              19  ---  Average Short Term Temperature
 0x05  0x018  1              19  ---  Average Long Term Temperature
 0x05  0x020  1              33  ---  Highest Temperature
-0x05  0x028  1              17  ---  Lowest Temperature
+0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              24  ---  Highest Average Short Term Temperature
 0x05  0x038  1              19  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              24  ---  Highest Average Long Term Temperature

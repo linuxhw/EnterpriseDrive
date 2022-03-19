@@ -63,13 +63,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    47
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   001   001   000    -    77112
+  9 Power_On_Hours          -O--CK   001   001   000    -    77271
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    45
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    44
-193 Load_Cycle_Count        -O--CK   023   023   000    -    533669
-194 Temperature_Celsius     -O---K   106   100   000    -    46
+193 Load_Cycle_Count        -O--CK   022   022   000    -    534679
+194 Temperature_Celsius     -O---K   104   100   000    -    48
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -122,9 +122,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  2
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    46 Celsius
+Current Temperature:                    48 Celsius
 Power Cycle Min/Max Temperature:     27/52 Celsius
-Lifetime    Min/Max Temperature:     46/52 Celsius
+Lifetime    Min/Max Temperature:     45/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -132,11 +132,11 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (200)
+Temperature History Size (Index):    478 (318)
 
 SCT Error Recovery Control:
-           Read: Disabled
-          Write: Disabled
+           Read:     70 (7.0 seconds)
+          Write:     70 (7.0 seconds)
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -144,10 +144,10 @@ ID      Size     Value  Description
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
-0x0005  2            0  R_ERR response for non-data FIS
+0x0005  2            3  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
-0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0007  2            3  R_ERR response for host-to-device non-data FIS
+0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
-0x8000  4        91157  Vendor specific
+0x8000  4       671921  Vendor specific
 

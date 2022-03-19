@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -54,9 +54,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5300
+  9 Power_On_Hours          -O--CK   100   100   000    -    10016
  12 Power_Cycle_Count       -O--CK   100   100   000    -    2
-165 Block_Erase_Count       -O--CK   100   100   000    -    494
+165 Block_Erase_Count       -O--CK   100   100   000    -    515
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    7
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
 168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    20
@@ -69,14 +69,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   060   053   000    -    40 (Min/Max 29/53)
+194 Temperature_Celsius     -O---K   058   053   000    -    42 (Min/Max 29/53)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x012901280129
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x012f0128012f
 232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    1800
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    3768
-241 Host_Writes_GiB         ----CK   100   100   000    -    1438
-242 Host_Reads_GiB          ----CK   100   100   000    -    3864
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    1891
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    3922
+241 Host_Writes_GiB         ----CK   100   100   000    -    1490
+242 Host_Reads_GiB          ----CK   100   100   000    -    3928
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -115,20 +115,20 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               2  ---  Lifetime Power-On Resets
-0x01  0x010  4            5300  ---  Power-on Hours
-0x01  0x018  6      3015752477  ---  Logical Sectors Written
-0x01  0x028  6      8104998279  ---  Logical Sectors Read
-0x01  0x038  6            5300  ---  Date and Time TimeStamp
+0x01  0x010  4           10016  ---  Power-on Hours
+0x01  0x018  6      3126170478  ---  Logical Sectors Written
+0x01  0x028  6      8237718638  ---  Logical Sectors Read
+0x01  0x038  6           10016  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              40  ---  Current Temperature
-0x05  0x010  1              40  ---  Average Short Term Temperature
-0x05  0x018  1              39  ---  Average Long Term Temperature
+0x05  0x008  1              42  ---  Current Temperature
+0x05  0x010  1              41  ---  Average Short Term Temperature
+0x05  0x018  1              42  ---  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              37  ---  Lowest Temperature
-0x05  0x030  1              41  ---  Highest Average Short Term Temperature
-0x05  0x038  1              41  ---  Lowest Average Short Term Temperature
-0x05  0x040  1              40  ---  Highest Average Long Term Temperature
-0x05  0x048  1              40  ---  Lowest Average Long Term Temperature
+0x05  0x030  1              42  ---  Highest Average Short Term Temperature
+0x05  0x038  1              42  ---  Lowest Average Short Term Temperature
+0x05  0x040  1              42  ---  Highest Average Long Term Temperature
+0x05  0x048  1              42  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              95  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
@@ -145,8 +145,8 @@ ID      Size     Value  Description
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            9  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           33  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           31  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
 0x0001  2            0  Command failed due to ICRC error

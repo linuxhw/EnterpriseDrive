@@ -56,16 +56,16 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    32252
+  9 Power_On_Hours          -O--C-   100   100   000    -    36448
  12 Power_Cycle_Count       -O--C-   100   100   000    -    762
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    22857
 170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/554
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    245 (Average 169)
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    410 (Average 332)
 192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    751
 194 Temperature_Celsius     PO---K   098   098   057    -    30 (Min/Max 0/30)
 218 CRC_Error_Count         PO-R--   100   100   050    -    11557
-231 SSD_Life_Left           PO--C-   100   100   000    -    95
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    24465
+231 SSD_Life_Left           PO--C-   100   100   000    -    89
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    52756
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -96,25 +96,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed without error       00%     32236         -
-# 2  Extended offline    Completed without error       00%     32076         -
-# 3  Extended offline    Completed without error       00%     31909         -
-# 4  Extended offline    Completed without error       00%     31741         -
-# 5  Extended offline    Completed without error       00%     31573         -
-# 6  Extended offline    Completed without error       00%     31405         -
-# 7  Extended offline    Completed without error       00%     31238         -
-# 8  Extended offline    Completed without error       00%     31071         -
-# 9  Extended offline    Completed without error       00%     30903         -
-#10  Extended offline    Completed without error       00%     30735         -
-#11  Extended offline    Completed without error       00%     30567         -
-#12  Extended offline    Completed without error       00%     30399         -
-#13  Extended offline    Completed without error       00%     30232         -
-#14  Extended offline    Completed without error       00%     30064         -
-#15  Extended offline    Completed without error       00%     29896         -
-#16  Extended offline    Completed without error       00%     29728         -
-#17  Extended offline    Completed without error       00%     29560         -
-#18  Extended offline    Completed without error       00%     29392         -
-#19  Extended offline    Completed without error       00%     29225         -
+# 1  Extended offline    Completed without error       00%     36430         -
+# 2  Extended offline    Completed without error       00%     36262         -
+# 3  Extended offline    Completed without error       00%     36094         -
+# 4  Extended offline    Completed without error       00%     35927         -
+# 5  Extended offline    Completed without error       00%     35759         -
+# 6  Extended offline    Completed without error       00%     35591         -
+# 7  Extended offline    Completed without error       00%     35423         -
+# 8  Extended offline    Completed without error       00%     35256         -
+# 9  Extended offline    Completed without error       00%     35088         -
+#10  Extended offline    Completed without error       00%     34920         -
+#11  Extended offline    Completed without error       00%     34752         -
+#12  Extended offline    Completed without error       00%     34585         -
+#13  Extended offline    Completed without error       00%     34417         -
+#14  Extended offline    Completed without error       00%     34249         -
+#15  Extended offline    Completed without error       00%     34082         -
+#16  Extended offline    Completed without error       00%     33914         -
+#17  Extended offline    Completed without error       00%     33746         -
+#18  Extended offline    Completed without error       00%     33578         -
+#19  Extended offline    Completed without error       00%     33411         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -131,11 +131,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             762  ---  Lifetime Power-On Resets
-0x01  0x010  4           32252  ---  Power-on Hours
-0x01  0x018  6     51308778201  ---  Logical Sectors Written
-0x01  0x020  6       838799545  ---  Number of Write Commands
-0x01  0x028  6     69928914002  ---  Logical Sectors Read
-0x01  0x030  6       637362715  ---  Number of Read Commands
+0x01  0x010  4           36448  ---  Power-on Hours
+0x01  0x018  6    110637867805  ---  Logical Sectors Written
+0x01  0x020  6      2023671387  ---  Number of Write Commands
+0x01  0x028  6     87392167747  ---  Logical Sectors Read
+0x01  0x030  6       840541178  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              34  ---  Resets Between Cmd Acceptance and Completion
@@ -157,7 +157,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x008  4           12251  ---  Number of Hardware Resets
 0x06  0x018  4           11487  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              11  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -170,7 +170,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4      7944751  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4    665081766  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4            4  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

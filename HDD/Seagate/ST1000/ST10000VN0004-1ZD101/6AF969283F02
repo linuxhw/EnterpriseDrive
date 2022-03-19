@@ -26,8 +26,8 @@ General SMART Values:
 Offline data collection status:  (0x82)	Offline data collection activity
 					was completed without error.
 
-Self-test execution status:      ( 113)	The previous self-test completed having
-					the read element of the test failed.
+Self-test execution status:      (  36)	The self-test routine was interrupted
+					by the host with a hard or soft reset.
 Total time to complete Offline 
 data collection: 		(  575) seconds.
 Offline data collection
@@ -58,31 +58,31 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   082   063   044    -    141643437
+  1 Raw_Read_Error_Rate     POSR--   069   063   044    -    8022479
   3 Spin_Up_Time            PO----   092   087   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    55
-  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1331
-  7 Seek_Error_Rate         POSR--   094   060   045    -    2267972585
-  9 Power_On_Hours          -O--CK   067   067   000    -    29558 (108 10 0)
+  5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    1771
+  7 Seek_Error_Rate         POSR--   092   060   045    -    1450990366
+  9 Power_On_Hours          -O--CK   065   065   000    -    30735 (129 195 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    55
-184 End-to-End_Error        -O--CK   100   100   099    -    0
-187 Reported_Uncorrect      -O--CK   088   088   000    -    12
+184 End-to-End_Error        -O--CK   098   098   099    NOW  2
+187 Reported_Uncorrect      -O--CK   086   086   000    -    14
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   091   091   000    -    9
 190 Airflow_Temperature_Cel -O---K   071   063   040    -    29 (Min/Max 22/30)
-191 G-Sense_Error_Rate      -O--CK   087   087   000    -    27205
+191 G-Sense_Error_Rate      -O--CK   087   087   000    -    27234
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    30
-193 Load_Cycle_Count        -O--CK   096   096   000    -    9937
+193 Load_Cycle_Count        -O--CK   096   096   000    -    9941
 194 Temperature_Celsius     -O---K   029   040   000    -    29 (0 20 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   028   001   000    -    141643437
-197 Current_Pending_Sector  -O--C-   100   100   000    -    16
-198 Offline_Uncorrectable   ----C-   100   100   000    -    16
-199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
+195 Hardware_ECC_Recovered  -O-RC-   028   001   000    -    8022479
+197 Current_Pending_Sector  -O--C-   100   100   000    -    0
+198 Offline_Uncorrectable   ----C-   100   100   000    -    0
+199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    2
 200 Multi_Zone_Error_Rate   PO---K   100   100   001    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    28540 (3 2 0)
-241 Total_LBAs_Written      ------   100   253   000    -    20024871606
-242 Total_LBAs_Read         ------   100   253   000    -    796340999896
+240 Head_Flying_Hours       ------   100   253   000    -    29716 (19 33 0)
+241 Total_LBAs_Written      ------   100   253   000    -    20259066411
+242 Total_LBAs_Read         ------   100   253   000    -    816794368200
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 12
+Device Error Count: 16
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -148,36 +148,36 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
+Error 16 [15] log entry is empty
+Error 15 [14] log entry is empty
+Error 14 [13] log entry is empty
+Error 13 [12] log entry is empty
 Error 12 [11] log entry is empty
 Error 11 [10] log entry is empty
 Error 10 [9] log entry is empty
 Error 9 [8] log entry is empty
-Error 8 [7] log entry is empty
-Error 7 [6] log entry is empty
-Error 6 [5] log entry is empty
-Error 5 [4] log entry is empty
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Extended offline    Completed: read failure       10%     29098         19355416624
-# 2  Extended offline    Interrupted (host reset)      10%     28364         -
-# 3  Extended offline    Completed without error       00%     27605         -
-# 4  Extended offline    Interrupted (host reset)      90%     26846         -
-# 5  Extended offline    Completed without error       00%     26146         -
-# 6  Extended offline    Completed without error       00%     25427         -
-# 7  Extended offline    Interrupted (host reset)      60%     24658         -
-# 8  Extended offline    Interrupted (host reset)      00%     23979         -
-# 9  Extended offline    Completed: read failure       90%     23221         4226816
-#10  Extended offline    Completed without error       00%     22519         -
-#11  Extended offline    Completed without error       00%     21804         -
-#12  Extended offline    Completed without error       00%     21025         -
-#13  Extended offline    Completed without error       00%     20305         -
-#14  Extended offline    Completed without error       00%     19562         -
-#15  Extended offline    Completed without error       00%     18818         -
-#16  Extended offline    Completed without error       00%     18097         -
-#17  Extended offline    Completed without error       00%     17353         -
-#18  Extended offline    Completed without error       00%     16633         -
-#19  Extended offline    Completed without error       00%     15889         -
-1 of 2 failed self-tests are outdated by newer successful extended offline self-test # 3
+# 1  Extended offline    Interrupted (host reset)      40%     30557         -
+# 2  Extended offline    Completed: read failure       10%     29827         19355420584
+# 3  Extended offline    Completed: read failure       10%     29098         19355416624
+# 4  Extended offline    Interrupted (host reset)      10%     28364         -
+# 5  Extended offline    Completed without error       00%     27605         -
+# 6  Extended offline    Interrupted (host reset)      90%     26846         -
+# 7  Extended offline    Completed without error       00%     26146         -
+# 8  Extended offline    Completed without error       00%     25427         -
+# 9  Extended offline    Interrupted (host reset)      60%     24658         -
+#10  Extended offline    Interrupted (host reset)      00%     23979         -
+#11  Extended offline    Completed: read failure       90%     23221         4226816
+#12  Extended offline    Completed without error       00%     22519         -
+#13  Extended offline    Completed without error       00%     21804         -
+#14  Extended offline    Completed without error       00%     21025         -
+#15  Extended offline    Completed without error       00%     20305         -
+#16  Extended offline    Completed without error       00%     19562         -
+#17  Extended offline    Completed without error       00%     18818         -
+#18  Extended offline    Completed without error       00%     18097         -
+#19  Extended offline    Completed without error       00%     17353         -
+1 of 3 failed self-tests are outdated by newer successful extended offline self-test # 5
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -196,14 +196,14 @@ Device State:                        Active (0)
 Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:     22/31 Celsius
 Lifetime    Min/Max Temperature:     20/51 Celsius
-Under/Over Temperature Limit Count:   0/14450
+Under/Over Temperature Limit Count:   0/15627
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (96)
+Temperature History Size (Index):    128 (121)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -213,23 +213,23 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              55  ---  Lifetime Power-On Resets
-0x01  0x010  4           29558  ---  Power-on Hours
-0x01  0x018  6     20024652151  ---  Logical Sectors Written
-0x01  0x020  6       226533933  ---  Number of Write Commands
-0x01  0x028  6    796314836331  ---  Logical Sectors Read
-0x01  0x030  6      2531791825  ---  Number of Read Commands
+0x01  0x010  4           30735  ---  Power-on Hours
+0x01  0x018  6     20258846972  ---  Logical Sectors Written
+0x01  0x020  6       232541805  ---  Number of Write Commands
+0x01  0x028  6    816768204635  ---  Logical Sectors Read
+0x01  0x030  6      2613101810  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4       323126069  N--  Spindle Motor Power-on Hours
+0x03  0x008  4       323127245  N--  Spindle Motor Power-on Hours
 0x03  0x010  4       323096594  N--  Head Flying Hours
-0x03  0x018  4            9937  ---  Head Load Events
-0x03  0x020  4            1331  ---  Number of Reallocated Logical Sectors
+0x03  0x018  4            9941  ---  Head Load Events
+0x03  0x020  4            1771  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
-0x03  0x038  4              16  ---  Number of Realloc. Candidate Logical Sectors
+0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
 0x03  0x040  4              30  ---  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4             136  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4             176  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              29  ---  Current Temperature
@@ -246,9 +246,9 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             482  ---  Number of Hardware Resets
+0x06  0x008  4             493  ---  Number of Hardware Resets
 0x06  0x010  4              24  ---  Number of ASR Events
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4               2  ---  Number of Interface CRC Errors
 0xff  =====  =               =  ===  == Vendor Specific Statistics (rev 1) ==
 0xff  0x008  7               0  ---  Vendor Specific
                                 |||_ C monitored condition met
@@ -256,27 +256,11 @@ Page  Offset Size        Value Flags Description
                                 |___ N normalized value
 
 Pending Defects log (GP Log 0x0c)
-Index                LBA    Hours
-    0        19355420576    29458
-    1        19355420577    29458
-    2        19355420578    29458
-    3        19355420579    29458
-    4        19355420580    29458
-    5        19355420581    29458
-    6        19355420582    29458
-    7        19355420583    29458
-    8        19355422552    29458
-    9        19355422553    29458
-   10        19355422554    29458
-   11        19355422555    29458
-   12        19355422556    29458
-   13        19355422557    29458
-   14        19355422558    29458
-   15        19355422559    29458
+No Defects Logged
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2          209  Device-to-host register FISes sent due to a COMRESET
+0x000a  2          220  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

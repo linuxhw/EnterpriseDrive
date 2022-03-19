@@ -21,10 +21,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | OWC       | Mercury Accelsi... | 240 GB | 1       | 2002  | 1     | 2.74   |
-| OWC       | Mercury Electra... | 250 GB | 2       | 774   | 0     | 2.12   |
+| OWC       | Mercury Electra... | 250 GB | 2       | 818   | 0     | 2.24   |
 
 SSD by Family
 -------------
@@ -37,7 +37,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
 | OWC       | Unknown                | 1      | 1       | 2002  | 1     | 2.74   |
-| OWC       | SandForce Driven SSDs  | 1      | 2       | 774   | 0     | 2.12   |
+| OWC       | SandForce Driven SSDs  | 1      | 2       | 818   | 0     | 2.24   |

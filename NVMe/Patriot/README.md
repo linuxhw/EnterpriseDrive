@@ -15,7 +15,8 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Patriot   | P300               | 256 GB | 2       | 196   | 0     | 0.54   |
-| Patriot   | P300               | 128 GB | 4       | 163   | 0     | 0.45   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Patriot   | P300               | 128 GB | 4       | 226   | 0     | 0.62   |
+| Patriot   | P300               | 256 GB | 2       | 208   | 0     | 0.57   |
+| Patriot   | M.2 P300           | 128 GB | 1       | 48    | 0     | 0.13   |

@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    7869
+  9 Power_On_Hours          -O--CK   098   098   000    -    9089
  12 Power_Cycle_Count       -O--CK   099   099   000    -    6
-177 Wear_Leveling_Count     PO--C-   097   097   005    -    186
+177 Wear_Leveling_Count     PO--C-   096   096   005    -    235
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    5855
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -75,14 +75,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    4
-241 Total_LBAs_Written      -O--CK   099   099   000    -    427083055116
-242 Total_LBAs_Read         -O--CK   099   099   000    -    719048190110
+241 Total_LBAs_Written      -O--CK   099   099   000    -    530670634522
+242 Total_LBAs_Read         -O--CK   099   099   000    -    875119927204
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    803368182016
+251 NAND_Writes             -O--CK   100   100   000    -    1016005062720
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,25 +117,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      7862         -
-# 2  Short offline       Completed without error       00%      7838         -
-# 3  Short offline       Completed without error       00%      7814         -
-# 4  Short offline       Completed without error       00%      7790         -
-# 5  Extended offline    Completed without error       00%      7768         -
-# 6  Short offline       Completed without error       00%      7766         -
-# 7  Short offline       Completed without error       00%      7742         -
-# 8  Short offline       Completed without error       00%      7718         -
-# 9  Short offline       Completed without error       00%      7694         -
-#10  Short offline       Completed without error       00%      7670         -
-#11  Short offline       Completed without error       00%      7646         -
-#12  Short offline       Completed without error       00%      7622         -
-#13  Extended offline    Completed without error       00%      7600         -
-#14  Short offline       Completed without error       00%      7598         -
-#15  Short offline       Completed without error       00%      7574         -
-#16  Short offline       Completed without error       00%      7550         -
-#17  Short offline       Completed without error       00%      7526         -
-#18  Short offline       Completed without error       00%      7502         -
-#19  Short offline       Completed without error       00%      7478         -
+# 1  Short offline       Completed without error       00%      9086         -
+# 2  Short offline       Completed without error       00%      9062         -
+# 3  Short offline       Completed without error       00%      9038         -
+# 4  Short offline       Completed without error       00%      9014         -
+# 5  Short offline       Completed without error       00%      8990         -
+# 6  Short offline       Completed without error       00%      8966         -
+# 7  Extended offline    Completed without error       00%      8944         -
+# 8  Short offline       Completed without error       00%      8942         -
+# 9  Short offline       Completed without error       00%      8918         -
+#10  Short offline       Completed without error       00%      8894         -
+#11  Short offline       Completed without error       00%      8870         -
+#12  Short offline       Completed without error       00%      8846         -
+#13  Short offline       Completed without error       00%      8822         -
+#14  Short offline       Completed without error       00%      8798         -
+#15  Extended offline    Completed without error       00%      8776         -
+#16  Short offline       Completed without error       00%      8774         -
+#17  Short offline       Completed without error       00%      8750         -
+#18  Short offline       Completed without error       00%      8726         -
+#19  Short offline       Completed without error       00%      8702         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -152,7 +152,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     21/32 Celsius
+Power Cycle Min/Max Temperature:     21/33 Celsius
 Lifetime    Min/Max Temperature:     19/37 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -162,7 +162,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (114)
+Temperature History Size (Index):    128 (14)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -172,12 +172,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               6  ---  Lifetime Power-On Resets
-0x01  0x010  4            7869  ---  Power-on Hours
-0x01  0x018  6    427083055196  ---  Logical Sectors Written
-0x01  0x020  6      7851002998  ---  Number of Write Commands
-0x01  0x028  6    719048190110  ---  Logical Sectors Read
-0x01  0x030  6     20878668667  ---  Number of Read Commands
-0x01  0x038  6          615000  ---  Date and Time TimeStamp
+0x01  0x010  4            9089  ---  Power-on Hours
+0x01  0x018  6    530670634626  ---  Logical Sectors Written
+0x01  0x020  6      9408263059  ---  Number of Write Commands
+0x01  0x028  6    875119927204  ---  Logical Sectors Read
+0x01  0x030  6     22086807928  ---  Number of Read Commands
+0x01  0x038  6         2732000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -191,7 +191,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               3  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

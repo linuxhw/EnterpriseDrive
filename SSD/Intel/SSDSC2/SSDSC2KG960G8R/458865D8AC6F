@@ -17,7 +17,7 @@ ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
 Local Time is:    --
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 
 === START OF READ SMART DATA SECTION ===
 SMART overall-health self-assessment test result: PASSED
@@ -59,11 +59,11 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    246412971
+  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    315395013
   5 Reallocated_Sector_Ct   PO--CK   099   099   001    -    24
-  9 Power_On_Hours          -O--CK   100   100   000    -    19685
+  9 Power_On_Hours          -O--CK   100   100   000    -    23403
  12 Power_Cycle_Count       -O--CK   100   100   000    -    52
- 13 Read_Soft_Error_Rate    -OSRC-   100   088   000    -    110402380756651
+ 13 Read_Soft_Error_Rate    -OSRC-   100   088   000    -    127814247156677
 170 Available_Reservd_Space PO--CK   099   099   010    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    46
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   099   099   010    -    7
@@ -78,15 +78,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    1
 201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2585 (52 65535)
 202 End_of_Life             POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    299176
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    330613
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    65535
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
 232 Available_Reservd_Space PO--CK   099   099   010    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    299176
+233 Total_LBAs_Written      -O--CK   100   100   000    -    330613
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    299176
-242 Total_LBAs_Read         -O--CK   100   100   000    -    40391
+241 Total_LBAs_Written      -O--CK   100   100   000    -    330613
+242 Total_LBAs_Read         -O--CK   100   100   000    -    41444
 245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -168,7 +168,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/73 Celsius
 Min/Max Temperature Limit:            0/73 Celsius
-Temperature History Size (Index):    478 (11)
+Temperature History Size (Index):    478 (369)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -178,11 +178,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              52  ---  Lifetime Power-On Resets
-0x01  0x018  6     19606861267  ---  Logical Sectors Written
-0x01  0x020  6       624187695  ---  Number of Write Commands
-0x01  0x028  6      2647121353  ---  Logical Sectors Read
-0x01  0x030  6        45015058  ---  Number of Read Commands
-0x01  0x038  6      2146800084  ---  Date and Time TimeStamp
+0x01  0x018  6     21667093075  ---  Logical Sectors Written
+0x01  0x020  6       726487612  ---  Number of Write Commands
+0x01  0x028  6      2716103395  ---  Logical Sectors Read
+0x01  0x030  6        45354541  ---  Number of Read Commands
+0x01  0x038  6      2648010047  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -201,8 +201,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              79  ---  Number of Hardware Resets
-0x06  0x010  4              78  ---  Number of ASR Events
+0x06  0x008  4              87  ---  Number of Hardware Resets
+0x06  0x010  4              86  ---  Number of ASR Events
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -219,7 +219,7 @@ ID      Size     Value  Description
 0x0005  4            0  R_ERR response for non-data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
-0x000a  4           32  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           40  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

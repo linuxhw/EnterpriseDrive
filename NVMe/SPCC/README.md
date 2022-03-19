@@ -15,6 +15,6 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| SPCC      | M.2 PCIe SSD       | 1 TB   | 1       | 789   | 0     | 2.16   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| SPCC      | M.2 PCIe SSD       | 1 TB   | 1       | 837   | 0     | 2.29   |

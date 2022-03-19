@@ -57,27 +57,27 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   060   060   000    -    35751 (8 80 0)
+  9 Power_On_Hours          -O--CK   056   056   000    -    39055 (5 184 0)
  13 Lifetime_UECC_Ct        -O--C-   100   100   001    -    0
- 32 Lifetime_Write_AmpFctr  -O----   100   100   000    -    242
- 33 Write_AmpFctr           -O----   100   100   000    -    136
+ 32 Lifetime_Write_AmpFctr  -O----   100   100   000    -    234
+ 33 Write_AmpFctr           -O----   100   100   000    -    181
 170 Reserve_Erase_BlkCt     -O--CK   100   100   000    -    18279
 171 Program_Fail_Ct         -O--CK   100   100   000    -    0
 172 Erase_Fail_Ct           -O--CK   100   100   000    -    0
 175 Lifetime_Die_Failure_Ct -O--CK   100   100   000    -    0
-178 SSD_LifeLeft(0.01%)     -O--C-   100   100   000    -    9215
+178 SSD_LifeLeft(0.01%)     -O--C-   100   100   000    -    9153
 183 LT_Link_Rate_DwnGrd_Ct  -O--CK   100   100   000    -    0
 191 Clean_Shutdown_Ct       -O--CK   100   100   000    -    20
 192 Unclean_Shutdown_Ct     -O--CK   100   100   000    -    0
 194 Temperature_Celsius     -O---K   066   050   030    -    34 (Min/Max 20/50)
 196 Lifetime_Retried_Blk_Ct PO-RC-   100   100   010    -    0
 211 Read_Disturb_ReallocEvt -O--CK   100   100   000    -    0
-233 Lifetime_Nand_Writes    -O--CK   100   100   000    -    1201536
+233 Lifetime_Nand_Writes    -O--CK   100   100   000    -    1299712
 235 Capacitor_Health        -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    496064
-242 Total_LBAs_Read         -O--CK   100   100   000    -    24448
+241 Total_LBAs_Written      -O--CK   100   100   000    -    553408
+242 Total_LBAs_Read         -O--CK   100   100   000    -    30976
 244 Therm_Throt_Activation  -O--CK   100   100   000    -    0
-245 Drive_Life_Remaining%   -O--C-   093   093   002    -    93
+245 Drive_Life_Remaining%   -O--C-   092   092   002    -    92
 253 SPI_Test_Remaining      -O--C-   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -128,19 +128,19 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                    34 Celsius
-Power Cycle Min/Max Temperature:     30/39 Celsius
+Power Cycle Min/Max Temperature:     26/39 Celsius
 Lifetime    Min/Max Temperature:     20/50 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
 00 00 00 00 00 00 65 00 65 00 00 00 01 00 00 00
-00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7e
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 82
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/65 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (464)
+Temperature History Size (Index):    478 (323)
 
 SCT Error Recovery Control:
            Read:    100 (10.0 seconds)
@@ -150,19 +150,19 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              20  ---  Lifetime Power-On Resets
-0x01  0x010  4           35751  ---  Power-on Hours
-0x01  0x018  6    968896714001  ---  Logical Sectors Written
-0x01  0x020  6    154775282700  ---  Number of Write Commands
-0x01  0x028  6     47776782510  ---  Logical Sectors Read
-0x01  0x030  6    223447642626  ---  Number of Read Commands
-0x01  0x038  6      4149548416  ---  Date and Time TimeStamp
+0x01  0x010  4           39055  ---  Power-on Hours
+0x01  0x018  6   1080902274073  ---  Logical Sectors Written
+0x01  0x020  6    163361730148  ---  Number of Write Commands
+0x01  0x028  6     60534744530  ---  Logical Sectors Read
+0x01  0x030  6    236333408241  ---  Number of Read Commands
+0x01  0x038  6      3159046528  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4             652  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              34  ---  Current Temperature
-0x05  0x010  1              33  ---  Average Short Term Temperature
-0x05  0x018  1              32  ---  Average Long Term Temperature
+0x05  0x010  1              32  ---  Average Short Term Temperature
+0x05  0x018  1              31  ---  Average Long Term Temperature
 0x05  0x020  1              50  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              59  ---  Highest Average Short Term Temperature
@@ -174,11 +174,11 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             279  ---  Number of Hardware Resets
-0x06  0x010  4              51  ---  Number of ASR Events
+0x06  0x008  4             289  ---  Number of Hardware Resets
+0x06  0x010  4              53  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -186,7 +186,7 @@ Page  Offset Size        Value Flags Description
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  2            0  Command failed due to ICRC error
-0x000a  2          296  Device-to-host register FISes sent due to a COMRESET
+0x000a  2          306  Device-to-host register FISes sent due to a COMRESET
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS

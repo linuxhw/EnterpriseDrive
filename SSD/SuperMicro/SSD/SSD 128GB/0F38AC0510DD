@@ -57,33 +57,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    26108
- 12 Power_Cycle_Count       ------   100   100   000    -    22
+  9 Power_On_Hours          ------   100   100   000    -    31030
+ 12 Power_Cycle_Count       ------   100   100   000    -    23
  15 Unknown_Attribute       ------   100   100   000    -    247463936
 160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
 161 Valid_Spare_Block_Cnt   ------   100   100   000    -    165
 163 Initial_Bad_Block_Count ------   100   100   000    -    12
-164 Total_Erase_Count       ------   100   100   000    -    500559
-165 Max_Erase_Count         ------   100   100   000    -    293
-166 Min_Erase_Count         ------   100   100   000    -    191
-167 Average_Erase_Count     ------   100   100   000    -    239
+164 Total_Erase_Count       ------   100   100   000    -    536533
+165 Max_Erase_Count         ------   100   100   000    -    311
+166 Min_Erase_Count         ------   100   100   000    -    208
+167 Average_Erase_Count     ------   100   100   000    -    257
 168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
 172 Unknown_Attribute       ------   100   100   000    -    0
 175 Program_Fail_Count_Chip ------   100   100   000    -    12
-177 Wear_Leveling_Count     ------   100   100   000    -    1548
+177 Wear_Leveling_Count     ------   100   100   000    -    1746
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    9
-194 Temperature_Celsius     ------   100   100   000    -    33 (Min/Max 14/51)
-195 Hardware_ECC_Recovered  ------   100   100   000    -    1004
+192 Power-Off_Retract_Count ------   100   100   000    -    10
+194 Temperature_Celsius     ------   100   100   000    -    32 (Min/Max 14/51)
+195 Hardware_ECC_Recovered  ------   100   100   000    -    1650
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
 231 Temperature_Celsius     ------   100   100   000    -    100
-232 Available_Reservd_Space ------   100   100   000    -    93
-233 Media_Wearout_Indicator ------   100   100   000    -    31284
-241 Host_Writes_32MiB       ------   100   100   000    -    8214
-242 Host_Reads_32MiB        ------   100   100   000    -    7384
+232 Available_Reservd_Space ------   100   100   000    -    92
+233 Media_Wearout_Indicator ------   100   100   000    -    33533
+241 Host_Writes_32MiB       ------   100   100   000    -    8771
+242 Host_Reads_32MiB        ------   100   100   000    -    9040
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,22 +126,22 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              22  ---  Lifetime Power-On Resets
-0x01  0x010  4           26108  ---  Power-on Hours
-0x01  0x018  6        46650998  ---  Logical Sectors Written
-0x01  0x020  6       594200113  ---  Number of Write Commands
-0x01  0x028  6      2600482718  ---  Logical Sectors Read
-0x01  0x030  6       121233574  ---  Number of Read Commands
+0x01  0x008  4              23  ---  Lifetime Power-On Resets
+0x01  0x010  4           31030  ---  Power-on Hours
+0x01  0x018  6      1215368750  ---  Logical Sectors Written
+0x01  0x020  6       637306904  ---  Number of Write Commands
+0x01  0x028  6      1779470072  ---  Logical Sectors Read
+0x01  0x030  6       139443661  ---  Number of Read Commands
 
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              14  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              15  ---  Resets Between Cmd Acceptance and Completion
 
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             201  ---  Number of Hardware Resets
+0x06  0x008  4             222  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               7  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

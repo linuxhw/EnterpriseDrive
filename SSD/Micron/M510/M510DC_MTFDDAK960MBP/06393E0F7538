@@ -59,27 +59,27 @@ SCT capabilities: 	       (0x0035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
+  1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    1
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   001    -    8
-  9 Power_On_Hours          -O--CK   100   100   001    -    46878
+  9 Power_On_Hours          -O--CK   100   100   001    -    49326
  12 Power_Cycle_Count       -O--CK   100   100   001    -    11
 170 Reserved_Block_Count    PO--CK   098   098   010    -    270
 171 Program_Fail_Count      -O--CK   100   100   001    -    4
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Ave_Block-Erase_Count   PO--CK   010   010   000    -    4534
+173 Ave_Block-Erase_Count   PO--CK   003   003   000    -    4870
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   001    -    7
 184 Error_Correction_Count  PO--CK   100   100   050    -    0
 187 Reported_Uncorrect      -O--CK   100   100   001    -    0
 188 Command_Timeout         -O--CK   100   100   001    -    2
-194 Temperature_Celsius     -O---K   081   058   000    -    19 (Min/Max 16/42)
+194 Temperature_Celsius     -O---K   075   058   000    -    25 (Min/Max 16/42)
 195 Cumulativ_Corrected_ECC -O-RCK   100   100   001    -    4294967295
 197 Current_Pending_Sector  -O--CK   100   100   001    -    0
 198 Offline_Uncorrectable   ----CK   100   100   001    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   001    -    0
-202 Percent_Lifetime_Remain ---RC-   010   010   001    -    90
+202 Percent_Lifetime_Remain ---RC-   003   003   001    -    97
 206 Write_Error_Rate        -OSR--   100   100   001    -    4
-247 Host_Program_Page_Count -O--CK   100   100   000    -    20052386438
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    28760176712
+247 Host_Program_Page_Count -O--CK   100   100   000    -    28488852983
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    42269592565
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -155,7 +155,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    19 Celsius
+Current Temperature:                    25 Celsius
 Power Cycle Min/Max Temperature:     16/33 Celsius
 Lifetime    Min/Max Temperature:     16/42 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -165,24 +165,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (128)
+Temperature History Size (Index):    478 (63)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           46878  ---  Power-on Hours
-0x01  0x018  6   1482504179320  ---  Logical Sectors Written
-0x01  0x020  6     23123203714  ---  Number of Write Commands
-0x01  0x028  6    469164446797  ---  Logical Sectors Read
-0x01  0x030  6      3651805319  ---  Number of Read Commands
+0x01  0x010  4           49326  ---  Power-on Hours
+0x01  0x018  6   1752470939312  ---  Logical Sectors Written
+0x01  0x020  6     23751157545  ---  Number of Write Commands
+0x01  0x028  6    508861635637  ---  Logical Sectors Read
+0x01  0x030  6      4208672662  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              19  ---  Current Temperature
+0x05  0x008  1              25  ---  Current Temperature
 0x05  0x010  1              19  ---  Average Short Term Temperature
-0x05  0x018  1              19  ---  Average Long Term Temperature
+0x05  0x018  1              20  ---  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              37  ---  Highest Average Short Term Temperature

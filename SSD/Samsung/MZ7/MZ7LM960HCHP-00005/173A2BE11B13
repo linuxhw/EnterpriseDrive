@@ -57,9 +57,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    29065
+  9 Power_On_Hours          -O--CK   093   093   000    -    32411
  12 Power_Cycle_Count       -O--CK   099   099   000    -    26
-177 Wear_Leveling_Count     PO--C-   030   030   005    -    5182
+177 Wear_Leveling_Count     PO--C-   022   022   005    -    5756
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    4877
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -73,18 +73,18 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    25
-241 Total_LBAs_Written      -O--CK   099   099   000    -    2382304463453
-242 Total_LBAs_Read         -O--CK   099   099   000    -    1066737386608
+241 Total_LBAs_Written      -O--CK   099   099   000    -    2647481363237
+242 Total_LBAs_Read         -O--CK   099   099   000    -    1176492432920
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
 248 Unknown_Attribute       -O--CK   100   100   000    -    465
-249 Unknown_Samsung_Attr    -O--CK   100   100   000    -    462
-250 SATA_Iface_Downshift    -O--CK   100   100   000    -    29
-251 NAND_Writes             -O--CK   100   100   000    -    11099787422880
-252 Unknown_Attribute       -O--CK   100   100   000    -    7502
+249 Unknown_Samsung_Attr    -O--CK   100   100   000    -    457
+250 SATA_Iface_Downshift    -O--CK   100   100   000    -    21
+251 NAND_Writes             -O--CK   100   100   000    -    12331628420256
+252 Unknown_Attribute       -O--CK   100   100   000    -    17130
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -142,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (52)
+Temperature History Size (Index):    128 (33)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -158,8 +158,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           55  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           55  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           56  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           56  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

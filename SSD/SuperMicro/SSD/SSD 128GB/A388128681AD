@@ -1,7 +1,8 @@
-smartctl 7.0 2019-05-21 r4916 [x86_64-linux-3.10.0-957...] (local build)
-Copyright (C) 2002-18, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
+Model Family:     Silicon Motion based OEM SSDs
 Device Model:     SuperMicro SSD
 Serial Number:    --
 LU WWN Device Id: 5 15d937 ...
@@ -9,7 +10,7 @@ Firmware Version: SOB20R
 User Capacity:    126,701,535,232 bytes [126 GB]
 Sector Size:      512 bytes logical/physical
 Rotation Rate:    Solid State Device
-Device is:        Not in smartctl database [for details use: -P showall]
+Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-2 (minor revision not indicated)
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
 Local Time is:    --
@@ -56,33 +57,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    2390
- 12 Power_Cycle_Count       ------   100   100   000    -    14
+  9 Power_On_Hours          ------   100   100   000    -    18121
+ 12 Power_Cycle_Count       ------   100   100   000    -    23
  15 Unknown_Attribute       ------   100   100   000    -    247463936
-160 Unknown_Attribute       ------   100   100   000    -    0
-161 Unknown_Attribute       ------   100   100   000    -    169
-163 Unknown_Attribute       ------   100   100   000    -    8
-164 Unknown_Attribute       ------   100   100   000    -    21500
-165 Unknown_Attribute       ------   100   100   000    -    92
-166 Unknown_Attribute       ------   100   100   000    -    1
-167 Unknown_Attribute       ------   100   100   000    -    10
-168 Unknown_Attribute       ------   100   100   000    -    3000
+160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
+161 Valid_Spare_Block_Cnt   ------   100   100   000    -    169
+163 Initial_Bad_Block_Count ------   100   100   000    -    8
+164 Total_Erase_Count       ------   100   100   000    -    60283
+165 Max_Erase_Count         ------   100   100   000    -    109
+166 Min_Erase_Count         ------   100   100   000    -    4
+167 Average_Erase_Count     ------   100   100   000    -    28
+168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
 172 Unknown_Attribute       ------   100   100   000    -    0
 175 Program_Fail_Count_Chip ------   100   100   000    -    8
-177 Wear_Leveling_Count     ------   100   100   000    -    0
+177 Wear_Leveling_Count     ------   100   100   000    -    111
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    1
-194 Temperature_Celsius     ------   100   100   000    -    43 (Min/Max 21/71)
-195 Hardware_ECC_Recovered  ------   100   100   000    -    11113
+192 Power-Off_Retract_Count ------   100   100   000    -    5
+194 Temperature_Celsius     ------   100   100   000    -    45 (Min/Max 21/71)
+195 Hardware_ECC_Recovered  ------   100   100   000    -    31317
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    0
 231 Temperature_Celsius     ------   100   100   000    -    100
 232 Available_Reservd_Space ------   100   100   000    -    100
-233 Media_Wearout_Indicator ------   100   100   000    -    1343
-241 Total_LBAs_Written      ------   100   100   000    -    491
-242 Total_LBAs_Read         ------   100   100   000    -    537
+233 Media_Wearout_Indicator ------   100   100   000    -    3767
+241 Host_Writes_32MiB       ------   100   100   000    -    1214
+242 Host_Reads_32MiB        ------   100   100   000    -    1248
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -125,19 +126,19 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              14  ---  Lifetime Power-On Resets
-0x01  0x010  4            2390  ---  Power-on Hours
-0x01  0x018  6      1031293248  ---  Logical Sectors Written
-0x01  0x020  6        70193051  ---  Number of Write Commands
-0x01  0x028  6      1128261040  ---  Logical Sectors Read
-0x01  0x030  6        50360914  ---  Number of Read Commands
+0x01  0x008  4              23  ---  Lifetime Power-On Resets
+0x01  0x010  4           18121  ---  Power-on Hours
+0x01  0x018  6      2546875525  ---  Logical Sectors Written
+0x01  0x020  6       163849828  ---  Number of Write Commands
+0x01  0x028  6      2617466556  ---  Logical Sectors Read
+0x01  0x030  6        56288707  ---  Number of Read Commands
 
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
 
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              61  ---  Number of Hardware Resets
+0x06  0x008  4             168  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator

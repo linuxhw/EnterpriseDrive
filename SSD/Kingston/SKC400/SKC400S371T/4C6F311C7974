@@ -60,27 +60,27 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     PO--C-   100   100   050    -    0
   7 Not_In_Use              PO-R--   100   100   050    -    0
   8 Not_In_Use              P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    25000
+  9 Power_On_Hours          -O--C-   100   100   000    -    28231
  12 Power_Cycle_Count       -O--C-   100   100   000    -    63
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/1053
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    186 (Average 119)
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    350 (Average 279)
 175 Not_In_Use              PO--C-   100   100   050    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    57
-194 Temperature_Celsius     PO---K   072   068   030    -    28 (Min/Max 25/32)
+194 Temperature_Celsius     PO---K   069   068   030    -    31 (Min/Max 25/32)
 196 Reallocated_Event_Count -O----   100   100   010    -    0
 197 Not_In_Use              -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    PO-R--   100   100   050    -    0
 218 CRC_Error_Count         PO-R--   100   100   050    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    97
-233 Flash_Writes_GiB        PO-R--   100   100   000    -    124557
+231 SSD_Life_Left           PO--C-   100   100   000    -    91
+233 Flash_Writes_GiB        PO-R--   100   100   000    -    287286
 240 Not_In_Use              PO--C-   100   100   000    -    0
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    50054
-242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    175797
-244 Average_Erase_Count     -O----   100   100   000    -    119
-245 Max_Erase_Count         -O----   100   100   000    -    186
-246 Total_Erase_Count       -O--C-   100   100   000    -    32259200
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    83471
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    205397
+244 Average_Erase_Count     -O----   100   100   000    -    279
+245 Max_Erase_Count         -O----   100   100   000    -    350
+246 Total_Erase_Count       -O--C-   100   100   000    -    75333888
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,12 +127,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              63  ---  Lifetime Power-On Resets
-0x01  0x018  6    104972546915  ---  Logical Sectors Written
-0x01  0x020  6      2867987817  ---  Number of Write Commands
-0x01  0x028  6    368674462868  ---  Logical Sectors Read
-0x01  0x030  6      4473983514  ---  Number of Read Commands
+0x01  0x018  6    175053441125  ---  Logical Sectors Written
+0x01  0x020  6      4112232750  ---  Number of Write Commands
+0x01  0x028  6    430750087870  ---  Logical Sectors Read
+0x01  0x030  6      5834720138  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4         9996086  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4        10002912  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
@@ -149,7 +149,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             341  ---  Number of Hardware Resets
+0x06  0x008  4             342  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               5  ---  Percentage Used Endurance Indicator
@@ -165,8 +165,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4    892198953  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4          318  Device-to-host register FISes sent due to a COMRESET
+0x0009  4   1850324472  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4          319  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

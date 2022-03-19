@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,29 +59,29 @@ SCT capabilities: 	       (0x3035)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   080   064   006    -    100376520
+  1 Raw_Read_Error_Rate     POSR--   081   064   006    -    116126500
   3 Spin_Up_Time            PO----   099   098   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    76
+  4 Start_Stop_Count        -O--CK   100   100   020    -    82
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   086   060   045    -    375457630
-  9 Power_On_Hours          -O--CK   074   074   000    -    23327 (49 211 0)
+  7 Seek_Error_Rate         POSR--   086   060   045    -    378398449
+  9 Power_On_Hours          -O--CK   070   070   000    -    26810 (154 17 0)
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    69
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    75
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   099   000    -    17180131334
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   077   053   040    -    23 (Min/Max 20/28)
+190 Airflow_Temperature_Cel -O---K   078   053   040    -    22 (Min/Max 21/26)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    1
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    24
-193 Load_Cycle_Count        -O--CK   001   001   000    -    921097
-194 Temperature_Celsius     -O---K   023   047   000    -    23 (0 10 0 0 0)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    26
+193 Load_Cycle_Count        -O--CK   001   001   000    -    936597
+194 Temperature_Celsius     -O---K   022   047   000    -    22 (0 10 0 0 0)
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    19366 (87 45 0)
-241 Total_LBAs_Written      ------   100   253   000    -    185470739834
-242 Total_LBAs_Read         ------   100   253   000    -    822988422365
+240 Head_Flying_Hours       ------   100   253   000    -    22521 (35 124 0)
+241 Total_LBAs_Written      ------   100   253   000    -    186057335577
+242 Total_LBAs_Read         ------   100   253   000    -    827301311467
 254 Free_Fall_Sensor        -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -146,8 +146,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     20/28 Celsius
+Current Temperature:                    22 Celsius
+Power Cycle Min/Max Temperature:     21/26 Celsius
 Lifetime    Min/Max Temperature:     10/46 Celsius
 Specified Max Operating Temperature:    22 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -157,22 +157,22 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        30 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (119)
+Temperature History Size (Index):    128 (116)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              69  ---  Lifetime Power-On Resets
-0x01  0x010  4           23327  ---  Power-on Hours
-0x01  0x018  6    185470752178  ---  Logical Sectors Written
-0x01  0x020  6       383546227  ---  Number of Write Commands
-0x01  0x028  6    823004162349  ---  Logical Sectors Read
-0x01  0x030  6      1577332636  ---  Number of Read Commands
+0x01  0x008  4              75  ---  Lifetime Power-On Resets
+0x01  0x010  4           26810  ---  Power-on Hours
+0x01  0x018  6    186057347921  ---  Logical Sectors Written
+0x01  0x020  6       384295380  ---  Number of Write Commands
+0x01  0x028  6    827317051451  ---  Logical Sectors Read
+0x01  0x030  6      1582570028  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           23326  ---  Spindle Motor Power-on Hours
-0x03  0x010  4              47  ---  Head Flying Hours
-0x03  0x018  4          921097  ---  Head Load Events
+0x03  0x008  4           26809  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2157  ---  Head Flying Hours
+0x03  0x018  4          936597  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -186,7 +186,7 @@ Page  Offset Size        Value Flags Description
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2           24  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

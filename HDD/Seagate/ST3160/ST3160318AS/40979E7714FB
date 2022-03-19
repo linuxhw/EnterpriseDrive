@@ -60,28 +60,28 @@ SCT capabilities: 	       (0x103f)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    209591779
+  1 Raw_Read_Error_Rate     POSR--   119   099   006    -    220685220
   3 Spin_Up_Time            PO----   097   097   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    744
+  4 Start_Stop_Count        -O--CK   100   100   020    -    750
   5 Reallocated_Sector_Ct   PO--CK   100   100   036    -    1
-  7 Seek_Error_Rate         POSR--   084   060   030    -    291602071
-  9 Power_On_Hours          -O--CK   038   038   000    -    54406
+  7 Seek_Error_Rate         POSR--   084   060   030    -    300524052
+  9 Power_On_Hours          -O--CK   036   036   000    -    56629
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    744
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    750
 183 Runtime_Bad_Block       ------   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   028   000    -    132
+188 Command_Timeout         -O--CK   100   028   000    -    138
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   069   053   045    -    31 (Min/Max 30/34)
-194 Temperature_Celsius     -O---K   031   047   000    -    31 (0 14 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   044   030   000    -    209591779
+190 Airflow_Temperature_Cel -O---K   073   053   045    -    27 (Min/Max 21/28)
+194 Temperature_Celsius     -O---K   027   047   000    -    27 (0 14 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   044   030   000    -    220685220
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   193   000    -    26
-240 Head_Flying_Hours       ------   100   253   000    -    56400 (20 160 0)
-241 Total_LBAs_Written      ------   100   253   000    -    3561769420
-242 Total_LBAs_Read         ------   100   253   000    -    2541798714
+240 Head_Flying_Hours       ------   100   253   000    -    58645 (223 155 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3823167635
+242 Total_LBAs_Read         ------   100   253   000    -    81943643
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -135,8 +135,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    31 Celsius
-Power Cycle Min/Max Temperature:     30/34 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     21/28 Celsius
 Lifetime    Min/Max Temperature:     14/46 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -145,7 +145,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:     14/55 Celsius
 Min/Max Temperature Limit:           10/60 Celsius
-Temperature History Size (Index):    128 (109)
+Temperature History Size (Index):    128 (53)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -153,7 +153,7 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            7  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

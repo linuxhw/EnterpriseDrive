@@ -61,12 +61,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    16186
+  9 Power_On_Hours          -O--CK   100   100   000    -    19609
  12 Power_Cycle_Count       -O--CK   100   100   001    -    16
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   086   086   000    -    896
+173 Avg_Block-Erase_Count   -O--CK   082   082   000    -    1128
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    15
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
@@ -78,11 +78,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   086   086   001    -    14
+202 Percent_Lifetime_Remain ----CK   082   082   001    -    18
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    654744008554
-247 Host_Program_Page_Count -O--CK   100   100   000    -    20459550416
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    49517966447
+246 Unknown_Attribute       -O--CK   100   100   000    -    814855940575
+247 Host_Program_Page_Count -O--CK   100   100   000    -    25462780448
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    62663519395
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    5352
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -157,24 +157,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (146)
+Temperature History Size (Index):    478 (361)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              16  ---  Lifetime Power-On Resets
-0x01  0x010  4           16186  ---  Power-on Hours
-0x01  0x018  6    654744008738  ---  Logical Sectors Written
-0x01  0x020  6     11529970024  ---  Number of Write Commands
-0x01  0x028  6    326807601399  ---  Logical Sectors Read
-0x01  0x030  6      1861599809  ---  Number of Read Commands
-0x01  0x038  6     58270140000  ---  Date and Time TimeStamp
+0x01  0x010  4           19609  ---  Power-on Hours
+0x01  0x018  6    814855940735  ---  Logical Sectors Written
+0x01  0x020  6     13469799082  ---  Number of Write Commands
+0x01  0x028  6    391075516905  ---  Logical Sectors Read
+0x01  0x030  6      2183668771  ---  Number of Read Commands
+0x01  0x038  6     70593540000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              23  ---  Current Temperature
-0x05  0x010  1              23  ---  Average Short Term Temperature
+0x05  0x010  1              24  ---  Average Short Term Temperature
 0x05  0x018  1              23  ---  Average Long Term Temperature
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
@@ -191,7 +191,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              14  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              18  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

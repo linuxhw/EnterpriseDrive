@@ -21,10 +21,10 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Dell      | SSDSCKJB120G7R     | 120 GB | 5       | 1193  | 1     | 2.75   |
-| Dell      | SSDSCKKB240G8R     | 240 GB | 12      | 306   | 0     | 0.84   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Dell      | SSDSCKJB120G7R     | 120 GB | 5       | 1346  | 1     | 3.10   |
+| Dell      | SSDSCKKB240G8R     | 240 GB | 13      | 397   | 0     | 1.09   |
 
 SSD by Family
 -------------
@@ -37,7 +37,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Dell      | Certified Intel S35... | 1      | 5       | 1193  | 1     | 2.75   |
-| Dell      | Certified Intel S4x... | 1      | 12      | 306   | 0     | 0.84   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Dell      | Certified Intel S35... | 1      | 5       | 1346  | 1     | 3.10   |
+| Dell      | Certified Intel S4x... | 1      | 13      | 397   | 0     | 1.09   |

@@ -59,27 +59,27 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Retired_Block_Count     PO--C-   100   100   050    -    0
   7 Not_In_Use              PO-R--   100   100   050    -    0
   8 Not_In_Use              P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--C-   100   100   000    -    30825
+  9 Power_On_Hours          -O--C-   100   100   000    -    36017
  12 Power_Cycle_Count       -O--C-   100   100   000    -    80
 168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
 170 Bad_Blk_Ct_Erl/Lat      PO----   100   100   010    -    0/203
-173 MaxAvgErase_Ct          -O--C-   100   100   000    -    1525 (Average 1422)
+173 MaxAvgErase_Ct          -O--C-   100   100   000    -    1553 (Average 1451)
 175 Not_In_Use              PO--C-   100   100   050    -    0
 187 Reported_Uncorrect      -O--C-   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    67
-194 Temperature_Celsius     PO---K   078   060   030    -    22 (Min/Max 8/40)
+194 Temperature_Celsius     PO---K   076   060   030    -    24 (Min/Max 8/40)
 196 Reallocated_Event_Count -O----   100   100   010    -    0
 197 Not_In_Use              -O--CK   100   100   000    -    0
 199 SATA_CRC_Error_Count    PO-R--   100   100   050    -    0
 218 CRC_Error_Count         PO-R--   100   100   050    -    0
-231 SSD_Life_Left           PO--C-   100   100   000    -    53
-233 Flash_Writes_GiB        PO-R--   100   100   000    -    182917
+231 SSD_Life_Left           PO--C-   100   100   000    -    52
+233 Flash_Writes_GiB        PO-R--   100   100   000    -    186792
 240 Not_In_Use              PO--C-   100   100   000    -    0
-241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    87526
-242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    17829
-244 Average_Erase_Count     -O----   100   100   000    -    1422
-245 Max_Erase_Count         -O----   100   100   000    -    1525
-246 Total_Erase_Count       -O--C-   100   100   000    -    48875552
+241 Lifetime_Writes_GiB     -O--C-   100   100   000    -    90283
+242 Lifetime_Reads_GiB      -O--C-   100   100   000    -    18447
+244 Average_Erase_Count     -O----   100   100   000    -    1451
+245 Max_Erase_Count         -O----   100   100   000    -    1553
+246 Total_Erase_Count       -O--C-   100   100   000    -    49872128
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -128,12 +128,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              80  ---  Lifetime Power-On Resets
-0x01  0x018  6    183555832989  ---  Logical Sectors Written
-0x01  0x020  6     13577301761  ---  Number of Write Commands
-0x01  0x028  6     37391713145  ---  Logical Sectors Read
-0x01  0x030  6       843057532  ---  Number of Read Commands
+0x01  0x018  6    189337811045  ---  Logical Sectors Written
+0x01  0x020  6     14116030461  ---  Number of Write Commands
+0x01  0x028  6     38687255377  ---  Logical Sectors Read
+0x01  0x030  6       898023508  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4            8286  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4           11479  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
@@ -166,7 +166,7 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4    134793115  Transition from drive PhyRdy to drive PhyNRdy
+0x0009  4    245536809  Transition from drive PhyRdy to drive PhyNRdy
 0x000a  4          522  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC

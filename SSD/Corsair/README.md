@@ -21,9 +21,9 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| Corsair   | Force 3 SSD        | 120 GB | 3       | 2182  | 0     | 5.98   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| Corsair   | Force 3 SSD        | 120 GB | 3       | 2217  | 0     | 6.08   |
 | Corsair   | Force LS SSD       | 64 GB  | 2       | 450   | 0     | 1.23   |
 | Corsair   | Neutron SSD        | 128 GB | 1       | 1955  | 4     | 1.07   |
 
@@ -38,7 +38,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| Corsair   | SandForce Driven SSDs  | 2      | 5       | 1489  | 0     | 4.08   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| Corsair   | SandForce Driven SSDs  | 2      | 5       | 1510  | 0     | 4.14   |
 | Corsair   | Unknown                | 1      | 1       | 1955  | 4     | 1.07   |

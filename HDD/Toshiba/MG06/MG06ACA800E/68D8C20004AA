@@ -27,8 +27,8 @@ General SMART Values:
 Offline data collection status:  (0x84)	Offline data collection activity
 					was suspended by an interrupting command from host.
 
-Self-test execution status:      ( 241)	Self-test routine in progress...
-					10% of test remaining.
+Self-test execution status:      ( 245)	Self-test routine in progress...
+					50% of test remaining.
 Total time to complete Offline 
 data collection: 		(  120) seconds.
 Offline data collection
@@ -64,19 +64,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   090   090   000    -    4219
+  9 Power_On_Hours          -O--CK   084   084   000    -    6433
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    1
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    0
 193 Load_Cycle_Count        -O--CK   100   100   000    -    2
-194 Temperature_Celsius     -O---K   100   100   000    -    24 (Min/Max 20/33)
+194 Temperature_Celsius     -O---K   100   100   000    -    28 (Min/Max 20/33)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
-220 Disk_Shift              -O----   100   100   000    -    17170470
-222 Loaded_Hours            -O--CK   090   090   000    -    4219
+220 Disk_Shift              -O----   100   100   000    -    33816613
+222 Loaded_Hours            -O--CK   084   084   000    -    6432
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
 226 Load-in_Time            -OS--K   100   100   000    -    532
@@ -115,25 +115,25 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Short offline       Completed without error       00%      3591         -
-# 2  Short offline       Completed without error       00%      3567         -
-# 3  Extended offline    Completed without error       00%      3561         -
-# 4  Short offline       Completed without error       00%      3087         -
-# 5  Short offline       Completed without error       00%      3062         -
-# 6  Short offline       Completed without error       00%      3039         -
-# 7  Extended offline    Completed without error       00%      3020         -
-# 8  Short offline       Completed without error       00%      2751         -
-# 9  Short offline       Completed without error       00%      2726         -
-#10  Extended offline    Completed without error       00%      2715         -
-#11  Short offline       Completed without error       00%      2415         -
-#12  Extended offline    Completed without error       00%      2401         -
-#13  Short offline       Completed without error       00%      2247         -
-#14  Extended offline    Completed without error       00%      2245         -
-#15  Short offline       Completed without error       00%      2078         -
-#16  Short offline       Completed without error       00%      2054         -
-#17  Short offline       Completed without error       00%      2030         -
-#18  Extended offline    Completed without error       00%      2025         -
-#19  Short offline       Completed without error       00%      1910         -
+# 1  Short offline       Completed without error       00%      5103         -
+# 2  Short offline       Completed without error       00%      5079         -
+# 3  Short offline       Completed without error       00%      5055         -
+# 4  Short offline       Completed without error       00%      5031         -
+# 5  Short offline       Completed without error       00%      5007         -
+# 6  Short offline       Completed without error       00%      4983         -
+# 7  Extended offline    Interrupted (host reset)      30%      4972         -
+# 8  Short offline       Completed without error       00%      4767         -
+# 9  Short offline       Completed without error       00%      4743         -
+#10  Short offline       Completed without error       00%      4719         -
+#11  Extended offline    Completed without error       00%      4715         -
+#12  Extended offline    Completed without error       00%      4263         -
+#13  Short offline       Completed without error       00%      3591         -
+#14  Short offline       Completed without error       00%      3567         -
+#15  Extended offline    Completed without error       00%      3561         -
+#16  Short offline       Completed without error       00%      3087         -
+#17  Short offline       Completed without error       00%      3062         -
+#18  Short offline       Completed without error       00%      3039         -
+#19  Extended offline    Completed without error       00%      3020         -
 
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
@@ -149,7 +149,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        DST executing in background (3)
-Current Temperature:                    24 Celsius
+Current Temperature:                    28 Celsius
 Power Cycle Min/Max Temperature:     20/33 Celsius
 Lifetime    Min/Max Temperature:     20/33 Celsius
 Specified Max Operating Temperature:    55 Celsius
@@ -160,7 +160,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    478 (354)
+Temperature History Size (Index):    478 (279)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -170,20 +170,20 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 3) ==
 0x01  0x008  4               1  ---  Lifetime Power-On Resets
-0x01  0x010  4            4219  ---  Power-on Hours
-0x01  0x018  6     55345249699  ---  Logical Sectors Written
-0x01  0x020  6       370113067  ---  Number of Write Commands
-0x01  0x028  6    123362894925  ---  Logical Sectors Read
-0x01  0x030  6       351350499  ---  Number of Read Commands
-0x01  0x038  6     15188400000  ---  Date and Time TimeStamp
+0x01  0x010  4            6433  ---  Power-on Hours
+0x01  0x018  6     73394105043  ---  Logical Sectors Written
+0x01  0x020  6       555778499  ---  Number of Write Commands
+0x01  0x028  6    262308646308  ---  Logical Sectors Read
+0x01  0x030  6       724787519  ---  Number of Read Commands
+0x01  0x038  6     23158800000  ---  Date and Time TimeStamp
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               0  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             640  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             640  ---  Head Flying Hours
+0x03  0x008  4             468  ---  Spindle Motor Power-on Hours
+0x03  0x010  4             467  ---  Head Flying Hours
 0x03  0x018  4               2  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4              77  ---  Read Recovery Attempts
+0x03  0x028  4             115  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x03  0x038  4               0  ---  Number of Realloc. Candidate Logical Sectors
 0x03  0x040  4               0  ---  Number of High Priority Unload Events
@@ -191,9 +191,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              24  ---  Current Temperature
+0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1              25  N--  Average Short Term Temperature
-0x05  0x018  1              26  N--  Average Long Term Temperature
+0x05  0x018  1              25  N--  Average Long Term Temperature
 0x05  0x020  1              33  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              28  N--  Highest Average Short Term Temperature
@@ -205,8 +205,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              24  ---  Number of Hardware Resets
-0x06  0x010  4               6  ---  Number of ASR Events
+0x06  0x008  4              29  ---  Number of Hardware Resets
+0x06  0x010  4               7  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -226,8 +226,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4          468  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           21  Device-to-host register FISes sent due to a COMRESET
+0x0009  4          473  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           25  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

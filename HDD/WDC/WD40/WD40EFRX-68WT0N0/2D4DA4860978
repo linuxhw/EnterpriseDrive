@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    16
-  3 Spin_Up_Time            POS--K   199   181   021    -    7016
-  4 Start_Stop_Count        -O--CK   100   100   000    -    27
+  3 Spin_Up_Time            POS--K   174   174   021    -    8258
+  4 Start_Stop_Count        -O--CK   100   100   000    -    28
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   016   016   000    -    61763
+  9 Power_On_Hours          -O--CK   011   011   000    -    65350
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    20
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    19
-193 Load_Cycle_Count        -O--CK   193   193   000    -    22373
-194 Temperature_Celsius     -O---K   122   108   000    -    30
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    21
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    20
+193 Load_Cycle_Count        -O--CK   193   193   000    -    22411
+194 Temperature_Celsius     -O---K   123   108   000    -    29
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -173,8 +173,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     26/42 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     22/30 Celsius
 Lifetime    Min/Max Temperature:     19/44 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -186,7 +186,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (233)
+Temperature History Size (Index):    478 (237)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -202,10 +202,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           54  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           55  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           12  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           13  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4     58146156  Vendor specific
+0x8000  4      2907817  Vendor specific
 

@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 32
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   085   085   000    -    9451
+  9 Power_On_Hours          -O--CK   079   079   000    -    13245
  12 Power_Cycle_Count       -O--CK   099   099   000    -    8
-100 Unknown_Attribute       PO--CK   097   097   005    -    204
+100 Unknown_Attribute       PO--CK   097   097   005    -    207
 170 Unknown_Attribute       PO--CK   100   100   010    -    100
 173 Unknown_Attribute       PO---K   099   099   005    -    99
 174 Unknown_Attribute       -O--C-   100   100   000    -    0
@@ -74,8 +74,8 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 202 Unknown_SSD_Attribute   PO--CK   100   100   010    -    0
 231 Temperature_Celsius     PO-R-K   099   099   001    -    99
-241 Total_LBAs_Written      -O--CK   099   099   000    -    9257043917
-242 Total_LBAs_Read         -O--CK   099   099   000    -    12192523963
+241 Total_LBAs_Written      -O--CK   099   099   000    -    12333694253
+242 Total_LBAs_Read         -O--CK   099   099   000    -    17696970404
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -127,7 +127,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     14/28 Celsius
+Power Cycle Min/Max Temperature:     13/31 Celsius
 Lifetime    Min/Max Temperature:      9/33 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (10)
+Temperature History Size (Index):    128 (113)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -147,12 +147,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               8  ---  Lifetime Power-On Resets
-0x01  0x010  4            9451  ---  Power-on Hours
-0x01  0x018  6      9257043917  ---  Logical Sectors Written
-0x01  0x020  6       370587253  ---  Number of Write Commands
-0x01  0x028  6     12192523963  ---  Logical Sectors Read
-0x01  0x030  6        49045998  ---  Number of Read Commands
-0x01  0x038  6         3251000  ---  Date and Time TimeStamp
+0x01  0x010  4           13245  ---  Power-on Hours
+0x01  0x018  6     12333694253  ---  Logical Sectors Written
+0x01  0x020  6       522151527  ---  Number of Write Commands
+0x01  0x028  6     17696970404  ---  Logical Sectors Read
+0x01  0x030  6        70811905  ---  Number of Read Commands
+0x01  0x038  6          343000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -162,7 +162,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x028  1               9  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             127  ---  Number of Hardware Resets
+0x06  0x008  4             142  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
@@ -181,8 +181,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2            4  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           19  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           19  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

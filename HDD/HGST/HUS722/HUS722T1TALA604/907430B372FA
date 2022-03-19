@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -66,11 +66,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    10
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   070   070   000    -    22079
+  9 Power_On_Hours          -O--CK   063   063   000    -    27469
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    10
- 16 Gas_Gauge               -O---K   001   199   000    -    91033698511
+ 16 Gas_Gauge               -O---K   002   198   000    -    110677231927
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    6
 193 Load_Cycle_Count        -O--CK   200   200   000    -    19
@@ -148,7 +148,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (374)
+Temperature History Size (Index):    478 (54)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -158,16 +158,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              10  -D-  Lifetime Power-On Resets
-0x01  0x010  4           22079  -D-  Power-on Hours
-0x01  0x018  6     32826468976  -D-  Logical Sectors Written
-0x01  0x020  6       805515203  -D-  Number of Write Commands
-0x01  0x028  6     58207229535  -D-  Logical Sectors Read
-0x01  0x030  6       300554843  -D-  Number of Read Commands
-0x01  0x038  6      2174988672  -D-  Date and Time TimeStamp
-0x01  0x048  2             169  ND-  Workload Utilization
+0x01  0x010  4           27469  -D-  Power-on Hours
+0x01  0x018  6     38525779608  -D-  Logical Sectors Written
+0x01  0x020  6       966716857  -D-  Number of Write Commands
+0x01  0x028  6     72151452611  -D-  Logical Sectors Read
+0x01  0x030  6       359099659  -D-  Number of Read Commands
+0x01  0x038  6       104152192  -D-  Date and Time TimeStamp
+0x01  0x048  2             206  ND-  Workload Utilization
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           22079  -D-  Spindle Motor Power-on Hours
-0x03  0x010  4           21372  -D-  Head Flying Hours
+0x03  0x008  4           27469  -D-  Spindle Motor Power-on Hours
+0x03  0x010  4           26763  -D-  Head Flying Hours
 0x03  0x018  4              26  -D-  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  -D-  Read Recovery Attempts
@@ -180,7 +180,7 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  -D-  Current Temperature
 0x05  0x010  1              33  -D-  Average Short Term Temperature
-0x05  0x018  1              32  -D-  Average Long Term Temperature
+0x05  0x018  1              33  -D-  Average Long Term Temperature
 0x05  0x020  1              36  -D-  Highest Temperature
 0x05  0x028  1              23  -D-  Lowest Temperature
 0x05  0x030  1              35  -D-  Highest Average Short Term Temperature
@@ -192,8 +192,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  -D-  Time in Under-Temperature
 0x05  0x068  1               0  -D-  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              89  -D-  Number of Hardware Resets
-0x06  0x010  4              68  -D-  Number of ASR Events
+0x06  0x008  4             101  -D-  Number of Hardware Resets
+0x06  0x010  4              76  -D-  Number of ASR Events
 0x06  0x018  4               0  -D-  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -212,8 +212,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           31  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           45  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           39  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           57  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

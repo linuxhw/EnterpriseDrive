@@ -15,7 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | KingSpec  | MT-128             | 128 GB | 1       | 281   | 0     | 0.77   |
 | KingSpec  | P4-960             | 960 GB | 2       | 239   | 0     | 0.66   |

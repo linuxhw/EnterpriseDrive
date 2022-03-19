@@ -24,8 +24,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x82)	Offline data collection activity
-					was completed without error.
+Offline data collection status:  (0x84)	Offline data collection activity
+					was suspended by an interrupting command from host.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -61,16 +61,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   139   139   054    -    72
   3 Spin_Up_Time            POS---   127   127   024    -    604 (Average 614)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    11
+  4 Start_Stop_Count        -O--C-   100   100   000    -    13
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   145   145   020    -    24
-  9 Power_On_Hours          -O--C-   099   099   000    -    12089
+  9 Power_On_Hours          -O--C-   098   098   000    -    15342
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    11
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    175
-193 Load_Cycle_Count        -O--C-   100   100   000    -    175
-194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 23/49)
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    13
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    306
+193 Load_Cycle_Count        -O--C-   100   100   000    -    306
+194 Temperature_Celsius     -O----   206   206   000    -    29 (Min/Max 23/49)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
 198 Offline_Uncorrectable   ---R--   100   100   000    -    0
@@ -171,9 +171,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        Active (0)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     25/34 Celsius
+Device State:                        SMART Off-line Data Collection executing in background (4)
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     29/31 Celsius
 Lifetime    Min/Max Temperature:     23/49 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -182,7 +182,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (2)
+Temperature History Size (Index):    128 (51)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -191,15 +191,15 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x018  6     38524490219  ---  Logical Sectors Written
-0x01  0x020  6       109306321  ---  Number of Write Commands
-0x01  0x028  6    361571083709  ---  Logical Sectors Read
-0x01  0x030  6      1418523962  ---  Number of Read Commands
+0x01  0x008  4              13  ---  Lifetime Power-On Resets
+0x01  0x018  6     45266644170  ---  Logical Sectors Written
+0x01  0x020  6       141426581  ---  Number of Write Commands
+0x01  0x028  6    392386902029  ---  Logical Sectors Read
+0x01  0x030  6      1476495339  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           12087  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           12087  ---  Head Flying Hours
-0x03  0x018  4             175  ---  Head Load Events
+0x03  0x008  4           15339  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           15339  ---  Head Flying Hours
+0x03  0x018  4             306  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               7  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -207,9 +207,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              31  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              30  N--  Average Long Term Temperature
+0x05  0x008  1              29  ---  Current Temperature
+0x05  0x010  1              29  N--  Average Short Term Temperature
+0x05  0x018  1              28  N--  Average Long Term Temperature
 0x05  0x020  1              49  ---  Highest Temperature
 0x05  0x028  1              23  ---  Lowest Temperature
 0x05  0x030  1              40  N--  Highest Average Short Term Temperature
@@ -237,8 +237,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

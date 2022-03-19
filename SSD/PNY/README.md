@@ -21,11 +21,13 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
 | PNY       | CS900 120GB SSD    | 120 GB | 2       | 543   | 0     | 1.49   |
+| PNY       | CS900 480GB SSD    | 480 GB | 1       | 524   | 0     | 1.44   |
 | PNY       | CS900 240GB SSD    | 240 GB | 1       | 418   | 0     | 1.15   |
-| PNY       | CS900 250GB SSD    | 250 GB | 10      | 109   | 0     | 0.30   |
+| PNY       | CS900 250GB SSD    | 250 GB | 10      | 247   | 0     | 0.68   |
+| PNY       | CS900 1TB SSD      | 1 TB   | 2       | 45    | 0     | 0.12   |
 
 SSD by Family
 -------------
@@ -38,7 +40,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF   |
-|-----------|------------------------|--------|---------|-------|-------|--------|
-| PNY       | Phison Driven SSDs     | 2      | 3       | 502   | 0     | 1.38   |
-| PNY       | Unknown                | 1      | 10      | 109   | 0     | 0.30   |
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| PNY       | Phison Driven SSDs     | 3      | 4       | 507   | 0     | 1.39   |
+| PNY       | Unknown                | 2      | 12      | 213   | 0     | 0.59   |

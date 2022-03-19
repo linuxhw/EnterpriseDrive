@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   098   098   000    -    9535
+  9 Power_On_Hours          -O--CK   097   097   000    -    12929
  12 Power_Cycle_Count       -O--CK   099   099   000    -    7
-177 Wear_Leveling_Count     PO--C-   099   099   000    -    5
+177 Wear_Leveling_Count     PO--C-   099   099   000    -    6
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
@@ -70,7 +70,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    5
-241 Total_LBAs_Written      -O--CK   099   099   000    -    6648972936
+241 Total_LBAs_Written      -O--CK   099   099   000    -    7884517600
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (13)
+Temperature History Size (Index):    128 (23)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -142,12 +142,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               7  ---  Lifetime Power-On Resets
-0x01  0x010  4            9535  ---  Power-on Hours
-0x01  0x018  6      6648972936  ---  Logical Sectors Written
-0x01  0x020  6       603595525  ---  Number of Write Commands
-0x01  0x028  6      6736445288  ---  Logical Sectors Read
-0x01  0x030  6        26533347  ---  Number of Read Commands
-0x01  0x038  6         2624000  ---  Date and Time TimeStamp
+0x01  0x010  4           12929  ---  Power-on Hours
+0x01  0x018  6      7884517600  ---  Logical Sectors Written
+0x01  0x020  6       701583402  ---  Number of Write Commands
+0x01  0x028  6      8655415992  ---  Logical Sectors Read
+0x01  0x030  6        34030833  ---  Number of Read Commands
+0x01  0x038  6         1810000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion

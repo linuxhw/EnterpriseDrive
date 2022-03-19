@@ -58,13 +58,13 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   117   117   050    -    0/163434263
+  1 Raw_Read_Error_Rate     POSR--   116   116   050    -    0/136152308
   5 Retired_Block_Count     PO--CK   100   100   003    -    0
-  9 Power_On_Hours_and_Msec -O--CK   047   047   000    -    46744h+01m+37.150s
+  9 Power_On_Hours_and_Msec -O--CK   043   043   000    -    50297h+30m+18.940s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    18
- 13 Soft_Read_Error_Rate    -O-R--   042   042   000    -    7230670/163434263
-100 Gigabytes_Erased        -O--CK   000   000   000    -    21651
-170 Reserve_Block_Count     -O--CK   000   000   000    -    7616
+ 13 Soft_Read_Error_Rate    -O-R--   042   042   000    -    8973283/136152308
+100 Gigabytes_Erased        -O--CK   000   000   000    -    23212
+170 Reserve_Block_Count     -O--CK   000   000   000    -    7552
 171 Program_Fail_Count      -O--CK   000   000   000    -    0
 172 Erase_Fail_Count        -O--CK   000   000   000    -    0
 174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    14
@@ -73,21 +73,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count        -O--CK   000   000   000    -    0
 184 IO_Error_Detect_Code_Ct -O--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-189 Airflow_Temperature_Cel ------   028   031   000    -    28 (Min/Max 15/31)
-194 Temperature_Celsius     -O---K   028   031   000    -    28 (Min/Max 15/31)
-195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/163434263
+189 Airflow_Temperature_Cel ------   029   032   000    -    29 (Min/Max 15/32)
+194 Temperature_Celsius     -O---K   029   032   000    -    29 (Min/Max 15/32)
+195 ECC_Uncorr_Error_Count  --SRC-   120   120   000    -    0/136152308
 196 Reallocated_Event_Count PO--CK   100   100   003    -    0
-198 Uncorrectable_Sector_Ct ----C-   117   117   000    -    0/10214641
+198 Uncorrectable_Sector_Ct ----C-   116   116   000    -    0/4254759
 199 SATA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/163434263
-204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/163434263
+201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/136152308
+204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/136152308
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
 231 SSD_Life_Left           PO--C-   100   100   010    -    0
 232 Available_Reservd_Space ------   000   000   000    -    29
-233 SandForce_Internal      ------   000   000   000    -    17584
-234 SandForce_Internal      -O--CK   000   000   000    -    18534
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    18534
-242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    117486
+233 SandForce_Internal      ------   000   000   000    -    20177
+234 SandForce_Internal      -O--CK   000   000   000    -    19600
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    19600
+242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    118317
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,8 +126,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     15/31 Celsius
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     15/32 Celsius
 Lifetime    Min/Max Temperature:     15/77 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -136,15 +136,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/120 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    61237 (475)
+Temperature History Size (Index):    61237 (130)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x010  4           46761  ---  Power-on Hours
-0x01  0x018  6     38896258478  ---  Logical Sectors Written
-0x01  0x028  6    246387147606  ---  Logical Sectors Read
+0x01  0x010  4           50315  ---  Power-on Hours
+0x01  0x018  6     41130077729  ---  Logical Sectors Written
+0x01  0x028  6    248129073243  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4             240  ---  Resets Between Cmd Acceptance and Completion

@@ -15,6 +15,7 @@ Days — avg. days per sample,
 Err  — avg. errors per sample,
 MTBF — avg. MTBF in years per sample.
 
-| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF   |
-|-----------|--------------------|--------|---------|-------|-------|--------|
-| XPG       | SPECTRIX S40G      | 1 TB   | 1       | 168   | 0     | 0.46   |
+| MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
+|-----------|--------------------|--------|---------|-------|-------|------|
+| XPG       | SPECTRIX S40G      | 4 TB   | 4       | 166   | 4     | 0.35   |
+| XPG       | GAMMIX S11 Pro     | 256 GB | 1       | 24    | 0     | 0.07   |
