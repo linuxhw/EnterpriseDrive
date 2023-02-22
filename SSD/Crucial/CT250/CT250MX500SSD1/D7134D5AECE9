@@ -61,11 +61,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    3646
+  9 Power_On_Hours          -O--CK   100   100   000    -    3703
  12 Power_Cycle_Count       -O--CK   100   100   000    -    14
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   062   062   000    -    581
+173 Ave_Block-Erase_Count   -O--CK   061   061   000    -    591
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    1
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    32
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
@@ -76,12 +76,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Bogus_Current_Pend_Sect -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   062   062   001    -    38
+202 Percent_Lifetime_Remain ----CK   061   061   001    -    39
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    7833490199
-247 Host_Program_Page_Count -O--CK   100   100   000    -    324397848
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    4369288674
+246 Total_LBAs_Written      -O--CK   100   100   000    -    7980135389
+247 Host_Program_Page_Count -O--CK   100   100   000    -    330475858
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    4445836845
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -139,17 +139,17 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (106)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              14  ---  Lifetime Power-On Resets
-0x01  0x010  4            3646  ---  Power-on Hours
-0x01  0x018  6      3538522903  ---  Logical Sectors Written
-0x01  0x020  6       405228420  ---  Number of Write Commands
-0x01  0x028  6      3331785692  ---  Logical Sectors Read
-0x01  0x030  6        53672016  ---  Number of Read Commands
+0x01  0x010  4            3703  ---  Power-on Hours
+0x01  0x018  6      3685168093  ---  Logical Sectors Written
+0x01  0x020  6       412444046  ---  Number of Write Commands
+0x01  0x028  6      3795677380  ---  Logical Sectors Read
+0x01  0x030  6        56146420  ---  Number of Read Commands
 0x01  0x038  6      4294967296  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               6  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              38  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              39  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

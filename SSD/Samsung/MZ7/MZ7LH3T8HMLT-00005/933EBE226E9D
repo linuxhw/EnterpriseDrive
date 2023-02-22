@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    3339
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    4
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    18
+  9 Power_On_Hours          -O--CK   099   099   000    -    4975
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    5
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    29
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    11682
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -74,15 +74,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
-235 POR_Recovery_Count      -O--C-   099   099   000    -    2
-241 Total_LBAs_Written      -O--CK   099   099   000    -    68425257402
-242 Total_LBAs_Read         -O--CK   099   099   000    -    71450407422
+235 POR_Recovery_Count      -O--C-   099   099   000    -    3
+241 Total_LBAs_Written      -O--CK   099   099   000    -    97719075162
+242 Total_LBAs_Read         -O--CK   099   099   000    -    106546458894
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    159977230592
+251 NAND_Writes             -O--CK   100   100   000    -    252028337408
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -133,7 +133,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    32 Celsius
-Power Cycle Min/Max Temperature:     27/34 Celsius
+Power Cycle Min/Max Temperature:     31/34 Celsius
 Lifetime    Min/Max Temperature:     26/37 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -143,7 +143,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (73)
+Temperature History Size (Index):    128 (33)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -152,16 +152,16 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4               4  ---  Lifetime Power-On Resets
-0x01  0x010  4            3339  ---  Power-on Hours
-0x01  0x018  6     68425257402  ---  Logical Sectors Written
-0x01  0x020  6      1534901920  ---  Number of Write Commands
-0x01  0x028  6     71450407422  ---  Logical Sectors Read
-0x01  0x030  6       491853009  ---  Number of Read Commands
-0x01  0x038  6         2752000  ---  Date and Time TimeStamp
+0x01  0x008  4               5  ---  Lifetime Power-On Resets
+0x01  0x010  4            4975  ---  Power-on Hours
+0x01  0x018  6     97719075162  ---  Logical Sectors Written
+0x01  0x020  6      2233184261  ---  Number of Write Commands
+0x01  0x028  6    106546458894  ---  Logical Sectors Read
+0x01  0x030  6       759793384  ---  Number of Read Commands
+0x01  0x038  6         2779000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              32  ---  Current Temperature
 0x05  0x020  1              37  ---  Highest Temperature

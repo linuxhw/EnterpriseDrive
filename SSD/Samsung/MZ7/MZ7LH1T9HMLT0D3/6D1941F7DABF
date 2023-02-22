@@ -59,10 +59,10 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O-RC-   200   200   000    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1422
+  9 Power_On_Hours          -O--CK   099   099   000    -    3135
  12 Power_Cycle_Count       -O--CK   099   099   000    -    19
  13 Read_Soft_Error_Rate    -O-RC-   200   200   000    -    0
-177 Wear_Leveling_Count     PO--C-   099   099   005    -    13
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    59
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--C-   100   100   000    -    5836
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
@@ -74,16 +74,16 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 201 Unknown_SSD_Attribute   PO--CK   100   100   001    -    0
 202 Unknown_SSD_Attribute   PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   099   099   000    -    31887966795
+233 Media_Wearout_Indicator -O--CK   099   099   000    -    113207001278
 235 Unknown_Attribute       -O--C-   099   099   000    -    16
-242 Total_LBAs_Read         -O--CK   099   099   000    -    12872589982
+242 Total_LBAs_Read         -O--CK   099   099   000    -    45330471895
 243 Unknown_Attribute       -O--CK   100   100   000    -    0
 244 Unknown_Attribute       -O--CK   100   100   000    -    0
 245 Unknown_Attribute       -O-RCK   099   099   000    -    99
 246 Unknown_Attribute       -O--CK   100   100   000    -    65535
 247 Unknown_Attribute       -O--CK   100   100   000    -    65535
 248 Unknown_Attribute       -O--CK   100   100   000    -    65535
-251 Unknown_Attribute       -O--CK   100   100   000    -    55943916864
+251 Unknown_Attribute       -O--CK   100   100   000    -    255586876736
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -139,7 +139,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     23/34 Celsius
+Power Cycle Min/Max Temperature:     22/34 Celsius
 Lifetime    Min/Max Temperature:     21/50 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -149,18 +149,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (97)
+Temperature History Size (Index):    128 (7)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              19  ---  Lifetime Power-On Resets
-0x01  0x010  4            1422  ---  Power-on Hours
-0x01  0x018  6     31887966795  ---  Logical Sectors Written
-0x01  0x020  6       168747437  ---  Number of Write Commands
-0x01  0x028  6     12872589982  ---  Logical Sectors Read
-0x01  0x030  6        73515722  ---  Number of Read Commands
-0x01  0x038  6         2904000  ---  Date and Time TimeStamp
+0x01  0x010  4            3135  ---  Power-on Hours
+0x01  0x018  6    113207001278  ---  Logical Sectors Written
+0x01  0x020  6       522960323  ---  Number of Write Commands
+0x01  0x028  6     45330471895  ---  Logical Sectors Read
+0x01  0x030  6       291485405  ---  Number of Read Commands
+0x01  0x038  6         2745000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion

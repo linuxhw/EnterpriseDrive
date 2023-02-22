@@ -53,30 +53,30 @@ recommended polling time: 	 (  85) minutes.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    15810
+  5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    3
+  9 Power_On_Hours          -O--CK   100   100   000    -    19994
  12 Power_Cycle_Count       -O--CK   100   100   000    -    21
-165 Block_Erase_Count       -O--CK   100   100   000    -    6362
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    463
-167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    0
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    561
-169 Total_Bad_Blocks        -O--CK   100   100   ---    -    536
-170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
+165 Block_Erase_Count       -O--CK   100   100   000    -    12969
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    508
+167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    3
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    600
+169 Total_Bad_Blocks        -O--CK   100   100   ---    -    539
+170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    3
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    463
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    508
 174 Unexpected_Power_Loss   -O--CK   100   100   000    -    17
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   062   064   000    -    38 (Min/Max 15/64)
+194 Temperature_Celsius     -O---K   064   064   000    -    36 (Min/Max 15/64)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x12115c3c1211
-232 Available_Reservd_Space PO--CK   100   100   005    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    235688
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    71579
-241 Host_Writes_GiB         ----CK   100   100   000    -    280372
-242 Host_Reads_GiB          ----CK   100   100   000    -    88122
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x2505653c2505
+232 Available_Reservd_Space PO--CK   100   100   005    -    98
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    258827
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    145900
+241 Host_Writes_GiB         ----CK   100   100   000    -    301437
+242 Host_Reads_GiB          ----CK   100   100   000    -    119629
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -115,14 +115,14 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              21  ---  Lifetime Power-On Resets
-0x01  0x010  4           15810  ---  Power-on Hours
-0x01  0x018  6    587983136960  ---  Logical Sectors Written
-0x01  0x028  6    184805818750  ---  Logical Sectors Read
-0x01  0x038  6           15810  ---  Date and Time TimeStamp
+0x01  0x010  4           19994  ---  Power-on Hours
+0x01  0x018  6    632161088560  ---  Logical Sectors Written
+0x01  0x028  6    250881489374  ---  Logical Sectors Read
+0x01  0x038  6           19994  ---  Date and Time TimeStamp
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              38  ---  Current Temperature
-0x05  0x010  1              38  ---  Average Short Term Temperature
-0x05  0x018  1              38  ---  Average Long Term Temperature
+0x05  0x008  1              36  ---  Current Temperature
+0x05  0x010  1              36  ---  Average Short Term Temperature
+0x05  0x018  1              37  ---  Average Long Term Temperature
 0x05  0x020  1              63  ---  Highest Temperature
 0x05  0x028  1              28  ---  Lowest Temperature
 0x05  0x030  1              59  ---  Highest Average Short Term Temperature
@@ -134,7 +134,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              92  N--  Percentage Used Endurance Indicator
+0x07  0x008  1             101  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

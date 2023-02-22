@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   137   137   054    -    104
+  2 Throughput_Performance  P-S---   137   137   054    -    105
   3 Spin_Up_Time            POS---   135   135   024    -    487 (Average 488)
   4 Start_Stop_Count        -O--C-   100   100   000    -    12
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   095   095   000    -    36078
+  9 Power_On_Hours          -O--C-   095   095   000    -    38531
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    12
-192 Power-Off_Retract_Count -O--CK   057   057   000    -    51951
-193 Load_Cycle_Count        -O--C-   057   057   000    -    51951
+192 Power-Off_Retract_Count -O--CK   050   050   000    -    60987
+193 Load_Cycle_Count        -O--C-   050   050   000    -    60987
 194 Temperature_Celsius     -O----   200   200   000    -    30 (Min/Max 25/42)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -137,7 +137,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (9)
+Temperature History Size (Index):    128 (83)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -151,21 +151,21 @@ Page  Offset Size        Value Flags Description
 0x01  0x020  6      6507513735  ---  Number of Write Commands
 0x01  0x028  6    220714459920  ---  Logical Sectors Read
 0x01  0x030  6       988299576  ---  Number of Read Commands
-0x01  0x038  6    129883851600  ---  Date and Time TimeStamp
+0x01  0x038  6    138714439100  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           30873  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           30873  ---  Head Flying Hours
-0x03  0x018  4           51951  ---  Head Load Events
+0x03  0x008  4           32573  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           32573  ---  Head Flying Hours
+0x03  0x018  4           60987  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4         5744244  ---  Read Recovery Attempts
+0x03  0x028  4         5744297  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
-0x05  0x018  1              30  N--  Average Long Term Temperature
+0x05  0x010  1              29  N--  Average Short Term Temperature
+0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              25  ---  Lowest Temperature
 0x05  0x030  1              38  N--  Highest Average Short Term Temperature

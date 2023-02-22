@@ -55,28 +55,28 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   000   100   000    -    17043
+  9 Power_On_Hours          -O--CK   000   100   000    -    20649
  12 Power_Cycle_Count       -O--CK   100   100   000    -    42
-165 Block_Erase_Count       -O--CK   100   100   000    -    31259325177850
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   000    -    150
+165 Block_Erase_Count       -O--CK   100   100   000    -    39750592243499
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   000    -    205
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   000    -    0
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   000    -    251
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   000    -    307
 169 Total_Bad_Blocks        -O--CK   100   100   000    -    0
 170 Grown_Bad_Blocks        -O--CK   100   100   000    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    201
+173 Average_PE_Cycles_TLC   -O--CK   100   100   000    -    249
 174 Unexpected_Power_Loss   -O--CK   100   100   000    -    41
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   071   057   000    -    29 (Min/Max 0/43)
+194 Temperature_Celsius     -O---K   058   057   000    -    42 (Min/Max 0/43)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    2575
-230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x0aa80b390b39
+230 Media_Wearout_Indicator -O--CK   100   100   000    -    0x0d0e0df00df0
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   000    -    24137
-234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    38371
-241 Host_Writes_GiB         ----CK   253   253   000    -    20666
-242 Host_Reads_GiB          ----CK   253   253   000    -    39362
+233 NAND_GB_Written_TLC     -O--CK   100   100   000    -    29971
+234 NAND_GB_Written_SLC     -O--CK   100   100   000    -    47002
+241 Host_Writes_GiB         ----CK   253   253   000    -    24610
+242 Host_Reads_GiB          ----CK   253   253   000    -    48796
 244 Temp_Throttle_Status    -O--CK   000   100   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -127,16 +127,16 @@ Error 3290 [3] occurred at disk power-on lifetime: 0 hours (0 days + 0 hours)
   After command completion occurred, registers were:
   ER -- ST COUNT  LBA_48  LH LM LL DV DC
   -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
+  00 -- 00 00 00 00 00 00 00 00 00 00 00   at LBA = 0x00000000 = 0
 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  b0 00 d1 01 01 00 00 4f 00 c2 01 00 08     00:00:00.000  SMART READ ATTRIBUTE THRESHOLDS [OBS-4]
-  2f 00 00 01 01 00 00 00 00 00 03 00 08     00:00:00.000  READ LOG EXT
-  2f 00 00 01 01 00 00 00 00 00 00 00 08     00:00:00.000  READ LOG EXT
-  b0 00 d5 01 01 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART READ LOG
-  b0 00 da 00 00 00 00 4f 00 c2 00 00 08     00:00:00.000  SMART RETURN STATUS
+  60 00 08 01 b0 00 00 ea 00 80 b0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 f0 00 00 ad 00 2d 50 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 00 00 00 ad 00 2d b0 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 01 38 00 00 6b 00 2f 98 00 00     00:00:00.000  READ FPDMA QUEUED
+  60 00 08 00 58 00 00 75 00 31 d8 00 00     00:00:00.000  READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -145,13 +145,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              42  ---  Lifetime Power-On Resets
-0x01  0x010  4           17043  ---  Power-on Hours
-0x01  0x018  6       390498349  ---  Logical Sectors Written
-0x01  0x020  6       408576808  ---  Number of Write Commands
-0x01  0x028  6       944316245  ---  Logical Sectors Read
-0x01  0x030  6      3655213558  ---  Number of Read Commands
+0x01  0x010  4           20649  ---  Power-on Hours
+0x01  0x018  6        71417949  ---  Logical Sectors Written
+0x01  0x020  6      1274413654  ---  Number of Write Commands
+0x01  0x028  6      3549825715  ---  Logical Sectors Read
+0x01  0x030  6      1286128486  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               8  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -54,21 +54,21 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    11996
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    36
+  9 Power_On_Hours          -O--CK   100   100   000    -    22847
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    49
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   000    -    0
-173 Unknown_Attribute       -O--CK   100   100   005    -    250
-174 Unknown_Attribute       -O--CK   100   100   000    -    34
+173 Unknown_Attribute       -O--CK   100   100   005    -    818
+174 Unknown_Attribute       -O--CK   100   100   000    -    47
 176 Erase_Fail_Count_Chip   -O---K   100   100   000    -    100
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   000    -    36
+194 Temperature_Celsius     -O---K   100   100   000    -    37
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    3230
-242 Total_LBAs_Read         -O--CK   100   100   000    -    1066
-243 Unknown_Attribute       -O--CK   100   100   000    -    10333
+241 Total_LBAs_Written      -O--CK   100   100   000    -    10003
+242 Total_LBAs_Read         -O--CK   100   100   000    -    2421
+243 Unknown_Attribute       -O--CK   100   100   000    -    43035
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,14 +114,14 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              36  ---  Lifetime Power-On Resets
-0x01  0x010  4           11996  ---  Power-on Hours
-0x01  0x018  6      2479340678  ---  Logical Sectors Written
-0x01  0x020  6       222605281  ---  Number of Write Commands
-0x01  0x028  6      2236896746  ---  Logical Sectors Read
-0x01  0x030  6        12945994  ---  Number of Read Commands
+0x01  0x008  4              49  ---  Lifetime Power-On Resets
+0x01  0x010  4           22847  ---  Power-on Hours
+0x01  0x018  6      3799407994  ---  Logical Sectors Written
+0x01  0x020  6          138770  ---  Number of Write Commands
+0x01  0x028  6       783168813  ---  Logical Sectors Read
+0x01  0x030  6           22446  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              11  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -130,6 +130,6 @@ SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
-0x0005  4            1  R_ERR response for non-data FIS
-0x000a  4           25  Device-to-host register FISes sent due to a COMRESET
+0x0005  4            0  R_ERR response for non-data FIS
+0x000a  4           22  Device-to-host register FISes sent due to a COMRESET
 

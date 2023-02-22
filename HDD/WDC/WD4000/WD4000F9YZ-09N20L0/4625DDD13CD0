@@ -64,14 +64,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   4 Start_Stop_Count        -O--CK   100   100   000    -    9
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   087   086   000    -    9912
+  9 Power_On_Hours          -O--CK   087   086   000    -    10195
  10 Spin_Retry_Count        -O--CK   100   253   000    -    0
  11 Calibration_Retry_Count -O--CK   100   253   000    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    9
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   200   200   000    -    7
 193 Load_Cycle_Count        -O--CK   200   200   000    -    3
-194 Temperature_Celsius     -O---K   123   109   000    -    29
+194 Temperature_Celsius     -O---K   124   109   000    -    28
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   200   200   000    -    0
@@ -128,7 +128,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    29 Celsius
+Current Temperature:                    28 Celsius
 Power Cycle Min/Max Temperature:     28/35 Celsius
 Lifetime    Min/Max Temperature:     15/43 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -141,7 +141,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (172)
+Temperature History Size (Index):    478 (189)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -151,23 +151,23 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4               9  ---  Lifetime Power-On Resets
-0x01  0x010  4            9912  ---  Power-on Hours
-0x01  0x018  6 115667008175079  ---  Logical Sectors Written
+0x01  0x010  4           10195  ---  Power-on Hours
+0x01  0x018  6 115667008175119  ---  Logical Sectors Written
 0x01  0x020  6       156936431  ---  Number of Write Commands
-0x01  0x028  6    361429632398  ---  Logical Sectors Read
-0x01  0x030  6       768286951  ---  Number of Read Commands
+0x01  0x028  6    361429670334  ---  Logical Sectors Read
+0x01  0x030  6       768286981  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           69104  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           69104  ---  Head Flying Hours
+0x03  0x008  4           70578  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           70578  ---  Head Flying Hours
 0x03  0x018  4              11  ---  Head Load Events
 0x03  0x020  4             200  N--  Number of Reallocated Logical Sectors
-0x03  0x028  4               0  ---  Read Recovery Attempts
+0x03  0x028  4               1  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              29  ---  Current Temperature
+0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1              28  ---  Average Short Term Temperature
 0x05  0x018  1              28  ---  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
@@ -203,5 +203,5 @@ ID      Size     Value  Description
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4     43736167  Vendor specific
+0x8000  4     49048987  Vendor specific
 

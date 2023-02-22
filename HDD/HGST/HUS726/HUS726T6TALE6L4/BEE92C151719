@@ -64,11 +64,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   096   096   000    -    32781
+  9 Power_On_Hours          -O--C-   096   096   000    -    34417
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    7
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    1193
-193 Load_Cycle_Count        -O--C-   100   100   000    -    1193
+192 Power-Off_Retract_Count -O--CK   099   099   000    -    1251
+193 Load_Cycle_Count        -O--C-   099   099   000    -    1251
 194 Temperature_Celsius     -O----   136   136   000    -    44 (Min/Max 24/52)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -130,7 +130,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
 Current Temperature:                    44 Celsius
-Power Cycle Min/Max Temperature:     43/47 Celsius
+Power Cycle Min/Max Temperature:     43/48 Celsius
 Lifetime    Min/Max Temperature:     24/52 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -139,7 +139,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (48)
+Temperature History Size (Index):    128 (18)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -149,16 +149,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               7  ---  Lifetime Power-On Resets
-0x01  0x010  4           32781  ---  Power-on Hours
-0x01  0x018  6    792656247014  ---  Logical Sectors Written
-0x01  0x020  6     15071802503  ---  Number of Write Commands
-0x01  0x028  6      3512148177  ---  Logical Sectors Read
-0x01  0x030  6       107909627  ---  Number of Read Commands
-0x01  0x038  6    118014501600  ---  Date and Time TimeStamp
+0x01  0x010  4           34417  ---  Power-on Hours
+0x01  0x018  6    831790963550  ---  Logical Sectors Written
+0x01  0x020  6     15869107942  ---  Number of Write Commands
+0x01  0x028  6      3679490393  ---  Logical Sectors Read
+0x01  0x030  6       113490518  ---  Number of Read Commands
+0x01  0x038  6    123904737650  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           28892  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           28892  ---  Head Flying Hours
-0x03  0x018  4            1193  ---  Head Load Events
+0x03  0x008  4           30338  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           30338  ---  Head Flying Hours
+0x03  0x018  4            1251  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -167,7 +167,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              44  ---  Current Temperature
-0x05  0x010  1              43  N--  Average Short Term Temperature
+0x05  0x010  1              44  N--  Average Short Term Temperature
 0x05  0x018  1              44  N--  Average Long Term Temperature
 0x05  0x020  1              52  ---  Highest Temperature
 0x05  0x028  1              24  ---  Lowest Temperature

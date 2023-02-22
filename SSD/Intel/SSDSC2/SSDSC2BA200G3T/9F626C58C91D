@@ -17,11 +17,12 @@ ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
 Local Time is:    --
 Rd look-ahead is: Enabled
-Write cache is:   Enabled
+Write cache is:   Disabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 
 === START OF READ SMART DATA SECTION ===
-SMART overall-health self-assessment test result: PASSED
+SMART overall-health self-assessment test result: FAILED!
+Drive failure expected in less than 24 hours. SAVE ALL DATA.
 
 General SMART Values:
 Offline data collection status:  (0x00)	Offline data collection activity
@@ -60,11 +61,11 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   130   130   039    -    18625693
+  1 Raw_Read_Error_Rate     POSR--   130   130   039    -    28030949
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    44309
+  9 Power_On_Hours          -O--CK   100   100   000    -    44992
  12 Power_Cycle_Count       -O--CK   100   100   000    -    25
- 13 Read_Soft_Error_Rate    -O--CK   123   100   000    -    18625693
+ 13 Read_Soft_Error_Rate    -O--CK   126   100   000    -    28030949
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    37359
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   ---    -    0
@@ -74,11 +75,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Unknown_SSD_Attribute   PO--CK   100   100   010    -    1138429133404
+201 Unknown_SSD_Attribute   PO--CK   001   001   010    NOW  1155652255745
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    10
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    2
-228 Workload_Minutes        -O--CK   100   100   000    -    64489
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    1678493
+228 Workload_Minutes        -O--CK   100   100   000    -    105468
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    1684591
 245 Unknown_Attribute       -O--CK   099   099   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -289,7 +290,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (12)
+Temperature History Size (Index):    478 (362)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -299,10 +300,10 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              25  ---  Lifetime Power-On Resets
-0x01  0x018  6    110001768234  ---  Logical Sectors Written
-0x01  0x020  6        25545227  ---  Number of Write Commands
-0x01  0x028  6      7763610087  ---  Logical Sectors Read
-0x01  0x030  6          291686  ---  Number of Read Commands
+0x01  0x018  6    110401389018  ---  Logical Sectors Written
+0x01  0x020  6        40912472  ---  Number of Write Commands
+0x01  0x028  6      7773015343  ---  Logical Sectors Read
+0x01  0x030  6          439080  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               8  ---  Resets Between Cmd Acceptance and Completion

@@ -54,13 +54,13 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   100   100   050    -    3936
+  9 Power_On_Hours          -O--CK   100   100   050    -    5179
  12 Power_Cycle_Count       -O--CK   100   100   050    -    13
 160 Unknown_Attribute       -O--CK   100   100   050    -    0
 161 Unknown_Attribute       PO--CK   100   100   050    -    100
 163 Unknown_Attribute       -O--CK   100   100   050    -    12
-164 Unknown_Attribute       -O--CK   100   100   050    -    74
-165 Unknown_Attribute       -O--CK   100   100   050    -    1
+164 Unknown_Attribute       -O--CK   100   100   050    -    113
+165 Unknown_Attribute       -O--CK   100   100   050    -    2
 166 Unknown_Attribute       -O--CK   100   100   050    -    1
 167 Unknown_Attribute       -O--CK   100   100   050    -    1
 168 Unknown_Attribute       -O--CK   100   100   050    -    2000
@@ -73,15 +73,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 182 Erase_Fail_Count_Total  -O--CK   100   100   050    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   050    -    12
 194 Temperature_Celsius     -O---K   100   100   050    -    0
-195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    3990
+195 Hardware_ECC_Recovered  -O--CK   100   100   050    -    6887
 196 Reallocated_Event_Count -O--CK   100   100   050    -    0
 197 Current_Pending_Sector  -O--CK   100   100   050    -    0
 198 Offline_Uncorrectable   -O--CK   100   100   050    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   050    -    0
 232 Available_Reservd_Space -O--CK   100   100   050    -    100
-241 Total_LBAs_Written      ----CK   100   100   050    -    3212
-242 Total_LBAs_Read         ----CK   100   100   050    -    410299
-245 Unknown_Attribute       -O--CK   100   100   050    -    11988
+241 Total_LBAs_Written      ----CK   100   100   050    -    3993
+242 Total_LBAs_Read         ----CK   100   100   050    -    567480
+245 Unknown_Attribute       -O--CK   100   100   050    -    16038
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,11 +131,11 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              13  ---  Lifetime Power-On Resets
-0x01  0x010  4            3936  ---  Power-on Hours
-0x01  0x018  6       210526123  ---  Logical Sectors Written
-0x01  0x020  6         3211495  ---  Number of Write Commands
-0x01  0x028  6      1119589234  ---  Logical Sectors Read
-0x01  0x030  6        52672480  ---  Number of Read Commands
+0x01  0x010  4            5179  ---  Power-on Hours
+0x01  0x018  6       261699209  ---  Logical Sectors Written
+0x01  0x020  6         5183148  ---  Number of Write Commands
+0x01  0x028  6      2830682586  ---  Logical Sectors Read
+0x01  0x030  6        72947126  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
@@ -147,5 +147,5 @@ ID      Size     Value  Description
 0x0001  4            0  Command failed due to ICRC error
 0x0002  4            0  R_ERR response for data FIS
 0x0005  4            0  R_ERR response for non-data FIS
-0x000a  4           31  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           33  Device-to-host register FISes sent due to a COMRESET
 

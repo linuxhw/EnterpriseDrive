@@ -61,7 +61,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    2366
+  9 Power_On_Hours          -O--CK   100   100   000    -    3880
  12 Power_Cycle_Count       -O--CK   100   100   001    -    7
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -80,13 +80,13 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    2490086874
-247 Host_Program_Page_Count -O--CK   100   100   000    -    80802348
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    7428269
+246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    3721955405
+247 Host_Program_Page_Count -O--CK   100   100   000    -    121254839
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    13112049
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   100   100   000    -    2983
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
-211 Integ_Scan_Complete_Cnt -O--CK   100   100   000    -    21
-212 Integ_Scan_Folding_Cnt  -O--CK   100   100   000    -    1
+211 Integ_Scan_Complete_Cnt -O--CK   100   100   000    -    30
+212 Integ_Scan_Folding_Cnt  -O--CK   100   100   000    -    2
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -155,24 +155,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (433)
+Temperature History Size (Index):    478 (101)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 3) ==
 0x01  0x008  4               7  ---  Lifetime Power-On Resets
-0x01  0x010  4            2366  ---  Power-on Hours
-0x01  0x018  6      2490086874  ---  Logical Sectors Written
-0x01  0x020  6       115364512  ---  Number of Write Commands
-0x01  0x028  6      7947922582  ---  Logical Sectors Read
-0x01  0x030  6        78204318  ---  Number of Read Commands
-0x01  0x038  6      8520180000  ---  Date and Time TimeStamp
+0x01  0x010  4            3880  ---  Power-on Hours
+0x01  0x018  6      3721955405  ---  Logical Sectors Written
+0x01  0x020  6       152296701  ---  Number of Write Commands
+0x01  0x028  6     11709677132  ---  Logical Sectors Read
+0x01  0x030  6        93258390  ---  Number of Read Commands
+0x01  0x038  6     13969440000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              41  ---  Current Temperature
-0x05  0x010  1              40  ---  Average Short Term Temperature
+0x05  0x010  1              41  ---  Average Short Term Temperature
 0x05  0x018  1              40  ---  Average Long Term Temperature
 0x05  0x020  1              45  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
@@ -185,8 +185,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              48  ---  Number of Hardware Resets
-0x06  0x010  4              14  ---  Number of ASR Events
+0x06  0x008  4              52  ---  Number of Hardware Resets
+0x06  0x010  4              15  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  ---  Percentage Used Endurance Indicator
@@ -200,7 +200,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           32  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           37  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

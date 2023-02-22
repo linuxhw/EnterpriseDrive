@@ -55,14 +55,14 @@ SCT capabilities: 	       (0x1025)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   084   064   044    -    242871456
+  1 Raw_Read_Error_Rate     POSR--   083   064   044    -    187273400
   3 Spin_Up_Time            PO----   092   092   070    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  7 Seek_Error_Rate         POSR--   073   060   030    -    18789866
-  9 Power_On_Hours          -O--CK   099   099   000    -    952
+  7 Seek_Error_Rate         POSR--   078   060   030    -    64031928
+  9 Power_On_Hours          -O--CK   098   098   000    -    2596
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
-180 Unknown_HDD_Attribute   PO-RCK   100   100   030    -    595566608
-194 Temperature_Celsius     -O---K   017   040   000    -    17 (0 15 0 0 0)
+180 Unknown_HDD_Attribute   PO-RCK   100   100   030    -    1833963872
+194 Temperature_Celsius     -O---K   018   040   000    -    18 (0 15 0 0 0)
 196 Reallocated_Event_Count PO--CK   100   100   010    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -123,33 +123,33 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    17 Celsius
+Current Temperature:                    18 Celsius
 Power Cycle Min/Max Temperature:     15/24 Celsius
 Lifetime    Min/Max Temperature:     15/36 Celsius
 Specified Max Operating Temperature:    60 Celsius
-Under/Over Temperature Limit Count:   0/905
+Under/Over Temperature Limit Count:   0/2577
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (96)
+Temperature History Size (Index):    128 (104)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4             952  ---  Power-on Hours
-0x01  0x018  6       207545674  ---  Logical Sectors Written
-0x01  0x020  6          552669  ---  Number of Write Commands
-0x01  0x028  6      4687059083  ---  Logical Sectors Read
-0x01  0x030  6        16582300  ---  Number of Read Commands
+0x01  0x010  4            2596  ---  Power-on Hours
+0x01  0x018  6      4620155708  ---  Logical Sectors Written
+0x01  0x020  6        15907536  ---  Number of Write Commands
+0x01  0x028  6     23000765513  ---  Logical Sectors Read
+0x01  0x030  6        54168104  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             951  ---  Spindle Motor Power-on Hours
-0x03  0x010  4             951  ---  Head Flying Hours
-0x03  0x018  4              55  ---  Head Load Events
+0x03  0x008  4            2595  ---  Spindle Motor Power-on Hours
+0x03  0x010  4            2595  ---  Head Flying Hours
+0x03  0x018  4             124  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -159,22 +159,22 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              17  ---  Current Temperature
-0x05  0x010  1              16  ---  Average Short Term Temperature
-0x05  0x018  1               -  ---  Average Long Term Temperature
+0x05  0x008  1              18  ---  Current Temperature
+0x05  0x010  1              17  ---  Average Short Term Temperature
+0x05  0x018  1              17  ---  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
 0x05  0x028  1              15  ---  Lowest Temperature
 0x05  0x030  1              28  ---  Highest Average Short Term Temperature
 0x05  0x038  1              15  ---  Lowest Average Short Term Temperature
-0x05  0x040  1               -  ---  Highest Average Long Term Temperature
-0x05  0x048  1               -  ---  Lowest Average Long Term Temperature
+0x05  0x040  1              17  ---  Highest Average Long Term Temperature
+0x05  0x048  1              16  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1              13  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              60  ---  Number of Hardware Resets
-0x06  0x010  4              39  ---  Number of ASR Events
+0x06  0x008  4              63  ---  Number of Hardware Resets
+0x06  0x010  4              40  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -182,7 +182,7 @@ Page  Offset Size        Value Flags Description
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            3  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

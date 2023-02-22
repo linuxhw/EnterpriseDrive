@@ -65,22 +65,22 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   050    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   001   001   000    -    49714
+  9 Power_On_Hours          -O--CK   001   001   000    -    51180
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    18
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    10
-193 Load_Cycle_Count        -O--CK   100   100   000    -    3697
+193 Load_Cycle_Count        -O--CK   100   100   000    -    3716
 194 Temperature_Celsius     -O---K   100   100   000    -    43 (Min/Max 17/61)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   253   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    0
-222 Loaded_Hours            -O--CK   001   001   000    -    48963
+222 Loaded_Hours            -O--CK   001   001   000    -    50428
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    290
+226 Load-in_Time            -OS--K   100   100   000    -    294
 240 Head_Flying_Hours       P-----   100   100   001    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -144,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:            5/55 Celsius
-Temperature History Size (Index):    478 (342)
+Temperature History Size (Index):    478 (129)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -154,17 +154,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              18  ---  Lifetime Power-On Resets
-0x01  0x010  4           49714  ---  Power-on Hours
-0x01  0x018  6    228686965196  ---  Logical Sectors Written
-0x01  0x020  6       559669751  ---  Number of Write Commands
-0x01  0x028  6   1021260084650  ---  Logical Sectors Read
-0x01  0x030  6      2978594557  ---  Number of Read Commands
+0x01  0x010  4           51180  ---  Power-on Hours
+0x01  0x018  6    244119463143  ---  Logical Sectors Written
+0x01  0x020  6       640415062  ---  Number of Write Commands
+0x01  0x028  6   1040811303408  ---  Logical Sectors Read
+0x01  0x030  6      3022744171  ---  Number of Read Commands
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
 0x02  0x010  4               0  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           49714  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           48963  ---  Head Flying Hours
-0x03  0x018  4            3697  ---  Head Load Events
+0x03  0x008  4           51180  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           50428  ---  Head Flying Hours
+0x03  0x018  4            3716  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              43  ---  Current Temperature
-0x05  0x010  1              42  N--  Average Short Term Temperature
+0x05  0x010  1              43  N--  Average Short Term Temperature
 0x05  0x018  1              42  N--  Average Long Term Temperature
 0x05  0x020  1              61  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
@@ -186,7 +186,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               5  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              43  ---  Number of Hardware Resets
+0x06  0x008  4              44  ---  Number of Hardware Resets
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
                                 |||_ C monitored condition met
@@ -206,8 +206,8 @@ ID      Size     Value  Description
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           17  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           17  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           18  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

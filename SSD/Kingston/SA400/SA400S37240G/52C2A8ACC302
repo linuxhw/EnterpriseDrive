@@ -54,31 +54,31 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5416
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    48
+  9 Power_On_Hours          -O--CK   100   100   000    -    8294
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    51
 148 Unknown_Attribute       ------   100   100   000    -    0
 149 Unknown_Attribute       ------   100   100   000    -    0
 167 Write_Protect_Mode      ------   100   100   000    -    0
-168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    0
+168 SATA_Phy_Error_Count    -O--C-   100   100   000    -    3
 169 Bad_Block_Rate          ------   100   100   000    -    14
 170 Bad_Blk_Ct_Erl/Lat      ------   100   100   010    -    0/10
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 MaxAvgErase_Ct          ------   100   100   000    -    108 (Average 91)
+173 MaxAvgErase_Ct          ------   100   100   000    -    111 (Average 100)
 181 Program_Fail_Count      -O--CK   100   100   000    -    0
 182 Erase_Fail_Count        ------   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    45
+192 Unsafe_Shutdown_Count   -O--C-   100   100   000    -    47
 194 Temperature_Celsius     -O---K   023   050   000    -    23 (Min/Max 20/50)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
-199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    0
-218 CRC_Error_Count         -O--CK   100   100   000    -    0
+199 SATA_CRC_Error_Count    -O--CK   100   100   000    -    3
+218 CRC_Error_Count         -O--CK   100   100   000    -    3
 231 SSD_Life_Left           ------   090   090   000    -    90
-233 Flash_Writes_GiB        -O--CK   100   100   000    -    15755
-241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    10638
-242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    353
-244 Average_Erase_Count     ------   100   100   000    -    91
-245 Max_Erase_Count         ------   100   100   000    -    108
-246 Total_Erase_Count       ------   100   100   000    -    699648
+233 Flash_Writes_GiB        -O--CK   100   100   000    -    16713
+241 Lifetime_Writes_GiB     -O--CK   100   100   000    -    11251
+242 Lifetime_Reads_GiB      -O--CK   100   100   000    -    465
+244 Average_Erase_Count     ------   100   100   000    -    100
+245 Max_Erase_Count         ------   100   100   000    -    111
+246 Total_Erase_Count       ------   100   100   000    -    773376
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -113,10 +113,10 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              48  ---  Lifetime Power-On Resets
-0x01  0x010  4            5416  ---  Power-on Hours
-0x01  0x018  6     22310337883  ---  Logical Sectors Written
-0x01  0x028  6       741941228  ---  Logical Sectors Read
+0x01  0x008  4              51  ---  Lifetime Power-On Resets
+0x01  0x010  4            8294  ---  Power-on Hours
+0x01  0x018  6     23596795450  ---  Logical Sectors Written
+0x01  0x028  6       976998353  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
@@ -124,23 +124,23 @@ Page  Offset Size        Value Flags Description
 0x05  0x020  1              50  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x018  4               0  ---  Number of Interface CRC Errors
+0x06  0x018  4               3  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              10  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
-0x0003  2            0  R_ERR response for device-to-host data FIS
+0x0001  2            3  Command failed due to ICRC error
+0x0003  2            3  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  4           33  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           32  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           19  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           20  Device-to-host register FISes sent due to a COMRESET
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0010  2            0  R_ERR response for host-to-device data FIS, non-CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC

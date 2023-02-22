@@ -61,9 +61,9 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    37197
+  9 Power_On_Hours          -O--CK   100   100   000    -    38671
  12 Power_Cycle_Count       -O--CK   100   100   000    -    44
- 13 Read_Soft_Error_Rate    -OSRC-   130   130   000    -    55834574847
+ 13 Read_Soft_Error_Rate    -OSRC-   130   130   000    -    68719476735
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    41
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
@@ -76,17 +76,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Unknown_SSD_Attribute   PO--CK   100   100   010    -    1009841021706
+201 Unknown_SSD_Attribute   PO--CK   100   100   010    -    1048346633070
 202 Unknown_SSD_Attribute   POS--K   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    14867108
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    15550247
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    102400
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    3785498119
+228 Workload_Minutes        -O--CK   100   100   000    -    3785586562
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    14867108
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    15550247
 234 Thermal_Throttle        -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    14867108
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    13487913
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    15550247
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    14140959
 245 Unknown_Attribute       -O--CK   097   097   000    -    97
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -164,7 +164,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (4)
+Temperature History Size (Index):    478 (14)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -174,23 +174,23 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              44  ---  Lifetime Power-On Resets
-0x01  0x018  6    974330823999  ---  Logical Sectors Written
-0x01  0x020  6      4705412374  ---  Number of Write Commands
-0x01  0x028  6    883943902310  ---  Logical Sectors Read
-0x01  0x030  6      4713684125  ---  Number of Read Commands
+0x01  0x018  6   1019101032495  ---  Logical Sectors Written
+0x01  0x020  6      4977543913  ---  Number of Write Commands
+0x01  0x028  6    926741964974  ---  Logical Sectors Read
+0x01  0x030  6      5028261132  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              21  ---  Current Temperature
-0x05  0x010  1              21  ---  Average Short Term Temperature
+0x05  0x010  1              22  ---  Average Short Term Temperature
 0x05  0x018  1              21  ---  Average Long Term Temperature
 0x05  0x020  1              30  ---  Highest Temperature
 0x05  0x028  1              18  ---  Lowest Temperature
 0x05  0x030  1              25  ---  Highest Average Short Term Temperature
 0x05  0x038  1              20  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              25  ---  Highest Average Long Term Temperature
-0x05  0x048  1              21  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              20  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature

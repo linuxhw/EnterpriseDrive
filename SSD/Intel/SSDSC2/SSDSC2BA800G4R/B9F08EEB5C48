@@ -62,25 +62,25 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    4294967295
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    46768
+  9 Power_On_Hours          -O--CK   100   100   000    -    48320
  12 Power_Cycle_Count       -O--CK   100   100   000    -    745
- 13 Read_Soft_Error_Rate    -OSRC-   129   100   000    -    4745938862079
+ 13 Read_Soft_Error_Rate    -OSRC-   129   100   000    -    6369436499967
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    60920
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O-RCK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-194 Temperature_Internal    -O---K   100   100   000    -    45
+194 Temperature_Internal    -O---K   100   100   000    -    41
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Unknown_SSD_Attribute   PO--CK   100   100   010    -    1194522912078
+201 Unknown_SSD_Attribute   PO--CK   100   100   010    -    1236969137686
 202 Unknown_SSD_Attribute   POS--K   100   100   000    -    0
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    102400
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
-228 Workload_Minutes        -O--CK   100   100   000    -    3786072226
-233 Media_Wearout_Indicator -O--CK   100   100   000    -    124796524
-245 Unknown_Attribute       -O--CK   082   082   000    -    0
+228 Workload_Minutes        -O--CK   100   100   000    -    3786165342
+233 Media_Wearout_Indicator -O--CK   100   100   000    -    128725442
+245 Unknown_Attribute       -O--CK   081   081   000    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -136,7 +136,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    45 Celsius
+Current Temperature:                    41 Celsius
 Power Cycle Min/Max Temperature:     37/50 Celsius
 Lifetime    Min/Max Temperature:     22/60 Celsius
 Specified Max Operating Temperature:    70 Celsius
@@ -150,7 +150,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (464)
+Temperature History Size (Index):    478 (371)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -160,17 +160,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4             745  ---  Lifetime Power-On Resets
-0x01  0x018  6   8178665010839  ---  Logical Sectors Written
-0x01  0x020  6    107192616011  ---  Number of Write Commands
-0x01  0x028  6   5117973405869  ---  Logical Sectors Read
-0x01  0x030  6    115309867329  ---  Number of Read Commands
+0x01  0x018  6   8436150592207  ---  Logical Sectors Written
+0x01  0x020  6    110904357739  ---  Number of Write Commands
+0x01  0x028  6   5309549258485  ---  Logical Sectors Read
+0x01  0x030  6    118855603487  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              45  ---  Current Temperature
+0x05  0x008  1              41  ---  Current Temperature
 0x05  0x010  1              42  ---  Average Short Term Temperature
-0x05  0x018  1              41  ---  Average Long Term Temperature
+0x05  0x018  1              42  ---  Average Long Term Temperature
 0x05  0x020  1              60  ---  Highest Temperature
 0x05  0x028  1              30  ---  Lowest Temperature
 0x05  0x030  1              57  ---  Highest Average Short Term Temperature
@@ -182,11 +182,11 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              43  ---  Number of Hardware Resets
-0x06  0x010  4              43  ---  Number of ASR Events
+0x06  0x008  4              44  ---  Number of Hardware Resets
+0x06  0x010  4              44  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              18  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              19  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -197,7 +197,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4            5  Device-to-host register FISes sent due to a COMRESET
+0x000a  4            6  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

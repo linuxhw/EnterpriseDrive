@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    16660h+29m+06.430s
+  9 Power_On_Hours_and_Msec -O--CK   100   100   000    -    17201h+52m+00.600s
  12 Power_Cycle_Count       -O--CK   100   100   000    -    77
-170 Available_Reservd_Space PO--CK   043   043   010    -    0
+170 Available_Reservd_Space PO--CK   036   036   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    29
@@ -70,15 +70,15 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O--CK   022   043   000    -    22 (Min/Max 11/43)
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    29
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    2253413
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    2284398
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    65535
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    47
 228 Workload_Minutes        -O--CK   100   100   000    -    65535
-232 Available_Reservd_Space PO--CK   043   043   010    -    0
-233 Media_Wearout_Indicator -O--CK   005   005   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    2253413
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    2055204
-249 NAND_Writes_1GiB        -O--CK   100   100   000    -    365780
+232 Available_Reservd_Space PO--CK   036   036   010    -    0
+233 Media_Wearout_Indicator -O--CK   001   001   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    2284398
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    2055321
+249 NAND_Writes_1GiB        -O--CK   100   100   000    -    386503
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -129,21 +129,21 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/75 Celsius
-Temperature History Size (Index):    478 (215)
+Temperature History Size (Index):    478 (18)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              83  ---  Lifetime Power-On Resets
-0x01  0x010  4           16660  ---  Power-on Hours
-0x01  0x018  6    147698057687  ---  Logical Sectors Written
-0x01  0x028  6    134706667054  ---  Logical Sectors Read
+0x01  0x010  4           17201  ---  Power-on Hours
+0x01  0x018  6    149728695767  ---  Logical Sectors Written
+0x01  0x028  6    134714292378  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4           12044  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              22  ---  Current Temperature
-0x05  0x010  1              21  ---  Average Short Term Temperature
+0x05  0x010  1              22  ---  Average Short Term Temperature
 0x05  0x018  1              30  ---  Average Long Term Temperature
 0x05  0x020  1              42  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
@@ -160,7 +160,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4            2147  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              86  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              90  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

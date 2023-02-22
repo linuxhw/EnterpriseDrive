@@ -24,14 +24,14 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x04)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  473) seconds.
+data collection: 		(  617) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 
@@ -61,7 +61,7 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   001    -    20911
+  9 Power_On_Hours          -O--CK   100   100   001    -    21073
  12 Power_Cycle_Count       -O--CK   100   100   001    -    15
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    2995198100
-247 Host_Program_Page_Count -O--CK   100   100   000    -    93509666
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    18398318
+246 Unknown_Attribute       -O--CK   100   100   000    -    3003202812
+247 Host_Program_Page_Count -O--CK   100   100   000    -    93759733
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    18615039
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    4652
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -127,7 +127,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%     20902         -
+# 1  Vendor (0xff)       Completed without error       00%     21054         -
 # 2  Vendor (0xff)       Completed without error       00%     20741         -
 # 3  Vendor (0xff)       Completed without error       00%     20424         -
 # 4  Vendor (0xff)       Completed without error       00%     20102         -
@@ -150,7 +150,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
-    2        0        0  Not_testing
+    2        0        0  Completed [00% left] (26598-92133)
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
@@ -160,7 +160,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        SMART Off-line Data Collection executing in background (4)
+Device State:                        Active (0)
 Current Temperature:                    45 Celsius
 Power Cycle Min/Max Temperature:     37/56 Celsius
 Lifetime    Min/Max Temperature:     22/57 Celsius
@@ -171,18 +171,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (90)
+Temperature History Size (Index):    478 (216)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4           20911  ---  Power-on Hours
-0x01  0x018  6      2995198100  ---  Logical Sectors Written
-0x01  0x020  6        91342828  ---  Number of Write Commands
-0x01  0x028  6      3108732534  ---  Logical Sectors Read
-0x01  0x030  6         9043796  ---  Number of Read Commands
-0x01  0x038  6     75281820000  ---  Date and Time TimeStamp
+0x01  0x010  4           21073  ---  Power-on Hours
+0x01  0x018  6      3003202812  ---  Logical Sectors Written
+0x01  0x020  6        91851119  ---  Number of Write Commands
+0x01  0x028  6      3108732614  ---  Logical Sectors Read
+0x01  0x030  6         9043806  ---  Number of Read Commands
+0x01  0x038  6     75863820000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               4  ---  Resets Between Cmd Acceptance and Completion

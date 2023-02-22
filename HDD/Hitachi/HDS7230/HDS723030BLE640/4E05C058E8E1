@@ -17,7 +17,7 @@ SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
 Local Time is:    --
 APM feature is:   Disabled
 Rd look-ahead is: Enabled
-Write cache is:   Disabled
+Write cache is:   Enabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
 
 === START OF READ SMART DATA SECTION ===
@@ -58,18 +58,18 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     PO-R--   096   096   016    -    196614
+  1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
   2 Throughput_Performance  P-S---   139   139   054    -    72
   3 Spin_Up_Time            POS---   136   136   024    -    422 (Average 419)
-  4 Start_Stop_Count        -O--C-   100   100   000    -    25
+  4 Start_Stop_Count        -O--C-   100   100   000    -    27
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
-  8 Seek_Time_Performance   P-S---   114   114   020    -    37
-  9 Power_On_Hours          -O--C-   093   093   000    -    55930
+  8 Seek_Time_Performance   P-S---   124   124   020    -    33
+  9 Power_On_Hours          -O--C-   092   092   000    -    56517
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    24
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    102
-193 Load_Cycle_Count        -O--C-   100   100   000    -    102
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    26
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    116
+193 Load_Cycle_Count        -O--C-   100   100   000    -    116
 194 Temperature_Celsius     -O----   181   181   000    -    33 (Min/Max 17/47)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -126,7 +126,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    33 Celsius
-Power Cycle Min/Max Temperature:     30/35 Celsius
+Power Cycle Min/Max Temperature:     33/34 Celsius
 Lifetime    Min/Max Temperature:     17/47 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -135,34 +135,34 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (41)
+Temperature History Size (Index):    128 (52)
 
 SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+           Read: Disabled
+          Write: Disabled
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              24  ---  Lifetime Power-On Resets
-0x01  0x010  4           55930  ---  Power-on Hours
-0x01  0x018  6     99869455968  ---  Logical Sectors Written
-0x01  0x020  6      1372402400  ---  Number of Write Commands
-0x01  0x028  6   1918417281184  ---  Logical Sectors Read
-0x01  0x030  6       535778610  ---  Number of Read Commands
+0x01  0x008  4              26  ---  Lifetime Power-On Resets
+0x01  0x010  4           56517  ---  Power-on Hours
+0x01  0x018  6     99890467952  ---  Logical Sectors Written
+0x01  0x020  6      1372448473  ---  Number of Write Commands
+0x01  0x028  6   1918994266655  ---  Logical Sectors Read
+0x01  0x030  6       538104242  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           55884  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           55884  ---  Head Flying Hours
-0x03  0x018  4             102  ---  Head Load Events
+0x03  0x008  4           56471  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           56471  ---  Head Flying Hours
+0x03  0x018  4             116  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4             109  ---  Read Recovery Attempts
+0x03  0x028  4             119  ---  Read Recovery Attempts
 0x03  0x030  4               6  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              33  ---  Current Temperature
-0x05  0x010  1              33  N--  Average Short Term Temperature
+0x05  0x008  1              34  ---  Current Temperature
+0x05  0x010  1              32  N--  Average Short Term Temperature
 0x05  0x018  1              32  N--  Average Long Term Temperature
 0x05  0x020  1              47  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature

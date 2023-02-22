@@ -63,11 +63,11 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         -O-R--   100   100   067    -    0
   8 Seek_Time_Performance   --S---   128   128   020    -    18
-  9 Power_On_Hours          -O--C-   098   098   000    -    14546
+  9 Power_On_Hours          -O--C-   098   098   000    -    15896
  10 Spin_Retry_Count        -O--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    11
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    619
-193 Load_Cycle_Count        -O--C-   100   100   000    -    619
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    676
+193 Load_Cycle_Count        -O--C-   100   100   000    -    676
 194 Temperature_Celsius     -O----   189   189   000    -    29 (Min/Max 21/35)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -139,24 +139,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/55 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (88)
+Temperature History Size (Index):    128 (30)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           14546  ---  Power-on Hours
-0x01  0x018  6     37597993477  ---  Logical Sectors Written
-0x01  0x020  6        78566159  ---  Number of Write Commands
-0x01  0x028  6    259757752345  ---  Logical Sectors Read
-0x01  0x030  6       577807808  ---  Number of Read Commands
-0x01  0x038  6     52366154700  ---  Date and Time TimeStamp
+0x01  0x010  4           15896  ---  Power-on Hours
+0x01  0x018  6     43002904263  ---  Logical Sectors Written
+0x01  0x020  6        92251604  ---  Number of Write Commands
+0x01  0x028  6    277271845900  ---  Logical Sectors Read
+0x01  0x030  6       624506000  ---  Number of Read Commands
+0x01  0x038  6     57227685950  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           14538  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           14538  ---  Head Flying Hours
-0x03  0x018  4             619  ---  Head Load Events
+0x03  0x008  4           15888  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           15888  ---  Head Flying Hours
+0x03  0x018  4             676  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
-0x03  0x028  4              27  ---  Read Recovery Attempts
+0x03  0x028  4              28  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
@@ -164,7 +164,7 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              29  ---  Current Temperature
 0x05  0x010  1              29  N--  Average Short Term Temperature
-0x05  0x018  1              29  N--  Average Long Term Temperature
+0x05  0x018  1              28  N--  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              21  ---  Lowest Temperature
 0x05  0x030  1              32  N--  Highest Average Short Term Temperature

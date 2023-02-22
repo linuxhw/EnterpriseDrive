@@ -58,9 +58,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    27883
+  9 Power_On_Hours          -O--CK   094   094   000    -    29520
  12 Power_Cycle_Count       -O--CK   099   099   000    -    11
-177 Wear_Leveling_Count     PO--C-   091   091   000    -    127
+177 Wear_Leveling_Count     PO--C-   091   091   000    -    133
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
@@ -68,9 +68,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 190 Airflow_Temperature_Cel -O--CK   078   068   000    -    22
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
-199 CRC_Error_Count         -OSRCK   099   099   000    -    296
+199 CRC_Error_Count         -OSRCK   099   099   000    -    307
 235 POR_Recovery_Count      -O--C-   099   099   000    -    1
-241 Total_LBAs_Written      -O--CK   099   099   000    -    433627355089
+241 Total_LBAs_Written      -O--CK   099   099   000    -    454062390953
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -132,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (23)
+Temperature History Size (Index):    128 (116)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -142,12 +142,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           27883  ---  Power-on Hours
-0x01  0x018  6    433627355089  ---  Logical Sectors Written
-0x01  0x020  6      4689278073  ---  Number of Write Commands
-0x01  0x028  6    657795078493  ---  Logical Sectors Read
-0x01  0x030  6      3993589267  ---  Number of Read Commands
-0x01  0x038  6         2157000  ---  Date and Time TimeStamp
+0x01  0x010  4           29520  ---  Power-on Hours
+0x01  0x018  6    454062390953  ---  Logical Sectors Written
+0x01  0x020  6      4913521238  ---  Number of Write Commands
+0x01  0x028  6    697261477645  ---  Logical Sectors Read
+0x01  0x030  6      4199591691  ---  Number of Read Commands
+0x01  0x038  6         1773000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -157,27 +157,27 @@ Page  Offset Size        Value Flags Description
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             474  ---  Number of Hardware Resets
+0x06  0x008  4             485  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
-0x06  0x018  4             296  ---  Number of Interface CRC Errors
+0x06  0x018  4             307  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               8  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               9  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2           71  Command failed due to ICRC error
-0x0002  2           71  R_ERR response for data FIS
-0x0003  2           71  R_ERR response for device-to-host data FIS
+0x0001  2           82  Command failed due to ICRC error
+0x0002  2           82  R_ERR response for data FIS
+0x0003  2           82  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           74  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           74  Device-to-host register FISes sent due to a COMRESET
+0x0009  2           85  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2           85  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

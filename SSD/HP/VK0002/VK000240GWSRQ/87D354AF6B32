@@ -55,11 +55,11 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR--   200   200   002    -    0
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1902
-173 Unknown_Attribute       PO--CK   099   099   005    -    8
+  9 Power_On_Hours          -O--CK   099   099   000    -    3398
+173 Unknown_Attribute       PO--CK   099   099   005    -    15
 175 Program_Fail_Count_Chip PO--CK   100   100   001    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   200   200   097    -    0
-194 Temperature_Celsius     -O---K   087   077   000    -    13
+194 Temperature_Celsius     -O---K   089   077   000    -    11
 196 Reallocated_Event_Count PO--CK   100   100   005    -    0
 202 Unknown_SSD_Attribute   PO--CK   100   100   010    -    0
                             ||||||_ K auto-keep
@@ -113,8 +113,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    13 Celsius
-Power Cycle Min/Max Temperature:      7/27 Celsius
+Current Temperature:                    11 Celsius
+Power Cycle Min/Max Temperature:      9/27 Celsius
 Lifetime    Min/Max Temperature:      6/27 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -124,28 +124,28 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    128 (66)
+Temperature History Size (Index):    128 (81)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              77  ---  Lifetime Power-On Resets
-0x01  0x010  4            1902  ---  Power-on Hours
-0x01  0x018  6      2764457092  ---  Logical Sectors Written
-0x01  0x020  6        49325437  ---  Number of Write Commands
-0x01  0x028  6      1038106446  ---  Logical Sectors Read
-0x01  0x030  6         4617952  ---  Number of Read Commands
-0x01  0x038  6         2461000  ---  Date and Time TimeStamp
+0x01  0x008  4              78  ---  Lifetime Power-On Resets
+0x01  0x010  4            3398  ---  Power-on Hours
+0x01  0x018  6      4058881952  ---  Logical Sectors Written
+0x01  0x020  6       100162387  ---  Number of Write Commands
+0x01  0x028  6      1846073202  ---  Logical Sectors Read
+0x01  0x030  6         7979118  ---  Number of Read Commands
+0x01  0x038  6         2192000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              13  ---  Current Temperature
+0x05  0x008  1              11  ---  Current Temperature
 0x05  0x020  1              27  ---  Highest Temperature
 0x05  0x028  1               6  ---  Lowest Temperature
 0x05  0x058  1              60  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             366  ---  Number of Hardware Resets
+0x06  0x008  4             374  ---  Number of Hardware Resets
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==

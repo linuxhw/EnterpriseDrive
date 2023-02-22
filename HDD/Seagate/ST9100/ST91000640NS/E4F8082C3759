@@ -60,30 +60,30 @@ SCT capabilities: 	       (0x10bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--+  084   063   044    -    242215446
+  1 Raw_Read_Error_Rate     POSR--+  083   063   044    -    219679994
   3 Spin_Up_Time            PO----+  094   094   000    -    0
-  4 Start_Stop_Count        -O--CK   100   100   020    -    67
+  4 Start_Stop_Count        -O--CK   100   100   020    -    68
   5 Reallocated_Sector_Ct   PO--CK+  100   100   036    -    0
-  7 Seek_Error_Rate         POSR--   090   060   030    -    11009017889
-  9 Power_On_Hours          -O--CK   033   033   000    -    59198
+  7 Seek_Error_Rate         POSR--   090   060   030    -    11061804111
+  9 Power_On_Hours          -O--CK   031   031   000    -    60996
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    64
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    65
 184 End-to-End_Error        -O--CK   100   100   099    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    0
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   074   049   045    -    26 (Min/Max 25/51)
+190 Airflow_Temperature_Cel -O---K   072   049   045    -    28 (Min/Max 23/30)
 191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    53
-193 Load_Cycle_Count        -O--CK   099   099   000    -    3175
-194 Temperature_Celsius     -O---K   026   051   000    -    26 (0 19 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   120   099   000    -    242215446
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    54
+193 Load_Cycle_Count        -O--CK   099   099   000    -    3251
+194 Temperature_Celsius     -O---K   028   051   000    -    28 (0 19 0 0 0)
+195 Hardware_ECC_Recovered  -O-RC-   119   099   000    -    219679994
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
-240 Head_Flying_Hours       ------   100   253   000    -    59116 (157 104 0)
-241 Total_LBAs_Written      ------   100   253   000    -    92279212
-242 Total_LBAs_Read         ------   100   253   000    -    3072807392
+240 Head_Flying_Hours       ------   100   253   000    -    60914 (88 96 0)
+241 Total_LBAs_Written      ------   100   253   000    -    3635984286
+242 Total_LBAs_Read         ------   100   253   000    -    2272877307
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -141,8 +141,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       522 (0x020a)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     25/51 Celsius
+Current Temperature:                    27 Celsius
+Power Cycle Min/Max Temperature:     23/30 Celsius
 Lifetime    Min/Max Temperature:     19/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -151,7 +151,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      5/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (62)
+Temperature History Size (Index):    128 (58)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -159,7 +159,7 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x000a  2            9  Device-to-host register FISes sent due to a COMRESET
+0x000a  2            4  Device-to-host register FISes sent due to a COMRESET
 0x0001  2            0  Command failed due to ICRC error
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS

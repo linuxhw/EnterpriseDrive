@@ -55,13 +55,13 @@ SCT capabilities: 	       (0x0021)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   130   130   039    -    5856667
+  1 Raw_Read_Error_Rate     POSR--   130   130   039    -    6039083
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    13584
+  9 Power_On_Hours          -O--CK   100   100   000    -    15156
 173 Unknown_Attribute       PO--CK   100   100   001    -    0
 175 Program_Fail_Count_Chip PO--CK   100   100   010    -    25769740863
-180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   130   130   039    -    1157348811
-194 Temperature_Celsius     -O---K   100   100   000    -    23
+180 Unused_Rsvd_Blk_Cnt_Tot PO-RCK   130   130   039    -    1442770803
+194 Temperature_Celsius     -O---K   100   100   000    -    15
 196 Reallocated_Event_Count PO--CK   100   100   010    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -116,7 +116,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    23 Celsius
+Current Temperature:                    15 Celsius
 Power Cycle Min/Max Temperature:      8/28 Celsius
 Lifetime    Min/Max Temperature:      8/28 Celsius
 Specified Max Operating Temperature:    60 Celsius
@@ -130,24 +130,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:            0/60 Celsius
-Temperature History Size (Index):    478 (124)
+Temperature History Size (Index):    478 (281)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               5  ---  Lifetime Power-On Resets
-0x01  0x018  6      1151492144  ---  Logical Sectors Written
-0x01  0x020  6        85827349  ---  Number of Write Commands
-0x01  0x028  6         5878044  ---  Logical Sectors Read
-0x01  0x030  6        16127227  ---  Number of Read Commands
-0x01  0x038  6      1661158206  ---  Date and Time TimeStamp
+0x01  0x018  6      1436731720  ---  Logical Sectors Written
+0x01  0x020  6       100595094  ---  Number of Write Commands
+0x01  0x028  6         6060460  ---  Logical Sectors Read
+0x01  0x030  6        16142977  ---  Number of Read Commands
+0x01  0x038  6      3025424249  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              23  ---  Current Temperature
-0x05  0x010  1              23  ---  Average Short Term Temperature
-0x05  0x018  1              21  ---  Average Long Term Temperature
+0x05  0x008  1              15  ---  Current Temperature
+0x05  0x010  1              15  ---  Average Short Term Temperature
+0x05  0x018  1              14  ---  Average Long Term Temperature
 0x05  0x020  1              28  ---  Highest Temperature
 0x05  0x028  1               8  ---  Lowest Temperature
 0x05  0x030  1              25  ---  Highest Average Short Term Temperature

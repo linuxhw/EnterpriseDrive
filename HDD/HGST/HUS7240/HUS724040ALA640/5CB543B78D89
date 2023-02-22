@@ -22,8 +22,8 @@ Write cache is:   Disabled
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -58,24 +58,24 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   099   016    -    0
   2 Throughput_Performance  POS--K   138   100   054    -    76
-  3 Spin_Up_Time            PO---K   138   100   024    -    524 (Average 596)
-  4 Start_Stop_Count        -O--CK   100   100   000    -    13
+  3 Spin_Up_Time            PO---K   142   100   024    -    566 (Average 524)
+  4 Start_Stop_Count        -O--CK   100   100   000    -    17
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         POSR-K   100   100   067    -    0
-  8 Seek_Time_Performance   P-S--K   138   100   020    -    27
-  9 Power_On_Hours          -O--CK   098   098   000    -    15315
+  8 Seek_Time_Performance   P-S--K   140   100   020    -    26
+  9 Power_On_Hours          -O--CK   098   098   000    -    17134
  10 Spin_Retry_Count        PO--CK   100   100   060    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    13
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    17
 180 Unknown_HDD_Attribute   PO-R-K   100   100   098    -    0
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 185 Unknown_Attribute       -O--CK   100   100   000    -    65535
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    3
 189 High_Fly_Writes         -O-RCK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O---K   070   052   000    -    30 (Min/Max 29/32)
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    296
-193 Load_Cycle_Count        -O--CK   100   100   000    -    296
-194 Temperature_Celsius     -O---K   200   171   000    -    30 (Min/Max 24/48)
+190 Airflow_Temperature_Cel -O---K   071   052   000    -    29 (Min/Max 28/32)
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    357
+193 Load_Cycle_Count        -O--CK   100   100   000    -    357
+194 Temperature_Celsius     -O---K   206   171   000    -    29 (Min/Max 24/48)
 196 Reallocated_Event_Count PO--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
@@ -107,7 +107,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (1 sectors)
-Device Error Count: 78 (device log contains only the most recent 4 errors)
+Device Error Count: 92 (device log contains only the most recent 4 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -123,7 +123,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 78 [1] occurred at disk power-on lifetime: 15193 hours (633 days + 1 hours)
+Error 92 [3] occurred at disk power-on lifetime: 17134 hours (713 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -134,13 +134,13 @@ Error 78 [1] occurred at disk power-on lifetime: 15193 hours (633 days + 1 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  47 00 00 00 01 00 00 00 00 03 30 00 00     14:26:31.843  READ LOG DMA EXT
-  90 00 00 00 00 00 00 00 00 00 00 00 00     14:26:31.843  EXECUTE DEVICE DIAGNOSTIC
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     14:26:31.843  CHECK POWER MODE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     14:26:31.841  IDENTIFY DEVICE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     14:26:31.841  CHECK POWER MODE
+  47 00 00 00 01 00 00 00 00 03 30 00 00  3d+ ...          READ LOG DMA EXT
+  90 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          EXECUTE DEVICE DIAGNOSTIC
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          IDENTIFY DEVICE
 
-Error 77 [0] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours)
+Error 91 [2] occurred at disk power-on lifetime: 17134 hours (713 days + 22 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -151,13 +151,13 @@ Error 77 [0] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  47 00 00 00 01 00 00 00 00 03 30 00 00     02:08:25.314  READ LOG DMA EXT
-  90 00 00 00 00 00 00 00 00 00 00 00 00     02:08:25.314  EXECUTE DEVICE DIAGNOSTIC
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     02:08:25.314  CHECK POWER MODE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:08:25.312  IDENTIFY DEVICE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     02:08:25.312  CHECK POWER MODE
+  47 00 00 00 01 00 00 00 00 03 30 00 00  3d+ ...          READ LOG DMA EXT
+  90 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          EXECUTE DEVICE DIAGNOSTIC
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00  3d+ ...          IDENTIFY DEVICE
 
-Error 76 [3] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours)
+Error 90 [1] occurred at disk power-on lifetime: 16296 hours (679 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -168,13 +168,13 @@ Error 76 [3] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  47 00 00 00 01 00 00 00 00 03 30 00 00     02:08:14.505  READ LOG DMA EXT
-  90 00 00 00 00 00 00 00 00 00 00 00 00     02:08:14.505  EXECUTE DEVICE DIAGNOSTIC
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     02:08:14.505  CHECK POWER MODE
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     02:08:14.505  CHECK POWER MODE
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:08:14.491  IDENTIFY DEVICE
+  47 00 00 00 01 00 00 00 00 03 30 00 00     00:52:32.516  READ LOG DMA EXT
+  90 00 00 00 00 00 00 00 00 00 00 00 00     00:52:32.516  EXECUTE DEVICE DIAGNOSTIC
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:52:32.516  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:52:32.516  CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:52:32.514  IDENTIFY DEVICE
 
-Error 75 [2] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours)
+Error 89 [0] occurred at disk power-on lifetime: 16296 hours (679 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -185,11 +185,11 @@ Error 75 [2] occurred at disk power-on lifetime: 14881 hours (620 days + 1 hours
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  47 00 00 00 01 00 00 00 00 03 30 00 00     02:08:13.811  READ LOG DMA EXT
-  60 00 08 00 00 00 00 00 00 08 78 40 00     02:08:13.806  READ FPDMA QUEUED
-  90 00 00 00 00 00 00 00 00 00 00 00 00     02:08:13.711  EXECUTE DEVICE DIAGNOSTIC
-  60 00 08 00 00 00 00 00 00 08 38 40 00     02:08:13.711  READ FPDMA QUEUED
-  e5 00 00 00 00 00 00 00 00 00 00 00 00     02:08:13.711  CHECK POWER MODE
+  47 00 00 00 01 00 00 00 00 03 30 00 00     00:52:29.844  READ LOG DMA EXT
+  90 00 00 00 00 00 00 00 00 00 00 00 00     00:52:29.844  EXECUTE DEVICE DIAGNOSTIC
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:52:29.844  CHECK POWER MODE
+  e5 00 00 00 00 00 00 00 00 00 00 00 00     00:52:29.844  CHECK POWER MODE
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:52:29.842  IDENTIFY DEVICE
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -208,9 +208,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    30 Celsius
-Power Cycle Min/Max Temperature:     29/32 Celsius
+Device State:                        Active (0)
+Current Temperature:                    29 Celsius
+Power Cycle Min/Max Temperature:     28/32 Celsius
 Lifetime    Min/Max Temperature:     24/48 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -220,24 +220,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (127)
+Temperature History Size (Index):    128 (60)
 
 SCT Error Recovery Control:
-           Read:     70 (7.0 seconds)
-          Write:     70 (7.0 seconds)
+           Read:     50 (5.0 seconds)
+          Write:     50 (5.0 seconds)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              13  ---  Lifetime Power-On Resets
-0x01  0x018  6     45393775281  ---  Logical Sectors Written
-0x01  0x020  6       137362422  ---  Number of Write Commands
-0x01  0x028  6    389833918419  ---  Logical Sectors Read
-0x01  0x030  6      1475764551  ---  Number of Read Commands
+0x01  0x008  4              17  ---  Lifetime Power-On Resets
+0x01  0x018  6     56308222137  ---  Logical Sectors Written
+0x01  0x020  6       217643995  ---  Number of Write Commands
+0x01  0x028  6    412447318965  ---  Logical Sectors Read
+0x01  0x030  6      1518770205  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           15313  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           15313  ---  Head Flying Hours
-0x03  0x018  4             296  ---  Head Load Events
+0x03  0x008  4           17132  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           17132  ---  Head Flying Hours
+0x03  0x018  4             357  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4              34  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -245,8 +245,8 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               3  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              30  N--  Average Short Term Temperature
+0x05  0x008  1              29  ---  Current Temperature
+0x05  0x010  1              28  N--  Average Short Term Temperature
 0x05  0x018  1              29  N--  Average Long Term Temperature
 0x05  0x020  1              48  ---  Highest Temperature
 0x05  0x028  1              24  ---  Lowest Temperature
@@ -259,8 +259,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            6583  ---  Number of Hardware Resets
-0x06  0x010  4              73  ---  Number of ASR Events
+0x06  0x008  4            6585  ---  Number of Hardware Resets
+0x06  0x010  4              74  ---  Number of ASR Events
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
@@ -275,8 +275,8 @@ ID      Size     Value  Description
 0x0005  2            0  R_ERR response for non-data FIS
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
-0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2            0  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            1  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 

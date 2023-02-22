@@ -60,8 +60,8 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     -O--CK   120   120   050    -    0/0
   5 Retired_Block_Count     PO--CK   100   100   003    -    1
-  9 Power_On_Hours_and_Msec -O--CK   050   050   000    -    44485h+44m+15.930s
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    39
+  9 Power_On_Hours_and_Msec -O--CK   048   048   000    -    45649h+32m+59.570s
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    40
 171 Program_Fail_Count      -O-R--   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unexpect_Power_Loss_Ct  ----CK   000   000   000    -    24
@@ -76,12 +76,12 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 201 Unc_Soft_Read_Err_Rate  --SRC-   120   120   000    -    0/0
 204 Soft_ECC_Correct_Rate   --SRC-   120   120   000    -    0/0
 230 Life_Curve_Status       PO--C-   100   100   000    -    100
-231 SSD_Life_Left           ------   095   095   011    -    47244640257
-233 SandForce_Internal      -O--CK   000   000   000    -    37341
-234 SandForce_Internal      -O--CK   000   000   000    -    20504
-241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    20504
+231 SSD_Life_Left           ------   097   097   011    -    47244640257
+233 SandForce_Internal      -O--CK   000   000   000    -    38421
+234 SandForce_Internal      -O--CK   000   000   000    -    20989
+241 Lifetime_Writes_GiB     -O--CK   000   000   000    -    20989
 242 Lifetime_Reads_GiB      -O--CK   000   000   000    -    18234
-244 Unknown_Attribute       ------   098   098   010    -    5832793
+244 Unknown_Attribute       ------   097   097   010    -    6488163
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -131,15 +131,15 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/85 Celsius
-Temperature History Size (Index):    478 (161)
+Temperature History Size (Index):    478 (361)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              39  ---  Lifetime Power-On Resets
-0x01  0x010  4           44485  ---  Power-on Hours
-0x01  0x018  6     43001759500  ---  Logical Sectors Written
-0x01  0x028  6     38239896080  ---  Logical Sectors Read
+0x01  0x008  4              40  ---  Lifetime Power-On Resets
+0x01  0x010  4           45649  ---  Power-on Hours
+0x01  0x018  6     44018625796  ---  Logical Sectors Written
+0x01  0x028  6     38241449490  ---  Logical Sectors Read
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -162,7 +162,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4             666  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               2  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               3  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

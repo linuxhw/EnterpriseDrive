@@ -60,12 +60,12 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   000    -    0
   5 Reallocate_NAND_Blk_Cnt -O--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    725
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    19
+  9 Power_On_Hours          -O--CK   100   100   000    -    878
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    22
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    6
-174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    14
+173 Ave_Block-Erase_Count   -O--CK   100   100   000    -    14
+174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    17
 180 Unused_Reserve_NAND_Blk PO--CK   000   000   000    -    25
 183 SATA_Interfac_Downshift -O--CK   100   100   000    -    0
 184 Error_Correction_Count  -O--CK   100   100   000    -    0
@@ -78,9 +78,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
 210 Success_RAIN_Recov_Cnt  -O--CK   100   100   000    -    0
-246 Total_LBAs_Written      -O--CK   100   100   000    -    1530255670
-247 Host_Program_Page_Count -O--CK   100   100   000    -    29987709
-248 FTL_Program_Page_Count  -O--CK   100   100   000    -    21081539
+246 Total_LBAs_Written      -O--CK   100   100   000    -    3180470617
+247 Host_Program_Page_Count -O--CK   100   100   000    -    71444151
+248 FTL_Program_Page_Count  -O--CK   100   100   000    -    49928037
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -129,7 +129,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    25 Celsius
-Power Cycle Min/Max Temperature:     25/27 Celsius
+Power Cycle Min/Max Temperature:     24/35 Celsius
 Lifetime    Min/Max Temperature:      0/51 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -138,25 +138,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (55)
+Temperature History Size (Index):    128 (102)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              19  ---  Lifetime Power-On Resets
-0x01  0x010  4             725  ---  Power-on Hours
-0x01  0x018  6      1530255670  ---  Logical Sectors Written
-0x01  0x020  6        25173446  ---  Number of Write Commands
-0x01  0x028  6      1179618888  ---  Logical Sectors Read
-0x01  0x030  6        53103452  ---  Number of Read Commands
-0x01  0x038  6      2610888673  ---  Date and Time TimeStamp
+0x01  0x008  4              22  ---  Lifetime Power-On Resets
+0x01  0x010  4             878  ---  Power-on Hours
+0x01  0x018  6      3180470617  ---  Logical Sectors Written
+0x01  0x020  6        58284771  ---  Number of Write Commands
+0x01  0x028  6      2211301150  ---  Logical Sectors Read
+0x01  0x030  6        89371456  ---  Number of Read Commands
+0x01  0x038  6      3162919462  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              14  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              17  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              25  ---  Current Temperature
-0x05  0x010  1              25  ---  Average Short Term Temperature
-0x05  0x018  1              25  ---  Average Long Term Temperature
+0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x018  1              24  ---  Average Long Term Temperature
 0x05  0x020  1              51  ---  Highest Temperature
 0x05  0x028  1               0  ---  Lowest Temperature
 0x05  0x030  1              32  ---  Highest Average Short Term Temperature
@@ -168,7 +168,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             695  ---  Number of Hardware Resets
+0x06  0x008  4             950  ---  Number of Hardware Resets
 0x06  0x010  4               3  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==

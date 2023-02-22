@@ -59,12 +59,12 @@ SCT capabilities: 	       (0x50bd)	SCT Status supported.
 SMART Attributes Data Structure revision number: 10
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR--   081   063   044    -    127407298
+  1 Raw_Read_Error_Rate     POSR--   082   063   044    -    190599664
   3 Spin_Up_Time            PO----   091   090   000    -    0
   4 Start_Stop_Count        -O--CK   100   100   020    -    37
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    24
-  7 Seek_Error_Rate         POSR--   092   060   030    -    1868342780
-  9 Power_On_Hours          -O--CK   035   035   000    -    57746
+  7 Seek_Error_Rate         POSR--   092   060   030    -    1868939111
+  9 Power_On_Hours          -O--CK   034   034   000    -    57885
  10 Spin_Retry_Count        PO--C-   100   100   097    -    0
  12 Power_Cycle_Count       -O--CK   100   100   020    -    37
 184 End-to-End_Error        -O--CK   100   100   099    -    0
@@ -74,9 +74,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 190 Airflow_Temperature_Cel -O---K   067   050   045    -    33 (Min/Max 31/34)
 191 G-Sense_Error_Rate      -O--CK   079   079   000    -    43805
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    0
-193 Load_Cycle_Count        -O--CK   054   054   000    -    92464
+193 Load_Cycle_Count        -O--CK   054   054   000    -    92470
 194 Temperature_Celsius     -O---K   033   050   000    -    33 (0 21 0 0 0)
-195 Hardware_ECC_Recovered  -O-RC-   070   042   000    -    127407298
+195 Hardware_ECC_Recovered  -O-RC-   079   042   000    -    190599664
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -OSRCK   200   200   000    -    0
@@ -146,14 +146,14 @@ Device State:                        Active (0)
 Current Temperature:                    33 Celsius
 Power Cycle Min/Max Temperature:     31/34 Celsius
 Lifetime    Min/Max Temperature:     21/50 Celsius
-Under/Over Temperature Limit Count:   0/2143
+Under/Over Temperature Limit Count:   0/2285
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         3 minutes
 Temperature Logging Interval:        59 minutes
 Min/Max recommended Temperature:      0/ 0 Celsius
 Min/Max Temperature Limit:            0/ 0 Celsius
-Temperature History Size (Index):    128 (94)
+Temperature History Size (Index):    128 (108)
 
 SCT Error Recovery Control:
            Read:    100 (10.0 seconds)
@@ -163,16 +163,16 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              37  ---  Lifetime Power-On Resets
-0x01  0x010  4           57746  ---  Power-on Hours
-0x01  0x018  6    309368566737  ---  Logical Sectors Written
-0x01  0x020  6       856275284  ---  Number of Write Commands
-0x01  0x028  6  57378654717988  ---  Logical Sectors Read
-0x01  0x030  6      4909093609  ---  Number of Read Commands
+0x01  0x010  4           57885  ---  Power-on Hours
+0x01  0x018  6    309368644673  ---  Logical Sectors Written
+0x01  0x020  6       856277454  ---  Number of Write Commands
+0x01  0x028  6  57380285843820  ---  Logical Sectors Read
+0x01  0x030  6      4910739560  ---  Number of Read Commands
 0x01  0x038  6               -  ---  Date and Time TimeStamp
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           57697  ---  Spindle Motor Power-on Hours
+0x03  0x008  4           57836  ---  Spindle Motor Power-on Hours
 0x03  0x010  4            4959  ---  Head Flying Hours
-0x03  0x018  4           92464  ---  Head Load Events
+0x03  0x018  4           92470  ---  Head Load Events
 0x03  0x020  4              24  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -182,7 +182,7 @@ Page  Offset Size        Value Flags Description
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              33  N--  Current Temperature
 0x05  0x010  1              33  N--  Average Short Term Temperature
-0x05  0x018  1              32  N--  Average Long Term Temperature
+0x05  0x018  1              33  N--  Average Long Term Temperature
 0x05  0x020  1              50  N--  Highest Temperature
 0x05  0x028  1              21  N--  Lowest Temperature
 0x05  0x030  1              43  N--  Highest Average Short Term Temperature

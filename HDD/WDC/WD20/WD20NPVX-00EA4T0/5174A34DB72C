@@ -60,16 +60,16 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   200   200   051    -    148
   3 Spin_Up_Time            POS--K   220   218   021    -    4000
-  4 Start_Stop_Count        -O--CK   100   100   000    -    158
+  4 Start_Stop_Count        -O--CK   100   100   000    -    159
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
-  7 Seek_Error_Rate         -OSR-K   200   200   000    -    0
-  9 Power_On_Hours          -O--CK   009   009   000    -    67060
+  7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
+  9 Power_On_Hours          -O--CK   005   005   000    -    69525
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    157
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    152
-193 Load_Cycle_Count        -O--CK   144   144   000    -    170754
-194 Temperature_Celsius     -O---K   128   109   000    -    24
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    158
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    153
+193 Load_Cycle_Count        -O--CK   130   130   000    -    211291
+194 Temperature_Celsius     -O---K   126   109   000    -    26
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    10
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -105,7 +105,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 276 (device log contains only the most recent 24 errors)
+Device Error Count: 277 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -120,6 +120,23 @@ Device Error Count: 276 (device log contains only the most recent 24 errors)
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 277 [12] occurred at disk power-on lifetime: 2967 hours (123 days + 15 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  04 -- 51 00 01 00 00 00 00 00 00 40 00  Error: ABRT
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  3f 00 00 00 01 00 00 00 00 00 e0 40 00     00:00:31.884  WRITE LOG EXT
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.883  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     00:00:31.879  SMART READ DATA
+  ec 00 00 00 00 00 00 00 00 00 00 00 00     00:00:31.878  IDENTIFY DEVICE
+  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     00:00:31.874  SMART READ DATA
 
 Error 276 [11] occurred at disk power-on lifetime: 1481 hours (61 days + 17 hours)
   When the command that caused the error occurred, the device was active or idle.
@@ -240,23 +257,6 @@ Error 270 [5] occurred at disk power-on lifetime: 1453 hours (60 days + 13 hours
   ec 00 00 00 00 00 00 00 00 00 00 00 00     03:25:37.313  IDENTIFY DEVICE
   b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     03:25:37.309  SMART READ DATA
 
-Error 269 [4] occurred at disk power-on lifetime: 1452 hours (60 days + 12 hours)
-  When the command that caused the error occurred, the device was active or idle.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  04 -- 51 00 01 00 00 00 00 00 00 40 00  Error: ABRT
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  3f 00 00 00 01 00 00 00 00 00 e0 40 00     02:29:02.148  WRITE LOG EXT
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:29:02.148  IDENTIFY DEVICE
-  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     02:29:02.143  SMART READ DATA
-  ec 00 00 00 00 00 00 00 00 00 00 00 00     02:29:02.143  IDENTIFY DEVICE
-  b0 00 d0 00 00 00 00 00 c2 4f 00 00 00     02:29:02.139  SMART READ DATA
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -274,8 +274,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    24 Celsius
-Power Cycle Min/Max Temperature:     21/26 Celsius
+Current Temperature:                    26 Celsius
+Power Cycle Min/Max Temperature:     24/27 Celsius
 Lifetime    Min/Max Temperature:      0/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -287,7 +287,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    128 (97)
+Temperature History Size (Index):    128 (9)
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
@@ -299,10 +299,10 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           11  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           12  Device-to-host register FISes sent due to a COMRESET
+0x0009  2            0  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2            1  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC
 0x0012  2            0  R_ERR response for host-to-device non-data FIS, CRC
-0x8000  4       268227  Vendor specific
+0x8000  4      3677202  Vendor specific
 

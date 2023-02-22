@@ -61,7 +61,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    82548
+  9 Power_On_Hours          -O--CK   100   100   000    -    86211
  12 Power_Cycle_Count       -O--CK   100   100   000    -    52
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -71,14 +71,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    49
 199 CRC_Error_Count         ----CK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    7384637
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    736263
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    7393415
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    736541
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    14
-228 Workload_Minutes        -O--CK   100   100   000    -    2152436562
+228 Workload_Minutes        -O--CK   100   100   000    -    2152656357
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   037   037   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    7384637
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    7194342
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    7393415
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    7194355
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -91,8 +91,8 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0x74)       Completed: unknown failure    20%     65280         65535
-# 2  Vendor (0x74)       Completed: unknown failure    20%     65280         65535
+# 1  Vendor (0xc3)       Completed: electrical failure 00%     65280         65535
+# 2  Vendor (0xc3)       Completed: electrical failure 00%     65280         65535
 
 SMART Selective self-test log data structure revision number 0
 
@@ -118,17 +118,17 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              52  ---  Lifetime Power-On Resets
-0x01  0x010  4           82548  ---  Power-on Hours
-0x01  0x018  6    483959635694  ---  Logical Sectors Written
-0x01  0x020  6      2346346958  ---  Number of Write Commands
-0x01  0x028  6    471488431155  ---  Logical Sectors Read
-0x01  0x030  6      2554913787  ---  Number of Read Commands
+0x01  0x010  4           86211  ---  Power-on Hours
+0x01  0x018  6    484534846550  ---  Logical Sectors Written
+0x01  0x020  6      2376274066  ---  Number of Write Commands
+0x01  0x028  6    471489253273  ---  Logical Sectors Read
+0x01  0x030  6      2554939690  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               2  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2316  ---  Number of Hardware Resets
-0x06  0x010  4             796  ---  Number of ASR Events
+0x06  0x008  4            2326  ---  Number of Hardware Resets
+0x06  0x010  4             798  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1              63  ---  Percentage Used Endurance Indicator
@@ -142,8 +142,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           12  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           21  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           31  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

@@ -58,11 +58,11 @@ SCT capabilities: 	       (0x103d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 11
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     POSR-K   100   100   090    -    0
+  1 Raw_Read_Error_Rate     POSR-K   100   100   090    -    3
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    4582
+  9 Power_On_Hours          -O--CK   100   100   000    -    6100
  12 Power_Cycle_Count       -O--CK   100   100   000    -    12
-100 Flash_GB_Erased         -O--CK   100   100   000    -    59
+100 Flash_GB_Erased         -O--CK   100   100   000    -    83
 102 Lifetime_PS4_Entry_Ct   -O--CK   100   100   000    -    13
 103 Lifetime_PS3_Exit_Ct    -O--CK   100   100   000    -    0
 170 Grown_Bad_Block_Ct      -O--CK   100   100   000    -    0
@@ -73,17 +73,17 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 177 Wear_Range_Delta        PO---K   100   100   089    -    0 0 0
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0x00000000000000
 187 Uncorrectable_ECC_Ct    -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   025   037   000    -    25 (Min/Max 22/37)
+194 Temperature_Celsius     -O---K   028   037   000    -    28 (Min/Max 22/37)
 195 RAISE_ECC_Cor_Ct        -O--CK   100   100   000    -    0
 198 Uncor_Read_Error_Ct     -O--CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 230 Drv_Life_Protect_Status PO---K   100   100   091    -    100
 231 SSD_Life_Left           PO--CK   099   099   010    -    0x001b4a00000001
 232 Available_Reservd_Space POS--K   100   100   003    -    0
-233 Lifetime_Wts_To_Flsh_GB -O--CK   100   100   000    -    1202
-241 Lifetime_Wts_Frm_Hst_GB -O--CK   100   100   000    -    3991
-242 Lifetime_Rds_Frm_Hst_GB -O--CK   100   100   000    -    4354
-243 Free_Space              -OS--K   085   085   003    -    0x072173000e22bb
+233 Lifetime_Wts_To_Flsh_GB -O--CK   100   100   000    -    1935
+241 Lifetime_Wts_Frm_Hst_GB -O--CK   100   100   000    -    4345
+242 Lifetime_Rds_Frm_Hst_GB -O--CK   100   100   000    -    6092
+243 Free_Space              -OS--K   084   084   003    -    0x0720dc000de312
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -142,7 +142,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    31 Celsius
 Power Cycle Min/Max Temperature:     25/37 Celsius
 Lifetime    Min/Max Temperature:     22/37 Celsius
 Specified Max Operating Temperature:   116 Celsius
@@ -154,7 +154,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:     -10/116 Celsius
 Min/Max Temperature Limit:           -10/120 Celsius
-Temperature History Size (Index):    478 (113)
+Temperature History Size (Index):    478 (188)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -164,20 +164,20 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              12  ---  Lifetime Power-On Resets
-0x01  0x010  4            4582  ---  Power-on Hours
-0x01  0x018  6      8370471648  ---  Logical Sectors Written
-0x01  0x020  6       144961674  ---  Number of Write Commands
-0x01  0x028  6      9132153607  ---  Logical Sectors Read
-0x01  0x030  6        36514569  ---  Number of Read Commands
-0x01  0x038  6     16498531011  ---  Date and Time TimeStamp
-0x01  0x058  7           56118  ---  Resource Availability
+0x01  0x010  4            6100  ---  Power-on Hours
+0x01  0x018  6      9112536433  ---  Logical Sectors Written
+0x01  0x020  6       176450492  ---  Number of Write Commands
+0x01  0x028  6     12775924975  ---  Logical Sectors Read
+0x01  0x030  6        51183905  ---  Number of Read Commands
+0x01  0x038  6     21962581843  ---  Date and Time TimeStamp
+0x01  0x058  7           55131  ---  Resource Availability
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              25  ---  Current Temperature
-0x05  0x010  1              24  ---  Average Short Term Temperature
-0x05  0x018  1              23  ---  Average Long Term Temperature
+0x05  0x008  1              28  ---  Current Temperature
+0x05  0x010  1              28  ---  Average Short Term Temperature
+0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
 0x05  0x028  1              22  ---  Lowest Temperature
 0x05  0x030  1              34  ---  Highest Average Short Term Temperature

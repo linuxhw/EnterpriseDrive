@@ -60,7 +60,7 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   099   099   000    -    8
-  9 Power_On_Hours          -O--CK   100   100   000    -    25060
+  9 Power_On_Hours          -O--CK   100   100   000    -    25877
  12 Power_Cycle_Count       -O--CK   100   100   000    -    49
 170 Available_Reservd_Space PO--CK   099   099   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    2
@@ -69,23 +69,23 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2619 (49 65535)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error_Count  PO--CK   100   100   090    -    0
-187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Drive_Temperature       -O---K   070   066   000    -    30 (Min/Max 19/35)
+187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    4
+190 Drive_Temperature       -O---K   077   066   000    -    23 (Min/Max 19/35)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    42
-194 Temperature_Celsius     -O---K   100   100   000    -    30
+194 Temperature_Celsius     -O---K   100   100   000    -    23
 197 Pending_Sector_Count    -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    5664075
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    1863
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    5705867
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    1884
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    43
-228 Workload_Minutes        -O--CK   100   100   000    -    1503430
+228 Workload_Minutes        -O--CK   100   100   000    -    1552456
 232 Available_Reservd_Space PO--CK   099   099   010    -    0
 233 Media_Wearout_Indicator -O--CK   099   099   000    -    0
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
 235 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2619 (49 65535)
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    5664075
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    4303738
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    12961313
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    5705867
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    4476547
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    13120128
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -117,7 +117,89 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      8  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (20 sectors)
-No Errors Logged
+Device Error Count: 4
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 4 [3] occurred at disk power-on lifetime: 25872 hours (1078 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 d8 00 00 16 58 0a 00 40 00  Error: UNC at LBA = 0x16580a00 = 374868480
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 d8 00 00 16 58 0a 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 d0 00 00 16 58 09 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 c8 00 00 16 5a 87 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 b8 00 00 16 5a 84 00 40 00  9d+ ...          READ FPDMA QUEUED
+  ec 00 00 00 00 00 00 00 00 00 00 a0 00  9d+ ...          IDENTIFY DEVICE
+
+Error 3 [2] occurred at disk power-on lifetime: 25872 hours (1078 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 78 00 00 16 58 08 00 40 00  Error: UNC at LBA = 0x16580800 = 374867968
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 78 00 00 16 58 08 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 80 00 00 16 5a 87 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 70 00 00 16 58 09 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 68 00 00 16 58 0a 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 90 00 00 16 5a 84 00 40 00  9d+ ...          READ FPDMA QUEUED
+
+Error 2 [1] occurred at disk power-on lifetime: 25872 hours (1078 days + 0 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 30 00 00 16 58 08 00 40 00  Error: UNC at LBA = 0x16580800 = 374867968
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 30 00 00 16 58 08 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 20 00 00 16 5a 86 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 18 00 00 16 5a 85 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 28 00 00 16 5a 87 00 40 00  9d+ ...          READ FPDMA QUEUED
+  60 01 00 00 10 00 00 16 5a 84 00 40 00  9d+ ...          READ FPDMA QUEUED
+
+Error 1 [0] occurred at disk power-on lifetime: 25700 hours (1070 days + 20 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  40 -- 41 00 00 00 00 4e 86 61 78 40 00  Error: UNC at LBA = 0x4e866178 = 1317429624
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 01 00 00 00 00 00 4e 86 61 78 40 00  2d+ ...          READ FPDMA QUEUED
+  60 01 00 00 08 00 00 4e 86 62 78 40 00  2d+ ...          READ FPDMA QUEUED
+  60 01 00 00 f0 00 00 4e 86 3a 78 40 00  2d+ ...          READ FPDMA QUEUED
+  60 01 00 00 e8 00 00 4e 86 39 78 40 00  2d+ ...          READ FPDMA QUEUED
+  60 01 00 00 e0 00 00 4e 86 38 78 40 00  2d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
@@ -136,7 +218,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    30 Celsius
+Current Temperature:                    23 Celsius
 Power Cycle Min/Max Temperature:     19/35 Celsius
 Lifetime    Min/Max Temperature:     15/36 Celsius
 Specified Max Operating Temperature:    73 Celsius
@@ -150,7 +232,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/73 Celsius
 Min/Max Temperature Limit:            0/73 Celsius
-Temperature History Size (Index):    478 (387)
+Temperature History Size (Index):    478 (180)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -160,18 +242,18 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              49  ---  Lifetime Power-On Resets
-0x01  0x018  6    371200856049  ---  Logical Sectors Written
-0x01  0x020  6      2670505915  ---  Number of Write Commands
-0x01  0x028  6    282049785548  ---  Logical Sectors Read
-0x01  0x030  6      1026935261  ---  Number of Read Commands
-0x01  0x038  6        22906062  ---  Date and Time TimeStamp
+0x01  0x018  6    373939706672  ---  Logical Sectors Written
+0x01  0x020  6      2695508162  ---  Number of Write Commands
+0x01  0x028  6    293375046102  ---  Logical Sectors Read
+0x01  0x030  6      1053697259  ---  Number of Read Commands
+0x01  0x038  6      2964459087  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               4  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              30  ---  Current Temperature
-0x05  0x010  1              26  ---  Average Short Term Temperature
-0x05  0x018  1              26  ---  Average Long Term Temperature
+0x05  0x008  1              23  ---  Current Temperature
+0x05  0x010  1              23  ---  Average Short Term Temperature
+0x05  0x018  1              25  ---  Average Long Term Temperature
 0x05  0x020  1              35  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              31  ---  Highest Average Short Term Temperature

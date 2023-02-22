@@ -56,9 +56,9 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    1515
+  9 Power_On_Hours          -O--CK   100   100   ---    -    2847
  12 Power_Cycle_Count       -O--CK   100   100   ---    -    3
-165 Block_Erase_Count       -O--CK   100   100   ---    -    43319830
+165 Block_Erase_Count       -O--CK   100   100   ---    -    111751070762
 166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    1
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    36
 168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    34
@@ -66,19 +66,19 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    4
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    10
 174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    0
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
 188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   075   028   ---    -    25 (Min/Max 23/28)
+194 Temperature_Celsius     -O---K   075   031   ---    -    25 (Min/Max 23/31)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x005200280052
+230 Media_Wearout_Indicator -O--CK   001   001   ---    -    0x014001000140
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    10178
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    16716
-241 Host_Writes_GiB         ----CK   253   253   ---    -    13895
-242 Host_Reads_GiB          ----CK   253   253   ---    -    11972
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    22958
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    33332
+241 Host_Writes_GiB         ----CK   253   253   ---    -    25580
+242 Host_Reads_GiB          ----CK   253   253   ---    -    25329
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -115,13 +115,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x010  4            1515  ---  Power-on Hours
-0x01  0x018  6     29140698550  ---  Logical Sectors Written
-0x01  0x020  6       395525899  ---  Number of Write Commands
-0x01  0x028  6     25107748595  ---  Logical Sectors Read
-0x01  0x030  6       203947137  ---  Number of Read Commands
+0x01  0x010  4            2847  ---  Power-on Hours
+0x01  0x018  6     53647121864  ---  Logical Sectors Written
+0x01  0x020  6       786331988  ---  Number of Write Commands
+0x01  0x028  6     53119236295  ---  Logical Sectors Read
+0x01  0x030  6       462668367  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               1  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

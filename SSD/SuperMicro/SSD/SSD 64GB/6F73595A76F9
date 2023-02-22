@@ -1,8 +1,8 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
-Model Family:     Silicon Motion based OEM SSDs
+Model Family:     Supermicro SATA DOM (SuperDOM)
 Device Model:     SuperMicro SSD
 Serial Number:    --
 LU WWN Device Id: 5 15d907 ...
@@ -57,33 +57,33 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     ------   100   100   000    -    0
   5 Reallocated_Sector_Ct   ------   100   100   000    -    0
-  9 Power_On_Hours          ------   100   100   000    -    23775
- 12 Power_Cycle_Count       ------   100   100   000    -    10
- 15 Unknown_Attribute       ------   100   100   000    -    123731968
-160 Uncorrectable_Error_Cnt ------   100   100   000    -    0
-161 Valid_Spare_Block_Cnt   ------   100   100   000    -    158
-163 Initial_Bad_Block_Count ------   100   100   000    -    15
-164 Total_Erase_Count       ------   100   100   000    -    2211283
-165 Max_Erase_Count         ------   100   100   000    -    1104
-166 Min_Erase_Count         ------   100   100   000    -    1002
-167 Average_Erase_Count     ------   100   100   000    -    1061
-168 Max_Erase_Count_of_Spec ------   100   100   000    -    3000
+  9 Power_On_Hours          ------   100   100   000    -    37405
+ 12 Power_Cycle_Count       ------   100   100   000    -    12
+ 15 User_Cpcty_Sector_Cnt   ------   100   100   000    -    123731968
+160 Not_In_Use              ------   100   100   000    -    0
+161 Not_In_Use              ------   100   100   000    -    158
+163 Not_In_Use              ------   100   100   000    -    15
+164 Not_In_Use              ------   100   100   000    -    2871494
+165 Not_In_Use              ------   100   100   000    -    1427
+166 Minimum_PE_Cycles_TLC   ------   100   100   000    -    1325
+167 Not_In_Use              ------   100   100   000    -    1378
+168 Maximum_PE_Cycles_TLC   ------   100   100   000    -    3000
 172 Unknown_Attribute       ------   100   100   000    -    0
 175 Program_Fail_Count_Chip ------   100   100   000    -    15
-177 Wear_Leveling_Count     ------   100   100   000    -    12922
+177 Wear_Leveling_Count     ------   100   100   000    -    15345
 181 Program_Fail_Cnt_Total  ------   100   100   000    -    0
 187 Reported_Uncorrect      ------   100   100   000    -    0
-192 Power-Off_Retract_Count ------   100   100   000    -    3
-194 Temperature_Celsius     ------   100   100   000    -    52 (Min/Max 17/69)
-195 Hardware_ECC_Recovered  ------   100   100   000    -    6835
+192 Power-Off_Retract_Count ------   100   100   000    -    4
+194 Temperature_Celsius     ------   100   100   000    -    56 (Min/Max 17/69)
+195 Hardware_ECC_Recovered  ------   100   100   000    -    8820
 197 Current_Pending_Sector  ------   100   100   000    -    0
 198 Offline_Uncorrectable   ------   100   100   000    -    0
 199 UDMA_CRC_Error_Count    ------   100   100   000    -    1
-231 Temperature_Celsius     ------   100   100   000    -    100
-232 Available_Reservd_Space ------   100   100   000    -    65
-233 Media_Wearout_Indicator ------   100   100   000    -    69102
-241 Host_Writes_32MiB       ------   100   100   000    -    26592
-242 Host_Reads_32MiB        ------   100   100   000    -    12189
+231 SSD_Life_Left           ------   100   100   000    -    100
+232 Available_Reservd_Space ------   100   100   000    -    55
+233 NAND_Writes_1GiB        ------   100   100   000    -    89734
+241 Lifetime_Writes_GiB     ------   100   100   000    -    39542
+242 Lifetime_Reads_GiB      ------   100   100   000    -    15595
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -126,22 +126,22 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              10  ---  Lifetime Power-On Resets
-0x01  0x010  4           23775  ---  Power-on Hours
-0x01  0x018  6      4229081925  ---  Logical Sectors Written
-0x01  0x020  6      1999551766  ---  Number of Write Commands
-0x01  0x028  6      4088670879  ---  Logical Sectors Read
-0x01  0x030  6       315744924  ---  Number of Read Commands
+0x01  0x008  4              12  ---  Lifetime Power-On Resets
+0x01  0x010  4           37405  ---  Power-on Hours
+0x01  0x018  6      1321929565  ---  Logical Sectors Written
+0x01  0x020  6      3646301996  ---  Number of Write Commands
+0x01  0x028  6      2641005179  ---  Logical Sectors Read
+0x01  0x030  6       459788776  ---  Number of Read Commands
 
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4               6  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4               7  ---  Resets Between Cmd Acceptance and Completion
 
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              71  ---  Number of Hardware Resets
+0x06  0x008  4              88  ---  Number of Hardware Resets
 0x06  0x018  4               1  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              35  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              45  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -58,19 +58,19 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   099   099   010    -    3
-  9 Power_On_Hours          -O--CK   085   085   000    -    74035
+  9 Power_On_Hours          -O--CK   084   084   000    -    77033
  12 Power_Cycle_Count       -O--CK   099   099   000    -    13
-177 Wear_Leveling_Count     PO--C-   062   062   000    -    2298
+177 Wear_Leveling_Count     PO--C-   058   058   000    -    2514
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   099   099   010    -    3
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
 182 Erase_Fail_Count_Total  -O--CK   100   100   010    -    0
 183 Runtime_Bad_Block       PO--C-   099   099   010    -    3
 187 Uncorrectable_Error_Cnt -O--CK   099   099   000    -    4
-190 Airflow_Temperature_Cel -O--CK   072   063   000    -    28
+190 Airflow_Temperature_Cel -O--CK   070   063   000    -    30
 195 ECC_Error_Rate          -O-RC-   199   199   000    -    4
-199 CRC_Error_Count         -OSRCK   099   099   000    -    13
+199 CRC_Error_Count         -OSRCK   099   099   000    -    18
 235 POR_Recovery_Count      -O--C-   099   099   000    -    11
-241 Total_LBAs_Written      -O--CK   099   099   000    -    498245699023
+241 Total_LBAs_Written      -O--CK   099   099   000    -    516994234668
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -120,17 +120,17 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    30 Celsius
 Power Cycle Min/Max Temperature:      ?/ ? Celsius
 Lifetime    Min/Max Temperature:      ?/ ? Celsius
-Under/Over Temperature Limit Count:   0/943428
+Under/Over Temperature Limit Count:   0/975924
 
 SCT Temperature History Version:     2
 Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      ?/ ? Celsius
 Min/Max Temperature Limit:            ?/ ? Celsius
-Temperature History Size (Index):    128 (0)
+Temperature History Size (Index):    128 (78)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -138,7 +138,7 @@ SCT Error Recovery Control:
 
 SATA Phy Event Counters (GP Log 0x11)
 ID      Size     Value  Description
-0x0001  2            0  Command failed due to ICRC error
+0x0001  2            5  Command failed due to ICRC error
 0x0002  2            0  R_ERR response for data FIS
 0x0003  2            0  R_ERR response for device-to-host data FIS
 0x0004  2            0  R_ERR response for host-to-device data FIS
@@ -146,8 +146,8 @@ ID      Size     Value  Description
 0x0006  2            0  R_ERR response for device-to-host non-data FIS
 0x0007  2            0  R_ERR response for host-to-device non-data FIS
 0x0008  2            0  Device-to-host non-data FIS retries
-0x0009  2           84  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  2           84  Device-to-host register FISes sent due to a COMRESET
+0x0009  2          305  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  2          305  Device-to-host register FISes sent due to a COMRESET
 0x000b  2            0  CRC errors within host-to-device FIS
 0x000d  2            0  Non-CRC errors within host-to-device FIS
 0x000f  2            0  R_ERR response for host-to-device data FIS, CRC

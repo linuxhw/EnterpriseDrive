@@ -1,4 +1,4 @@
-smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1127...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -59,9 +59,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   094   094   000    -    29784
+  9 Power_On_Hours          -O--CK   093   093   000    -    31279
  12 Power_Cycle_Count       -O--CK   099   099   000    -    15
-177 Wear_Leveling_Count     PO--C-   095   095   005    -    327
+177 Wear_Leveling_Count     PO--C-   095   095   005    -    369
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1631
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -76,14 +76,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    12
-241 Total_LBAs_Written      -O--CK   099   099   000    -    219591346712
-242 Total_LBAs_Read         -O--CK   099   099   000    -    80603720942
+241 Total_LBAs_Written      -O--CK   099   099   000    -    253835422663
+242 Total_LBAs_Read         -O--CK   099   099   000    -    82847036739
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    349698645504
+251 NAND_Writes             -O--CK   100   100   000    -    395223896064
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,7 +144,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (23)
+Temperature History Size (Index):    128 (34)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -154,12 +154,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              15  ---  Lifetime Power-On Resets
-0x01  0x010  4           29784  ---  Power-on Hours
-0x01  0x018  6    219591346800  ---  Logical Sectors Written
-0x01  0x020  6      3522671405  ---  Number of Write Commands
-0x01  0x028  6     80603720942  ---  Logical Sectors Read
-0x01  0x030  6       543696069  ---  Number of Read Commands
-0x01  0x038  6         2643000  ---  Date and Time TimeStamp
+0x01  0x010  4           31279  ---  Power-on Hours
+0x01  0x018  6    253835422663  ---  Logical Sectors Written
+0x01  0x020  6      3972379117  ---  Number of Write Commands
+0x01  0x028  6     82847036739  ---  Logical Sectors Read
+0x01  0x030  6       566012774  ---  Number of Read Commands
+0x01  0x038  6         3591000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
@@ -173,7 +173,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               5  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -61,18 +61,18 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    15694
+  9 Power_On_Hours          -O--CK   100   100   000    -    16989
  12 Power_Cycle_Count       -O--CK   100   100   001    -    11
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   100   100   000    -    5
+173 Avg_Block-Erase_Count   -O--CK   100   100   000    -    8
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    6
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    5
-194 Temperature_Celsius     -O---K   071   067   000    -    29 (Min/Max 19/33)
+194 Temperature_Celsius     -O---K   071   066   000    -    29 (Min/Max 19/34)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
@@ -80,9 +80,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Percent_Lifetime_Remain ----CK   100   100   001    -    0
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    11965560316
-247 Host_Program_Page_Count -O--CK   100   100   000    -    380922122
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    43366506
+246 Unknown_Micron_Attrib   -O--CK   100   100   000    -    18525497997
+247 Host_Program_Page_Count -O--CK   100   100   000    -    588208365
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    75615231
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    5352
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
 211 Integ_Scan_Complete_Cnt -O--CK   100   100   000    -    87
@@ -164,8 +164,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        SMART Off-line Data Collection executing in background (4)
 Current Temperature:                    29 Celsius
-Power Cycle Min/Max Temperature:     20/33 Celsius
-Lifetime    Min/Max Temperature:     19/33 Celsius
+Power Cycle Min/Max Temperature:     20/34 Celsius
+Lifetime    Min/Max Temperature:     19/34 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -173,18 +173,18 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (113)
+Temperature History Size (Index):    478 (342)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           15694  ---  Power-on Hours
-0x01  0x018  6     11965560512  ---  Logical Sectors Written
-0x01  0x020  6       576188586  ---  Number of Write Commands
-0x01  0x028  6     12228912602  ---  Logical Sectors Read
-0x01  0x030  6       124636053  ---  Number of Read Commands
-0x01  0x038  6     56499120000  ---  Date and Time TimeStamp
+0x01  0x010  4           16989  ---  Power-on Hours
+0x01  0x018  6     18525497997  ---  Logical Sectors Written
+0x01  0x020  6       830411684  ---  Number of Write Commands
+0x01  0x028  6     14362753435  ---  Logical Sectors Read
+0x01  0x030  6       135763656  ---  Number of Read Commands
+0x01  0x038  6     61161900000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               5  ---  Resets Between Cmd Acceptance and Completion
@@ -192,7 +192,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x008  1              29  ---  Current Temperature
 0x05  0x010  1              29  ---  Average Short Term Temperature
 0x05  0x018  1              27  ---  Average Long Term Temperature
-0x05  0x020  1              33  ---  Highest Temperature
+0x05  0x020  1              34  ---  Highest Temperature
 0x05  0x028  1              19  ---  Lowest Temperature
 0x05  0x030  1              32  ---  Highest Average Short Term Temperature
 0x05  0x038  1              24  ---  Lowest Average Short Term Temperature
@@ -203,8 +203,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4              62  ---  Number of Hardware Resets
-0x06  0x010  4              15  ---  Number of ASR Events
+0x06  0x008  4              66  ---  Number of Hardware Resets
+0x06  0x010  4              16  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               0  N--  Percentage Used Endurance Indicator
@@ -218,7 +218,7 @@ ID      Size     Value  Description
 0x0003  4            0  R_ERR response for device-to-host data FIS
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0006  4            0  R_ERR response for device-to-host non-data FIS
-0x000a  4           50  Device-to-host register FISes sent due to a COMRESET
+0x000a  4           55  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 

@@ -59,17 +59,17 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     PO-R--   100   100   016    -    0
-  2 Throughput_Performance  P-S---   134   134   054    -    89
+  2 Throughput_Performance  P-S---   134   134   054    -    88
   3 Spin_Up_Time            POS---   148   148   024    -    391 (Average 386)
   4 Start_Stop_Count        -O--C-   100   100   000    -    30
   5 Reallocated_Sector_Ct   PO--CK   100   100   005    -    0
   7 Seek_Error_Rate         PO-R--   100   100   067    -    0
   8 Seek_Time_Performance   P-S---   138   138   020    -    25
-  9 Power_On_Hours          -O--C-   089   089   000    -    82928
+  9 Power_On_Hours          -O--C-   088   088   000    -    84433
  10 Spin_Retry_Count        PO--C-   100   100   060    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    30
-192 Power-Off_Retract_Count -O--CK   100   100   000    -    286
-193 Load_Cycle_Count        -O--C-   100   100   000    -    286
+192 Power-Off_Retract_Count -O--CK   100   100   000    -    290
+193 Load_Cycle_Count        -O--C-   100   100   000    -    290
 194 Temperature_Celsius     -O----   240   240   000    -    25 (Min/Max 20/40)
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O---K   100   100   000    -    0
@@ -132,7 +132,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    128 (105)
+Temperature History Size (Index):    128 (18)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -142,15 +142,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              30  ---  Lifetime Power-On Resets
-0x01  0x010  4           82928  ---  Power-on Hours
-0x01  0x018  6    262080691449  ---  Logical Sectors Written
-0x01  0x020  6       699876458  ---  Number of Write Commands
-0x01  0x028  6   1594198206357  ---  Logical Sectors Read
-0x01  0x030  6      6272245680  ---  Number of Read Commands
+0x01  0x010  4           84433  ---  Power-on Hours
+0x01  0x018  6    270048562049  ---  Logical Sectors Written
+0x01  0x020  6       728872452  ---  Number of Write Commands
+0x01  0x028  6   1615882126237  ---  Logical Sectors Read
+0x01  0x030  6      6308997172  ---  Number of Read Commands
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           82915  ---  Spindle Motor Power-on Hours
-0x03  0x010  4           82915  ---  Head Flying Hours
-0x03  0x018  4             286  ---  Head Load Events
+0x03  0x008  4           84420  ---  Spindle Motor Power-on Hours
+0x03  0x010  4           84420  ---  Head Flying Hours
+0x03  0x018  4             290  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               3  ---  Read Recovery Attempts
 0x03  0x030  4               7  ---  Number of Mechanical Start Failures
@@ -158,9 +158,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
+0x05  0x008  1              25  ---  Current Temperature
 0x05  0x010  1              24  N--  Average Short Term Temperature
-0x05  0x018  1              23  N--  Average Long Term Temperature
+0x05  0x018  1              24  N--  Average Long Term Temperature
 0x05  0x020  1              40  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
 0x05  0x030  1              35  N--  Highest Average Short Term Temperature

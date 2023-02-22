@@ -60,17 +60,17 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    8005
- 12 Power_Cycle_Count       -O--CK   100   100   001    -    12
+  9 Power_On_Hours          -O--CK   100   100   000    -    9801
+ 12 Power_Cycle_Count       -O--CK   100   100   001    -    13
 170 Unknown_Attribute       PO--CK   100   100   010    -    0
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
 172 Unknown_Attribute       -O--CK   100   100   001    -    0
-173 Unknown_Attribute       -O--CK   099   099   000    -    15
-174 Unknown_Attribute       -O--CK   100   100   000    -    3
+173 Unknown_Attribute       -O--CK   099   099   000    -    19
+174 Unknown_Attribute       -O--CK   100   100   000    -    4
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-188 Command_Timeout         -O--CK   100   100   000    -    10
+188 Command_Timeout         -O--CK   100   100   000    -    11
 194 Temperature_Celsius     -O---K   072   063   000    -    28 (Min/Max 16/37)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
@@ -79,9 +79,9 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
 202 Unknown_SSD_Attribute   ----CK   099   099   001    -    1
 206 Unknown_SSD_Attribute   -OSR--   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    102379724352
-247 Unknown_Attribute       -O--CK   100   100   000    -    3293600384
-248 Unknown_Attribute       -O--CK   100   100   000    -    1111401062
+246 Unknown_Attribute       -O--CK   100   100   000    -    121854097528
+247 Unknown_Attribute       -O--CK   100   100   000    -    3936476458
+248 Unknown_Attribute       -O--CK   100   100   000    -    1531889019
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   001   001   000    -    10948
 210 Unknown_Attribute       -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -143,7 +143,7 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
 Current Temperature:                    28 Celsius
-Power Cycle Min/Max Temperature:     20/33 Celsius
+Power Cycle Min/Max Temperature:     24/35 Celsius
 Lifetime    Min/Max Temperature:     16/37 Celsius
 Under/Over Temperature Limit Count:   0/0
 
@@ -152,25 +152,25 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (329)
+Temperature History Size (Index):    478 (454)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4              12  ---  Lifetime Power-On Resets
-0x01  0x010  4            8005  ---  Power-on Hours
-0x01  0x018  6    102379724352  ---  Logical Sectors Written
-0x01  0x020  6       461640681  ---  Number of Write Commands
-0x01  0x028  6    101731373785  ---  Logical Sectors Read
-0x01  0x030  6       309494723  ---  Number of Read Commands
-0x01  0x038  6     28819320000  ---  Date and Time TimeStamp
+0x01  0x008  4              13  ---  Lifetime Power-On Resets
+0x01  0x010  4            9801  ---  Power-on Hours
+0x01  0x018  6    121854097544  ---  Logical Sectors Written
+0x01  0x020  6       617293590  ---  Number of Write Commands
+0x01  0x028  6    143648161579  ---  Logical Sectors Read
+0x01  0x030  6       500831559  ---  Number of Read Commands
+0x01  0x038  6     35283600000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
-0x04  0x010  4              10  ---  Resets Between Cmd Acceptance and Completion
+0x04  0x010  4              11  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              28  ---  Current Temperature
 0x05  0x010  1              28  ---  Average Short Term Temperature
-0x05  0x018  1              28  ---  Average Long Term Temperature
+0x05  0x018  1              27  ---  Average Long Term Temperature
 0x05  0x020  1              37  ---  Highest Temperature
 0x05  0x028  1              16  ---  Lowest Temperature
 0x05  0x030  1              33  ---  Highest Average Short Term Temperature
@@ -182,8 +182,8 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  ---  Time in Under-Temperature
 0x05  0x068  1               0  ---  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             196  ---  Number of Hardware Resets
-0x06  0x010  4              58  ---  Number of ASR Events
+0x06  0x008  4             201  ---  Number of Hardware Resets
+0x06  0x010  4              59  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
 0x07  0x008  1               1  N--  Percentage Used Endurance Indicator

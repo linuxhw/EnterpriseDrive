@@ -61,7 +61,7 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   3 Spin_Up_Time            -----K   100   100   000    -    0
   4 Start_Stop_Count        ----CK   100   100   000    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    84711
+  9 Power_On_Hours          -O--CK   100   100   000    -    88295
  12 Power_Cycle_Count       -O--CK   100   100   000    -    40
 170 Reserve_Block_Count     PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
@@ -69,14 +69,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    34
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    10034349
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    60487
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    10050376
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    60908
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    9
-228 Workload_Minutes        -O--CK   100   100   000    -    5082714
+228 Workload_Minutes        -O--CK   100   100   000    -    5297704
 232 Available_Reservd_Space PO--CK   100   100   010    -    0
 233 Media_Wearout_Indicator -O--CK   041   041   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    10034349
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    1041511
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    10050376
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    1041582
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -114,20 +114,20 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4              40  ---  Lifetime Power-On Resets
-0x01  0x010  4           84711  ---  Power-on Hours
-0x01  0x018  6    657611106856  ---  Logical Sectors Written
-0x01  0x020  6       578734596  ---  Number of Write Commands
-0x01  0x028  6     68256473009  ---  Logical Sectors Read
-0x01  0x030  6      2424779666  ---  Number of Read Commands
+0x01  0x010  4           88295  ---  Power-on Hours
+0x01  0x018  6    658661459848  ---  Logical Sectors Written
+0x01  0x020  6       632175010  ---  Number of Write Commands
+0x01  0x028  6     68261167156  ---  Logical Sectors Read
+0x01  0x030  6      2424814202  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4            2195  ---  Number of Hardware Resets
-0x06  0x010  4             781  ---  Number of ASR Events
+0x06  0x008  4            2200  ---  Number of Hardware Resets
+0x06  0x010  4             782  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              59  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              60  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
@@ -138,8 +138,8 @@ ID      Size     Value  Description
 0x0004  4            0  R_ERR response for host-to-device data FIS
 0x0007  4            0  R_ERR response for host-to-device non-data FIS
 0x0008  4            0  Device-to-host non-data FIS retries
-0x0009  4           15  Transition from drive PhyRdy to drive PhyNRdy
-0x000a  4           26  Device-to-host register FISes sent due to a COMRESET
+0x0009  4           18  Transition from drive PhyRdy to drive PhyNRdy
+0x000a  4           31  Device-to-host register FISes sent due to a COMRESET
 0x000b  4            0  CRC errors within host-to-device FIS
 0x000d  4            0  Non-CRC errors within host-to-device FIS
 0x000f  4            0  R_ERR response for host-to-device data FIS, CRC

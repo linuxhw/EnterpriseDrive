@@ -24,8 +24,8 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x84)	Offline data collection activity
-					was suspended by an interrupting command from host.
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
@@ -65,28 +65,28 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
   7 Seek_Error_Rate         PO-R--   100   100   050    -    0
   8 Seek_Time_Performance   P-S---   100   100   050    -    0
-  9 Power_On_Hours          -O--CK   097   097   000    -    1297
+  9 Power_On_Hours          -O--CK   093   093   000    -    2878
  10 Spin_Retry_Count        PO--CK   100   100   030    -    0
  12 Power_Cycle_Count       -O--CK   100   100   000    -    2
  23 Unknown_Attribute       PO---K   100   100   075    -    0
  24 Unknown_Attribute       PO---K   100   100   075    -    0
  27 Unknown_Attribute       PO---K   100   100   030    -    853779
-191 G-Sense_Error_Rate      -O--CK   100   100   000    -    0
+191 G-Sense_Error_Rate      -O--CK   100   100   000    -    2
 192 Power-Off_Retract_Count -O--CK   100   100   000    -    1
-193 Load_Cycle_Count        -O--CK   100   100   000    -    508
-194 Temperature_Celsius     -O---K   100   100   000    -    23 (Min/Max 17/25)
+193 Load_Cycle_Count        -O--CK   100   100   000    -    511
+194 Temperature_Celsius     -O---K   100   100   000    -    20 (Min/Max 17/25)
 196 Reallocated_Event_Count PO--CK   100   100   010    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   200   200   000    -    0
 220 Disk_Shift              -O----   100   100   000    -    18087937
-222 Loaded_Hours            -O--CK   097   097   000    -    1277
+222 Loaded_Hours            -O--CK   093   093   000    -    2858
 223 Load_Retry_Count        -O--CK   100   100   000    -    0
 224 Load_Friction           -O---K   100   100   000    -    0
-226 Load-in_Time            -OS--K   100   100   000    -    627
+226 Load-in_Time            -OS--K   100   100   000    -    628
 240 Head_Flying_Hours       P-----   100   100   001    -    0
-241 Total_LBAs_Written      -O--CK   100   100   000    -    392797956
-242 Total_LBAs_Read         -O--CK   100   100   000    -    12127378879
+241 Total_LBAs_Written      -O--CK   100   100   000    -    2372757047
+242 Total_LBAs_Read         -O--CK   100   100   000    -    30138770277
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,9 +138,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    23 Celsius
-Power Cycle Min/Max Temperature:     19/25 Celsius
+Device State:                        Active (0)
+Current Temperature:                    20 Celsius
+Power Cycle Min/Max Temperature:     18/25 Celsius
 Lifetime    Min/Max Temperature:     17/25 Celsius
 Specified Max Operating Temperature:    55 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -154,7 +154,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      5/55 Celsius
 Min/Max Temperature Limit:           -40/70 Celsius
-Temperature History Size (Index):    478 (406)
+Temperature History Size (Index):    478 (177)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -164,19 +164,19 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 3) ==
 0x01  0x008  4               2  ---  Lifetime Power-On Resets
-0x01  0x010  4            1297  ---  Power-on Hours
-0x01  0x018  6       392797956  ---  Logical Sectors Written
-0x01  0x020  6         1225973  ---  Number of Write Commands
-0x01  0x028  6     12127378879  ---  Logical Sectors Read
-0x01  0x030  6        12334786  ---  Number of Read Commands
-0x01  0x038  6      4669200000  ---  Date and Time TimeStamp
+0x01  0x010  4            2878  ---  Power-on Hours
+0x01  0x018  6      2372757047  ---  Logical Sectors Written
+0x01  0x020  6        28027999  ---  Number of Write Commands
+0x01  0x028  6     30138770277  ---  Logical Sectors Read
+0x01  0x030  6        31412801  ---  Number of Read Commands
+0x01  0x038  6     10360800000  ---  Date and Time TimeStamp
 0x01  0x040  4               0  ---  Pending Error Count
 0x02  =====  =               =  ===  == Free-Fall Statistics (rev 1) ==
-0x02  0x010  4               0  ---  Overlimit Shock Events
+0x02  0x010  4               2  ---  Overlimit Shock Events
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4             104  ---  Spindle Motor Power-on Hours
-0x03  0x010  4              84  ---  Head Flying Hours
-0x03  0x018  4             508  ---  Head Load Events
+0x03  0x008  4             492  ---  Spindle Motor Power-on Hours
+0x03  0x010  4             472  ---  Head Flying Hours
+0x03  0x018  4             511  ---  Head Load Events
 0x03  0x020  4               0  ---  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  ---  Read Recovery Attempts
 0x03  0x030  4               0  ---  Number of Mechanical Start Failures
@@ -187,9 +187,9 @@ Page  Offset Size        Value Flags Description
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x04  0x018  4               0  -D-  Physical Element Status Changed
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              23  ---  Current Temperature
+0x05  0x008  1              20  ---  Current Temperature
 0x05  0x010  1              20  N--  Average Short Term Temperature
-0x05  0x018  1              20  N--  Average Long Term Temperature
+0x05  0x018  1              19  N--  Average Long Term Temperature
 0x05  0x020  1              25  ---  Highest Temperature
 0x05  0x028  1              17  ---  Lowest Temperature
 0x05  0x030  1              23  N--  Highest Average Short Term Temperature

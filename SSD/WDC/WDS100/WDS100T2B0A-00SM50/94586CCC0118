@@ -55,29 +55,29 @@ SMART Attributes Data Structure revision number: 4
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   ---    -    0
-  9 Power_On_Hours          -O--CK   100   100   ---    -    3631
- 12 Power_Cycle_Count       -O--CK   100   100   ---    -    3
-165 Block_Erase_Count       -O--CK   100   100   ---    -    1636747055638
-166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    35
+  9 Power_On_Hours          -O--CK   100   100   ---    -    6952
+ 12 Power_Cycle_Count       -O--CK   100   100   ---    -    19
+165 Block_Erase_Count       -O--CK   100   100   ---    -    2375641209449
+166 Minimum_PE_Cycles_TLC   -O--CK   100   100   ---    -    63
 167 Max_Bad_Blocks_per_Die  -O--CK   100   100   ---    -    131
-168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    102
+168 Maximum_PE_Cycles_TLC   -O--CK   100   100   ---    -    139
 169 Total_Bad_Blocks        -O--CK   100   100   ---    -    463
 170 Grown_Bad_Blocks        -O--CK   100   100   ---    -    0
 171 Program_Fail_Count      -O--CK   100   100   ---    -    0
 172 Erase_Fail_Count        -O--CK   100   100   ---    -    0
-173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    61
-174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    0
+173 Average_PE_Cycles_TLC   -O--CK   100   100   ---    -    89
+174 Unexpected_Power_Loss   -O--CK   100   100   ---    -    7
 184 End-to-End_Error        -O--CK   100   100   ---    -    0
 187 Reported_Uncorrect      -O--CK   100   100   ---    -    0
-188 Command_Timeout         -O--CK   100   100   ---    -    0
-194 Temperature_Celsius     -O---K   075   038   ---    -    25 (Min/Max 23/38)
+188 Command_Timeout         -O--CK   100   100   ---    -    1
+194 Temperature_Celsius     -O---K   073   038   ---    -    27 (Min/Max 21/38)
 199 UDMA_CRC_Error_Count    -O--CK   100   100   ---    -    0
-230 Media_Wearout_Indicator -O--CK   009   009   ---    -    0x091a060a091a
+230 Media_Wearout_Indicator -O--CK   013   013   ---    -    0x0d34085a0d34
 232 Available_Reservd_Space PO--CK   100   100   004    -    100
-233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    63481
-234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    68870
-241 Host_Writes_GiB         ----CK   253   253   ---    -    32842
-242 Host_Reads_GiB          ----CK   253   253   ---    -    45320
+233 NAND_GB_Written_TLC     -O--CK   100   100   ---    -    91442
+234 NAND_GB_Written_SLC     -O--CK   100   100   ---    -    100573
+241 Host_Writes_GiB         ----CK   253   253   ---    -    50343
+242 Host_Reads_GiB          ----CK   253   253   ---    -    72341
 244 Temp_Throttle_Status    -O--CK   000   100   ---    -    0
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -113,14 +113,14 @@ No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x010  4            3631  ---  Power-on Hours
-0x01  0x018  6     68876582309  ---  Logical Sectors Written
-0x01  0x020  6      1379417132  ---  Number of Write Commands
-0x01  0x028  6     95044431919  ---  Logical Sectors Read
-0x01  0x030  6       886865443  ---  Number of Read Commands
+0x01  0x008  4              19  ---  Lifetime Power-On Resets
+0x01  0x010  4            6952  ---  Power-on Hours
+0x01  0x018  6    105578408782  ---  Logical Sectors Written
+0x01  0x020  6      1785338669  ---  Number of Write Commands
+0x01  0x028  6    151711489764  ---  Logical Sectors Read
+0x01  0x030  6      1198710472  ---  Number of Read Commands
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               6  N--  Percentage Used Endurance Indicator
+0x07  0x008  1               8  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -24,14 +24,14 @@ ATA Security is:  Disabled, NOT FROZEN [SEC1]
 SMART overall-health self-assessment test result: PASSED
 
 General SMART Values:
-Offline data collection status:  (0x03)	Offline data collection activity
-					is in progress.
+Offline data collection status:  (0x00)	Offline data collection activity
+					was never started.
 
 Self-test execution status:      (   0)	The previous self-test routine completed
 					without error or no self-test has ever 
 					been run.
 Total time to complete Offline 
-data collection: 		(  600) seconds.
+data collection: 		( 2597) seconds.
 Offline data collection
 capabilities: 			 (0x7b) SMART execute Offline immediate.
 
@@ -61,28 +61,28 @@ Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   100   050    -    0
   5 Reallocated_Sector_Ct   -O--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    19530
+  9 Power_On_Hours          -O--CK   100   100   000    -    21314
  12 Power_Cycle_Count       -O--CK   100   100   001    -    11
 170 Reserved_Block_Pct      PO--CK   100   100   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    0
 172 Erase_Fail_Count        -O--CK   100   100   001    -    0
-173 Avg_Block-Erase_Count   -O--CK   085   085   000    -    953
+173 Avg_Block-Erase_Count   -O--CK   084   084   000    -    1018
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    10
 183 SATA_Int_Downshift_Ct   -O--CK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
 188 Command_Timeout         -O--CK   100   100   000    -    1
-194 Temperature_Celsius     -O---K   075   066   000    -    25 (Min/Max 20/34)
+194 Temperature_Celsius     -O---K   074   066   000    -    26 (Min/Max 20/34)
 195 Hardware_ECC_Recovered  -O--CK   100   100   000    -    0
 196 Reallocated_Event_Count -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 198 Offline_Uncorrectable   ----CK   100   100   000    -    0
 199 UDMA_CRC_Error_Count    -O--CK   100   100   000    -    0
-202 Percent_Lifetime_Remain ----CK   085   085   001    -    15
+202 Percent_Lifetime_Remain ----CK   084   084   001    -    16
 206 Write_Error_Rate        -OSR--   100   100   000    -    0
-246 Unknown_Attribute       -O--CK   100   100   000    -    698909080857
-247 Host_Program_Page_Count -O--CK   100   100   000    -    21839849076
-248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    52675231405
+246 Unknown_Attribute       -O--CK   100   100   000    -    745319588544
+247 Host_Program_Page_Count -O--CK   100   100   000    -    23290091934
+248 Bckgnd_Program_Page_Cnt -O--CK   100   100   000    -    56328819317
 180 Unused_Rsvd_Blk_Cnt_Tot PO--CK   000   000   000    -    5352
 210 RAIN_Success_Recovered  -O--CK   100   100   000    -    0
                             ||||||_ K auto-keep
@@ -127,7 +127,7 @@ No Errors Logged
 
 SMART Extended Self-test Log Version: 1 (1 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
-# 1  Vendor (0xff)       Completed without error       00%      3502         -
+# 1  Vendor (0xff)       Completed without error       00%     21287         -
 # 2  Vendor (0xff)       Completed without error       00%       450         -
 # 3  Vendor (0xff)       Completed without error       00%       280         -
 # 4  Vendor (0xff)       Completed without error       00%       137         -
@@ -135,7 +135,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 SMART Selective self-test log data structure revision number 1
  SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
     1        0        0  Not_testing
-    2        0        0  Not_testing
+    2        0        0  Completed [00% left] (1079618990-1079684525)
     3        0        0  Not_testing
     4        0        0  Not_testing
     5        0        0  Not_testing
@@ -145,8 +145,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
-Device State:                        SMART Off-line Data Collection executing in background (4)
-Current Temperature:                    25 Celsius
+Device State:                        Active (0)
+Current Temperature:                    26 Celsius
 Power Cycle Min/Max Temperature:     22/34 Celsius
 Lifetime    Min/Max Temperature:     20/34 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -156,24 +156,24 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:           -5/75 Celsius
-Temperature History Size (Index):    478 (243)
+Temperature History Size (Index):    478 (431)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              11  ---  Lifetime Power-On Resets
-0x01  0x010  4           19530  ---  Power-on Hours
-0x01  0x018  6    698909080865  ---  Logical Sectors Written
-0x01  0x020  6     11865653553  ---  Number of Write Commands
-0x01  0x028  6    421926544287  ---  Logical Sectors Read
-0x01  0x030  6      2285879416  ---  Number of Read Commands
-0x01  0x038  6     70310820000  ---  Date and Time TimeStamp
+0x01  0x010  4           21314  ---  Power-on Hours
+0x01  0x018  6    745319588544  ---  Logical Sectors Written
+0x01  0x020  6     12487867674  ---  Number of Write Commands
+0x01  0x028  6    447729260487  ---  Logical Sectors Read
+0x01  0x030  6      2354716546  ---  Number of Read Commands
+0x01  0x038  6     76733640000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              25  ---  Current Temperature
-0x05  0x010  1              24  ---  Average Short Term Temperature
+0x05  0x008  1              26  ---  Current Temperature
+0x05  0x010  1              26  ---  Average Short Term Temperature
 0x05  0x018  1              24  ---  Average Long Term Temperature
 0x05  0x020  1              34  ---  Highest Temperature
 0x05  0x028  1              20  ---  Lowest Temperature
@@ -190,7 +190,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4               0  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              15  N--  Percentage Used Endurance Indicator
+0x07  0x008  1              16  N--  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

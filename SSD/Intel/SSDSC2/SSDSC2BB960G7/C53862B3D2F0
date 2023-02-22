@@ -60,31 +60,31 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   099   099   000    -    8
-  9 Power_On_Hours          -O--CK   100   100   000    -    25690
+  9 Power_On_Hours          -O--CK   100   100   000    -    26512
  12 Power_Cycle_Count       -O--CK   100   100   000    -    3
 170 Available_Reservd_Space PO--CK   099   099   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    2
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
 174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    1
-175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    16270 (156 6849)
+175 Power_Loss_Cap_Test     PO--CK   100   100   010    -    16150 (161 5775)
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    0
 184 End-to-End_Error_Count  PO--CK   100   100   090    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Case_Temperature        -O---K   072   067   000    -    28 (Min/Max 20/34)
+190 Case_Temperature        -O---K   071   067   000    -    29 (Min/Max 20/34)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    1
-194 Drive_Temperature       -O---K   100   100   000    -    28
+194 Drive_Temperature       -O---K   100   100   000    -    29
 197 Pending_Sector_Count    -O--C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    18963646
-226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    19005
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    19984455
+226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    19886
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    1
-228 Workload_Minutes        -O--CK   100   100   000    -    1541445
+228 Workload_Minutes        -O--CK   100   100   000    -    1590770
 232 Available_Reservd_Space PO--CK   099   099   010    -    0
-233 Media_Wearout_Indicator -O--CK   082   082   000    -    0
+233 Media_Wearout_Indicator -O--CK   081   081   000    -    0
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    18963646
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    365848
-243 NAND_Writes_32MiB       -O--CK   100   100   000    -    29252559
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    19984455
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    382389
+243 NAND_Writes_32MiB       -O--CK   100   100   000    -    30605102
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -138,7 +138,7 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    28 Celsius
+Current Temperature:                    29 Celsius
 Power Cycle Min/Max Temperature:     20/34 Celsius
 Lifetime    Min/Max Temperature:     18/34 Celsius
 Specified Max Operating Temperature:    70 Celsius
@@ -152,7 +152,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    478 (326)
+Temperature History Size (Index):    478 (415)
 
 SCT Error Recovery Control:
            Read: Disabled
@@ -162,15 +162,15 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
 0x01  0x008  4               3  ---  Lifetime Power-On Resets
-0x01  0x018  6   1242801564696  ---  Logical Sectors Written
-0x01  0x020  6      4989629108  ---  Number of Write Commands
-0x01  0x028  6     23976227045  ---  Logical Sectors Read
-0x01  0x030  6       418853786  ---  Number of Read Commands
+0x01  0x018  6   1309701262896  ---  Logical Sectors Written
+0x01  0x020  6      5229952725  ---  Number of Write Commands
+0x01  0x028  6     25060256933  ---  Logical Sectors Read
+0x01  0x030  6       441163790  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              28  ---  Current Temperature
+0x05  0x008  1              29  ---  Current Temperature
 0x05  0x010  1              28  ---  Average Short Term Temperature
 0x05  0x018  1              28  ---  Average Long Term Temperature
 0x05  0x020  1              33  ---  Highest Temperature
@@ -188,7 +188,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x010  4              40  ---  Number of ASR Events
 0x06  0x018  4               0  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1              18  ---  Percentage Used Endurance Indicator
+0x07  0x008  1              19  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
