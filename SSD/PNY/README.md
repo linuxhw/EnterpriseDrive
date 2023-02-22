@@ -17,15 +17,15 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | PNY       | CS900 120GB SSD    | 120 GB | 2       | 543   | 0     | 1.49   |
 | PNY       | CS900 480GB SSD    | 480 GB | 1       | 524   | 0     | 1.44   |
-| PNY       | CS900 240GB SSD    | 240 GB | 1       | 418   | 0     | 1.15   |
+| PNY       | CS900 240GB SSD    | 240 GB | 2       | 497   | 0     | 1.36   |
 | PNY       | CS900 250GB SSD    | 250 GB | 10      | 247   | 0     | 0.68   |
 | PNY       | CS900 1TB SSD      | 1 TB   | 2       | 45    | 0     | 0.12   |
 
@@ -36,11 +36,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| PNY       | Phison Driven SSDs     | 3      | 4       | 507   | 0     | 1.39   |
+| PNY       | Phison Driven SSDs     | 3      | 5       | 521   | 0     | 1.43   |
 | PNY       | Unknown                | 2      | 12      | 213   | 0     | 0.59   |

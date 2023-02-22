@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -27,7 +27,7 @@ MTBF — avg. MTBF in years per sample.
 | Apacer    | AS330              | 240 GB | 1       | 796   | 0     | 2.18   |
 | Apacer    | AS340              | 480 GB | 1       | 348   | 0     | 0.96   |
 | Apacer    | AS340              | 960 GB | 43      | 356   | 21    | 0.63   |
-| Apacer    | 480GB SATA Flas... | 480 GB | 3       | 157   | 0     | 0.43   |
+| Apacer    | 480GB SATA Flas... | 480 GB | 6       | 96    | 0     | 0.26   |
 
 SSD by Family
 -------------
@@ -36,12 +36,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Apacer    | Unknown                | 2      | 2       | 1120  | 0     | 3.07   |
 | Apacer    | AS340 SSDs             | 2      | 44      | 356   | 21    | 0.64   |
-| Apacer    | SSDs                   | 1      | 3       | 157   | 0     | 0.43   |
+| Apacer    | SSDs                   | 1      | 6       | 96    | 0     | 0.26   |

@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -27,6 +27,7 @@ MTBF — avg. MTBF in years per sample.
 | Samsung   | HD502HJ            | 500 GB | 4       | 2564  | 0     | 7.03   |
 | Samsung   | HD753LJ            | 752 GB | 1       | 2559  | 0     | 7.01   |
 | Samsung   | HD103UJ            | 1 TB   | 26      | 2912  | 144   | 4.64   |
+| Samsung   | HD161HJ            | 160 GB | 1       | 1446  | 0     | 3.96   |
 | Samsung   | SP0812C            | 80 GB  | 1       | 1426  | 0     | 3.91   |
 | Samsung   | HD103SJ            | 1 TB   | 23      | 2135  | 4     | 3.37   |
 | Samsung   | HD161GJ            | 160 GB | 3       | 1200  | 0     | 3.29   |
@@ -38,7 +39,7 @@ MTBF — avg. MTBF in years per sample.
 | Samsung   | HD322GJ            | 320 GB | 1       | 477   | 0     | 1.31   |
 | Samsung   | HD080HJ            | 80 GB  | 2       | 1964  | 841   | 1.17   |
 | Samsung   | HD501LJ            | 500 GB | 3       | 2183  | 676   | 1.14   |
-| Samsung   | HD252HJ            | 250 GB | 1       | 2983  | 12    | 0.63   |
+| Samsung   | HD252HJ            | 250 GB | 1       | 3046  | 12    | 0.64   |
 | Samsung   | HM641JI            | 640 GB | 1       | 141   | 0     | 0.39   |
 | Samsung   | HN-M500MBB         | 500 GB | 1       | 112   | 0     | 0.31   |
 | Samsung   | HM640JJ            | 640 GB | 1       | 373   | 8     | 0.11   |
@@ -52,14 +53,15 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Samsung   | SpinPoint S250         | 1      | 1       | 2882  | 0     | 7.90   |
-| Samsung   | SpinPoint F1 DT        | 5      | 33      | 2737  | 145   | 4.35   |
+| Samsung   | SpinPoint F1 DT        | 5      | 33      | 2739  | 145   | 4.35   |
+| Samsung   | SpinPoint S166         | 1      | 1       | 1446  | 0     | 3.96   |
 | Samsung   | SpinPoint F3           | 2      | 27      | 2199  | 3     | 3.92   |
 | Samsung   | SpinPoint P80          | 1      | 1       | 1426  | 0     | 3.91   |
 | Samsung   | SpinPoint F4 EG (AF)   | 1      | 3       | 1908  | 3     | 2.72   |

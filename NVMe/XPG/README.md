@@ -11,11 +11,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | XPG       | SPECTRIX S40G      | 4 TB   | 4       | 166   | 4     | 0.35   |
-| XPG       | GAMMIX S11 Pro     | 256 GB | 1       | 24    | 0     | 0.07   |
+| XPG       | GAMMIX S11 Pro     | 256 GB | 1       | 55    | 0     | 0.15   |

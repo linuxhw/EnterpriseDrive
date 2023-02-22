@@ -11,12 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Phison    | Viper M.2 VPN100   | 2 TB   | 7       | 417   | 0     | 1.14   |
-| Phison    | Sabrent Rocket Q   | 1 TB   | 5       | 306   | 0     | 0.84   |
+| Phison    | Viper M.2 VPN100   | 2 TB   | 7       | 428   | 0     | 1.17   |
+| Phison    | Sabrent Rocket Q   | 1 TB   | 6       | 349   | 0     | 0.96   |
 | Phison    | PCIe SSD           | 4 TB   | 7       | 105   | 0     | 0.29   |

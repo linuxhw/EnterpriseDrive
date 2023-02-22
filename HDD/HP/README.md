@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -31,7 +31,7 @@ MTBF — avg. MTBF in years per sample.
 | HP        | GB1000EAMYC        | 1 TB   | 1       | 2228  | 0     | 6.11   |
 | HP        | MB1000GDUNU        | 1 TB   | 1       | 1969  | 0     | 5.40   |
 | HP        | GB0160EAFJE        | 160 GB | 2       | 2937  | 513   | 4.82   |
-| HP        | MB1000GCEHH        | 1 TB   | 4       | 3041  | 578   | 4.20   |
+| HP        | MB1000GCEHH        | 1 TB   | 5       | 3106  | 464   | 3.69   |
 | HP        | MB2000GCEHK        | 2 TB   | 2       | 1625  | 1051  | 2.20   |
 | HP        | MB2000GCWDA        | 2 TB   | 2       | 802   | 0     | 2.20   |
 | HP        | MB2000EAZNL        | 2 TB   | 2       | 800   | 2     | 1.71   |
@@ -51,15 +51,15 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | HP        | Seagate Constellati... | 1      | 3       | 2387  | 0     | 6.54   |
 | HP        | RE3                    | 1      | 1       | 2228  | 0     | 6.11   |
 | HP        | Seagate Barracuda 7... | 1      | 2       | 2937  | 513   | 4.82   |
-| HP        | Proliant HardDrive     | 15     | 28      | 2232  | 249   | 3.23   |
+| HP        | Proliant HardDrive     | 15     | 29      | 2271  | 241   | 3.18   |
 | HP        | Constellation ES.3     | 1      | 2       | 802   | 0     | 2.20   |
 | HP        | 250GB SATA disk VB0... | 1      | 3       | 480   | 205   | 0.76   |

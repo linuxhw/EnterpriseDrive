@@ -11,10 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SanDisk   | WD Red SN700       | 500 GB | 3       | 10    | 0     | 0.03   |
+| SanDisk   | WD Red SN700       | 500 GB | 3       | 59    | 0     | 0.16   |
+| SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 24      | 32    | 0     | 0.09   |
+| SanDisk   | WD Blue SN570      | 250 GB | 1       | 12    | 0     | 0.03   |

@@ -17,9 +17,9 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
@@ -27,13 +27,13 @@ MTBF — avg. MTBF in years per sample.
 | China     | 512GB QLC SATA SSD | 512 GB | 6       | 350   | 0     | 0.96   |
 | China     | SATA SSD           | 240 GB | 6       | 305   | 0     | 0.84   |
 | China     | SH00R480GB         | 480 GB | 2       | 510   | 4     | 0.77   |
+| China     | SATA SSD           | 256 GB | 4       | 235   | 0     | 0.65   |
+| China     | SATA SSD           | 64 GB  | 9       | 230   | 0     | 0.63   |
 | China     | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
-| China     | SATA SSD           | 64 GB  | 9       | 229   | 0     | 0.63   |
-| China     | SATA SSD           | 256 GB | 4       | 214   | 0     | 0.59   |
 | China     | SATA SSD           | 1 TB   | 21      | 145   | 0     | 0.40   |
 | China     | SATA SSD           | 16 GB  | 1       | 144   | 0     | 0.39   |
-| China     | SATA SSD           | 32 GB  | 2       | 118   | 0     | 0.33   |
-| China     | OSSD120GBTSS2      | 120 GB | 1       | 843   | 18    | 0.12   |
+| China     | SATA SSD           | 32 GB  | 2       | 119   | 0     | 0.33   |
+| China     | OSSD120GBTSS2      | 120 GB | 1       | 924   | 18    | 0.13   |
 | China     | SATA SSD           | 120 GB | 3       | 40    | 0     | 0.11   |
 
 SSD by Family
@@ -43,11 +43,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| China     | Unknown                | 5      | 16      | 309   | 2     | 0.63   |
+| China     | Unknown                | 5      | 16      | 319   | 2     | 0.65   |
 | China     | Phison Driven OEM SSDs | 7      | 49      | 223   | 0     | 0.61   |

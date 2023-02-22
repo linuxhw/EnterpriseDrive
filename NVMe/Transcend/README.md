@@ -11,11 +11,11 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Transcend | TS2TMTE220S        | 2 TB   | 2       | 94    | 0     | 0.26   |
-| Transcend | TS512GMTE110S      | 512 GB | 1       | 43    | 0     | 0.12   |
+| Transcend | TS512GMTE110S      | 512 GB | 4       | 57    | 0     | 0.16   |

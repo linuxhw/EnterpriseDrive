@@ -11,23 +11,23 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Kingston  | SKC1000960G        | 960 GB | 3       | 886   | 0     | 2.43   |
 | Kingston  | SKC2000M81000G     | 1 TB   | 2       | 668   | 0     | 1.83   |
 | Kingston  | SEDC1000M1920G     | 1.9 TB | 2       | 364   | 0     | 1.00   |
-| Kingston  | SEDC1000M960G      | 960 GB | 2       | 314   | 0     | 0.86   |
+| Kingston  | SEDC1000M3840G     | 3.8 TB | 7       | 351   | 0     | 0.96   |
+| Kingston  | SEDC1000M960G      | 960 GB | 2       | 340   | 0     | 0.93   |
+| Kingston  | SEDC1000BM8240G    | 240 GB | 2       | 324   | 0     | 0.89   |
 | Kingston  | SKC2500M8250G      | 250 GB | 5       | 271   | 0     | 0.74   |
-| Kingston  | SEDC1000BM8240G    | 240 GB | 2       | 268   | 0     | 0.74   |
-| Kingston  | SEDC1000M3840G     | 3.8 TB | 7       | 261   | 0     | 0.72   |
-| Kingston  | SA2000M81000G      | 1 TB   | 8       | 212   | 0     | 0.58   |
+| Kingston  | SA2000M81000G      | 1 TB   | 8       | 261   | 0     | 0.72   |
+| Kingston  | SNVS500G           | 500 GB | 1       | 206   | 0     | 0.57   |
 | Kingston  | SKC2500M81000G     | 1 TB   | 9       | 202   | 0     | 0.55   |
 | Kingston  | SA1000M8960G       | 960 GB | 1       | 146   | 0     | 0.40   |
-| Kingston  | SNVS500G           | 500 GB | 1       | 140   | 0     | 0.39   |
 | Kingston  | SA2000M8500G       | 500 GB | 4       | 111   | 0     | 0.31   |
 | Kingston  | SA2000M8250G       | 250 GB | 1       | 101   | 0     | 0.28   |
 | Kingston  | SKC2500M8500G      | 500 GB | 4       | 53    | 0     | 0.15   |

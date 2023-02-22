@@ -11,11 +11,12 @@ Please take all columns into account when reading the table. Pay attention on th
 number of tested samples and power-on days. Simultaneous high values of both MTBF
 and errors are possible if only rare drives in the subset encounter errors.
 
-Days — avg. days per sample,
-Err  — avg. errors per sample,
-MTBF — avg. MTBF in years per sample.
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Intenso   | SSD                | 128 GB | 2       | 156   | 0     | 0.43   |
 | Intenso   | AP-SSD-A1-256      | 256 GB | 1       | 71    | 0     | 0.20   |
+| Intenso   | SSD SATAIII        | 240 GB | 2       | 63    | 0     | 0.18   |
