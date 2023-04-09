@@ -23,7 +23,7 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Express Flash N... | 1.6 TB | 19      | 1180  | 54    | 3.08   |
 | Dell      | Express Flash N... | 1.6 TB | 4       | 890   | 0     | 2.44   |
 | Dell      | Express Flash P... | 800 GB | 8       | 731   | 0     | 2.00   |
-| Dell      | Express Flash N... | 1.6 TB | 116     | 591   | 0     | 1.62   |
+| Dell      | Express Flash N... | 1.6 TB | 118     | 586   | 0     | 1.61   |
 | Dell      | Express Flash P... | 1.6 TB | 5       | 569   | 0     | 1.56   |
 | Dell      | Express Flash N... | 3.2 TB | 4       | 538   | 0     | 1.47   |
 | Dell      | Express Flash P... | 6.4 TB | 1       | 527   | 0     | 1.45   |

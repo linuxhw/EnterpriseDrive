@@ -35,6 +35,7 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 32 GB  | 2       | 119   | 0     | 0.33   |
 | China     | OSSD120GBTSS2      | 120 GB | 1       | 924   | 18    | 0.13   |
 | China     | SATA SSD           | 120 GB | 3       | 40    | 0     | 0.11   |
+| China     | Destiny4_4000G_DVT | 4 TB   | 7       | 41    | 21    | 0.07   |
 
 SSD by Family
 -------------
@@ -49,5 +50,5 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
-| China     | Unknown                | 5      | 16      | 319   | 2     | 0.65   |
 | China     | Phison Driven OEM SSDs | 7      | 49      | 223   | 0     | 0.61   |
+| China     | Unknown                | 6      | 23      | 234   | 8     | 0.47   |

@@ -84,17 +84,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 980            | 500 GB | 4       | 104   | 0     | 0.29   |
 | Samsung   | MZQL21T9HCJR-00... | 1.9 TB | 18      | 102   | 0     | 0.28   |
 | Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 35      | 98    | 0     | 0.27   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 83      | 95    | 0     | 0.26   |
 | Samsung   | SSD 983 DCT M.2    | 960 GB | 5       | 84    | 0     | 0.23   |
 | Samsung   | SSD 980 PRO        | 250 GB | 4       | 81    | 0     | 0.22   |
 | Samsung   | MT001600KWHAC 1... | 1.6 TB | 1       | 77    | 0     | 0.21   |
 | Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 19      | 75    | 0     | 0.21   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 1       | 70    | 0     | 0.19   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 10      | 60    | 0     | 0.17   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 81      | 60    | 0     | 0.17   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 2       | 55    | 0     | 0.15   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5       | 54    | 0     | 0.15   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 1       | 33    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 28    | 0     | 0.08   |
 | Samsung   | MZVL2512HCJQ-00B07 | 512 GB | 8       | 11    | 0     | 0.03   |
 | Samsung   | MZQLB960HAJR-000AZ | 960 GB | 11      | 10    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 3       | 4     | 0     | 0.01   |

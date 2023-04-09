@@ -40,7 +40,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT2050MX300SSD1    | 2 TB   | 22      | 1266  | 22    | 1.48   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 38      | 539   | 0     | 1.48   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 1       | 507   | 0     | 1.39   |
-| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 870   | 33    | 1.31   |
+| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 913   | 33    | 1.37   |
 | Crucial   | CT1000BX100SSD1    | 1 TB   | 1       | 446   | 0     | 1.22   |
 | Crucial   | CT960BX500SSD1     | 960 GB | 8       | 418   | 0     | 1.15   |
 | Crucial   | CT500MX500SSD1     | 500 GB | 160     | 389   | 3     | 0.88   |
@@ -82,8 +82,8 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | MX1/2/300, M5/600, ... | 1      | 4       | 1560  | 503   | 2.10   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 14     | 257     | 916   | 10    | 2.02   |
 | Crucial   | Silicon Motion base... | 5      | 6       | 679   | 0     | 1.86   |
+| Crucial   | Unknown                | 1      | 6       | 913   | 33    | 1.37   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 7      | 325     | 713   | 15    | 1.36   |
 | Crucial   | MX500 SSDs             | 5      | 716     | 263   | 3     | 0.62   |
-| Crucial   | Unknown                | 2      | 15      | 354   | 14    | 0.54   |
 | Crucial   | SiliconMotion based... | 2      | 2       | 157   | 0     | 0.43   |
-| Crucial   | Client SSDs            | 1      | 12      | 34    | 0     | 0.09   |
+| Crucial   | Client SSDs            | 2      | 21      | 24    | 0     | 0.07   |

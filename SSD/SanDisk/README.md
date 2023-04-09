@@ -91,6 +91,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SATA Cloudspeed Max... | 6      | 97      | 1287  | 11    | 3.48   |
 | SanDisk   | SanDisk based SSDs     | 5      | 18      | 1477  | 7     | 2.82   |
 | SanDisk   | SATA CS1K GEN1 ESS ... | 1      | 1       | 670   | 0     | 1.84   |
-| SanDisk   | Marvell based SanDi... | 23     | 166     | 706   | 2     | 1.77   |
+| SanDisk   | Marvell based SanDi... | 25     | 170     | 697   | 2     | 1.75   |
 | SanDisk   | SandForce Driven SSDs  | 4      | 8       | 802   | 4     | 1.24   |
-| SanDisk   | Unknown                | 12     | 18      | 439   | 103   | 1.11   |
+| SanDisk   | Unknown                | 10     | 14      | 473   | 132   | 1.18   |

@@ -7,13 +7,13 @@ longest power-on hours (POH) and minimal number of errors, i.e. maximal MTBF (me
 between failures).
 
 Everyone can contribute to this report by installing [hw-probe](https://github.com/linuxhw/hw-probe) to
-their [OpenVZ 7](https://wiki.openvz.org/) servers:
+their [OpenVZ](https://wiki.openvz.org/) servers:
 
     sudo -E hw-probe -all -upload
 
-This is a report for enterprise drives. Report for consumer drives: [EnterpriseDrive](https://github.com/linuxhw/SMART)
+This is a report for enterprise drives. Report for consumer drives: [SMART](https://github.com/linuxhw/SMART)
 
-Total drives: 62174.
+Total drives: 62543.
 
 Contents
 --------
@@ -165,7 +165,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST2000NC000-1CX164 | 2 TB   | 1       | 2192  | 0     | 6.01   |
 | Seagate   | ST3000VX000-1CU166 | 3 TB   | 27      | 2613  | 5     | 5.97   |
 | WDC       | WD1001FALS-00E8B0  | 1 TB   | 1       | 2171  | 0     | 5.95   |
-| WDC       | WD5003AZEX-00K1GA0 | 500 GB | 43      | 2291  | 1     | 5.91   |
+| WDC       | WD5003AZEX-00K1GA0 | 500 GB | 43      | 2293  | 1     | 5.92   |
 | Hitachi   | HDP725050GLA360    | 500 GB | 3       | 2156  | 0     | 5.91   |
 | Toshiba   | MD04ACA500         | 5 TB   | 2       | 2148  | 0     | 5.89   |
 | Seagate   | ST6000DM001-1XY17Z | 6 TB   | 4       | 2125  | 0     | 5.82   |
@@ -183,7 +183,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST750LX003-1AC154  | 752 GB | 2       | 3002  | 1     | 5.48   |
 | WDC       | WD2502ABYS-18B7A0  | 250 GB | 2       | 1995  | 0     | 5.47   |
 | Seagate   | ST2000NM0033       | 2 TB   | 1       | 1988  | 0     | 5.45   |
-| Seagate   | ST4000NM0033-9Z... | 4 TB   | 452     | 2421  | 113   | 5.43   |
+| Seagate   | ST4000NM0033-9Z... | 4 TB   | 452     | 2422  | 113   | 5.44   |
 | WDC       | WD20EARX-00PASB0   | 2 TB   | 4       | 1982  | 0     | 5.43   |
 | HP        | MB1000GDUNU        | 1 TB   | 1       | 1969  | 0     | 5.40   |
 | Seagate   | ST91000640NS       | 1 TB   | 44      | 2173  | 2     | 5.36   |
@@ -256,7 +256,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | WDC       | WD2003FYPS-02W0B1  | 2 TB   | 2       | 1563  | 0     | 4.28   |
 | WDC       | WD2003FYYS-02W0B1  | 2 TB   | 36      | 2048  | 50    | 4.25   |
 | WDC       | WD100PURZ-85W86Y0  | 10 TB  | 1       | 1550  | 0     | 4.25   |
-| HGST      | HUS724040ALA640    | 4 TB   | 150     | 1642  | 2     | 4.22   |
+| HGST      | HUS724040ALA640    | 4 TB   | 150     | 1643  | 2     | 4.22   |
 | WDC       | WD10EZEX-00RKKA0   | 1 TB   | 7       | 1828  | 16    | 4.21   |
 | Hitachi   | HUA722020ALA330    | 2 TB   | 6       | 2058  | 2     | 4.19   |
 | Seagate   | ST2000DM001-1ER164 | 2 TB   | 29      | 1737  | 211   | 4.19   |
@@ -340,7 +340,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | HGST      | HUS722T1TALA600    | 1 TB   | 31      | 1288  | 0     | 3.53   |
 | Hitachi   | HUA722020ALA331    | 2 TB   | 10      | 2391  | 203   | 3.53   |
 | WDC       | WD1001FALS-00J7B0  | 1 TB   | 2       | 2317  | 4     | 3.53   |
-| Toshiba   | MG03ACA100         | 1 TB   | 54      | 1300  | 2     | 3.52   |
+| Toshiba   | MG03ACA100         | 1 TB   | 54      | 1301  | 2     | 3.52   |
 | Seagate   | ST9500620NS        | 500 GB | 27      | 1465  | 1     | 3.51   |
 | Hitachi   | HDS723030BLE640    | 3 TB   | 5       | 1896  | 166   | 3.49   |
 | WDC       | WD101KRYZ-01JPDB1  | 10 TB  | 13      | 1378  | 89    | 3.49   |
@@ -398,12 +398,12 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | HGST      | HUS726060ALE610    | 6 TB   | 34      | 1123  | 0     | 3.08   |
 | HGST      | HUS726040ALA614    | 4 TB   | 20      | 1253  | 4     | 3.08   |
 | Seagate   | ST2000DL003-9VT166 | 2 TB   | 8       | 1655  | 274   | 3.07   |
+| HGST      | HUS726040ALE614    | 4 TB   | 18      | 1187  | 2     | 3.07   |
 | Seagate   | ST1000NM0055-1V... | 1 TB   | 43      | 1234  | 1     | 3.05   |
 | HGST      | HUS726040ALE610    | 4 TB   | 24      | 1112  | 0     | 3.05   |
 | WDC       | WD3000FYYZ-01UL1B2 | 3 TB   | 10      | 1724  | 3     | 3.05   |
 | WDC       | WD30EFRX-68N32N0   | 3 TB   | 4       | 1105  | 0     | 3.03   |
 | WDC       | WD5000BMVV-11GNWS0 | 500 GB | 1       | 1103  | 0     | 3.02   |
-| HGST      | HUS726040ALE614    | 4 TB   | 17      | 1174  | 3     | 3.02   |
 | WDC       | WD1003FBYX-12      | 1 TB   | 29      | 1177  | 1     | 3.01   |
 | WDC       | WD1003FBYX-01Y7B0  | 1 TB   | 45      | 1738  | 12    | 3.00   |
 | WDC       | WD2003FYYS-27Y2P0  | 2 TB   | 2       | 1602  | 2     | 3.00   |
@@ -496,9 +496,9 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Hitachi   | HUS724040ALE640    | 4 TB   | 29      | 946   | 1     | 2.36   |
 | Seagate   | ST1000DM005 HD1... | 1 TB   | 4       | 2010  | 4     | 2.36   |
 | HPE       | MM1000GFJTE        | 1 TB   | 4       | 862   | 0     | 2.36   |
-| Seagate   | ST10000NM0016-1... | 10 TB  | 1565    | 1472  | 88    | 2.36   |
+| Seagate   | ST10000NM0016-1... | 10 TB  | 1567    | 1472  | 88    | 2.36   |
+| Seagate   | ST4000NM0035-1V... | 4 TB   | 195     | 924   | 16    | 2.35   |
 | WDC       | WD10EZEX-75M2NA0   | 1 TB   | 1       | 856   | 0     | 2.35   |
-| Seagate   | ST4000NM0035-1V... | 4 TB   | 195     | 923   | 16    | 2.34   |
 | WDC       | WD1003FZEX-00K3CA0 | 1 TB   | 208     | 885   | 3     | 2.34   |
 | HGST      | HUH728060ALE604    | 6 TB   | 14      | 1278  | 28    | 2.34   |
 | Seagate   | ST2000DM006-2DM164 | 2 TB   | 42      | 884   | 26    | 2.34   |
@@ -524,6 +524,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | WDC       | WD82PURZ-85TEUY0   | 8 TB   | 19      | 806   | 0     | 2.21   |
 | HP        | MB2000GCEHK        | 2 TB   | 2       | 1625  | 1051  | 2.20   |
 | HP        | MB2000GCWDA        | 2 TB   | 2       | 802   | 0     | 2.20   |
+| Toshiba   | MG04ACA400E        | 4 TB   | 94      | 815   | 24    | 2.20   |
 | Seagate   | ST33000651NS       | 3 TB   | 1       | 801   | 0     | 2.20   |
 | Seagate   | ST14000VN0008-2... | 14 TB  | 12      | 868   | 2     | 2.19   |
 | Seagate   | ST500DM009-2F110A  | 500 GB | 1       | 799   | 0     | 2.19   |
@@ -538,7 +539,6 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST8000VN0022-2E... | 8 TB   | 27      | 781   | 39    | 2.14   |
 | HGST      | HUH721212ALE604    | 12 TB  | 177     | 785   | 1     | 2.14   |
 | Seagate   | ST1000DM003-1SB102 | 1 TB   | 9       | 999   | 16    | 2.13   |
-| Toshiba   | MG04ACA400E        | 4 TB   | 91      | 790   | 25    | 2.13   |
 | WDC       | WD800JD-00HKA0     | 80 GB  | 1       | 776   | 0     | 2.13   |
 | Seagate   | ST1000LM024 HN-... | 1 TB   | 3       | 1172  | 4     | 2.12   |
 | WDC       | WD40EZRZ-75GXCB0   | 4 TB   | 3       | 771   | 0     | 2.11   |
@@ -578,6 +578,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Toshiba   | HDWA130            | 3 TB   | 1       | 699   | 0     | 1.92   |
 | WDC       | WD2002FFSX-68PF8N0 | 2 TB   | 13      | 696   | 0     | 1.91   |
 | Toshiba   | MG06ACA10TEY       | 10 TB  | 72      | 718   | 1     | 1.89   |
+| WDC       | WD4005FZBX-00K5WB0 | 4 TB   | 10      | 686   | 0     | 1.88   |
 | Seagate   | ST10000NM0086-2... | 10 TB  | 110     | 786   | 20    | 1.88   |
 | Seagate   | ST4000NM0245-1Z... | 4 TB   | 32      | 948   | 20    | 1.88   |
 | HGST      | HTS721010A9E630    | 1 TB   | 7       | 1273  | 721   | 1.87   |
@@ -617,7 +618,6 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST4000LM016-1N2170 | 4 TB   | 3       | 609   | 0     | 1.67   |
 | WDC       | WD5000AZLX-22JKKA0 | 500 GB | 3       | 953   | 3     | 1.66   |
 | WDC       | WD10EURX-63UY4Y0   | 1 TB   | 2       | 606   | 0     | 1.66   |
-| WDC       | WD4005FZBX-00K5WB0 | 4 TB   | 8       | 605   | 0     | 1.66   |
 | WDC       | WD4003FFBX-68MU3N0 | 4 TB   | 37      | 601   | 0     | 1.65   |
 | Seagate   | ST8000DM0004-1Z... | 8 TB   | 10      | 1045  | 317   | 1.65   |
 | HGST      | HUH721008ALE600    | 8 TB   | 70      | 600   | 0     | 1.64   |
@@ -735,7 +735,6 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | WDC       | WD6003FZBX-00K5WB0 | 6 TB   | 13      | 371   | 0     | 1.02   |
 | WDC       | WD3200BPVT-22JJ5T0 | 320 GB | 2       | 369   | 0     | 1.01   |
 | Seagate   | ST5000LM000-2AN170 | 5 TB   | 47      | 529   | 64    | 1.01   |
-| Seagate   | ST14000NM001G-2... | 14 TB  | 27      | 387   | 113   | 1.01   |
 | Toshiba   | HDWG180            | 8 TB   | 9       | 367   | 0     | 1.01   |
 | Seagate   | ST3320613AS        | 320 GB | 1       | 729   | 1     | 1.00   |
 | Seagate   | ST3250823AS        | 250 GB | 1       | 4725  | 12    | 1.00   |
@@ -774,7 +773,6 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | WDC       | WD7500BPVT-22HXZT3 | 752 GB | 1       | 301   | 0     | 0.83   |
 | HPE       | MB008000GWJRT      | 8 TB   | 4       | 300   | 0     | 0.82   |
 | WDC       | WD800BEVS-22RST0   | 80 GB  | 1       | 299   | 0     | 0.82   |
-| Seagate   | ST4000NM000A-2H... | 4 TB   | 12      | 332   | 1     | 0.80   |
 | Seagate   | ST8000NM000A-2K... | 8 TB   | 63      | 310   | 1     | 0.79   |
 | WDC       | WD20SPZX-00UA7T0   | 2 TB   | 7       | 288   | 0     | 0.79   |
 | Seagate   | ST10000DM0004-1... | 10 TB  | 7       | 498   | 491   | 0.79   |
@@ -800,6 +798,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Hitachi   | HTS545032B9A300    | 320 GB | 1       | 1024  | 3     | 0.70   |
 | Seagate   | ST31000524NS 45... | 1 TB   | 2       | 682   | 2     | 0.70   |
 | WDC       | WD40EZRX-00SPEB0   | 4 TB   | 3       | 394   | 8     | 0.70   |
+| Seagate   | ST14000NM001G-2... | 14 TB  | 44      | 267   | 69    | 0.70   |
 | HPE       | MB008000GWRTC      | 8 TB   | 1       | 252   | 0     | 0.69   |
 | WDC       | WD10EARS-00Y5B1    | 1 TB   | 4       | 1229  | 697   | 0.69   |
 | Toshiba   | MG06ACA800E        | 8 TB   | 124     | 247   | 0     | 0.68   |
@@ -838,6 +837,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | HP        | MB1000EAMZE        | 1 TB   | 2       | 185   | 0     | 0.51   |
 | WDC       | WD101EFBX-68B0AN0  | 10 TB  | 5       | 180   | 0     | 0.49   |
 | WDC       | WD60EFZX-68B3FN0   | 6 TB   | 5       | 179   | 0     | 0.49   |
+| Seagate   | ST4000NM000A-2H... | 4 TB   | 22      | 198   | 1     | 0.48   |
 | Seagate   | ST1000NX0343       | 1 TB   | 2       | 1728  | 10    | 0.48   |
 | WDC       | WD20EFAX-68B2RN1   | 2 TB   | 4       | 173   | 0     | 0.48   |
 | Seagate   | ST10000NM0086 0... | 10 TB  | 4       | 173   | 0     | 0.47   |
@@ -854,11 +854,11 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST1000NX0303       | 1 TB   | 3       | 650   | 4     | 0.42   |
 | Toshiba   | MQ01ACF032         | 320 GB | 1       | 151   | 0     | 0.41   |
 | Maxtor    | STM3200827AS       | 200 GB | 1       | 1203  | 7     | 0.41   |
+| WDC       | WUH721818ALE6L4    | 18 TB  | 756     | 150   | 1     | 0.41   |
 | WDC       | WD1003FBYX-20Y7B0  | 1 TB   | 2       | 149   | 0     | 0.41   |
 | WDC       | WD1600AAJS-22L7A0  | 160 GB | 2       | 1326  | 8     | 0.40   |
 | Toshiba   | HDWN180            | 8 TB   | 1       | 146   | 0     | 0.40   |
 | WDC       | WD20NPVX-00EA4T0   | 2 TB   | 5       | 1744  | 34    | 0.40   |
-| WDC       | WUH721818ALE6L4    | 18 TB  | 756     | 143   | 1     | 0.39   |
 | Apple     | HDD HTS545050A7... | 500 GB | 1       | 141   | 0     | 0.39   |
 | HP        | MB2000EBZQC        | 2 TB   | 1       | 1269  | 8     | 0.39   |
 | Samsung   | HM641JI            | 640 GB | 1       | 141   | 0     | 0.39   |
@@ -884,6 +884,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Toshiba   | MG09ACA18TE        | 18 TB  | 22      | 113   | 1     | 0.30   |
 | Toshiba   | MG08ACA16TEY       | 16 TB  | 24      | 109   | 0     | 0.30   |
 | Toshiba   | MG04ACA100N        | 1 TB   | 2       | 108   | 0     | 0.30   |
+| HGST      | WUH721818ALE6L4    | 18 TB  | 29      | 104   | 0     | 0.29   |
 | Seagate   | ST250DM000-1BD141  | 250 GB | 4       | 1076  | 536   | 0.28   |
 | WDC       | WD2500AAKX-00ERMA0 | 250 GB | 2       | 507   | 4     | 0.28   |
 | Seagate   | ST16000NM001J-2... | 16 TB  | 55      | 100   | 0     | 0.27   |
@@ -916,7 +917,6 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST2000NC001-1DY164 | 2 TB   | 1       | 1641  | 24    | 0.18   |
 | WDC       | WD5000LPLX-60ZNTT2 | 500 GB | 1       | 63    | 0     | 0.17   |
 | WDC       | WD50NDZW-11MR8S1   | 5 TB   | 2       | 60    | 0     | 0.17   |
-| HGST      | WUH721818ALE6L4    | 18 TB  | 29      | 60    | 0     | 0.16   |
 | Seagate   | ST16000NM003G-2... | 16 TB  | 14      | 59    | 0     | 0.16   |
 | HGST      | HUH728080ALN600    | 8 TB   | 2       | 96    | 2     | 0.16   |
 | Hitachi   | HTS545016B9A300    | 160 GB | 1       | 55    | 0     | 0.15   |
@@ -945,6 +945,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST5000NM0024-1H... | 5 TB   | 1       | 1636  | 49    | 0.09   |
 | WDC       | WD20EFAX-68FB5N0   | 2 TB   | 4       | 30    | 0     | 0.08   |
 | WDC       | WD4000FDYZ-27YA5B0 | 4 TB   | 5       | 711   | 115   | 0.08   |
+| Toshiba   | MG08ADA400N        | 4 TB   | 4       | 29    | 0     | 0.08   |
 | Apple     | HDD ST1000DM003    | 1 TB   | 1       | 254   | 8     | 0.08   |
 | Seagate   | ST2000DM008-2UB102 | 2 TB   | 1       | 27    | 0     | 0.08   |
 | WDC       | WD5000LPLX-60ZNTT1 | 500 GB | 10      | 29    | 1     | 0.07   |
@@ -985,6 +986,7 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST3160211AS        | 160 GB | 1       | 1802  | 497   | 0.01   |
 | Seagate   | ST1000VM002-1ET162 | 1 TB   | 1       | 113   | 32    | 0.01   |
 | HP        | GJ0250EAGSQ        | 250 GB | 2       | 3080  | 1028  | 0.01   |
+| Seagate   | ST8000NM017B-2T... | 8 TB   | 30      | 2     | 0     | 0.01   |
 | Hitachi   | HDS721010CLA630    | 1 TB   | 2       | 1533  | 699   | 0.01   |
 | WDC       | WD1600JS-75NCB2    | 160 GB | 1       | 2854  | 1502  | 0.01   |
 | MediaMax  | WL4000GSA6472E     | 4.9 TB | 1       | 1617  | 1054  | 0.00   |
@@ -1011,6 +1013,585 @@ See full list of tested HDD samples in the Appendix 1 ([All_HDD.md](/All_HDD.md)
 | Seagate   | ST9160821AS        | 160 GB | 1       | 262   | 1011  | 0.00   |
 | Seagate   | ST500LX025-1U717D  | 500 GB | 1       | 110   | 2019  | 0.00   |
 | HPE       | MB006000GWKGR      | 6 TB   | 1       | 0     | 0     | 0.00   |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
 
 HDD by Family
 -------------
@@ -1047,8 +1628,8 @@ MTBF - avg. MTBF in years per sample.
 | Hitachi   | Ultrastar 7K3000       | 4      | 79      | 1996  | 2     | 5.23   |
 | Hitachi   | Deskstar 7K2000        | 2      | 68      | 2351  | 45    | 5.08   |
 | Seagate   | Surveillance           | 10     | 52      | 2075  | 3     | 5.07   |
+| Seagate   | Constellation ES.3     | 5      | 729     | 2190  | 110   | 4.88   |
 | HGST      | Ultrastar 7K4000       | 5      | 444     | 1884  | 12    | 4.88   |
-| Seagate   | Constellation ES.3     | 5      | 729     | 2189  | 110   | 4.88   |
 | HGST      | MegaScale 4000         | 1      | 19      | 1854  | 13    | 4.88   |
 | HP        | Seagate Barracuda 7... | 1      | 2       | 2937  | 513   | 4.82   |
 | Seagate   | Enterprise NAS HDD     | 2      | 13      | 1906  | 1     | 4.80   |
@@ -1074,23 +1655,23 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint P80          | 1      | 1       | 1426  | 0     | 3.91   |
 | Toshiba   | 2.5" HDD               | 1      | 1       | 1412  | 0     | 3.87   |
 | Toshiba   | 2.5" HDD MQ01ABF       | 1      | 1       | 1380  | 0     | 3.78   |
-| Toshiba   | 3.5" MG04ACA Enterp... | 7      | 935     | 1441  | 17    | 3.71   |
+| Toshiba   | 3.5" MG04ACA Enterp... | 7      | 938     | 1441  | 17    | 3.71   |
 | Seagate   | Barracuda Pro          | 1      | 217     | 1431  | 1     | 3.67   |
 | Seagate   | Desktop HDD.15         | 4      | 181     | 1562  | 42    | 3.66   |
 | Seagate   | Barracuda XT           | 2      | 5       | 2329  | 14    | 3.64   |
 | Toshiba   | 2.5" HDD MK..61GSY     | 1      | 8       | 1313  | 0     | 3.60   |
 | WDC       | VelociRaptor           | 14     | 52      | 1501  | 2     | 3.57   |
 | Hitachi   | Deskstar 7K1000.C      | 8      | 35      | 2447  | 389   | 3.56   |
-| HGST      | Ultrastar 7K6000       | 11     | 633     | 1380  | 11    | 3.55   |
+| HGST      | Ultrastar 7K6000       | 11     | 634     | 1380  | 11    | 3.55   |
 | WDC       | Caviar Green           | 13     | 31      | 2296  | 201   | 3.50   |
 | Toshiba   | X300                   | 7      | 135     | 1345  | 14    | 3.49   |
 | WDC       | Caviar Blue            | 26     | 37      | 2063  | 9     | 3.49   |
 | Seagate   | SpinPoint M9T          | 1      | 16      | 1381  | 1     | 3.42   |
 | WDC       | RE4                    | 23     | 418     | 1536  | 9     | 3.40   |
-| Seagate   | Enterprise Capacity... | 19     | 5073    | 1568  | 41    | 3.33   |
+| Seagate   | Enterprise Capacity... | 22     | 5147    | 1563  | 41    | 3.32   |
 | Seagate   | Barracuda 7200.14 (AF) | 16     | 222     | 1586  | 231   | 3.31   |
 | Toshiba   | 3.5" HDD DT01ACA       | 4      | 431     | 1316  | 24    | 3.29   |
-| Toshiba   | 3.5" MG03ACAxxx(Y) ... | 4      | 89      | 1367  | 25    | 3.25   |
+| Toshiba   | 3.5" MG03ACAxxx(Y) ... | 4      | 89      | 1368  | 25    | 3.25   |
 | Toshiba   | MG04ACA Enterprise HDD | 4      | 41      | 1342  | 1     | 3.24   |
 | Toshiba   | S300                   | 2      | 3       | 1177  | 0     | 3.23   |
 | HP        | Proliant HardDrive     | 15     | 29      | 2271  | 241   | 3.18   |
@@ -1108,11 +1689,11 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | Se                     | 7      | 27      | 1201  | 2     | 2.76   |
 | WDC       | Black Mobile           | 7      | 40      | 1160  | 1     | 2.74   |
 | Samsung   | SpinPoint F4 EG (AF)   | 1      | 3       | 1908  | 3     | 2.72   |
-| WDC       | Red                    | 27     | 1000    | 1468  | 9     | 2.71   |
+| WDC       | Red                    | 28     | 1005    | 1461  | 9     | 2.70   |
 | HGST      | Ultrastar 7K2          | 4      | 241     | 988   | 6     | 2.68   |
 | WDC       | RE                     | 20     | 244     | 1641  | 42    | 2.67   |
 | Fujitsu   | MHW BH                 | 1      | 1       | 946   | 0     | 2.59   |
-| WDC       | Black                  | 12     | 465     | 994   | 4     | 2.59   |
+| WDC       | Black                  | 12     | 467     | 994   | 4     | 2.59   |
 | WDC       | Gold                   | 20     | 464     | 992   | 16    | 2.54   |
 | Seagate   | Seagate Enterprise     | 1      | 210     | 1028  | 42    | 2.53   |
 | WDC       | Caviar SE              | 6      | 6       | 1881  | 254   | 2.51   |
@@ -1174,10 +1755,9 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | MG06ACA Enterprise ... | 5      | 445     | 484   | 1     | 1.29   |
 | HGST      | Travelstar Z7K500      | 2      | 7       | 789   | 512   | 1.29   |
 | HGST      | Ultrastar DC HC310     | 3      | 254     | 472   | 3     | 1.27   |
-| Toshiba   | N300 NAS HDD           | 5      | 33      | 491   | 1     | 1.24   |
+| Toshiba   | N300/MN NAS HDD        | 5      | 33      | 491   | 1     | 1.24   |
 | Samsung   | SpinPoint P80 SD       | 1      | 2       | 1964  | 841   | 1.17   |
 | Seagate   | FireCuda 3.5           | 1      | 4       | 424   | 0     | 1.16   |
-| Seagate   | Exos 7E8               | 12     | 432     | 461   | 9     | 1.16   |
 | Seagate   | FireCuda 2.5           | 3      | 6       | 442   | 337   | 1.16   |
 | Samsung   | SpinPoint T166         | 1      | 3       | 2183  | 676   | 1.14   |
 | WDC       | Scorpio Black          | 4      | 6       | 1074  | 51    | 1.12   |
@@ -1197,21 +1777,21 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | AV-GP                  | 5      | 9       | 459   | 2     | 0.94   |
 | Toshiba   | Toshiba Enterprise     | 1      | 10      | 374   | 9     | 0.92   |
 | WDC       | Ultrastar He10/12      | 1      | 13      | 333   | 0     | 0.91   |
+| Seagate   | Exos 7E8               | 9      | 370     | 314   | 3     | 0.83   |
 | Seagate   | Momentus 7200.5        | 1      | 1       | 285   | 0     | 0.78   |
-| Seagate   | Exos X16               | 9      | 347     | 281   | 9     | 0.76   |
 | HP        | 250GB SATA disk VB0... | 1      | 3       | 480   | 205   | 0.76   |
+| Seagate   | Exos X16               | 9      | 364     | 271   | 9     | 0.73   |
 | Toshiba   | MG08                   | 1      | 5       | 263   | 0     | 0.72   |
-| Seagate   | Unknown                | 3      | 14      | 260   | 0     | 0.71   |
 | WDC       | Ultrastar DC HC500     | 1      | 8       | 239   | 0     | 0.66   |
 | Toshiba   | 2.5" HDD MQ04UBF       | 1      | 4       | 234   | 0     | 0.64   |
 | WDC       | Shrek LT 2.5           | 1      | 1       | 233   | 0     | 0.64   |
 | Apple     | Travelstar 5K1000      | 1      | 1       | 220   | 0     | 0.60   |
 | Toshiba   | 2.5" HDD MK..52GSX     | 1      | 1       | 199   | 0     | 0.55   |
+| WDC       | Red Plus               | 2      | 11      | 197   | 0     | 0.54   |
 | WDC       | Scorpio Blue           | 8      | 11      | 330   | 39    | 0.53   |
 | Hitachi   | Deskstar 7K1000.D      | 2      | 12      | 1345  | 1097  | 0.53   |
-| WDC       | Ultrastar DC HC550     | 3      | 2856    | 183   | 1     | 0.50   |
+| WDC       | Ultrastar DC HC550     | 3      | 2856    | 185   | 1     | 0.51   |
 | Seagate   | Exos X10               | 1      | 4       | 173   | 0     | 0.47   |
-| WDC       | Red Plus               | 3      | 16      | 162   | 0     | 0.45   |
 | Maxtor    | DiamondMax 20          | 1      | 1       | 1203  | 7     | 0.41   |
 | Toshiba   | MG08ACA Enterprise ... | 3      | 90      | 146   | 0     | 0.40   |
 | WDC       | Green Mobile           | 1      | 5       | 1744  | 34    | 0.40   |
@@ -1219,18 +1799,19 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SpinPoint M7E (AF)     | 1      | 1       | 141   | 0     | 0.39   |
 | Hitachi   | Travelstar 5K500.B     | 3      | 3       | 433   | 2     | 0.33   |
 | Samsung   | SpinPoint M8 (AF)      | 1      | 1       | 112   | 0     | 0.31   |
-| Toshiba   | MG09                   | 1      | 22      | 113   | 1     | 0.30   |
-| Toshiba   | Unknown                | 1      | 2       | 108   | 0     | 0.30   |
+| Toshiba   | MG09ACA Enterprise ... | 1      | 22      | 113   | 1     | 0.30   |
+| HGST      | Ultrastar DC HC550     | 1      | 29      | 104   | 0     | 0.29   |
 | Seagate   | Barracuda 7200.11      | 4      | 4       | 1450  | 209   | 0.29   |
 | Seagate   | Exos X18               | 3      | 276     | 103   | 0     | 0.28   |
 | Hitachi   | Travelstar 7K500       | 2      | 3       | 1298  | 343   | 0.28   |
 | Seagate   | Exos X20               | 1      | 4       | 88    | 0     | 0.24   |
+| Seagate   | Unknown                | 4      | 44      | 84    | 0     | 0.23   |
 | Toshiba   | 2.5" HDD MQ04ABB       | 1      | 3       | 82    | 0     | 0.23   |
 | WDC       | IU CB500               | 1      | 1       | 76    | 0     | 0.21   |
 | Seagate   | Momentus 5400.6        | 2      | 6       | 610   | 34    | 0.19   |
 | Toshiba   | 2.5" HDD MQ04ABF       | 1      | 2       | 306   | 1010  | 0.18   |
-| HGST      | Ultrastar DC HC550     | 1      | 29      | 60    | 0     | 0.16   |
 | Seagate   | Video 3.5 HDD          | 2      | 2       | 113   | 16    | 0.16   |
+| Toshiba   | Unknown                | 2      | 6       | 55    | 0     | 0.15   |
 | Samsung   | SpinPoint MP5          | 1      | 1       | 373   | 8     | 0.11   |
 | Seagate   | Momentus 5400.3        | 2      | 2       | 305   | 508   | 0.10   |
 | Hitachi   | Travelstar 7K100       | 1      | 1       | 2330  | 66    | 0.10   |
@@ -1267,12 +1848,11 @@ MTBF - avg. MTBF in years per sample.
 | Maxtor      | 6      | 10      | 1892  | 139   | 4.07   |
 | Samsung     | 22     | 88      | 2422  | 178   | 3.41   |
 | HP          | 20     | 40      | 2104  | 216   | 3.35   |
-| Seagate     | 265    | 10044   | 1314  | 50    | 2.87   |
-| HGST        | 65     | 5215    | 1039  | 7     | 2.72   |
-| Fujitsu     | 1      | 1       | 946   | 0     | 2.59   |
-| Toshiba     | 81     | 3842    | 980   | 12    | 2.53   |
+| Seagate     | 266    | 10103   | 1307  | 49    | 2.86   |
+| HGST        | 65     | 5216    | 1040  | 7     | 2.72   |
+| Toshiba     | 82     | 3849    | 979   | 12    | 2.53   |
 | MediaMax    | 4      | 5       | 1036  | 211   | 1.96   |
-| WDC         | 376    | 9119    | 772   | 8     | 1.77   |
+| WDC         | 376    | 9121    | 773   | 8     | 1.77   |
 | MaxDigital  | 2      | 2       | 868   | 508   | 1.63   |
 | HPE         | 17     | 498     | 643   | 7     | 1.60   |
 | Apple       | 3      | 3       | 205   | 3     | 0.36   |
@@ -1317,6 +1897,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7LM120HCFD-00003 | 120 GB | 4       | 2312  | 0     | 6.34   |
 | Samsung   | SSD 830 Series     | 512 GB | 12      | 3084  | 253   | 6.33   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 55      | 2463  | 1     | 6.32   |
+| Seagate   | 2E256-TU2-510B00   | 200 GB | 5       | 2880  | 411   | 6.32   |
 | Samsung   | MZ7LM240HCGR-00003 | 240 GB | 4       | 2292  | 0     | 6.28   |
 | Transcend | TS128GSSD340       | 128 GB | 1       | 2277  | 0     | 6.24   |
 | Samsung   | MZ7LM480HCHP-0E003 | 480 GB | 7       | 2231  | 0     | 6.11   |
@@ -1380,10 +1961,11 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7LM1T9HCJM00D3   | 1.9 TB | 4       | 1744  | 0     | 4.78   |
 | SanDisk   | SDLF1DAR-960G-1HA2 | 960 GB | 12      | 1744  | 0     | 4.78   |
 | Intel     | SSDSC2BW240A3      | 240 GB | 1       | 1743  | 0     | 4.78   |
-| Intel     | SSDSC2BA200G3      | 200 GB | 18      | 2009  | 1     | 4.75   |
+| Intel     | SSDSC2BA200G3      | 200 GB | 18      | 2011  | 1     | 4.76   |
 | SanDisk   | SDLF1DAR480G-1HHS  | 480 GB | 2       | 1734  | 0     | 4.75   |
 | Intel     | SSDSC2BB800G6      | 800 GB | 68      | 1847  | 15    | 4.73   |
 | Samsung   | MZ7LM480HCHP-00003 | 480 GB | 81      | 1788  | 3     | 4.72   |
+| Intel     | SSDSC2BB240G6      | 240 GB | 21      | 1721  | 0     | 4.72   |
 | Toshiba   | THNSN8240PCSE      | 240 GB | 2       | 1717  | 0     | 4.70   |
 | Kingston  | SE50S37480G        | 480 GB | 1       | 1716  | 0     | 4.70   |
 | Samsung   | SSD 840 EVO        | 250 GB | 10      | 2674  | 5     | 4.69   |
@@ -1393,7 +1975,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7KM480HAHP-00005 | 480 GB | 92      | 1694  | 0     | 4.64   |
 | Crucial   | CT512MX100SSD1     | 240 GB | 4       | 2113  | 1     | 4.64   |
 | Intel     | SSDSC2BA400G3      | 400 GB | 7       | 1826  | 1     | 4.63   |
-| Intel     | SSDSC2BB240G6      | 240 GB | 20      | 1687  | 0     | 4.62   |
 | Intel     | SSDSC2BB120G6      | 120 GB | 7       | 1685  | 0     | 4.62   |
 | Intel     | SSDSC2BX400G4      | 400 GB | 3       | 1684  | 0     | 4.61   |
 | Samsung   | MZ7WD960HAGP-00003 | 960 GB | 3       | 1681  | 0     | 4.61   |
@@ -1406,10 +1987,10 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Toshiba   | VX500              | 1 TB   | 6       | 1649  | 0     | 4.52   |
 | Micron    | M600_MTFDDAK256MBF | 256 GB | 2       | 1641  | 0     | 4.50   |
 | Intel     | SSDSC2BB240G4      | 240 GB | 45      | 1712  | 1     | 4.48   |
+| Intel     | SSDSC2BA400G4      | 400 GB | 39      | 1683  | 1     | 4.48   |
 | Samsung   | MZ7LM960HCHP-00005 | 960 GB | 24      | 1633  | 0     | 4.48   |
 | Intel     | SSDSC2BB600G4      | 600 GB | 23      | 1729  | 1     | 4.47   |
-| Intel     | SSDSC2BA400G4      | 400 GB | 39      | 1669  | 1     | 4.44   |
-| Samsung   | SSD 850 PRO        | 512 GB | 61      | 1659  | 1     | 4.43   |
+| Samsung   | SSD 850 PRO        | 512 GB | 61      | 1663  | 1     | 4.44   |
 | Samsung   | MZ7GE960HMHP-00003 | 960 GB | 24      | 2270  | 109   | 4.42   |
 | Samsung   | MZ7KM120HAFD-00005 | 120 GB | 15      | 1612  | 0     | 4.42   |
 | Samsung   | MZ7LM960HCHP-0E003 | 960 GB | 5       | 1611  | 0     | 4.42   |
@@ -1445,6 +2026,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Apacer    | AS510S             | 128 GB | 1       | 1444  | 0     | 3.96   |
 | SPCC      | SSD                | 120 GB | 1       | 1444  | 0     | 3.96   |
 | SanDisk   | SDLF1CRR019T-1HHS  | 1.9 TB | 30      | 1485  | 34    | 3.95   |
+| Intel     | SSDSC2BX800G4      | 800 GB | 4       | 1426  | 0     | 3.91   |
 | Intel     | SSDSC2BA800G4      | 800 GB | 17      | 1415  | 0     | 3.88   |
 | Kingston  | SE50S3100G         | 100 GB | 3       | 1763  | 1     | 3.87   |
 | Intel     | SSDSC2BB800G7R     | 800 GB | 40      | 1767  | 53    | 3.85   |
@@ -1480,7 +2062,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | SSD 850 EVO        | 2 TB   | 20      | 1432  | 22    | 3.42   |
 | Toshiba   | THNSN8960PCSE      | 960 GB | 32      | 1265  | 1     | 3.41   |
 | Kingston  | SUV300S37A240G     | 240 GB | 2       | 1245  | 0     | 3.41   |
-| Intel     | SSDSC2BX800G4      | 800 GB | 2       | 1244  | 0     | 3.41   |
 | Samsung   | SSD 850 EVO        | 500 GB | 128     | 1306  | 25    | 3.40   |
 | Samsung   | MZ7LM480HCHP-00005 | 480 GB | 29      | 1229  | 0     | 3.37   |
 | Samsung   | MZ7KM240HAGR-0E005 | 240 GB | 17      | 1822  | 23    | 3.37   |
@@ -1488,8 +2069,8 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7TE256HMHP-00004 | 256 GB | 1       | 1215  | 0     | 3.33   |
 | SATADOM   | ML 3MG-P           | 32 GB  | 2       | 1215  | 0     | 3.33   |
 | Intel     | SSDSC2BB150G7      | 150 GB | 16      | 1268  | 1     | 3.32   |
+| Intel     | SSDSC2BX480G4      | 480 GB | 41      | 1210  | 0     | 3.32   |
 | HP        | VK0480GEQNB        | 480 GB | 1       | 1199  | 0     | 3.28   |
-| Intel     | SSDSC2BX480G4      | 480 GB | 41      | 1190  | 0     | 3.26   |
 | Lite-On   | IT EBT-480N9S      | 480 GB | 1       | 1190  | 0     | 3.26   |
 | Dell      | SSDSCKJB120G7R     | 120 GB | 6       | 1375  | 1     | 3.25   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 2       | 1186  | 0     | 3.25   |
@@ -1516,11 +2097,11 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | SanDisk   | SDSSDA960G         | 960 GB | 1       | 1074  | 0     | 2.94   |
 | Micron    | M510DC_MTFDDAK9... | 960 GB | 2       | 1985  | 4     | 2.94   |
 | Samsung   | MZ7LM1T9HCJM-00003 | 1.9 TB | 7       | 1070  | 0     | 2.93   |
+| HPE       | MK0400GEYKD        | 400 GB | 2       | 1067  | 0     | 2.92   |
 | Intel     | SSDSC2KG480G7      | 480 GB | 54      | 1372  | 2     | 2.91   |
 | ADATA     | SP600              | 512 GB | 1       | 1055  | 0     | 2.89   |
 | Intel     | SSDSC2BB480G7      | 480 GB | 107     | 1211  | 1     | 2.87   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | 1       | 1044  | 0     | 2.86   |
-| HPE       | MK0400GEYKD        | 400 GB | 2       | 1044  | 0     | 2.86   |
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | 8       | 1550  | 10    | 2.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | 94      | 1175  | 41    | 2.85   |
 | Samsung   | MZ7LM960HMJP0D3    | 960 GB | 44      | 1079  | 1     | 2.84   |
@@ -1637,7 +2218,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Seagate   | XA1920ME10063      | 1.9 TB | 35      | 733   | 0     | 2.01   |
 | Samsung   | SSD PM851a 2.5 7mm | 1 TB   | 1       | 732   | 0     | 2.01   |
 | Samsung   | MZ7LH960HAJR-000AZ | 960 GB | 4       | 731   | 0     | 2.01   |
-| Micron    | 5100_MTFDDAK960TCB | 960 GB | 130     | 1192  | 4     | 2.00   |
+| Micron    | 5100_MTFDDAK960TCB | 960 GB | 130     | 1193  | 4     | 2.00   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 29      | 728   | 0     | 2.00   |
 | Crucial   | CT500BX100SSD1     | 500 GB | 2       | 723   | 0     | 1.98   |
 | Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | 71      | 787   | 1     | 1.97   |
@@ -1646,7 +2227,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | HPE       | MK000960GWUGH      | 960 GB | 6       | 806   | 1     | 1.96   |
 | Intel     | SSDSC2BB480G7R     | 480 GB | 24      | 752   | 1     | 1.96   |
 | Kingston  | SA400M8120G        | 120 GB | 3       | 714   | 0     | 1.96   |
-| Micron    | 1100_MTFDDAK512TBN | 512 GB | 44      | 1122  | 46    | 1.95   |
+| Micron    | 1100_MTFDDAK512TBN | 512 GB | 44      | 1124  | 46    | 1.95   |
 | HPE       | MK001920GWUGK      | 1.9 TB | 2       | 708   | 0     | 1.94   |
 | Intel     | SSDSCKKB240G8      | 240 GB | 17      | 707   | 0     | 1.94   |
 | Micron    | 5200_MTFDDAK960TDD | 960 GB | 166     | 731   | 1     | 1.94   |
@@ -1663,10 +2244,10 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7LH960HAJR0D3    | 960 GB | 20      | 672   | 0     | 1.84   |
 | Intel     | SSDSC2KG240G8      | 240 GB | 198     | 674   | 1     | 1.84   |
 | SanDisk   | SDLFOCAM-800G-1HA1 | 800 GB | 1       | 670   | 0     | 1.84   |
+| Micron    | 5200_MTFDDAK480TDN | 480 GB | 21      | 663   | 0     | 1.82   |
 | Kingston  | SHSS37A240G        | 240 GB | 3       | 661   | 0     | 1.81   |
 | Intel     | SSDSCKJB240G7      | 240 GB | 5       | 656   | 0     | 1.80   |
 | Samsung   | MZ7LM1T9HMJP0D3    | 1.9 TB | 2       | 656   | 0     | 1.80   |
-| Micron    | 5200_MTFDDAK480TDN | 480 GB | 21      | 655   | 0     | 1.80   |
 | Micron    | 5200_MTFDDAK480TDC | 480 GB | 31      | 664   | 1     | 1.79   |
 | Intel     | SSDSC2BB012T7      | 1.2 TB | 173     | 1202  | 4     | 1.79   |
 | Kingston  | SUV400S37120G      | 120 GB | 12      | 680   | 3     | 1.78   |
@@ -1686,22 +2267,21 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7LN128HCHP-000H1 | 128 GB | 1       | 629   | 0     | 1.72   |
 | Transcend | TS256GSSD370       | 256 GB | 1       | 624   | 0     | 1.71   |
 | Micron    | 5100_MTFDDAK480TBY | 480 GB | 15      | 808   | 3     | 1.70   |
-| Seagate   | ST480FP0021        | 480 GB | 2       | 2302  | 413   | 1.70   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | 1       | 620   | 0     | 1.70   |
 | SK hynix  | SC300 2.5 7MM      | 256 GB | 1       | 618   | 0     | 1.69   |
-| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 66      | 618   | 0     | 1.69   |
 | Samsung   | MZ7LM480HMHQ-00005 | 480 GB | 73      | 1242  | 28    | 1.69   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 47      | 771   | 1     | 1.68   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 7       | 612   | 0     | 1.68   |
+| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 67      | 612   | 0     | 1.68   |
 | SanDisk   | SDLF1CRR-019T-1HA1 | 1.9 TB | 10      | 650   | 1     | 1.67   |
 | Samsung   | SSD 860 DCT        | 960 GB | 4       | 608   | 0     | 1.67   |
 | Micron    | MTFDDAV480TDS-1... | 480 GB | 1       | 605   | 0     | 1.66   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 7       | 605   | 0     | 1.66   |
 | Intel     | SSDSC2KB019T7      | 1.9 TB | 65      | 1082  | 5     | 1.66   |
+| HP        | VK000240GWSRQ      | 240 GB | 25      | 604   | 0     | 1.66   |
 | Intel     | SSDSC2KB240G8      | 240 GB | 808     | 630   | 2     | 1.66   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 1       | 603   | 0     | 1.65   |
 | Samsung   | MZ7KH1T9HAJR-00005 | 1.9 TB | 117     | 605   | 1     | 1.65   |
-| HP        | VK000240GWSRQ      | 240 GB | 25      | 600   | 0     | 1.65   |
 | Samsung   | MZ7LH480HAHQ-000V3 | 480 GB | 5       | 599   | 0     | 1.64   |
 | Samsung   | MZ7KH240HAHQ-00005 | 240 GB | 69      | 599   | 0     | 1.64   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 3       | 596   | 0     | 1.63   |
@@ -1725,6 +2305,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | SSD 860 EVO        | 250 GB | 119     | 563   | 2     | 1.54   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 23      | 559   | 0     | 1.53   |
 | Kingston  | SEDC500M960G       | 960 GB | 14      | 586   | 1     | 1.53   |
+| Micron    | 5300_MTFDDAK480TDT | 480 GB | 7       | 557   | 0     | 1.53   |
 | Intel     | SSDSC2BB960G7      | 960 GB | 33      | 1051  | 3     | 1.53   |
 | SATADOM   | SL 3SE             | 32 GB  | 3       | 556   | 0     | 1.52   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 1       | 553   | 0     | 1.52   |
@@ -1736,7 +2317,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Plextor   | PX-128S3C          | 128 GB | 1       | 544   | 0     | 1.49   |
 | HP        | SSD S700           | 500 GB | 7       | 600   | 1     | 1.49   |
 | PNY       | CS900 120GB SSD    | 120 GB | 2       | 543   | 0     | 1.49   |
-| Micron    | 5300_MTFDDAK480TDT | 480 GB | 7       | 541   | 0     | 1.48   |
 | Crucial   | CT2050MX300SSD1    | 2 TB   | 22      | 1266  | 22    | 1.48   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 38      | 539   | 0     | 1.48   |
 | Goodram   | SSDPR-CX300-120    | 120 GB | 2       | 538   | 0     | 1.47   |
@@ -1757,15 +2337,16 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Micron    | MTFDDAK960TCB      | 960 GB | 12      | 642   | 1     | 1.41   |
 | Samsung   | MZ7LM240HMHQ-00003 | 240 GB | 2       | 513   | 0     | 1.41   |
 | Micron    | MTFDDAK1T9TCB-1... | 1.9 TB | 12      | 511   | 0     | 1.40   |
+| Micron    | 5300_MTFDDAK960TDS | 960 GB | 180     | 525   | 1     | 1.40   |
 | Patriot   | P200               | 2 TB   | 5       | 510   | 0     | 1.40   |
 | SanDisk   | SDSSDA480G         | 480 GB | 2       | 509   | 0     | 1.40   |
 | HP        | VK0480GFDKH        | 480 GB | 6       | 509   | 0     | 1.40   |
 | Samsung   | MZ7LH7T6HMLA-00005 | 7.6 TB | 125     | 509   | 0     | 1.40   |
 | Seagate   | XA960LE10063       | 960 GB | 110     | 509   | 0     | 1.39   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 1       | 507   | 0     | 1.39   |
-| Micron    | 5300_MTFDDAK960TDS | 960 GB | 180     | 519   | 1     | 1.38   |
 | Intel     | SSDSC2BB800H4      | 800 GB | 6       | 504   | 0     | 1.38   |
 | Seagate   | ST120FN0021        | 120 GB | 1       | 502   | 0     | 1.38   |
+| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 913   | 33    | 1.37   |
 | Intel     | SSDSC2BB120G7K     | 120 GB | 8       | 618   | 1     | 1.37   |
 | Zheino    | CHN 25SATAS3 512   | 512 GB | 1       | 497   | 0     | 1.36   |
 | PNY       | CS900 240GB SSD    | 240 GB | 2       | 497   | 0     | 1.36   |
@@ -1779,7 +2360,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 3       | 481   | 0     | 1.32   |
 | Micron    | 5300_MTFDDAK240TDS | 240 GB | 9       | 480   | 0     | 1.32   |
 | HP        | VK001600GWCNT      | 1.6 TB | 12      | 616   | 2     | 1.32   |
-| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 870   | 33    | 1.31   |
 | WDC       | WDS250G2B0A        | 250 GB | 2       | 476   | 0     | 1.31   |
 | Patriot   | Burst              | 120 GB | 1       | 476   | 0     | 1.30   |
 | Samsung   | MZ7LH480HAHQ0D3    | 480 GB | 2       | 475   | 0     | 1.30   |
@@ -1806,7 +2386,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 475     | 448   | 0     | 1.23   |
 | Crucial   | CT1000BX100SSD1    | 1 TB   | 1       | 446   | 0     | 1.22   |
 | Samsung   | SSD 883 DCT        | 480 GB | 7       | 446   | 0     | 1.22   |
-| Intel     | SSDSC2KB019T8      | 1.9 TB | 311     | 588   | 7     | 1.22   |
 | China     | SATA SSD           | 480 GB | 6       | 445   | 0     | 1.22   |
 | Micron    | MTFDDAK480TDS      | 480 GB | 8       | 444   | 0     | 1.22   |
 | Kingston  | SA400S37480G       | 480 GB | 35      | 699   | 12    | 1.22   |
@@ -1838,14 +2417,15 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | HPE       | VR000480GWFMD      | 480 GB | 1       | 406   | 0     | 1.11   |
 | SanDisk   | SSD G5 BICS4       | 1 TB   | 5       | 448   | 1     | 1.11   |
 | Intel     | SSDSC2KB480G8R     | 480 GB | 19      | 414   | 1     | 1.11   |
-| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 91      | 403   | 0     | 1.11   |
 | Patriot   | Burst              | 960 GB | 3       | 403   | 0     | 1.10   |
 | SPCC      | SSD                | 512 GB | 6       | 402   | 0     | 1.10   |
 | SuperM... | SSD                | 128 GB | 2       | 402   | 0     | 1.10   |
+| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 92      | 402   | 0     | 1.10   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 1       | 402   | 0     | 1.10   |
 | SanDisk   | SSD PLUS           | 480 GB | 24      | 574   | 6     | 1.10   |
 | Samsung   | MZ7LH3T8HALT0D3    | 3.8 TB | 8       | 397   | 0     | 1.09   |
 | SK hynix  | HFS3T8G32FEH-7410A | 3.8 TB | 8       | 395   | 0     | 1.08   |
+| Intel     | SSDSC2KB019T8      | 1.9 TB | 355     | 516   | 7     | 1.07   |
 | Corsair   | Neutron SSD        | 128 GB | 1       | 1955  | 4     | 1.07   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 45      | 399   | 1     | 1.07   |
 | Kingston  | SEDC500R480G       | 480 GB | 11      | 387   | 0     | 1.06   |
@@ -1864,7 +2444,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | HPE       | MK000480GWXFF      | 480 GB | 21      | 363   | 0     | 1.00   |
 | ORTIAL    | SSD                | 1 TB   | 12      | 455   | 2     | 1.00   |
 | Intel     | SSDSC2KG019T8L     | 1.9 TB | 6       | 489   | 2     | 0.99   |
-| Samsung   | SSD 860 PRO        | 512 GB | 67      | 361   | 0     | 0.99   |
+| Samsung   | SSD 860 PRO        | 512 GB | 67      | 362   | 0     | 0.99   |
 | Seagate   | XA240ME10003       | 240 GB | 5       | 361   | 0     | 0.99   |
 | Micron    | MTFDDAV240TDU      | 240 GB | 6       | 355   | 0     | 0.97   |
 | Samsung   | MZ7LM960HMJP-00003 | 960 GB | 2       | 678   | 12    | 0.97   |
@@ -1925,6 +2505,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Toshiba   | THNSF81D60CSE      | 1.6 TB | 10      | 253   | 0     | 0.69   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 8       | 273   | 1     | 0.69   |
 | Micron    | MTFDDAK960TDD      | 960 GB | 14      | 251   | 0     | 0.69   |
+| Patriot   | Burst Elite        | 240 GB | 2       | 250   | 0     | 0.69   |
 | Kingston  | SHFS37A240G        | 240 GB | 1       | 248   | 0     | 0.68   |
 | PNY       | CS900 250GB SSD    | 250 GB | 10      | 247   | 0     | 0.68   |
 | Samsung   | MZ7LH3T8HMLT-00005 | 3.8 TB | 106     | 246   | 0     | 0.68   |
@@ -1946,11 +2527,11 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | China     | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
 | Phison    | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
 | Team      | T253X1480G         | 480 GB | 1       | 229   | 0     | 0.63   |
+| Micron    | 5300_MTFDDAK7T6TDS | 7.6 TB | 24      | 229   | 0     | 0.63   |
 | Transcend | TS480GSSD220S      | 480 GB | 4       | 320   | 2     | 0.63   |
-| Micron    | 5210_MTFDDAK3T8QDE | 3.8 TB | 105     | 236   | 3     | 0.62   |
 | Transcend | TSMSSSD01-120GP    | 120 GB | 2       | 227   | 0     | 0.62   |
 | ADATA     | SU720              | 2 TB   | 2       | 225   | 0     | 0.62   |
-| Micron    | 5300_MTFDDAK7T6TDS | 7.6 TB | 24      | 224   | 0     | 0.61   |
+| Micron    | 5210_MTFDDAK3T8QDE | 3.8 TB | 112     | 234   | 3     | 0.61   |
 | Intel     | SSDSC2BA400G3I ... | 400 GB | 2       | 221   | 0     | 0.61   |
 | Samsung   | MZ7LM960HCHP-000MV | 960 GB | 6       | 220   | 0     | 0.60   |
 | SanDisk   | SDSA5GK-016G-1006  | 16 GB  | 1       | 219   | 0     | 0.60   |
@@ -1958,7 +2539,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Phison    | SATA SSD           | 64 GB  | 9       | 218   | 0     | 0.60   |
 | Transcend | TS1TSSD230S        | 1 TB   | 2       | 218   | 0     | 0.60   |
 | Kingston  | SA400S37240G       | 240 GB | 150     | 219   | 4     | 0.59   |
-| Intel     | SSDSC2KB038T8      | 3.8 TB | 68      | 251   | 1     | 0.58   |
 | Micron    | 5300_MTFDDAK3T8TDS | 3.8 TB | 61      | 250   | 1     | 0.58   |
 | Crucial   | CT120BX100SSD1     | 120 GB | 1       | 209   | 0     | 0.57   |
 | Intel     | SSDSC2KB240GZ      | 240 GB | 6       | 208   | 0     | 0.57   |
@@ -1966,13 +2546,12 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Intel     | SSDSC2KG038T8      | 3.8 TB | 14      | 303   | 1     | 0.57   |
 | Micron    | MTFDDAK960TDS      | 960 GB | 22      | 213   | 1     | 0.56   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 10      | 205   | 0     | 0.56   |
-| Patriot   | Burst Elite        | 240 GB | 2       | 203   | 0     | 0.56   |
 | Maxtor    | Z1 SSD             | 960 GB | 2       | 203   | 0     | 0.56   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 496     | 227   | 3     | 0.55   |
+| Micron    | 5300_MTFDDAK480TDS | 480 GB | 31      | 197   | 0     | 0.54   |
 | Samsung   | MZ7KM120HAFD-000FU | 120 GB | 1       | 195   | 0     | 0.54   |
 | Intel     | SSDSC2KG019T8R     | 1.9 TB | 58      | 220   | 1     | 0.54   |
 | Kingston  | SEDC500M480G       | 480 GB | 27      | 212   | 1     | 0.54   |
-| Micron    | 5300_MTFDDAK480TDS | 480 GB | 31      | 191   | 0     | 0.53   |
 | SATADOM   | SH Type D 3TE7     | 120 GB | 8       | 191   | 0     | 0.52   |
 | Lite-On   | CV8-CE512-11 SATA  | 512 GB | 1       | 189   | 0     | 0.52   |
 | HP        | VK000480GWTTA      | 480 GB | 6       | 188   | 0     | 0.52   |
@@ -1987,12 +2566,12 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 58      | 196   | 3     | 0.47   |
 | HP        | VK000960GWTHB      | 960 GB | 3       | 172   | 0     | 0.47   |
 | ADATA     | SU800              | 256 GB | 1       | 172   | 0     | 0.47   |
-| Intel     | SSDSC2KG480GZ      | 480 GB | 1       | 170   | 0     | 0.47   |
 | HP        | VK001920GWJPH      | 1.9 TB | 4       | 313   | 10    | 0.46   |
 | HPE       | MK000960GWSSD      | 960 GB | 40      | 166   | 0     | 0.46   |
 | Seagate   | XA240LE10003       | 240 GB | 10      | 166   | 0     | 0.46   |
 | HP        | SSD S750           | 1 TB   | 14      | 164   | 0     | 0.45   |
 | Team      | T253X6001T         | 1 TB   | 4       | 163   | 0     | 0.45   |
+| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 192   | 3     | 0.44   |
 | Phison    | SATA SSD           | 32 GB  | 1       | 161   | 0     | 0.44   |
 | Kingston  | SEDC500M3840G      | 3.8 TB | 13      | 237   | 1     | 0.44   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 107     | 176   | 2     | 0.43   |
@@ -2011,7 +2590,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | ADATA     | SU650              | 120 GB | 4       | 146   | 0     | 0.40   |
 | China     | SATA SSD           | 1 TB   | 21      | 145   | 0     | 0.40   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 2       | 1656  | 9     | 0.40   |
-| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 144   | 0     | 0.40   |
 | China     | SATA SSD           | 16 GB  | 1       | 144   | 0     | 0.39   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 34      | 143   | 0     | 0.39   |
 | Intel     | SSDSC2BB480G7K     | 480 GB | 1       | 141   | 0     | 0.39   |
@@ -2019,6 +2597,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | SATADOM   | SL 3TE7            | 120 GB | 6       | 139   | 0     | 0.38   |
 | WDC       | WDS400T1R0A-68A4W0 | 4 TB   | 10      | 138   | 0     | 0.38   |
 | Micron    | 1300_MTFDDAK512TDL | 512 GB | 116     | 138   | 0     | 0.38   |
+| Kingston  | SEDC450R960G       | 960 GB | 1       | 136   | 0     | 0.38   |
 | Kingston  | SKC6001024G        | 1 TB   | 2       | 136   | 0     | 0.37   |
 | HP        | VK0480GEPQP        | 480 GB | 4       | 135   | 0     | 0.37   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 1       | 133   | 0     | 0.37   |
@@ -2031,6 +2610,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Intel     | SSDSC2KW256G8      | 256 GB | 24      | 149   | 6     | 0.34   |
 | Innodisk  | DEMSR-64GM41BC1... | 64 GB  | 1       | 601   | 4     | 0.33   |
 | Samsung   | MZ7LN1T0HAJQ-00000 | 1 TB   | 2       | 119   | 0     | 0.33   |
+| Intel     | SSDSC2KB038T8      | 3.8 TB | 127     | 139   | 1     | 0.33   |
 | China     | SATA SSD           | 32 GB  | 2       | 119   | 0     | 0.33   |
 | ADATA     | SX900              | 128 GB | 8       | 345   | 639   | 0.32   |
 | Crucial   | CT1024M550SSD1     | 1 TB   | 5       | 2458  | 188   | 0.32   |
@@ -2038,12 +2618,14 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Intel     | SSDSCKKW128G8      | 128 GB | 3       | 112   | 0     | 0.31   |
 | Netac     | SSD                | 64 GB  | 1       | 111   | 0     | 0.31   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 8       | 137   | 2     | 0.30   |
+| QUMO      | SSD                | 256 GB | 1       | 108   | 0     | 0.30   |
 | Kingston  | SUV500M8240G       | 240 GB | 3       | 108   | 0     | 0.30   |
 | SanDisk   | SDSSDX480GG25      | 480 GB | 1       | 2911  | 26    | 0.30   |
 | Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 4       | 107   | 0     | 0.30   |
 | Kingston  | SEDC450R1920G      | 1.9 TB | 10      | 106   | 0     | 0.29   |
 | HP        | VK001920GXCGP      | 1.9 TB | 12      | 103   | 0     | 0.28   |
 | Samsung   | SSD 870 EVO        | 4 TB   | 11      | 150   | 8     | 0.28   |
+| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 14      | 101   | 0     | 0.28   |
 | Team      | T253A3001T         | 1 TB   | 31      | 101   | 0     | 0.28   |
 | Micron    | MTFDDAK1T9TDT      | 1.9 TB | 36      | 101   | 0     | 0.28   |
 | Intel     | SSDSC2KG076T8      | 7.6 TB | 2       | 98    | 0     | 0.27   |
@@ -2054,7 +2636,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | SanDisk   | SDSSDH3512G        | 512 GB | 3       | 90    | 0     | 0.25   |
 | KIOXIA... | SATA SSD           | 240 GB | 8       | 90    | 0     | 0.25   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 9       | 576   | 32    | 0.24   |
-| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 8       | 87    | 0     | 0.24   |
 | SanDisk   | SD8SB8U128G1122    | 128 GB | 1       | 261   | 2     | 0.24   |
 | Kingston  | SEDC450R3840G      | 3.8 TB | 4       | 86    | 0     | 0.24   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 1       | 84    | 0     | 0.23   |
@@ -2062,7 +2643,6 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | SSD 870 EVO        | 2 TB   | 64      | 108   | 3     | 0.23   |
 | ADATA     | SU800              | 1 TB   | 4       | 81    | 0     | 0.22   |
 | Micron    | MTFDDAK1T0TDL      | 1 TB   | 25      | 82    | 1     | 0.22   |
-| Kingston  | SEDC450R960G       | 960 GB | 1       | 79    | 0     | 0.22   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 1       | 2694  | 33    | 0.22   |
 | Patriot   | P210               | 2 TB   | 2       | 79    | 0     | 0.22   |
 | Transcend | TS1TSSD370S        | 1 TB   | 1       | 296   | 3     | 0.20   |
@@ -2079,6 +2659,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Samsung   | MZYTY128HDHP-000L2 | 128 GB | 3       | 61    | 0     | 0.17   |
 | ADATA     | SU630              | 240 GB | 3       | 61    | 0     | 0.17   |
 | Micron    | MTFDDAK512TBN      | 512 GB | 3       | 58    | 0     | 0.16   |
+| Intel     | SSDSC2KG480GZ      | 480 GB | 4       | 60    | 1     | 0.16   |
 | Transcend | TS2TSSD230S        | 2 TB   | 2       | 56    | 0     | 0.16   |
 | Seagate   | BarraCuda 120 S... | 500 GB | 2       | 56    | 0     | 0.16   |
 | WDC       | WDS500G1R0B-68A4Z0 | 500 GB | 3       | 53    | 0     | 0.15   |
@@ -2093,6 +2674,7 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Intel     | SSDSC2KB019T8R     | 1.9 TB | 3       | 68    | 3     | 0.12   |
 | GS Nan... | 512-16 GSPTA512... | 512 GB | 3       | 44    | 0     | 0.12   |
 | SPCC      | SSD                | 2 TB   | 1       | 43    | 0     | 0.12   |
+| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 30      | 40    | 0     | 0.11   |
 | Transcend | TS256GMTS800S      | 256 GB | 7       | 40    | 0     | 0.11   |
 | China     | SATA SSD           | 120 GB | 3       | 40    | 0     | 0.11   |
 | Qumo      | SSD                | 64 GB  | 2       | 47    | 608   | 0.10   |
@@ -2108,22 +2690,26 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Kingston  | SEDC450R7680G      | 7.6 TB | 2       | 30    | 0     | 0.08   |
 | HPE       | LK1600GEYMV        | 1.6 TB | 1       | 28    | 0     | 0.08   |
 | Intel     | SSDSC2KB960GZ      | 960 GB | 1       | 28    | 0     | 0.08   |
-| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 3       | 28    | 0     | 0.08   |
 | Intel     | SSDSC2KI128G8      | 128 GB | 1       | 56    | 1     | 0.08   |
 | Intel     | SSDSC2KG480G8R     | 480 GB | 1       | 27    | 0     | 0.08   |
 | Kingston  | SKC300S37A480G     | 480 GB | 1       | 27    | 0     | 0.08   |
+| China     | Destiny4_4000G_DVT | 4 TB   | 7       | 41    | 21    | 0.07   |
 | Patriot   | Burst Elite        | 120 GB | 1       | 26    | 0     | 0.07   |
 | SPCC      | SSD                | 128 GB | 2       | 25    | 0     | 0.07   |
+| Samsung   | MZ7L3480HBLT-00A07 | 480 GB | 26      | 23    | 0     | 0.07   |
+| QUMO      | Q3DT-240GSCY       | 240 GB | 3       | 22    | 0     | 0.06   |
 | ADATA     | SU630              | 480 GB | 2       | 22    | 0     | 0.06   |
-| QUMO      | Q3DT-240GSCY       | 240 GB | 3       | 20    | 0     | 0.06   |
 | Transcend | TS128GMTS800S      | 128 GB | 5       | 18    | 0     | 0.05   |
 | HP        | VK000240GWEZB      | 240 GB | 8       | 15    | 0     | 0.04   |
 | WDC       | WDS200T2G0A-00JH30 | 2 TB   | 8       | 14    | 0     | 0.04   |
 | SanDisk   | SD8SB8U-128G-1006  | 128 GB | 1       | 14    | 0     | 0.04   |
+| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 63      | 12    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 2 TB   | 1       | 12    | 0     | 0.04   |
 | Transcend | TS120GMTS820S      | 120 GB | 11      | 36    | 8     | 0.03   |
 | Crucial   | CT4000MX500SSD1    | 4 TB   | 9       | 10    | 0     | 0.03   |
 | SATADOM   | SV 3ME3            | 64 GB  | 4       | 10    | 0     | 0.03   |
+| Micron    | 5300_MTFDDAV480TDS | 480 GB | 38      | 9     | 0     | 0.03   |
+| Samsung   | MZ7L3480HCHQ-00A07 | 480 GB | 4       | 7     | 0     | 0.02   |
 | Micron    | 5300_MTFDDAK240TDT | 240 GB | 7       | 7     | 0     | 0.02   |
 | Micron    | MTFDDAK3T8TDT      | 3.8 TB | 32      | 7     | 0     | 0.02   |
 | Palit     | PH120 SSD          | 120 GB | 2       | 6     | 0     | 0.02   |
@@ -2157,18 +2743,636 @@ See full list of tested SSD samples in the Appendix 2 ([All_SSD.md](/All_SSD.md)
 | Intel     | SSDSC2BA100G3T     | 100 GB | 3       | 1547  | 1028  | 0.00   |
 | Intel     | SSDSC2BA800G4R     | 800 GB | 71      | 1382  | 1042  | 0.00   |
 | Micron    | MTFDDAK3T8TDS-1... | 3.8 TB | 2       | 1     | 0     | 0.00   |
+| Seagate   | ST480FP0021        | 480 GB | 2       | 2337  | 1821  | 0.00   |
 | Kingston  | SHPM2280P2H-240G   | 240 GB | 1       | 1297  | 1022  | 0.00   |
 | Intel     | SSDSC2BA200G4R     | 200 GB | 14      | 1273  | 1028  | 0.00   |
+| Intel     | SSDSC2KB480GZ      | 480 GB | 6       | 1     | 0     | 0.00   |
 | Intel     | SSDSC2KG960G8T     | 960 GB | 1       | 1037  | 1026  | 0.00   |
 | Crucial   | CT128MX100SSD1     | 128 GB | 1       | 1045  | 1061  | 0.00   |
 | ADATA     | ISMS331-128GMH     | 128 GB | 1       | 0     | 0     | 0.00   |
 | Intel     | SSDSC2BB800G4T     | 800 GB | 1       | 807   | 1027  | 0.00   |
 | GS Nan... | GS SSD 256-16 STR  | 256 GB | 2       | 0     | 0     | 0.00   |
-| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 25      | 0     | 0     | 0.00   |
 | Intel     | SSDSC2BX800G4R     | 800 GB | 4       | 357   | 1027  | 0.00   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | 2       | 297   | 921   | 0.00   |
 | Intel     | SSDSC2KW480H6      | 480 GB | 1       | 115   | 393   | 0.00   |
 | INDMEM    | SSD M.2 2260       | 128 GB | 1       | 0     | 0     | 0.00   |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
 
 SSD by Family
 -------------
@@ -2207,7 +3411,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | Dell Certified Inte... | 3      | 78      | 1412  | 27    | 3.33   |
 | Toshiba   | HK4R Series SSD        | 4      | 42      | 1227  | 1     | 3.32   |
 | Dell      | Certified Intel S35... | 1      | 6       | 1375  | 1     | 3.25   |
-| Intel     | 730 and DC S35x0/36... | 51     | 1216    | 1648  | 256   | 3.22   |
+| Intel     | 730 and DC S35x0/36... | 53     | 1223    | 1648  | 254   | 3.23   |
 | OCZ       | Indilinx Barefoot 3... | 3      | 7       | 1416  | 12    | 3.13   |
 | OCZ       | OCZ/Toshiba Trion SSDs | 2      | 2       | 1125  | 0     | 3.08   |
 | Apacer    | Unknown                | 2      | 2       | 1120  | 0     | 3.07   |
@@ -2215,6 +3419,7 @@ MTBF - avg. MTBF in years per sample.
 | Goodram   | Phison Driven OEM SSDs | 1      | 4       | 1006  | 0     | 2.76   |
 | OWC       | Unknown                | 1      | 1       | 2002  | 1     | 2.74   |
 | MyDigi... | Unknown                | 1      | 6       | 945   | 0     | 2.59   |
+| Seagate   | Unknown                | 6      | 16      | 1117  | 129   | 2.57   |
 | Seagate   | Nytro XF1230 SATA SSD  | 3      | 26      | 865   | 0     | 2.37   |
 | Superm... | Silicon Motion base... | 4      | 206     | 881   | 7     | 2.37   |
 | Intel     | 510 Series SSDs        | 1      | 2       | 842   | 0     | 2.31   |
@@ -2223,29 +3428,29 @@ MTBF - avg. MTBF in years per sample.
 | AMD       | Silicon Motion base... | 1      | 2       | 812   | 0     | 2.23   |
 | XPG       | Unknown                | 1      | 2       | 806   | 0     | 2.21   |
 | WDC       | Blue and Green SSDs    | 9      | 52      | 806   | 0     | 2.21   |
+| WDC       | Unknown                | 1      | 2       | 788   | 0     | 2.16   |
 | Intel     | 525 Series SSDs        | 1      | 1       | 788   | 0     | 2.16   |
-| Samsung   | Samsung based SSDs     | 151    | 7741    | 840   | 10    | 2.10   |
 | Crucial   | MX1/2/300, M5/600, ... | 1      | 4       | 1560  | 503   | 2.10   |
-| Micron    | BX/MX1/2/3/500, M5/... | 3      | 47      | 1142  | 43    | 2.08   |
+| Micron    | BX/MX1/2/3/500, M5/... | 3      | 47      | 1144  | 43    | 2.08   |
+| Samsung   | Samsung based SSDs     | 153    | 7844    | 829   | 10    | 2.07   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 14     | 257     | 916   | 10    | 2.02   |
 | Toshiba   | OCZ/Toshiba Trion SSDs | 1      | 1       | 1473  | 1     | 2.02   |
 | HP        | Unknown                | 32     | 223     | 776   | 1     | 2.02   |
 | Intel     | S3520 Series SSDs      | 7      | 292     | 1285  | 3     | 1.96   |
 | Lite-On   | Unknown                | 7      | 10      | 695   | 0     | 1.91   |
-| Micron    | 5100 Pro / 5200 SSDs   | 16     | 449     | 880   | 6     | 1.89   |
+| Micron    | 5100 Pro / 5200 SSDs   | 16     | 449     | 881   | 6     | 1.89   |
 | Toshiba   | HG6 Series SSD         | 2      | 2       | 686   | 0     | 1.88   |
 | Crucial   | Silicon Motion base... | 5      | 6       | 679   | 0     | 1.86   |
 | SanDisk   | SATA CS1K GEN1 ESS ... | 1      | 1       | 670   | 0     | 1.84   |
 | Micron    | BX/MX1/2/3/500, M5/... | 10     | 119     | 790   | 25    | 1.82   |
-| SanDisk   | Marvell based SanDi... | 23     | 166     | 706   | 2     | 1.77   |
+| SanDisk   | Marvell based SanDi... | 25     | 170     | 697   | 2     | 1.75   |
 | Goodram   | Phison Driven SSDs     | 4      | 14      | 630   | 0     | 1.73   |
-| Seagate   | 600 Pro Series         | 1      | 2       | 2302  | 413   | 1.70   |
 | Plextor   | Unknown                | 2      | 2       | 609   | 0     | 1.67   |
 | Plextor   | M3/M5/M6/M7 Series ... | 1      | 2       | 584   | 0     | 1.60   |
 | Kingston  | SSDNow UV400           | 2      | 65      | 586   | 1     | 1.56   |
-| Intel     | S4510/S4610/S4500/S... | 25     | 3891    | 677   | 3     | 1.55   |
 | HPE       | Unknown                | 21     | 150     | 604   | 1     | 1.54   |
 | Samsung   | Unknown                | 20     | 826     | 571   | 2     | 1.53   |
+| Intel     | S4510/S4610/S4500/S... | 30     | 4013    | 657   | 3     | 1.51   |
 | SATADOM   | Innodisk 3IE3/3ME3/... | 2      | 11      | 547   | 0     | 1.50   |
 | Seagate   | Nytro SATA SSD         | 8      | 211     | 546   | 0     | 1.50   |
 | Goodram   | Unknown                | 1      | 2       | 538   | 0     | 1.47   |
@@ -2255,38 +3460,36 @@ MTBF - avg. MTBF in years per sample.
 | PNY       | Phison Driven SSDs     | 3      | 5       | 521   | 0     | 1.43   |
 | Patriot   | Silicon Motion base... | 1      | 5       | 510   | 0     | 1.40   |
 | Kingston  | SSDNow UV400/500       | 5      | 18      | 508   | 0     | 1.39   |
+| Crucial   | Unknown                | 1      | 6       | 913   | 33    | 1.37   |
 | Zheino    | Unknown                | 1      | 1       | 497   | 0     | 1.36   |
 | Crucial   | BX/MX1/2/3/500, M5/... | 7      | 325     | 713   | 15    | 1.36   |
-| Micron    | 5100 Pro / 5200 / 5... | 17     | 828     | 594   | 9     | 1.34   |
 | SPCC      | Phison Driven OEM SSDs | 2      | 5       | 488   | 0     | 1.34   |
 | Intel     | Dell Certified Inte... | 12     | 188     | 563   | 12    | 1.30   |
+| Micron    | 5100 Pro / 5200 / 5... | 18     | 866     | 570   | 8     | 1.29   |
 | SK hynix  | SATA SSDs              | 8      | 27      | 461   | 0     | 1.26   |
-| Patriot   | Phison Driven SSDs     | 4      | 22      | 495   | 1     | 1.25   |
+| Patriot   | Phison Driven SSDs     | 5      | 23      | 494   | 1     | 1.25   |
 | Dell      | Certified Intel S4x... | 1      | 13      | 454   | 0     | 1.25   |
 | SanDisk   | SandForce Driven SSDs  | 4      | 8       | 802   | 4     | 1.24   |
-| WDC       | Blue / Red / Green ... | 17     | 289     | 511   | 3     | 1.22   |
-| Intel     | Unknown                | 24     | 156     | 1627  | 614   | 1.21   |
 | SATADOM   | Unknown                | 6      | 21      | 438   | 0     | 1.20   |
+| Intel     | Unknown                | 18     | 142     | 1741  | 674   | 1.20   |
+| WDC       | Blue / Red / Green ... | 19     | 303     | 501   | 3     | 1.19   |
+| SanDisk   | Unknown                | 10     | 14      | 473   | 132   | 1.18   |
 | THU       | Unknown                | 1      | 1       | 422   | 0     | 1.16   |
 | SPCC      | Unknown                | 6      | 13      | 471   | 10    | 1.14   |
 | KingDian  | Silicon Motion base... | 1      | 3       | 476   | 1     | 1.12   |
-| SanDisk   | Unknown                | 12     | 18      | 439   | 103   | 1.11   |
 | SuperM... | Silicon Motion base... | 1      | 2       | 402   | 0     | 1.10   |
 | Corsair   | Unknown                | 1      | 1       | 1955  | 4     | 1.07   |
 | ORTIAL    | Unknown                | 1      | 12      | 455   | 2     | 1.00   |
-| Kingston  | Phison Driven SSDs     | 28     | 511     | 398   | 3     | 0.98   |
+| Kingston  | Phison Driven SSDs     | 29     | 512     | 399   | 3     | 0.98   |
 | Gigaby... | Unknown                | 2      | 3       | 353   | 0     | 0.97   |
 | BIWIN     | Unknown                | 1      | 1       | 332   | 0     | 0.91   |
 | Mushkin   | Unknown                | 3      | 14      | 401   | 1     | 0.90   |
 | Mushkin   | Silicon Motion base... | 1      | 1       | 308   | 0     | 0.84   |
-| Micron    | Unknown                | 23     | 647     | 314   | 3     | 0.83   |
-| WDC       | Unknown                | 3      | 16      | 368   | 1     | 0.82   |
-| SK hynix  | Unknown                | 2      | 29      | 286   | 0     | 0.78   |
+| Micron    | Unknown                | 23     | 654     | 313   | 3     | 0.83   |
+| SK hynix  | Unknown                | 2      | 29      | 296   | 1     | 0.79   |
 | Maxtor    | Unknown                | 2      | 3       | 275   | 0     | 0.75   |
-| Seagate   | Unknown                | 6      | 13      | 272   | 0     | 0.75   |
 | KingSpec  | Unknown                | 2      | 3       | 253   | 0     | 0.70   |
 | Synology  | Unknown                | 1      | 12      | 240   | 0     | 0.66   |
-| China     | Unknown                | 5      | 16      | 319   | 2     | 0.65   |
 | Apacer    | AS340 SSDs             | 2      | 44      | 356   | 21    | 0.64   |
 | ADATA     | Silicon Motion base... | 6      | 20      | 271   | 25    | 0.63   |
 | Crucial   | MX500 SSDs             | 5      | 716     | 263   | 3     | 0.62   |
@@ -2296,15 +3499,14 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | Client SSDs            | 4      | 44      | 221   | 2     | 0.58   |
 | Team      | Unknown                | 5      | 41      | 204   | 0     | 0.56   |
 | Gigaby... | Phison Driven SSDs     | 2      | 11      | 202   | 0     | 0.56   |
-| Kingston  | Unknown                | 4      | 6       | 985   | 542   | 0.55   |
-| Crucial   | Unknown                | 2      | 15      | 354   | 14    | 0.54   |
 | Transcend | Unknown                | 4      | 19      | 198   | 5     | 0.51   |
 | Intel     | DC S3110 Series SSDs   | 1      | 1       | 173   | 0     | 0.47   |
-| Patriot   | Unknown                | 5      | 10      | 167   | 0     | 0.46   |
+| China     | Unknown                | 6      | 23      | 234   | 8     | 0.47   |
 | ADATA     | Unknown                | 13     | 33      | 422   | 248   | 0.44   |
 | Crucial   | SiliconMotion based... | 2      | 2       | 157   | 0     | 0.43   |
 | Intel     | 545s Series SSDs       | 4      | 45      | 167   | 4     | 0.40   |
 | Intel     | X18-M/X25-M/X25-V G... | 1      | 2       | 1656  | 9     | 0.40   |
+| Patriot   | Unknown                | 4      | 9       | 143   | 0     | 0.39   |
 | EMTEC     | Unknown                | 1      | 1       | 131   | 0     | 0.36   |
 | Transcend | Silicon Motion base... | 9      | 33      | 143   | 1     | 0.34   |
 | Innodisk  | Unknown                | 1      | 1       | 601   | 4     | 0.33   |
@@ -2312,17 +3514,20 @@ MTBF - avg. MTBF in years per sample.
 | Intenso   | Unknown                | 3      | 5       | 102   | 0     | 0.28   |
 | Apacer    | SSDs                   | 1      | 6       | 96    | 0     | 0.26   |
 | KIOXIA... | Unknown                | 1      | 8       | 90    | 0     | 0.25   |
+| Kingston  | Unknown                | 3      | 5       | 1026  | 650   | 0.23   |
 | Smartbuy  | Unknown                | 1      | 1       | 70    | 0     | 0.19   |
 | V-GeN     | Unknown                | 1      | 1       | 190   | 2     | 0.17   |
+| QUMO      | Unknown                | 2      | 4       | 44    | 0     | 0.12   |
 | Kingston  | Silicon Motion base... | 3      | 30      | 45    | 1     | 0.11   |
 | Qumo      | Unknown                | 1      | 2       | 47    | 608   | 0.10   |
 | KingFast  | Unknown                | 1      | 1       | 447   | 11    | 0.10   |
-| Crucial   | Client SSDs            | 1      | 12      | 34    | 0     | 0.09   |
+| Seagate   | IronWolf (Pro) 125 ... | 1      | 2       | 31    | 0     | 0.09   |
 | GS Nan... | Unknown                | 2      | 5       | 26    | 0     | 0.07   |
-| QUMO      | Unknown                | 1      | 3       | 20    | 0     | 0.06   |
+| Crucial   | Client SSDs            | 2      | 21      | 24    | 0     | 0.07   |
 | Palit     | Unknown                | 1      | 2       | 6     | 0     | 0.02   |
 | Intel     | 540 Series SSDs        | 3      | 4       | 90    | 177   | 0.01   |
 | Avant     | Unknown                | 1      | 2       | 2045  | 1018  | 0.01   |
+| Seagate   | 600 Pro Series         | 1      | 2       | 2337  | 1821  | 0.00   |
 | INDMEM    | Unknown                | 1      | 1       | 0     | 0     | 0.00   |
 
 SSD by Vendor
@@ -2349,28 +3554,25 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk     | 51     | 308     | 921   | 11    | 2.32   |
 | AMD         | 1      | 2       | 812   | 0     | 2.23   |
 | XPG         | 1      | 2       | 806   | 0     | 2.21   |
-| Samsung     | 171    | 8567    | 814   | 9     | 2.04   |
+| Samsung     | 173    | 8670    | 805   | 9     | 2.02   |
 | HP          | 32     | 223     | 776   | 1     | 2.02   |
-| Intel       | 167    | 6219    | 983   | 76    | 2.00   |
+| Intel       | 168    | 6334    | 966   | 74    | 1.97   |
 | Goodram     | 6      | 20      | 696   | 0     | 1.91   |
 | Lite-On     | 7      | 10      | 695   | 0     | 1.91   |
 | Dell        | 2      | 19      | 745   | 1     | 1.88   |
+| Seagate     | 19     | 257     | 624   | 23    | 1.63   |
 | Kingston    | 63     | 837     | 694   | 8     | 1.63   |
-| Seagate     | 18     | 252     | 579   | 4     | 1.55   |
 | HPE         | 21     | 150     | 604   | 1     | 1.54   |
-| Zheino      | 1      | 1       | 497   | 0     | 1.36   |
-| Micron      | 82     | 2172    | 596   | 9     | 1.36   |
 | WDC         | 29     | 357     | 547   | 3     | 1.35   |
+| Micron      | 83     | 2217    | 585   | 9     | 1.34   |
 | SATADOM     | 8      | 32      | 476   | 0     | 1.30   |
 | SPCC        | 8      | 18      | 475   | 7     | 1.19   |
-| THU         | 1      | 1       | 422   | 0     | 1.16   |
 | KingDian    | 1      | 3       | 476   | 1     | 1.12   |
 | SuperMicro  | 1      | 2       | 402   | 0     | 1.10   |
 | Crucial     | 40     | 1341    | 509   | 10    | 1.09   |
-| Patriot     | 10     | 37      | 409   | 1     | 1.06   |
-| SK hynix    | 10     | 56      | 370   | 0     | 1.02   |
+| Patriot     | 10     | 37      | 411   | 1     | 1.06   |
+| SK hynix    | 10     | 56      | 375   | 1     | 1.02   |
 | ORTIAL      | 1      | 12      | 455   | 2     | 1.00   |
-| BIWIN       | 1      | 1       | 332   | 0     | 0.91   |
 | Innodisk    | 2      | 2       | 837   | 3     | 0.90   |
 | Mushkin     | 4      | 15      | 395   | 1     | 0.90   |
 | PNY         | 5      | 17      | 304   | 0     | 0.83   |
@@ -2381,22 +3583,16 @@ MTBF - avg. MTBF in years per sample.
 | Synology    | 1      | 12      | 240   | 0     | 0.66   |
 | Gigabyte... | 4      | 14      | 235   | 0     | 0.64   |
 | Phison      | 5      | 23      | 226   | 0     | 0.62   |
-| China       | 12     | 65      | 246   | 1     | 0.62   |
+| China       | 13     | 72      | 226   | 3     | 0.57   |
 | Team        | 5      | 41      | 204   | 0     | 0.56   |
 | Transcend   | 14     | 53      | 203   | 2     | 0.51   |
-| EMTEC       | 1      | 1       | 131   | 0     | 0.36   |
-| Netac       | 1      | 1       | 111   | 0     | 0.31   |
 | Intenso     | 3      | 5       | 102   | 0     | 0.28   |
 | KIOXIA-E... | 1      | 8       | 90    | 0     | 0.25   |
-| Smartbuy    | 1      | 1       | 70    | 0     | 0.19   |
-| V-GeN       | 1      | 1       | 190   | 2     | 0.17   |
+| QUMO        | 2      | 4       | 44    | 0     | 0.12   |
 | Qumo        | 1      | 2       | 47    | 608   | 0.10   |
-| KingFast    | 1      | 1       | 447   | 11    | 0.10   |
 | GS Nanotech | 2      | 5       | 26    | 0     | 0.07   |
-| QUMO        | 1      | 3       | 20    | 0     | 0.06   |
 | Palit       | 1      | 2       | 6     | 0     | 0.02   |
 | Avant       | 1      | 2       | 2045  | 1018  | 0.01   |
-| INDMEM      | 1      | 1       | 0     | 0     | 0.00   |
 
 NVME by Model
 -------------
@@ -2500,7 +3696,7 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | Intel     | SSDPE2KX020T7      | 2 TB   | 1       | 611   | 0     | 1.68   |
 | Samsung   | SSD 960 EVO        | 250 GB | 4       | 594   | 0     | 1.63   |
 | Intel     | SSDPED1K750GA      | 752 GB | 152     | 593   | 0     | 1.63   |
-| Dell      | Express Flash N... | 1.6 TB | 116     | 591   | 0     | 1.62   |
+| Dell      | Express Flash N... | 1.6 TB | 118     | 586   | 0     | 1.61   |
 | Samsung   | MZWLL800HEHP-00003 | 800 GB | 14      | 864   | 4     | 1.60   |
 | Intel     | SSDPEL1D380GA      | 384 GB | 6       | 579   | 0     | 1.59   |
 | Intel     | SSDPE21K750GA      | 752 GB | 66      | 578   | 0     | 1.58   |
@@ -2666,9 +3862,9 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 193     | 117   | 0     | 0.32   |
 | ADATA     | SX8200PNP          | 512 GB | 5       | 117   | 0     | 0.32   |
 | Micron    | 7300_MTFDHBG1T9TDF | 1.9 TB | 13      | 117   | 0     | 0.32   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 116   | 0     | 0.32   |
 | Wester... | WUS4BB076D7P3E1    | 7.6 TB | 12      | 114   | 0     | 0.31   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 18      | 114   | 0     | 0.31   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 112   | 0     | 0.31   |
 | Kingston  | SA2000M8500G       | 500 GB | 4       | 111   | 0     | 0.31   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 8       | 110   | 0     | 0.30   |
 | Micron    | 7300_MTFDHBA480TDF | 480 GB | 2       | 110   | 0     | 0.30   |
@@ -2684,6 +3880,7 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | Crucial   | CT1000P5SSD8       | 1 TB   | 4       | 98    | 0     | 0.27   |
 | Wester... | WUS4BB096D7P3E1    | 960 GB | 200     | 97    | 0     | 0.27   |
 | ADATA     | SX8200PNP          | 2 TB   | 3       | 96    | 0     | 0.26   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 83      | 95    | 0     | 0.26   |
 | Transcend | TS2TMTE220S        | 2 TB   | 2       | 94    | 0     | 0.26   |
 | Dell      | Express Flash P... | 1.6 TB | 4       | 92    | 0     | 0.25   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 87    | 0     | 0.24   |
@@ -2702,11 +3899,9 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | Dell      | Express Flash N... | 6.4 TB | 4       | 63    | 0     | 0.17   |
 | Micron    | 7400_MTFDKCB1T9TDZ | 1.9 TB | 5       | 61    | 0     | 0.17   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 10      | 60    | 0     | 0.17   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 81      | 60    | 0     | 0.17   |
 | SanDisk   | WD Red SN700       | 500 GB | 3       | 59    | 0     | 0.16   |
 | Transcend | TS512GMTE110S      | 512 GB | 4       | 57    | 0     | 0.16   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 5       | 101   | 203   | 0.15   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 2       | 55    | 0     | 0.15   |
 | XPG       | GAMMIX S11 Pro     | 256 GB | 1       | 55    | 0     | 0.15   |
 | WDC       | WUS4CB032D7P3E4    | 3.2 TB | 5       | 54    | 0     | 0.15   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5       | 54    | 0     | 0.15   |
@@ -2725,6 +3920,7 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | ADATA     | SX6000LNP          | 512 GB | 1       | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 5       | 29    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 28    | 0     | 0.08   |
 | Micron    | MTFDHBA1T0TDV-1... | 1 TB   | 1       | 21    | 0     | 0.06   |
 | SK hynix  | BC501A NVMe        | 128 GB | 3       | 21    | 0     | 0.06   |
 | Crucial   | CT1000P5PSSD8      | 1 TB   | 3       | 20    | 0     | 0.06   |
@@ -2753,6 +3949,1167 @@ See full list of tested NVMe samples in the Appendix 5 ([All_NVMe.md](/All_NVMe.
 | ADATA     | SX6000LNP          | 128 GB | 1       | 0     | 0     | 0.00   |
 | Netac     | NVMe SSD           | 1 TB   | 1       | 0     | 0     | 0.00   |
 | Samsung   | SSD 980            | 1 TB   | 2       | 0     | 0     | 0.00   |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
+|           |                    |        |         |       |       |  |
 
 NVME by Vendor
 --------------
@@ -2769,13 +5126,11 @@ MTBF - avg. MTBF in years per sample.
 |-------------|--------|---------|-------|-------|------|
 | PNY         | 1      | 2       | 851   | 0     | 2.33   |
 | Intel       | 81     | 2086    | 846   | 2     | 2.31   |
-| SPCC        | 1      | 1       | 837   | 0     | 2.29   |
 | HGST        | 1      | 24      | 504   | 0     | 1.38   |
-| Smartbuy    | 1      | 1       | 493   | 0     | 1.35   |
 | Seagate     | 1      | 10      | 428   | 0     | 1.17   |
 | WDC         | 33     | 2791    | 366   | 1     | 1.00   |
-| Samsung     | 85     | 3186    | 360   | 2     | 0.97   |
-| Dell        | 21     | 675     | 340   | 2     | 0.93   |
+| Samsung     | 85     | 3208    | 358   | 2     | 0.97   |
+| Dell        | 21     | 677     | 340   | 2     | 0.93   |
 | Corsair     | 5      | 41      | 331   | 0     | 0.91   |
 | Gigabyte... | 1      | 10      | 312   | 0     | 0.86   |
 | Goodram     | 1      | 2       | 312   | 0     | 0.86   |
@@ -2785,8 +5140,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston    | 17     | 56      | 269   | 0     | 0.74   |
 | HUAWEI      | 3      | 7       | 263   | 0     | 0.72   |
 | Western ... | 13     | 1374    | 241   | 0     | 0.66   |
-| Team        | 1      | 1       | 235   | 0     | 0.65   |
-| Micron      | 19     | 280     | 193   | 0     | 0.53   |
+| Micron      | 19     | 280     | 194   | 0     | 0.53   |
 | Patriot     | 3      | 7       | 172   | 0     | 0.47   |
 | ADATA       | 8      | 17      | 181   | 9     | 0.40   |
 | Crucial     | 6      | 18      | 123   | 0     | 0.34   |

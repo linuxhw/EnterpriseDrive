@@ -33,7 +33,7 @@ MTBF - avg. MTBF in years per sample.
 | HP        | VK0960GFLKK        | 960 GB | 1       | 841   | 0     | 2.31   |
 | HP        | VK000240GWJPD      | 240 GB | 1       | 686   | 0     | 1.88   |
 | HP        | VK001920GWSXK      | 1.9 TB | 35      | 638   | 0     | 1.75   |
-| HP        | VK000240GWSRQ      | 240 GB | 25      | 600   | 0     | 1.65   |
+| HP        | VK000240GWSRQ      | 240 GB | 25      | 604   | 0     | 1.66   |
 | HP        | VK0480GFLKH        | 480 GB | 2       | 547   | 0     | 1.50   |
 | HP        | SSD S700           | 500 GB | 7       | 600   | 1     | 1.49   |
 | HP        | VK0480GFDKH        | 480 GB | 6       | 509   | 0     | 1.40   |

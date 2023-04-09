@@ -27,8 +27,8 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 7300_MTFDHBE6T4TDG | 6.4 TB | 24      | 182   | 0     | 0.50   |
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | 8       | 137   | 0     | 0.38   |
 | Micron    | 7300_MTFDHBG1T9TDF | 1.9 TB | 13      | 117   | 0     | 0.32   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 116   | 0     | 0.32   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 18      | 114   | 0     | 0.31   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 112   | 0     | 0.31   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 8       | 110   | 0     | 0.30   |
 | Micron    | 7300_MTFDHBA480TDF | 480 GB | 2       | 110   | 0     | 0.30   |
 | Micron    | 7300_MTFDHBE1T6TDG | 1.6 TB | 2       | 64    | 0     | 0.18   |

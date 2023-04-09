@@ -6373,6 +6373,7 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 32C6D26E1853 | 266   | 0     | 0.73   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 92B78F1459F9 | 266   | 0     | 0.73   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | A7D85CC902F9 | 266   | 0     | 0.73   |
+| Dell      | Express Flash N... | 1.6 TB | 91B22423490C | 266   | 0     | 0.73   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 009545034B01 | 266   | 0     | 0.73   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 3866E89C371D | 266   | 0     | 0.73   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 84317303C5F1 | 266   | 0     | 0.73   |
@@ -6708,6 +6709,7 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4CB016D7P3E3    | 1.6 TB | 74D067F2D71E | 243   | 0     | 0.67   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 2380218E8638 | 243   | 0     | 0.67   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 2CCC45881FEA | 243   | 0     | 0.67   |
+| Dell      | Express Flash N... | 1.6 TB | DAF6AC40CA83 | 243   | 0     | 0.67   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | F82B4DCE7C43 | 243   | 0     | 0.67   |
 | Wester... | WUS4BB096D7P3E3    | 960 GB | 1004ED5C3096 | 243   | 0     | 0.67   |
 | Wester... | WUS4BB096D7P3E3    | 960 GB | 36C6F183A29D | 243   | 0     | 0.67   |
@@ -7903,6 +7905,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 7300_MTFDHBE6T4TDG | 6.4 TB | D7ED5DC83DBD | 173   | 0     | 0.48   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 9CE1FC6BD12E | 173   | 0     | 0.48   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | F741B3278AB6 | 173   | 0     | 0.48   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | D3DA7A9578D2 | 173   | 0     | 0.48   |
 | Micron    | 9300_MTFDHAL7T6TDP | 7.6 TB | 0CC7E138ECBB | 173   | 0     | 0.48   |
 | Micron    | 9300_MTFDHAL7T6TDP | 7.6 TB | 73268E827870 | 173   | 0     | 0.48   |
 | Micron    | 9300_MTFDHAL7T6TDP | 7.6 TB | F0E9E745A558 | 173   | 0     | 0.48   |
@@ -7979,6 +7982,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2KX010T8      | 1 TB   | EADD3BC52F52 | 168   | 0     | 0.46   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 287F7C51FAD2 | 168   | 0     | 0.46   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | B3299A552DBB | 168   | 0     | 0.46   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 7E3078E459EB | 168   | 0     | 0.46   |
 | Intel     | SSDPE2KX010T8      | 1 TB   | DE2E5240BF51 | 168   | 0     | 0.46   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 6D9973163EAA | 168   | 0     | 0.46   |
 | Wester... | WUS4CB016D7P3E3    | 1.6 TB | A1B764986DF9 | 168   | 0     | 0.46   |
@@ -8019,6 +8023,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2KX010T7      | 1 TB   | C1FDC03C4F41 | 165   | 0     | 0.45   |
 | Samsung   | MZPLJ6T4HALA-00007 | 6.4 TB | 60CE6C9863F5 | 165   | 0     | 0.45   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 60464D3DB022 | 165   | 0     | 0.45   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 1F109F1B9149 | 165   | 0     | 0.45   |
 | WDC       | WUS4BB038D7P3E1    | 3.8 TB | 577C2208ABEA | 165   | 0     | 0.45   |
 | WDC       | WUS4BB038D7P3E1    | 3.8 TB | E623BECD7558 | 165   | 0     | 0.45   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | F571CD2D339A | 165   | 0     | 0.45   |
@@ -8061,6 +8066,7 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB096D7P3E3    | 960 GB | E5ACC8C0EE26 | 163   | 0     | 0.45   |
 | Wester... | WUS4BB096D7P3E3    | 960 GB | EC7A0CB10E67 | 163   | 0     | 0.45   |
 | Wester... | WUS4BB096D7P3E3    | 960 GB | F881463C0B19 | 163   | 0     | 0.45   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 90572E7FC4D5 | 163   | 0     | 0.45   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 97F9701A0273 | 163   | 0     | 0.45   |
 | Samsung   | MZPJB480HMGC-0BW07 | 480 GB | D0C7A74AE194 | 163   | 0     | 0.45   |
 | Dell      | Express Flash C... | 960 GB | 5AA4BD0A321A | 163   | 0     | 0.45   |
@@ -8220,7 +8226,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 6938E0BE9B1D | 152   | 0     | 0.42   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 8385F04D89E6 | 152   | 0     | 0.42   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 9C0535C38FFF | 152   | 0     | 0.42   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 1F109F1B9149 | 151   | 0     | 0.42   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 47D2B51DB3BD | 151   | 0     | 0.42   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | A362A45B6320 | 151   | 0     | 0.42   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 614708824B2B | 151   | 0     | 0.42   |
@@ -8238,6 +8243,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 79113C9DAF98 | 150   | 0     | 0.41   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 58F504A4A7DB | 150   | 0     | 0.41   |
 | Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | B74E031697CA | 150   | 0     | 0.41   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 82A5FC9D7693 | 150   | 0     | 0.41   |
 | Corsair   | MP600 PRO          | 2 TB   | 74942AD272D9 | 149   | 0     | 0.41   |
 | Intel     | SSDPF2NV153TZ      | 15.... | 7A7138102716 | 149   | 0     | 0.41   |
 | Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 3A8666869CE4 | 149   | 0     | 0.41   |
@@ -8297,13 +8303,10 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 9F13541786E7 | 145   | 0     | 0.40   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 16255236A571 | 144   | 0     | 0.40   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | B2A305927C15 | 144   | 0     | 0.40   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 7E3078E459EB | 144   | 0     | 0.40   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 90572E7FC4D5 | 144   | 0     | 0.40   |
 | Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 886D05F50090 | 144   | 0     | 0.40   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | EC9F645008D5 | 144   | 0     | 0.40   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 46572FC59BE9 | 144   | 0     | 0.40   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 26C8982EFCCD | 144   | 0     | 0.39   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | D3DA7A9578D2 | 144   | 0     | 0.39   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | DAB7A1EF9886 | 144   | 0     | 0.39   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | DEFEFB52C87F | 144   | 0     | 0.39   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 235C9C73BE11 | 143   | 0     | 0.39   |
@@ -8313,7 +8316,6 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4CB016D7P3E3    | 1.6 TB | D23906F95383 | 143   | 0     | 0.39   |
 | Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 5D3F457513F7 | 143   | 0     | 0.39   |
 | Wester... | WUS4BB038D7P3E3    | 3.8 TB | 05181ED19198 | 143   | 0     | 0.39   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 82A5FC9D7693 | 142   | 0     | 0.39   |
 | WDC       | WUS4BB096D7P3E1    | 800 GB | 247025EC8353 | 142   | 0     | 0.39   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 4067C71C5BB2 | 142   | 0     | 0.39   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | A9E3B34B55D2 | 142   | 0     | 0.39   |
@@ -8353,6 +8355,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 93E1F6ED4E4E | 141   | 0     | 0.39   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 81EC355EFFAB | 141   | 0     | 0.39   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 935ABB1ACF27 | 140   | 0     | 0.39   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | BB758CBE7311 | 140   | 0     | 0.38   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 67D74F72510A | 140   | 0     | 0.38   |
 | Dell      | Express Flash C... | 960 GB | 728A1DBC7B28 | 139   | 0     | 0.38   |
 | Dell      | Express Flash C... | 960 GB | BDD50621A6B6 | 139   | 0     | 0.38   |
@@ -8364,6 +8367,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WUS4BB019D7P3E1    | 1.9 TB | C54CB661CBCA | 139   | 0     | 0.38   |
 | WDC       | WUS4BB019D7P3E1    | 1.9 TB | D771917845DC | 139   | 0     | 0.38   |
 | Samsung   | MZPLJ6T4HALA-00007 | 6.4 TB | AEBE8BBB2067 | 139   | 0     | 0.38   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 0BC7E5FC7E70 | 139   | 0     | 0.38   |
 | Toshiba   | KXG60PNV2T04       | 2 TB   | 9C02A35A3A26 | 139   | 0     | 0.38   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | D8CDDE553F6E | 139   | 0     | 0.38   |
 | Wester... | WUS4BB096D7P3E3    | 960 GB | 05BA3FF3399B | 139   | 0     | 0.38   |
@@ -8430,6 +8434,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 9300_MTFDHAL7T6TDP | 7.6 TB | 8A1B90A91A39 | 134   | 0     | 0.37   |
 | Micron    | 9300_MTFDHAL7T6TDP | 7.6 TB | 94C69DE7C6BD | 134   | 0     | 0.37   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 36EB7ABB3643 | 134   | 0     | 0.37   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 8BFF874B0601 | 134   | 0     | 0.37   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 08FD296C00AF | 134   | 0     | 0.37   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 4872E8989C02 | 134   | 0     | 0.37   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 9A7898DF7DC4 | 134   | 0     | 0.37   |
@@ -8479,6 +8484,7 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB096D7P3E1    | 960 GB | 1CC9F6D2444E | 130   | 0     | 0.36   |
 | Wester... | WUS4BB096D7P3E1    | 960 GB | BC16180C7CEB | 130   | 0     | 0.36   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 6FCCE0753DDE | 130   | 0     | 0.36   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 86982B3C9E9E | 129   | 0     | 0.36   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 5431B39DB2E6 | 129   | 0     | 0.36   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 0A3AAF7A6100 | 129   | 0     | 0.35   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 3AB713FE934F | 129   | 0     | 0.35   |
@@ -8491,6 +8497,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | F2317EC57C7B | 129   | 0     | 0.35   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 9FFE63F0993F | 129   | 0     | 0.35   |
 | Micron    | 7300_MTFDHBG1T9TDF | 1.9 TB | DB7AAA917FC1 | 129   | 0     | 0.35   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C73A84E8B47E | 129   | 0     | 0.35   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 568A15765DD4 | 129   | 0     | 0.35   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 04B2F3460D21 | 128   | 0     | 0.35   |
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | ABC5702F5D73 | 128   | 0     | 0.35   |
@@ -8520,6 +8527,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D52A736F2069 | 127   | 0     | 0.35   |
 | Wester... | WUS4CB016D7P3E3    | 1.6 TB | BF9B7A9F102A | 126   | 0     | 0.35   |
 | Dell      | Express Flash C... | 960 GB | 0641827BEFAC | 126   | 0     | 0.35   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 09E4D30F98C0 | 126   | 0     | 0.35   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 516332F7C269 | 126   | 0     | 0.35   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 85A40F7C2A70 | 126   | 0     | 0.35   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | A74A2380148E | 126   | 0     | 0.35   |
@@ -8554,7 +8562,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZPLJ6T4HALA-00007 | 6.4 TB | 0D7CFE1EBF29 | 125   | 0     | 0.34   |
 | Samsung   | SSD 970 PRO        | 512 GB | 909F892C64A3 | 125   | 0     | 0.34   |
 | WDC       | WUS4BB019D7P3E1    | 1.9 TB | AAD841E3AC33 | 125   | 0     | 0.34   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 0BC7E5FC7E70 | 125   | 0     | 0.34   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 973B21941582 | 125   | 0     | 0.34   |
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | CA2928A87B27 | 125   | 0     | 0.34   |
 | Samsung   | SSD 970 PRO        | 512 GB | B822B24D2E0F | 125   | 0     | 0.34   |
@@ -8584,8 +8591,17 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB960HAJR-00007 | 960 GB | 8E1896D4AA45 | 124   | 0     | 0.34   |
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 2C923586FD68 | 124   | 0     | 0.34   |
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 5A07C843B9E3 | 124   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3B97B59EC246 | 124   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 602676C21ED8 | 124   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | D300C74008CE | 124   | 0     | 0.34   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | 75C1500829A4 | 124   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 70E9D9805812 | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 8454A7945A43 | 123   | 0     | 0.34   |
 | Samsung   | MZQL2960HCJR-00A07 | 960 GB | 9C2A2702067C | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 02846BF3053C | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 29BE85189EDA | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3F10491999C4 | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 47A445AA5066 | 123   | 0     | 0.34   |
 | Crucial   | CT1000P5SSD8       | 1 TB   | 5D1E754B7730 | 123   | 0     | 0.34   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 5CE7B4AD0D99 | 123   | 0     | 0.34   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 8AC9FE632463 | 123   | 0     | 0.34   |
@@ -8600,6 +8616,9 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB096D7P3E1    | 960 GB | A67E90093BA1 | 123   | 0     | 0.34   |
 | Wester... | WUS4BB096D7P3E1    | 960 GB | DEF3A60A1CF1 | 123   | 0     | 0.34   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | D82CCE51270D | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 1A3D34BE885A | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | ED764A14044C | 123   | 0     | 0.34   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | FBEFC84452FE | 123   | 0     | 0.34   |
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 39C58C605C42 | 123   | 0     | 0.34   |
 | Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | D2F93FE9941E | 123   | 0     | 0.34   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | 7F085B1611D7 | 123   | 0     | 0.34   |
@@ -8699,6 +8718,11 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | 115799F76371 | 121   | 0     | 0.33   |
 | Samsung   | MZQL2960HCJR-00A07 | 960 GB | 1C496ED5AA2E | 120   | 0     | 0.33   |
 | Samsung   | MZQL2960HCJR-00A07 | 960 GB | 7C8BA55D36BA | 120   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 201B56718189 | 120   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A956FFCCE3F0 | 120   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C4367CD5C14F | 120   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 9B004C18CA07 | 120   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | E4C2B07D3E38 | 120   | 0     | 0.33   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | C00C7437CB60 | 120   | 0     | 0.33   |
 | WDC       | WDS100T3X0C-00SJG0 | 1 TB   | 3D140911C1A4 | 120   | 0     | 0.33   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 64B0FF891FBE | 120   | 0     | 0.33   |
@@ -8713,6 +8737,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | CL SN720 SDAQNT... | 512 GB | C89763ED492C | 119   | 0     | 0.33   |
 | Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 0DA23ABFD22F | 119   | 0     | 0.33   |
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | 641DB8D29566 | 119   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3E22B1B03B5B | 119   | 0     | 0.33   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 737CC5AFDD50 | 119   | 0     | 0.33   |
 | Dell      | Express Flash N... | 6.4 TB | 52226F18767B | 119   | 0     | 0.33   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | 4C8F1A1ADB29 | 119   | 0     | 0.33   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 0DB6483CABB1 | 119   | 0     | 0.33   |
@@ -8801,6 +8827,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | 05446E8E85DE | 113   | 0     | 0.31   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 8BED3422E92C | 113   | 0     | 0.31   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 119E398699DC | 113   | 0     | 0.31   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 9B1BEDF7910B | 113   | 0     | 0.31   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | EF23A7BBB80E | 113   | 0     | 0.31   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 827DA553BB7A | 112   | 0     | 0.31   |
 | WDC       | WUS4BB038D7P3E1    | 3.8 TB | 1385BF1CCF51 | 112   | 0     | 0.31   |
 | WDC       | WUS4BB038D7P3E1    | 3.8 TB | 4BF7E3F4C06B | 112   | 0     | 0.31   |
@@ -8829,6 +8857,12 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB038D7P3E3    | 3.8 TB | 83F13596B0CA | 111   | 0     | 0.31   |
 | WDC       | CL SN720 SDAQNT... | 512 GB | 3166CAD87A2E | 111   | 0     | 0.31   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 58974B2425D2 | 111   | 0     | 0.31   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 0450A647EBC4 | 111   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 0F0028BFA154 | 111   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 24DEFE738A72 | 111   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 4205F02F9483 | 111   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 6E97CDF6402E | 111   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | ED074D066246 | 111   | 0     | 0.30   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | BE1A7B5ACC61 | 111   | 0     | 0.30   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 8A6FA39FD777 | 111   | 0     | 0.30   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | BD0D6496E478 | 111   | 0     | 0.30   |
@@ -8859,6 +8893,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 6E71031E4AB5 | 109   | 0     | 0.30   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 53821A65AEB5 | 109   | 0     | 0.30   |
 | Dell      | Ent NVMe P5600 ... | 1.6 TB | A8E2A9600B69 | 109   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 75FEAA7845CA | 109   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A052C0B4A7CD | 109   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A518F5ADBBE6 | 109   | 0     | 0.30   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C37066B39660 | 109   | 0     | 0.30   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | ACB20218CD05 | 109   | 0     | 0.30   |
 | Wester... | WUS4CB016D7P3E3    | 1.6 TB | 821D43A8F98E | 108   | 0     | 0.30   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 1501BD206141 | 108   | 0     | 0.30   |
@@ -9838,8 +9876,6 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB096D7P3E1    | 960 GB | AE6B7C6D71A7 | 52    | 0     | 0.14   |
 | Dell      | Ent NVMe P5600 ... | 1.6 TB | 44AA719B324E | 52    | 0     | 0.14   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 7B1382D758DD | 52    | 0     | 0.14   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 8BFF874B0601 | 51    | 0     | 0.14   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | BB758CBE7311 | 51    | 0     | 0.14   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | B325A0D1F76C | 155   | 2     | 0.14   |
 | Samsung   | MZQL21T9HCJR-00... | 1.9 TB | 09E7DDB45EFD | 51    | 0     | 0.14   |
 | Wester... | WUS4BB038D7P3E1    | 3.8 TB | 966EE7F47F57 | 51    | 0     | 0.14   |
@@ -10080,6 +10116,8 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | E32CFC0F7E9F | 44    | 0     | 0.12   |
 | Intel     | SSDPE2KX010T8      | 1 TB   | 313B8DE0FBA3 | 44    | 0     | 0.12   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | EA5D64B4D2B9 | 44    | 0     | 0.12   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 0930478F70A8 | 44    | 0     | 0.12   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 63DDE16B40C4 | 44    | 0     | 0.12   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 899F33C20106 | 44    | 0     | 0.12   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | B6DAC663D81B | 44    | 0     | 0.12   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | BC76BEBAD218 | 44    | 0     | 0.12   |
@@ -10160,13 +10198,7 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WUS4BB096D7P3E1    | 960 GB | 053F07A1CA72 | 43    | 0     | 0.12   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | AFA51BD03703 | 43    | 0     | 0.12   |
 | WDC       | WUS4BB096D7P3E1    | 960 GB | C533609C251D | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 70E9D9805812 | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 8454A7945A43 | 43    | 0     | 0.12   |
 | Dell      | Express Flash N... | 1.6 TB | E6ED2A716A1C | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 02846BF3053C | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 29BE85189EDA | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3F10491999C4 | 43    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 47A445AA5066 | 43    | 0     | 0.12   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | FD42394927BB | 43    | 0     | 0.12   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 3392224367D8 | 43    | 0     | 0.12   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | F64BF15D8A57 | 43    | 0     | 0.12   |
@@ -10210,10 +10242,6 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 021F55CCF94F | 42    | 0     | 0.12   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 127CE45C8189 | 42    | 0     | 0.12   |
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 7BC2903CA150 | 42    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 1A3D34BE885A | 42    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C73A84E8B47E | 42    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | ED764A14044C | 42    | 0     | 0.12   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | FBEFC84452FE | 42    | 0     | 0.12   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 0193588564EC | 42    | 0     | 0.12   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | A6EF0EBC19C4 | 42    | 0     | 0.12   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | AE47A0A47F32 | 42    | 0     | 0.12   |
@@ -10295,22 +10323,14 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WUS4BB076D7P3E1    | 7.6 TB | 49035A3CD0ED | 41    | 0     | 0.11   |
 | WDC       | WUS4BB076D7P3E1    | 7.6 TB | 7189135B63F7 | 41    | 0     | 0.11   |
 | ADATA     | SX6000PNP          | 256 GB | F8FBB8ACDB65 | 41    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 86982B3C9E9E | 41    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | D300C74008CE | 41    | 0     | 0.11   |
 | Wester... | WUS4BB038D7P3E1    | 3.8 TB | 27C05E35819E | 41    | 0     | 0.11   |
 | Wester... | WUS4BB038D7P3E1    | 3.8 TB | 321AF59AEBFE | 41    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 602676C21ED8 | 41    | 0     | 0.11   |
 | Intel     | SSDPE2KX010T8      | 1 TB   | 924650303EDF | 41    | 0     | 0.11   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 8ED044F0DD70 | 40    | 0     | 0.11   |
 | Samsung   | SSD 970 PRO        | 512 GB | 22AB68ABAEA7 | 40    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | F99EA9B543CB | 40    | 0     | 0.11   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | FE6E1B616E38 | 40    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 09E4D30F98C0 | 40    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 201B56718189 | 40    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A956FFCCE3F0 | 40    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C4367CD5C14F | 40    | 0     | 0.11   |
 | Intel     | SSDPED1K750GA      | 752 GB | A2FABA25FA5D | 39    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 9B004C18CA07 | 39    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | E4C2B07D3E38 | 39    | 0     | 0.11   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | 7F36682DCF43 | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 41F8A6DE0795 | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 223B92E3A837 | 39    | 0     | 0.11   |
@@ -10320,6 +10340,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | FB79D434A112 | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 84A20B88333D | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 69FDCE8FE2C7 | 39    | 0     | 0.11   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 723C6DA1F486 | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 2E43104AE771 | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | DE907329664D | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | E025253CC6F7 | 39    | 0     | 0.11   |
@@ -10328,8 +10349,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 32A48E2ADC7E | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 80A86C85C2DD | 39    | 0     | 0.11   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | FA3BD5C82525 | 38    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3E22B1B03B5B | 38    | 0     | 0.11   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 737CC5AFDD50 | 38    | 0     | 0.11   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 39F69D195560 | 37    | 0     | 0.10   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | CB51699DA4BF | 37    | 0     | 0.10   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 21B59A57BEF4 | 37    | 0     | 0.10   |
@@ -10342,12 +10361,14 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEKKW512G8      | 512 GB | 7BCB72FA5147 | 36    | 0     | 0.10   |
 | Toshiba   | KXG60ZNV1T02       | 1 TB   | 517ABD69E8B2 | 36    | 0     | 0.10   |
 | Toshiba   | KXG60ZNV1T02       | 1 TB   | EBB439A4142B | 36    | 0     | 0.10   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 3B97B59EC246 | 35    | 0     | 0.10   |
 | Intel     | SSDPE2KX040T7      | 4 TB   | 27EFCCA63A96 | 35    | 0     | 0.10   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 4FA012D498BB | 35    | 0     | 0.10   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | AEA6247AFF62 | 35    | 0     | 0.10   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | B2E0DFF87177 | 35    | 0     | 0.10   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | FA30EE2F5A53 | 35    | 0     | 0.10   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 90BD5EF56BA7 | 34    | 0     | 0.10   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 9BCF090B890E | 34    | 0     | 0.10   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | FBAB75A84417 | 34    | 0     | 0.10   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | E84E742948F7 | 34    | 0     | 0.09   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | CB18A7BB533E | 34    | 0     | 0.09   |
 | Wester... | WUS4BB096D7P3E1    | 960 GB | 4E462A083BDD | 34    | 0     | 0.09   |
@@ -10361,6 +10382,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 31EB946CA562 | 34    | 0     | 0.09   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 8B0C1A94CBAF | 34    | 0     | 0.09   |
 | Kingston  | SKC2500M82000G     | 2 TB   | B20D5DFF63D3 | 34    | 0     | 0.09   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 8C0F4A433054 | 33    | 0     | 0.09   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 201F5D1C132A | 33    | 0     | 0.09   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | B059736CFC3D | 33    | 0     | 0.09   |
 | Dell      | Express Flash C... | 960 GB | B10DE6B81865 | 33    | 0     | 0.09   |
@@ -10375,8 +10397,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 5A7BA04C1360 | 32    | 0     | 0.09   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | BC0E7A5073C6 | 32    | 0     | 0.09   |
 | Samsung   | MZQL23T8HCLS-00... | 3.8 TB | C71662F1EEFD | 32    | 0     | 0.09   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 9B1BEDF7910B | 32    | 0     | 0.09   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | EF23A7BBB80E | 32    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | D765935A3048 | 32    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 5BFC98022330 | 32    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 3C3A9E9485A5 | 32    | 0     | 0.09   |
@@ -10399,10 +10419,14 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 8AAC88C03679 | 31    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | A333486B7839 | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | C1E613DDD7B5 | 30    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 49EA73773FF0 | 30    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 80AAE1DF5FC9 | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | FF5778495DFE | 30    | 0     | 0.08   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | BD9A72C0B38B | 30    | 0     | 0.08   |
 | WDC       | CL SN720 SDAQNT... | 1 TB   | 3D8ED5D6F4AB | 30    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | E9B0D0B8F551 | 30    | 0     | 0.08   |
 | Silico... | NV900-1T           | 1 TB   | 357F7CFC7093 | 30    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | E803C6637D45 | 30    | 0     | 0.08   |
 | ADATA     | SX6000LNP          | 512 GB | E87FE29996C3 | 30    | 0     | 0.08   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | DEF9DBCD85A6 | 30    | 0     | 0.08   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | E166F6DDCB65 | 30    | 0     | 0.08   |
@@ -10410,6 +10434,8 @@ MTBF - avg. MTBF in years per sample.
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | 7754F6326F57 | 29    | 0     | 0.08   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | D295DC8D2DD1 | 29    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 362D1AD2519D | 29    | 0     | 0.08   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | CE701692C398 | 29    | 0     | 0.08   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | D1D0F2E7FC55 | 29    | 0     | 0.08   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 20259735CF2E | 28    | 0     | 0.08   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 014CEBC7C416 | 28    | 0     | 0.08   |
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | 1B40673307D4 | 28    | 0     | 0.08   |
@@ -10418,7 +10444,6 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Ent NVMe AGN RI... | 3.8 TB | B75794D7D779 | 28    | 0     | 0.08   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | 138D6002510B | 28    | 0     | 0.08   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | C4F69DBC5B8F | 28    | 0     | 0.08   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A052C0B4A7CD | 28    | 0     | 0.08   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | BA78635844EF | 28    | 0     | 0.08   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 1A4D6B393404 | 27    | 0     | 0.08   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 2594F8826CF8 | 27    | 0     | 0.08   |
@@ -10427,9 +10452,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | D20A28CED788 | 27    | 0     | 0.08   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | DBD66B315FB7 | 27    | 0     | 0.08   |
 | Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 0C70AE7C04FC | 27    | 0     | 0.08   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 75FEAA7845CA | 27    | 0     | 0.08   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | A518F5ADBBE6 | 27    | 0     | 0.08   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | C37066B39660 | 27    | 0     | 0.08   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 4C1638C0C2B0 | 27    | 0     | 0.08   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | 97A21DD98F38 | 27    | 0     | 0.08   |
 | Samsung   | MZQLB1T9HAJR-00007 | 1.9 TB | B29E9105F788 | 27    | 0     | 0.08   |
@@ -10458,12 +10480,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 3E3B9CDA59CD | 26    | 0     | 0.07   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | EA53346C8EAD | 26    | 0     | 0.07   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 4AAC10366C23 | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 0450A647EBC4 | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 0F0028BFA154 | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 24DEFE738A72 | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 4205F02F9483 | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 6E97CDF6402E | 26    | 0     | 0.07   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | ED074D066246 | 26    | 0     | 0.07   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | B1E849D3792F | 26    | 0     | 0.07   |
 | Dell      | Express Flash C... | 960 GB | D5A09A31B597 | 25    | 0     | 0.07   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 72D6D73A691D | 25    | 0     | 0.07   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 89E1D04613D3 | 25    | 0     | 0.07   |
@@ -10486,6 +10503,7 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | E63D7BAEFC08 | 23    | 0     | 0.06   |
 | Crucial   | CT1000P5PSSD8      | 1 TB   | 93C66804BA5F | 22    | 0     | 0.06   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 986BD1E5E8D3 | 22    | 0     | 0.06   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 3404A6853CE1 | 22    | 0     | 0.06   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 20DC63AD5F72 | 22    | 0     | 0.06   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | 8B9DE450A2A8 | 22    | 0     | 0.06   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | CCD63C13FF4C | 22    | 0     | 0.06   |
@@ -10629,6 +10647,7 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB096D7P3E1    | 960 GB | E7DB73320244 | 14    | 0     | 0.04   |
 | Dell      | Express Flash C... | 960 GB | 4871E2DAC8A1 | 14    | 0     | 0.04   |
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | C65B47A16064 | 14    | 0     | 0.04   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 16632CA42F6D | 14    | 0     | 0.04   |
 | Samsung   | MZVL2512HCJQ-00B07 | 512 GB | 74EA8B8E383F | 14    | 0     | 0.04   |
 | Dell      | Express Flash C... | 960 GB | 3D96AA6A58CA | 14    | 0     | 0.04   |
 | Dell      | Express Flash C... | 960 GB | B8C1581232A0 | 14    | 0     | 0.04   |
@@ -10669,6 +10688,7 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 2200_MTFDHBA512TCK | 512 GB | 91869E33D6D1 | 13    | 0     | 0.04   |
 | Samsung   | MZVL2512HCJQ-00B07 | 512 GB | 807DF766F985 | 13    | 0     | 0.04   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | CF68811DDCEC | 13    | 0     | 0.04   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | A78F4F7EC2B9 | 13    | 0     | 0.04   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 49408EC33FA7 | 13    | 0     | 0.04   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 6A9566C8CA91 | 13    | 0     | 0.04   |
 | Intel     | SSDPE2KX020T8      | 2 TB   | 299BDDD0C86C | 12    | 0     | 0.04   |
@@ -10970,7 +10990,11 @@ MTBF - avg. MTBF in years per sample.
 | KIOXIA    | KCD61LUL3T84       | 3.8 TB | F5EBAE7E2254 | 5     | 0     | 0.01   |
 | KIOXIA    | KCD61LUL3T84       | 3.8 TB | F756978014FA | 5     | 0     | 0.01   |
 | KIOXIA    | KCD61LUL3T84       | 3.8 TB | FBB521D78595 | 5     | 0     | 0.01   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 5302626B2A90 | 5     | 0     | 0.01   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 8439DC8DF14A | 5     | 0     | 0.01   |
 | KIOXIA    | KCD61LUL3T84       | 3.8 TB | 15A4F429475F | 5     | 0     | 0.01   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | B656BBE596CD | 5     | 0     | 0.01   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | CBA39303897A | 5     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 2C5052B13F7F | 5     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | C656BFAA9524 | 5     | 0     | 0.01   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 9D88F2183BBA | 5     | 0     | 0.01   |

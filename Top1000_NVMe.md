@@ -100,7 +100,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2KX020T7      | 2 TB   | 1       | 611   | 0     | 1.68   |
 | Samsung   | SSD 960 EVO        | 250 GB | 4       | 594   | 0     | 1.63   |
 | Intel     | SSDPED1K750GA      | 752 GB | 152     | 593   | 0     | 1.63   |
-| Dell      | Express Flash N... | 1.6 TB | 116     | 591   | 0     | 1.62   |
+| Dell      | Express Flash N... | 1.6 TB | 118     | 586   | 0     | 1.61   |
 | Samsung   | MZWLL800HEHP-00003 | 800 GB | 14      | 864   | 4     | 1.60   |
 | Intel     | SSDPEL1D380GA      | 384 GB | 6       | 579   | 0     | 1.59   |
 | Intel     | SSDPE21K750GA      | 752 GB | 66      | 578   | 0     | 1.58   |
@@ -266,9 +266,9 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 193     | 117   | 0     | 0.32   |
 | ADATA     | SX8200PNP          | 512 GB | 5       | 117   | 0     | 0.32   |
 | Micron    | 7300_MTFDHBG1T9TDF | 1.9 TB | 13      | 117   | 0     | 0.32   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 116   | 0     | 0.32   |
 | Wester... | WUS4BB076D7P3E1    | 7.6 TB | 12      | 114   | 0     | 0.31   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 18      | 114   | 0     | 0.31   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 112   | 0     | 0.31   |
 | Kingston  | SA2000M8500G       | 500 GB | 4       | 111   | 0     | 0.31   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 8       | 110   | 0     | 0.30   |
 | Micron    | 7300_MTFDHBA480TDF | 480 GB | 2       | 110   | 0     | 0.30   |
@@ -284,6 +284,7 @@ MTBF - avg. MTBF in years per sample.
 | Crucial   | CT1000P5SSD8       | 1 TB   | 4       | 98    | 0     | 0.27   |
 | Wester... | WUS4BB096D7P3E1    | 960 GB | 200     | 97    | 0     | 0.27   |
 | ADATA     | SX8200PNP          | 2 TB   | 3       | 96    | 0     | 0.26   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 83      | 95    | 0     | 0.26   |
 | Transcend | TS2TMTE220S        | 2 TB   | 2       | 94    | 0     | 0.26   |
 | Dell      | Express Flash P... | 1.6 TB | 4       | 92    | 0     | 0.25   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 87    | 0     | 0.24   |
@@ -302,11 +303,9 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Express Flash N... | 6.4 TB | 4       | 63    | 0     | 0.17   |
 | Micron    | 7400_MTFDKCB1T9TDZ | 1.9 TB | 5       | 61    | 0     | 0.17   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 10      | 60    | 0     | 0.17   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 81      | 60    | 0     | 0.17   |
 | SanDisk   | WD Red SN700       | 500 GB | 3       | 59    | 0     | 0.16   |
 | Transcend | TS512GMTE110S      | 512 GB | 4       | 57    | 0     | 0.16   |
 | Intel     | SSDPEKNW512G8      | 512 GB | 5       | 101   | 203   | 0.15   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 2       | 55    | 0     | 0.15   |
 | XPG       | GAMMIX S11 Pro     | 256 GB | 1       | 55    | 0     | 0.15   |
 | WDC       | WUS4CB032D7P3E4    | 3.2 TB | 5       | 54    | 0     | 0.15   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5       | 54    | 0     | 0.15   |
@@ -325,6 +324,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX6000LNP          | 512 GB | 1       | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
 | Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 5       | 29    | 0     | 0.08   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 28    | 0     | 0.08   |
 | Micron    | MTFDHBA1T0TDV-1... | 1 TB   | 1       | 21    | 0     | 0.06   |
 | SK hynix  | BC501A NVMe        | 128 GB | 3       | 21    | 0     | 0.06   |
 | Crucial   | CT1000P5PSSD8      | 1 TB   | 3       | 20    | 0     | 0.06   |

@@ -31,7 +31,7 @@ MTBF - avg. MTBF in years per sample.
 | SK hynix  | HFS3T8G32FEH-7410A | 3.8 TB | 8       | 395   | 0     | 1.08   |
 | SK hynix  | HFS250G32TND-N1A2A | 250 GB | 10      | 374   | 0     | 1.03   |
 | SK hynix  | SHGS31-1000GS-2    | 1 TB   | 23      | 323   | 0     | 0.89   |
-| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 144   | 0     | 0.40   |
+| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 192   | 3     | 0.44   |
 | SK hynix  | SC311 SATA         | 256 GB | 2       | 95    | 0     | 0.26   |
 
 SSD by Family
@@ -48,4 +48,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | SK hynix  | SATA SSDs              | 8      | 27      | 461   | 0     | 1.26   |
-| SK hynix  | Unknown                | 2      | 29      | 286   | 0     | 0.78   |
+| SK hynix  | Unknown                | 2      | 29      | 296   | 1     | 0.79   |

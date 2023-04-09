@@ -38,6 +38,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LM120HCFD-00003 | 120 GB | 4       | 2312  | 0     | 6.34   |
 | Samsung   | SSD 830 Series     | 512 GB | 12      | 3084  | 253   | 6.33   |
 | Intel     | SSDSC2CW240A3      | 240 GB | 55      | 2463  | 1     | 6.32   |
+| Seagate   | 2E256-TU2-510B00   | 200 GB | 5       | 2880  | 411   | 6.32   |
 | Samsung   | MZ7LM240HCGR-00003 | 240 GB | 4       | 2292  | 0     | 6.28   |
 | Transcend | TS128GSSD340       | 128 GB | 1       | 2277  | 0     | 6.24   |
 | Samsung   | MZ7LM480HCHP-0E003 | 480 GB | 7       | 2231  | 0     | 6.11   |
@@ -101,10 +102,11 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LM1T9HCJM00D3   | 1.9 TB | 4       | 1744  | 0     | 4.78   |
 | SanDisk   | SDLF1DAR-960G-1HA2 | 960 GB | 12      | 1744  | 0     | 4.78   |
 | Intel     | SSDSC2BW240A3      | 240 GB | 1       | 1743  | 0     | 4.78   |
-| Intel     | SSDSC2BA200G3      | 200 GB | 18      | 2009  | 1     | 4.75   |
+| Intel     | SSDSC2BA200G3      | 200 GB | 18      | 2011  | 1     | 4.76   |
 | SanDisk   | SDLF1DAR480G-1HHS  | 480 GB | 2       | 1734  | 0     | 4.75   |
 | Intel     | SSDSC2BB800G6      | 800 GB | 68      | 1847  | 15    | 4.73   |
 | Samsung   | MZ7LM480HCHP-00003 | 480 GB | 81      | 1788  | 3     | 4.72   |
+| Intel     | SSDSC2BB240G6      | 240 GB | 21      | 1721  | 0     | 4.72   |
 | Toshiba   | THNSN8240PCSE      | 240 GB | 2       | 1717  | 0     | 4.70   |
 | Kingston  | SE50S37480G        | 480 GB | 1       | 1716  | 0     | 4.70   |
 | Samsung   | SSD 840 EVO        | 250 GB | 10      | 2674  | 5     | 4.69   |
@@ -114,7 +116,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7KM480HAHP-00005 | 480 GB | 92      | 1694  | 0     | 4.64   |
 | Crucial   | CT512MX100SSD1     | 240 GB | 4       | 2113  | 1     | 4.64   |
 | Intel     | SSDSC2BA400G3      | 400 GB | 7       | 1826  | 1     | 4.63   |
-| Intel     | SSDSC2BB240G6      | 240 GB | 20      | 1687  | 0     | 4.62   |
 | Intel     | SSDSC2BB120G6      | 120 GB | 7       | 1685  | 0     | 4.62   |
 | Intel     | SSDSC2BX400G4      | 400 GB | 3       | 1684  | 0     | 4.61   |
 | Samsung   | MZ7WD960HAGP-00003 | 960 GB | 3       | 1681  | 0     | 4.61   |
@@ -127,10 +128,10 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | VX500              | 1 TB   | 6       | 1649  | 0     | 4.52   |
 | Micron    | M600_MTFDDAK256MBF | 256 GB | 2       | 1641  | 0     | 4.50   |
 | Intel     | SSDSC2BB240G4      | 240 GB | 45      | 1712  | 1     | 4.48   |
+| Intel     | SSDSC2BA400G4      | 400 GB | 39      | 1683  | 1     | 4.48   |
 | Samsung   | MZ7LM960HCHP-00005 | 960 GB | 24      | 1633  | 0     | 4.48   |
 | Intel     | SSDSC2BB600G4      | 600 GB | 23      | 1729  | 1     | 4.47   |
-| Intel     | SSDSC2BA400G4      | 400 GB | 39      | 1669  | 1     | 4.44   |
-| Samsung   | SSD 850 PRO        | 512 GB | 61      | 1659  | 1     | 4.43   |
+| Samsung   | SSD 850 PRO        | 512 GB | 61      | 1663  | 1     | 4.44   |
 | Samsung   | MZ7GE960HMHP-00003 | 960 GB | 24      | 2270  | 109   | 4.42   |
 | Samsung   | MZ7KM120HAFD-00005 | 120 GB | 15      | 1612  | 0     | 4.42   |
 | Samsung   | MZ7LM960HCHP-0E003 | 960 GB | 5       | 1611  | 0     | 4.42   |
@@ -166,6 +167,7 @@ MTBF - avg. MTBF in years per sample.
 | Apacer    | AS510S             | 128 GB | 1       | 1444  | 0     | 3.96   |
 | SPCC      | SSD                | 120 GB | 1       | 1444  | 0     | 3.96   |
 | SanDisk   | SDLF1CRR019T-1HHS  | 1.9 TB | 30      | 1485  | 34    | 3.95   |
+| Intel     | SSDSC2BX800G4      | 800 GB | 4       | 1426  | 0     | 3.91   |
 | Intel     | SSDSC2BA800G4      | 800 GB | 17      | 1415  | 0     | 3.88   |
 | Kingston  | SE50S3100G         | 100 GB | 3       | 1763  | 1     | 3.87   |
 | Intel     | SSDSC2BB800G7R     | 800 GB | 40      | 1767  | 53    | 3.85   |
@@ -201,7 +203,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 850 EVO        | 2 TB   | 20      | 1432  | 22    | 3.42   |
 | Toshiba   | THNSN8960PCSE      | 960 GB | 32      | 1265  | 1     | 3.41   |
 | Kingston  | SUV300S37A240G     | 240 GB | 2       | 1245  | 0     | 3.41   |
-| Intel     | SSDSC2BX800G4      | 800 GB | 2       | 1244  | 0     | 3.41   |
 | Samsung   | SSD 850 EVO        | 500 GB | 128     | 1306  | 25    | 3.40   |
 | Samsung   | MZ7LM480HCHP-00005 | 480 GB | 29      | 1229  | 0     | 3.37   |
 | Samsung   | MZ7KM240HAGR-0E005 | 240 GB | 17      | 1822  | 23    | 3.37   |
@@ -209,8 +210,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7TE256HMHP-00004 | 256 GB | 1       | 1215  | 0     | 3.33   |
 | SATADOM   | ML 3MG-P           | 32 GB  | 2       | 1215  | 0     | 3.33   |
 | Intel     | SSDSC2BB150G7      | 150 GB | 16      | 1268  | 1     | 3.32   |
+| Intel     | SSDSC2BX480G4      | 480 GB | 41      | 1210  | 0     | 3.32   |
 | HP        | VK0480GEQNB        | 480 GB | 1       | 1199  | 0     | 3.28   |
-| Intel     | SSDSC2BX480G4      | 480 GB | 41      | 1190  | 0     | 3.26   |
 | Lite-On   | IT EBT-480N9S      | 480 GB | 1       | 1190  | 0     | 3.26   |
 | Dell      | SSDSCKJB120G7R     | 120 GB | 6       | 1375  | 1     | 3.25   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 2       | 1186  | 0     | 3.25   |
@@ -237,11 +238,11 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDA960G         | 960 GB | 1       | 1074  | 0     | 2.94   |
 | Micron    | M510DC_MTFDDAK9... | 960 GB | 2       | 1985  | 4     | 2.94   |
 | Samsung   | MZ7LM1T9HCJM-00003 | 1.9 TB | 7       | 1070  | 0     | 2.93   |
+| HPE       | MK0400GEYKD        | 400 GB | 2       | 1067  | 0     | 2.92   |
 | Intel     | SSDSC2KG480G7      | 480 GB | 54      | 1372  | 2     | 2.91   |
 | ADATA     | SP600              | 512 GB | 1       | 1055  | 0     | 2.89   |
 | Intel     | SSDSC2BB480G7      | 480 GB | 107     | 1211  | 1     | 2.87   |
 | Samsung   | SSD PM830 2.5" 7mm | 256 GB | 1       | 1044  | 0     | 2.86   |
-| HPE       | MK0400GEYKD        | 400 GB | 2       | 1044  | 0     | 2.86   |
 | SanDisk   | SD7UB2Q512G1122    | 512 GB | 8       | 1550  | 10    | 2.85   |
 | Samsung   | SSD 850 EVO        | 250 GB | 94      | 1175  | 41    | 2.85   |
 | Samsung   | MZ7LM960HMJP0D3    | 960 GB | 44      | 1079  | 1     | 2.84   |
@@ -358,7 +359,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | XA1920ME10063      | 1.9 TB | 35      | 733   | 0     | 2.01   |
 | Samsung   | SSD PM851a 2.5 7mm | 1 TB   | 1       | 732   | 0     | 2.01   |
 | Samsung   | MZ7LH960HAJR-000AZ | 960 GB | 4       | 731   | 0     | 2.01   |
-| Micron    | 5100_MTFDDAK960TCB | 960 GB | 130     | 1192  | 4     | 2.00   |
+| Micron    | 5100_MTFDDAK960TCB | 960 GB | 130     | 1193  | 4     | 2.00   |
 | Samsung   | SSD 860 QVO        | 2 TB   | 29      | 728   | 0     | 2.00   |
 | Crucial   | CT500BX100SSD1     | 500 GB | 2       | 723   | 0     | 1.98   |
 | Micron    | 5200_MTFDDAK1T9TDD | 1.9 TB | 71      | 787   | 1     | 1.97   |
@@ -367,7 +368,7 @@ MTBF - avg. MTBF in years per sample.
 | HPE       | MK000960GWUGH      | 960 GB | 6       | 806   | 1     | 1.96   |
 | Intel     | SSDSC2BB480G7R     | 480 GB | 24      | 752   | 1     | 1.96   |
 | Kingston  | SA400M8120G        | 120 GB | 3       | 714   | 0     | 1.96   |
-| Micron    | 1100_MTFDDAK512TBN | 512 GB | 44      | 1122  | 46    | 1.95   |
+| Micron    | 1100_MTFDDAK512TBN | 512 GB | 44      | 1124  | 46    | 1.95   |
 | HPE       | MK001920GWUGK      | 1.9 TB | 2       | 708   | 0     | 1.94   |
 | Intel     | SSDSCKKB240G8      | 240 GB | 17      | 707   | 0     | 1.94   |
 | Micron    | 5200_MTFDDAK960TDD | 960 GB | 166     | 731   | 1     | 1.94   |
@@ -384,10 +385,10 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LH960HAJR0D3    | 960 GB | 20      | 672   | 0     | 1.84   |
 | Intel     | SSDSC2KG240G8      | 240 GB | 198     | 674   | 1     | 1.84   |
 | SanDisk   | SDLFOCAM-800G-1HA1 | 800 GB | 1       | 670   | 0     | 1.84   |
+| Micron    | 5200_MTFDDAK480TDN | 480 GB | 21      | 663   | 0     | 1.82   |
 | Kingston  | SHSS37A240G        | 240 GB | 3       | 661   | 0     | 1.81   |
 | Intel     | SSDSCKJB240G7      | 240 GB | 5       | 656   | 0     | 1.80   |
 | Samsung   | MZ7LM1T9HMJP0D3    | 1.9 TB | 2       | 656   | 0     | 1.80   |
-| Micron    | 5200_MTFDDAK480TDN | 480 GB | 21      | 655   | 0     | 1.80   |
 | Micron    | 5200_MTFDDAK480TDC | 480 GB | 31      | 664   | 1     | 1.79   |
 | Intel     | SSDSC2BB012T7      | 1.2 TB | 173     | 1202  | 4     | 1.79   |
 | Kingston  | SUV400S37120G      | 120 GB | 12      | 680   | 3     | 1.78   |
@@ -407,22 +408,21 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LN128HCHP-000H1 | 128 GB | 1       | 629   | 0     | 1.72   |
 | Transcend | TS256GSSD370       | 256 GB | 1       | 624   | 0     | 1.71   |
 | Micron    | 5100_MTFDDAK480TBY | 480 GB | 15      | 808   | 3     | 1.70   |
-| Seagate   | ST480FP0021        | 480 GB | 2       | 2302  | 413   | 1.70   |
 | SK hynix  | HFS120G32TND-N1A2A | 120 GB | 1       | 620   | 0     | 1.70   |
 | SK hynix  | SC300 2.5 7MM      | 256 GB | 1       | 618   | 0     | 1.69   |
-| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 66      | 618   | 0     | 1.69   |
 | Samsung   | MZ7LM480HMHQ-00005 | 480 GB | 73      | 1242  | 28    | 1.69   |
 | Intel     | SSDSC2BW120A4      | 120 GB | 47      | 771   | 1     | 1.68   |
 | Goodram   | IR-SSDPR-S25A-120  | 120 GB | 7       | 612   | 0     | 1.68   |
+| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 67      | 612   | 0     | 1.68   |
 | SanDisk   | SDLF1CRR-019T-1HA1 | 1.9 TB | 10      | 650   | 1     | 1.67   |
 | Samsung   | SSD 860 DCT        | 960 GB | 4       | 608   | 0     | 1.67   |
 | Micron    | MTFDDAV480TDS-1... | 480 GB | 1       | 605   | 0     | 1.66   |
 | WDC       | WDS120G1G0A-00SS50 | 120 GB | 7       | 605   | 0     | 1.66   |
 | Intel     | SSDSC2KB019T7      | 1.9 TB | 65      | 1082  | 5     | 1.66   |
+| HP        | VK000240GWSRQ      | 240 GB | 25      | 604   | 0     | 1.66   |
 | Intel     | SSDSC2KB240G8      | 240 GB | 808     | 630   | 2     | 1.66   |
 | SanDisk   | SDSSDHP256G        | 256 GB | 1       | 603   | 0     | 1.65   |
 | Samsung   | MZ7KH1T9HAJR-00005 | 1.9 TB | 117     | 605   | 1     | 1.65   |
-| HP        | VK000240GWSRQ      | 240 GB | 25      | 600   | 0     | 1.65   |
 | Samsung   | MZ7LH480HAHQ-000V3 | 480 GB | 5       | 599   | 0     | 1.64   |
 | Samsung   | MZ7KH240HAHQ-00005 | 240 GB | 69      | 599   | 0     | 1.64   |
 | Goodram   | SSDPR-CX400-512    | 512 GB | 3       | 596   | 0     | 1.63   |
@@ -446,6 +446,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO        | 250 GB | 119     | 563   | 2     | 1.54   |
 | WDC       | WDS250G2B0A-00SM50 | 250 GB | 23      | 559   | 0     | 1.53   |
 | Kingston  | SEDC500M960G       | 960 GB | 14      | 586   | 1     | 1.53   |
+| Micron    | 5300_MTFDDAK480TDT | 480 GB | 7       | 557   | 0     | 1.53   |
 | Intel     | SSDSC2BB960G7      | 960 GB | 33      | 1051  | 3     | 1.53   |
 | SATADOM   | SL 3SE             | 32 GB  | 3       | 556   | 0     | 1.52   |
 | SanDisk   | SD8SN8U-256G-1006  | 256 GB | 1       | 553   | 0     | 1.52   |
@@ -457,7 +458,6 @@ MTBF - avg. MTBF in years per sample.
 | Plextor   | PX-128S3C          | 128 GB | 1       | 544   | 0     | 1.49   |
 | HP        | SSD S700           | 500 GB | 7       | 600   | 1     | 1.49   |
 | PNY       | CS900 120GB SSD    | 120 GB | 2       | 543   | 0     | 1.49   |
-| Micron    | 5300_MTFDDAK480TDT | 480 GB | 7       | 541   | 0     | 1.48   |
 | Crucial   | CT2050MX300SSD1    | 2 TB   | 22      | 1266  | 22    | 1.48   |
 | Crucial   | CT120BX500SSD1     | 120 GB | 38      | 539   | 0     | 1.48   |
 | Goodram   | SSDPR-CX300-120    | 120 GB | 2       | 538   | 0     | 1.47   |
@@ -478,15 +478,16 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | MTFDDAK960TCB      | 960 GB | 12      | 642   | 1     | 1.41   |
 | Samsung   | MZ7LM240HMHQ-00003 | 240 GB | 2       | 513   | 0     | 1.41   |
 | Micron    | MTFDDAK1T9TCB-1... | 1.9 TB | 12      | 511   | 0     | 1.40   |
+| Micron    | 5300_MTFDDAK960TDS | 960 GB | 180     | 525   | 1     | 1.40   |
 | Patriot   | P200               | 2 TB   | 5       | 510   | 0     | 1.40   |
 | SanDisk   | SDSSDA480G         | 480 GB | 2       | 509   | 0     | 1.40   |
 | HP        | VK0480GFDKH        | 480 GB | 6       | 509   | 0     | 1.40   |
 | Samsung   | MZ7LH7T6HMLA-00005 | 7.6 TB | 125     | 509   | 0     | 1.40   |
 | Seagate   | XA960LE10063       | 960 GB | 110     | 509   | 0     | 1.39   |
 | Crucial   | CT250BX100SSD1     | 250 GB | 1       | 507   | 0     | 1.39   |
-| Micron    | 5300_MTFDDAK960TDS | 960 GB | 180     | 519   | 1     | 1.38   |
 | Intel     | SSDSC2BB800H4      | 800 GB | 6       | 504   | 0     | 1.38   |
 | Seagate   | ST120FN0021        | 120 GB | 1       | 502   | 0     | 1.38   |
+| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 913   | 33    | 1.37   |
 | Intel     | SSDSC2BB120G7K     | 120 GB | 8       | 618   | 1     | 1.37   |
 | Zheino    | CHN 25SATAS3 512   | 512 GB | 1       | 497   | 0     | 1.36   |
 | PNY       | CS900 240GB SSD    | 240 GB | 2       | 497   | 0     | 1.36   |
@@ -500,7 +501,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 3       | 481   | 0     | 1.32   |
 | Micron    | 5300_MTFDDAK240TDS | 240 GB | 9       | 480   | 0     | 1.32   |
 | HP        | VK001600GWCNT      | 1.6 TB | 12      | 616   | 2     | 1.32   |
-| Crucial   | CT1000MX500SSD1N   | 1 TB   | 6       | 870   | 33    | 1.31   |
 | WDC       | WDS250G2B0A        | 250 GB | 2       | 476   | 0     | 1.31   |
 | Patriot   | Burst              | 120 GB | 1       | 476   | 0     | 1.30   |
 | Samsung   | MZ7LH480HAHQ0D3    | 480 GB | 2       | 475   | 0     | 1.30   |
@@ -527,7 +527,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 475     | 448   | 0     | 1.23   |
 | Crucial   | CT1000BX100SSD1    | 1 TB   | 1       | 446   | 0     | 1.22   |
 | Samsung   | SSD 883 DCT        | 480 GB | 7       | 446   | 0     | 1.22   |
-| Intel     | SSDSC2KB019T8      | 1.9 TB | 311     | 588   | 7     | 1.22   |
 | China     | SATA SSD           | 480 GB | 6       | 445   | 0     | 1.22   |
 | Micron    | MTFDDAK480TDS      | 480 GB | 8       | 444   | 0     | 1.22   |
 | Kingston  | SA400S37480G       | 480 GB | 35      | 699   | 12    | 1.22   |
@@ -559,14 +558,15 @@ MTBF - avg. MTBF in years per sample.
 | HPE       | VR000480GWFMD      | 480 GB | 1       | 406   | 0     | 1.11   |
 | SanDisk   | SSD G5 BICS4       | 1 TB   | 5       | 448   | 1     | 1.11   |
 | Intel     | SSDSC2KB480G8R     | 480 GB | 19      | 414   | 1     | 1.11   |
-| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 91      | 403   | 0     | 1.11   |
 | Patriot   | Burst              | 960 GB | 3       | 403   | 0     | 1.10   |
 | SPCC      | SSD                | 512 GB | 6       | 402   | 0     | 1.10   |
 | SuperM... | SSD                | 128 GB | 2       | 402   | 0     | 1.10   |
+| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 92      | 402   | 0     | 1.10   |
 | WDC       | WDS240G2G0B-00EPW0 | 240 GB | 1       | 402   | 0     | 1.10   |
 | SanDisk   | SSD PLUS           | 480 GB | 24      | 574   | 6     | 1.10   |
 | Samsung   | MZ7LH3T8HALT0D3    | 3.8 TB | 8       | 397   | 0     | 1.09   |
 | SK hynix  | HFS3T8G32FEH-7410A | 3.8 TB | 8       | 395   | 0     | 1.08   |
+| Intel     | SSDSC2KB019T8      | 1.9 TB | 355     | 516   | 7     | 1.07   |
 | Corsair   | Neutron SSD        | 128 GB | 1       | 1955  | 4     | 1.07   |
 | WDC       | WDS200T2B0A-00SM50 | 2 TB   | 45      | 399   | 1     | 1.07   |
 | Kingston  | SEDC500R480G       | 480 GB | 11      | 387   | 0     | 1.06   |
@@ -585,7 +585,7 @@ MTBF - avg. MTBF in years per sample.
 | HPE       | MK000480GWXFF      | 480 GB | 21      | 363   | 0     | 1.00   |
 | ORTIAL    | SSD                | 1 TB   | 12      | 455   | 2     | 1.00   |
 | Intel     | SSDSC2KG019T8L     | 1.9 TB | 6       | 489   | 2     | 0.99   |
-| Samsung   | SSD 860 PRO        | 512 GB | 67      | 361   | 0     | 0.99   |
+| Samsung   | SSD 860 PRO        | 512 GB | 67      | 362   | 0     | 0.99   |
 | Seagate   | XA240ME10003       | 240 GB | 5       | 361   | 0     | 0.99   |
 | Micron    | MTFDDAV240TDU      | 240 GB | 6       | 355   | 0     | 0.97   |
 | Samsung   | MZ7LM960HMJP-00003 | 960 GB | 2       | 678   | 12    | 0.97   |
@@ -646,6 +646,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSF81D60CSE      | 1.6 TB | 10      | 253   | 0     | 0.69   |
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 8       | 273   | 1     | 0.69   |
 | Micron    | MTFDDAK960TDD      | 960 GB | 14      | 251   | 0     | 0.69   |
+| Patriot   | Burst Elite        | 240 GB | 2       | 250   | 0     | 0.69   |
 | Kingston  | SHFS37A240G        | 240 GB | 1       | 248   | 0     | 0.68   |
 | PNY       | CS900 250GB SSD    | 250 GB | 10      | 247   | 0     | 0.68   |
 | Samsung   | MZ7LH3T8HMLT-00005 | 3.8 TB | 106     | 246   | 0     | 0.68   |
@@ -667,11 +668,11 @@ MTBF - avg. MTBF in years per sample.
 | China     | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
 | Phison    | SATA SSD           | 960 GB | 4       | 230   | 0     | 0.63   |
 | Team      | T253X1480G         | 480 GB | 1       | 229   | 0     | 0.63   |
+| Micron    | 5300_MTFDDAK7T6TDS | 7.6 TB | 24      | 229   | 0     | 0.63   |
 | Transcend | TS480GSSD220S      | 480 GB | 4       | 320   | 2     | 0.63   |
-| Micron    | 5210_MTFDDAK3T8QDE | 3.8 TB | 105     | 236   | 3     | 0.62   |
 | Transcend | TSMSSSD01-120GP    | 120 GB | 2       | 227   | 0     | 0.62   |
 | ADATA     | SU720              | 2 TB   | 2       | 225   | 0     | 0.62   |
-| Micron    | 5300_MTFDDAK7T6TDS | 7.6 TB | 24      | 224   | 0     | 0.61   |
+| Micron    | 5210_MTFDDAK3T8QDE | 3.8 TB | 112     | 234   | 3     | 0.61   |
 | Intel     | SSDSC2BA400G3I ... | 400 GB | 2       | 221   | 0     | 0.61   |
 | Samsung   | MZ7LM960HCHP-000MV | 960 GB | 6       | 220   | 0     | 0.60   |
 | SanDisk   | SDSA5GK-016G-1006  | 16 GB  | 1       | 219   | 0     | 0.60   |
@@ -679,7 +680,6 @@ MTBF - avg. MTBF in years per sample.
 | Phison    | SATA SSD           | 64 GB  | 9       | 218   | 0     | 0.60   |
 | Transcend | TS1TSSD230S        | 1 TB   | 2       | 218   | 0     | 0.60   |
 | Kingston  | SA400S37240G       | 240 GB | 150     | 219   | 4     | 0.59   |
-| Intel     | SSDSC2KB038T8      | 3.8 TB | 68      | 251   | 1     | 0.58   |
 | Micron    | 5300_MTFDDAK3T8TDS | 3.8 TB | 61      | 250   | 1     | 0.58   |
 | Crucial   | CT120BX100SSD1     | 120 GB | 1       | 209   | 0     | 0.57   |
 | Intel     | SSDSC2KB240GZ      | 240 GB | 6       | 208   | 0     | 0.57   |
@@ -687,13 +687,12 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KG038T8      | 3.8 TB | 14      | 303   | 1     | 0.57   |
 | Micron    | MTFDDAK960TDS      | 960 GB | 22      | 213   | 1     | 0.56   |
 | Gigaby... | GP-GSTFS31120GNTD  | 120 GB | 10      | 205   | 0     | 0.56   |
-| Patriot   | Burst Elite        | 240 GB | 2       | 203   | 0     | 0.56   |
 | Maxtor    | Z1 SSD             | 960 GB | 2       | 203   | 0     | 0.56   |
 | Crucial   | CT1000MX500SSD1    | 1 TB   | 496     | 227   | 3     | 0.55   |
+| Micron    | 5300_MTFDDAK480TDS | 480 GB | 31      | 197   | 0     | 0.54   |
 | Samsung   | MZ7KM120HAFD-000FU | 120 GB | 1       | 195   | 0     | 0.54   |
 | Intel     | SSDSC2KG019T8R     | 1.9 TB | 58      | 220   | 1     | 0.54   |
 | Kingston  | SEDC500M480G       | 480 GB | 27      | 212   | 1     | 0.54   |
-| Micron    | 5300_MTFDDAK480TDS | 480 GB | 31      | 191   | 0     | 0.53   |
 | SATADOM   | SH Type D 3TE7     | 120 GB | 8       | 191   | 0     | 0.52   |
 | Lite-On   | CV8-CE512-11 SATA  | 512 GB | 1       | 189   | 0     | 0.52   |
 | HP        | VK000480GWTTA      | 480 GB | 6       | 188   | 0     | 0.52   |
@@ -708,12 +707,12 @@ MTBF - avg. MTBF in years per sample.
 | Micron    | 5300_MTFDDAK3T8TDT | 3.8 TB | 58      | 196   | 3     | 0.47   |
 | HP        | VK000960GWTHB      | 960 GB | 3       | 172   | 0     | 0.47   |
 | ADATA     | SU800              | 256 GB | 1       | 172   | 0     | 0.47   |
-| Intel     | SSDSC2KG480GZ      | 480 GB | 1       | 170   | 0     | 0.47   |
 | HP        | VK001920GWJPH      | 1.9 TB | 4       | 313   | 10    | 0.46   |
 | HPE       | MK000960GWSSD      | 960 GB | 40      | 166   | 0     | 0.46   |
 | Seagate   | XA240LE10003       | 240 GB | 10      | 166   | 0     | 0.46   |
 | HP        | SSD S750           | 1 TB   | 14      | 164   | 0     | 0.45   |
 | Team      | T253X6001T         | 1 TB   | 4       | 163   | 0     | 0.45   |
+| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 192   | 3     | 0.44   |
 | Phison    | SATA SSD           | 32 GB  | 1       | 161   | 0     | 0.44   |
 | Kingston  | SEDC500M3840G      | 3.8 TB | 13      | 237   | 1     | 0.44   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 107     | 176   | 2     | 0.43   |
@@ -732,7 +731,6 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SU650              | 120 GB | 4       | 146   | 0     | 0.40   |
 | China     | SATA SSD           | 1 TB   | 21      | 145   | 0     | 0.40   |
 | Intel     | SSDSA2M080G2GC     | 80 GB  | 2       | 1656  | 9     | 0.40   |
-| SK hynix  | HFS960G32FEH-BA10A | 960 GB | 6       | 144   | 0     | 0.40   |
 | China     | SATA SSD           | 16 GB  | 1       | 144   | 0     | 0.39   |
 | Crucial   | CT480BX500SSD1     | 480 GB | 34      | 143   | 0     | 0.39   |
 | Intel     | SSDSC2BB480G7K     | 480 GB | 1       | 141   | 0     | 0.39   |
@@ -740,6 +738,7 @@ MTBF - avg. MTBF in years per sample.
 | SATADOM   | SL 3TE7            | 120 GB | 6       | 139   | 0     | 0.38   |
 | WDC       | WDS400T1R0A-68A4W0 | 4 TB   | 10      | 138   | 0     | 0.38   |
 | Micron    | 1300_MTFDDAK512TDL | 512 GB | 116     | 138   | 0     | 0.38   |
+| Kingston  | SEDC450R960G       | 960 GB | 1       | 136   | 0     | 0.38   |
 | Kingston  | SKC6001024G        | 1 TB   | 2       | 136   | 0     | 0.37   |
 | HP        | VK0480GEPQP        | 480 GB | 4       | 135   | 0     | 0.37   |
 | Crucial   | CT240BX200SSD1     | 240 GB | 1       | 133   | 0     | 0.37   |
@@ -752,6 +751,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KW256G8      | 256 GB | 24      | 149   | 6     | 0.34   |
 | Innodisk  | DEMSR-64GM41BC1... | 64 GB  | 1       | 601   | 4     | 0.33   |
 | Samsung   | MZ7LN1T0HAJQ-00000 | 1 TB   | 2       | 119   | 0     | 0.33   |
+| Intel     | SSDSC2KB038T8      | 3.8 TB | 127     | 139   | 1     | 0.33   |
 | China     | SATA SSD           | 32 GB  | 2       | 119   | 0     | 0.33   |
 | ADATA     | SX900              | 128 GB | 8       | 345   | 639   | 0.32   |
 | Crucial   | CT1024M550SSD1     | 1 TB   | 5       | 2458  | 188   | 0.32   |
@@ -759,12 +759,14 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSCKKW128G8      | 128 GB | 3       | 112   | 0     | 0.31   |
 | Netac     | SSD                | 64 GB  | 1       | 111   | 0     | 0.31   |
 | Intel     | SSDSC2KW512G8      | 512 GB | 8       | 137   | 2     | 0.30   |
+| QUMO      | SSD                | 256 GB | 1       | 108   | 0     | 0.30   |
 | Kingston  | SUV500M8240G       | 240 GB | 3       | 108   | 0     | 0.30   |
 | SanDisk   | SDSSDX480GG25      | 480 GB | 1       | 2911  | 26    | 0.30   |
 | Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 4       | 107   | 0     | 0.30   |
 | Kingston  | SEDC450R1920G      | 1.9 TB | 10      | 106   | 0     | 0.29   |
 | HP        | VK001920GXCGP      | 1.9 TB | 12      | 103   | 0     | 0.28   |
 | Samsung   | SSD 870 EVO        | 4 TB   | 11      | 150   | 8     | 0.28   |
+| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 14      | 101   | 0     | 0.28   |
 | Team      | T253A3001T         | 1 TB   | 31      | 101   | 0     | 0.28   |
 | Micron    | MTFDDAK1T9TDT      | 1.9 TB | 36      | 101   | 0     | 0.28   |
 | Intel     | SSDSC2KG076T8      | 7.6 TB | 2       | 98    | 0     | 0.27   |
@@ -775,7 +777,6 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3512G        | 512 GB | 3       | 90    | 0     | 0.25   |
 | KIOXIA... | SATA SSD           | 240 GB | 8       | 90    | 0     | 0.25   |
 | WDC       | WDS480G2G0A-00JH30 | 480 GB | 9       | 576   | 32    | 0.24   |
-| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 8       | 87    | 0     | 0.24   |
 | SanDisk   | SD8SB8U128G1122    | 128 GB | 1       | 261   | 2     | 0.24   |
 | Kingston  | SEDC450R3840G      | 3.8 TB | 4       | 86    | 0     | 0.24   |
 | WDC       | WDS100T2B0B-00YS70 | 1 TB   | 1       | 84    | 0     | 0.23   |
@@ -783,7 +784,6 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 870 EVO        | 2 TB   | 64      | 108   | 3     | 0.23   |
 | ADATA     | SU800              | 1 TB   | 4       | 81    | 0     | 0.22   |
 | Micron    | MTFDDAK1T0TDL      | 1 TB   | 25      | 82    | 1     | 0.22   |
-| Kingston  | SEDC450R960G       | 960 GB | 1       | 79    | 0     | 0.22   |
 | SanDisk   | SDSSDP064G         | 64 GB  | 1       | 2694  | 33    | 0.22   |
 | Patriot   | P210               | 2 TB   | 2       | 79    | 0     | 0.22   |
 | Transcend | TS1TSSD370S        | 1 TB   | 1       | 296   | 3     | 0.20   |
@@ -800,6 +800,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZYTY128HDHP-000L2 | 128 GB | 3       | 61    | 0     | 0.17   |
 | ADATA     | SU630              | 240 GB | 3       | 61    | 0     | 0.17   |
 | Micron    | MTFDDAK512TBN      | 512 GB | 3       | 58    | 0     | 0.16   |
+| Intel     | SSDSC2KG480GZ      | 480 GB | 4       | 60    | 1     | 0.16   |
 | Transcend | TS2TSSD230S        | 2 TB   | 2       | 56    | 0     | 0.16   |
 | Seagate   | BarraCuda 120 S... | 500 GB | 2       | 56    | 0     | 0.16   |
 | WDC       | WDS500G1R0B-68A4Z0 | 500 GB | 3       | 53    | 0     | 0.15   |
@@ -814,6 +815,7 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2KB019T8R     | 1.9 TB | 3       | 68    | 3     | 0.12   |
 | GS Nan... | 512-16 GSPTA512... | 512 GB | 3       | 44    | 0     | 0.12   |
 | SPCC      | SSD                | 2 TB   | 1       | 43    | 0     | 0.12   |
+| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 30      | 40    | 0     | 0.11   |
 | Transcend | TS256GMTS800S      | 256 GB | 7       | 40    | 0     | 0.11   |
 | China     | SATA SSD           | 120 GB | 3       | 40    | 0     | 0.11   |
 | Qumo      | SSD                | 64 GB  | 2       | 47    | 608   | 0.10   |
@@ -829,22 +831,26 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SEDC450R7680G      | 7.6 TB | 2       | 30    | 0     | 0.08   |
 | HPE       | LK1600GEYMV        | 1.6 TB | 1       | 28    | 0     | 0.08   |
 | Intel     | SSDSC2KB960GZ      | 960 GB | 1       | 28    | 0     | 0.08   |
-| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 3       | 28    | 0     | 0.08   |
 | Intel     | SSDSC2KI128G8      | 128 GB | 1       | 56    | 1     | 0.08   |
 | Intel     | SSDSC2KG480G8R     | 480 GB | 1       | 27    | 0     | 0.08   |
 | Kingston  | SKC300S37A480G     | 480 GB | 1       | 27    | 0     | 0.08   |
+| China     | Destiny4_4000G_DVT | 4 TB   | 7       | 41    | 21    | 0.07   |
 | Patriot   | Burst Elite        | 120 GB | 1       | 26    | 0     | 0.07   |
 | SPCC      | SSD                | 128 GB | 2       | 25    | 0     | 0.07   |
+| Samsung   | MZ7L3480HBLT-00A07 | 480 GB | 26      | 23    | 0     | 0.07   |
+| QUMO      | Q3DT-240GSCY       | 240 GB | 3       | 22    | 0     | 0.06   |
 | ADATA     | SU630              | 480 GB | 2       | 22    | 0     | 0.06   |
-| QUMO      | Q3DT-240GSCY       | 240 GB | 3       | 20    | 0     | 0.06   |
 | Transcend | TS128GMTS800S      | 128 GB | 5       | 18    | 0     | 0.05   |
 | HP        | VK000240GWEZB      | 240 GB | 8       | 15    | 0     | 0.04   |
 | WDC       | WDS200T2G0A-00JH30 | 2 TB   | 8       | 14    | 0     | 0.04   |
 | SanDisk   | SD8SB8U-128G-1006  | 128 GB | 1       | 14    | 0     | 0.04   |
+| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 63      | 12    | 0     | 0.04   |
 | SanDisk   | SSD PLUS           | 2 TB   | 1       | 12    | 0     | 0.04   |
 | Transcend | TS120GMTS820S      | 120 GB | 11      | 36    | 8     | 0.03   |
 | Crucial   | CT4000MX500SSD1    | 4 TB   | 9       | 10    | 0     | 0.03   |
 | SATADOM   | SV 3ME3            | 64 GB  | 4       | 10    | 0     | 0.03   |
+| Micron    | 5300_MTFDDAV480TDS | 480 GB | 38      | 9     | 0     | 0.03   |
+| Samsung   | MZ7L3480HCHQ-00A07 | 480 GB | 4       | 7     | 0     | 0.02   |
 | Micron    | 5300_MTFDDAK240TDT | 240 GB | 7       | 7     | 0     | 0.02   |
 | Micron    | MTFDDAK3T8TDT      | 3.8 TB | 32      | 7     | 0     | 0.02   |
 | Palit     | PH120 SSD          | 120 GB | 2       | 6     | 0     | 0.02   |
@@ -878,25 +884,19 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDSC2BA100G3T     | 100 GB | 3       | 1547  | 1028  | 0.00   |
 | Intel     | SSDSC2BA800G4R     | 800 GB | 71      | 1382  | 1042  | 0.00   |
 | Micron    | MTFDDAK3T8TDS-1... | 3.8 TB | 2       | 1     | 0     | 0.00   |
+| Seagate   | ST480FP0021        | 480 GB | 2       | 2337  | 1821  | 0.00   |
 | Kingston  | SHPM2280P2H-240G   | 240 GB | 1       | 1297  | 1022  | 0.00   |
 | Intel     | SSDSC2BA200G4R     | 200 GB | 14      | 1273  | 1028  | 0.00   |
+| Intel     | SSDSC2KB480GZ      | 480 GB | 6       | 1     | 0     | 0.00   |
 | Intel     | SSDSC2KG960G8T     | 960 GB | 1       | 1037  | 1026  | 0.00   |
 | Crucial   | CT128MX100SSD1     | 128 GB | 1       | 1045  | 1061  | 0.00   |
 | ADATA     | ISMS331-128GMH     | 128 GB | 1       | 0     | 0     | 0.00   |
 | Intel     | SSDSC2BB800G4T     | 800 GB | 1       | 807   | 1027  | 0.00   |
 | GS Nan... | GS SSD 256-16 STR  | 256 GB | 2       | 0     | 0     | 0.00   |
-| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 25      | 0     | 0     | 0.00   |
 | Intel     | SSDSC2BX800G4R     | 800 GB | 4       | 357   | 1027  | 0.00   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | 2       | 297   | 921   | 0.00   |
 | Intel     | SSDSC2KW480H6      | 480 GB | 1       | 115   | 393   | 0.00   |
 | INDMEM    | SSD M.2 2260       | 128 GB | 1       | 0     | 0     | 0.00   |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
-|           |                    |        |         |       |       |  |
 |           |                    |        |         |       |       |  |
 |           |                    |        |         |       |       |  |
 |           |                    |        |         |       |       |  |
