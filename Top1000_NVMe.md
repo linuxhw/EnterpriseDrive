@@ -24,9 +24,9 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPEDMW012T4      | 1.2 TB | 1       | 1576  | 0     | 4.32   |
 | Intel     | SSDPEDMD020T4D ... | 2 TB   | 5       | 1486  | 0     | 4.07   |
 | Intel     | SSDPE2KE016T7      | 1.6 TB | 2       | 1483  | 0     | 4.06   |
+| Intel     | SSDPEDMD400G4      | 400 GB | 211     | 1448  | 0     | 3.97   |
 | Intel     | SSDPEDMX400G4      | 400 GB | 10      | 1432  | 0     | 3.93   |
 | Intel     | SSDPEDME800G4      | 800 GB | 1       | 1416  | 0     | 3.88   |
-| Intel     | SSDPEDMD400G4      | 400 GB | 211     | 1416  | 0     | 3.88   |
 | Intel     | SSDPEDMD016T4      | 1.6 TB | 17      | 1400  | 0     | 3.84   |
 | Samsung   | MZ1LV480HCHP-00003 | 480 GB | 2       | 1399  | 0     | 3.84   |
 | Intel     | SSDPEDMX020T7      | 2 TB   | 46      | 1375  | 5     | 3.70   |
@@ -179,8 +179,8 @@ MTBF - avg. MTBF in years per sample.
 | Intel     | SSDPE2KX040T7      | 4 TB   | 5       | 331   | 0     | 0.91   |
 | WDC       | WDS500G3X0C-00SJG0 | 500 GB | 27      | 330   | 0     | 0.90   |
 | Samsung   | MZSLW1T0HMLH-000L1 | 1 TB   | 2       | 328   | 0     | 0.90   |
+| Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 182     | 329   | 1     | 0.89   |
 | Kingston  | SEDC1000BM8240G    | 240 GB | 2       | 324   | 0     | 0.89   |
-| Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 182     | 326   | 1     | 0.88   |
 | Intel     | SSDPE2NV076T8      | 7.6 TB | 6       | 319   | 0     | 0.88   |
 | Samsung   | MZVLW128HEGR-000L1 | 128 GB | 1       | 316   | 0     | 0.87   |
 | WDC       | PC SN530 NVMe      | 512 GB | 1       | 313   | 0     | 0.86   |
@@ -208,6 +208,7 @@ MTBF - avg. MTBF in years per sample.
 | ADATA     | SX8200PNP          | 1 TB   | 2       | 243   | 0     | 0.67   |
 | HP        | SSD EX950          | 512 GB | 7       | 242   | 0     | 0.67   |
 | Intel     | EO000375KWJUC      | 375 GB | 2       | 242   | 0     | 0.66   |
+| Crucial   | CT500P5SSD8        | 500 GB | 5       | 240   | 0     | 0.66   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 14      | 237   | 0     | 0.65   |
 | Intel     | SSDPE2NU076T8      | 7.6 TB | 3       | 236   | 0     | 0.65   |
 | Team      | TM8FP6128G         | 128 GB | 1       | 235   | 0     | 0.65   |
@@ -251,13 +252,13 @@ MTBF - avg. MTBF in years per sample.
 | Corsair   | MP600 PRO          | 2 TB   | 2       | 150   | 0     | 0.41   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 56      | 149   | 0     | 0.41   |
 | WDC       | WUS4BB019D7P3E3    | 1.9 TB | 54      | 148   | 0     | 0.41   |
+| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 147   | 0     | 0.40   |
 | Intel     | SSDPF2NV153TZ      | 15.... | 2       | 146   | 0     | 0.40   |
 | Kingston  | SA1000M8960G       | 960 GB | 1       | 146   | 0     | 0.40   |
 | Dell      | Ent NVMe P5600 ... | 1.6 TB | 39      | 143   | 0     | 0.39   |
 | Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 33      | 140   | 0     | 0.39   |
 | Micron    | 7300_MTFDHBG3T8TDF | 3.8 TB | 8       | 137   | 0     | 0.38   |
 | Toshiba   | KXG60ZNV256G       | 256 GB | 156     | 136   | 1     | 0.37   |
-| Crucial   | CT500P5SSD8        | 500 GB | 5       | 132   | 0     | 0.36   |
 | WDC       | WUS3BA119C7P3E3    | 1.9 TB | 8       | 132   | 0     | 0.36   |
 | WDC       | WUS4BB076D7P3E1    | 7.6 TB | 57      | 130   | 0     | 0.36   |
 | Intel     | SSDPE2MD800G4      | 800 GB | 1       | 130   | 0     | 0.36   |
@@ -266,12 +267,12 @@ MTBF - avg. MTBF in years per sample.
 | Wester... | WUS4BB019D7P3E1    | 1.9 TB | 193     | 117   | 0     | 0.32   |
 | ADATA     | SX8200PNP          | 512 GB | 5       | 117   | 0     | 0.32   |
 | Micron    | 7300_MTFDHBG1T9TDF | 1.9 TB | 13      | 117   | 0     | 0.32   |
-| Micron    | 7300_MTFDHBE3T8TDF | 3.8 TB | 26      | 116   | 0     | 0.32   |
 | Wester... | WUS4BB076D7P3E1    | 7.6 TB | 12      | 114   | 0     | 0.31   |
 | Micron    | 2200_MTFDHBA256TCK | 256 GB | 18      | 114   | 0     | 0.31   |
 | Kingston  | SA2000M8500G       | 500 GB | 4       | 111   | 0     | 0.31   |
 | Micron    | MTFDHBA480TDF      | 480 GB | 8       | 110   | 0     | 0.30   |
 | Micron    | 7300_MTFDHBA480TDF | 480 GB | 2       | 110   | 0     | 0.30   |
+| Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 5       | 109   | 0     | 0.30   |
 | KIOXIA    | KCD6XLUL1T92       | 1.9 TB | 10      | 109   | 0     | 0.30   |
 | HUAWEI    | HWE52P431T6M002N   | 1.6 TB | 2       | 108   | 0     | 0.30   |
 | Samsung   | MZVLB256HBHQ-00000 | 256 GB | 6       | 107   | 0     | 0.29   |
@@ -289,12 +290,12 @@ MTBF - avg. MTBF in years per sample.
 | Dell      | Express Flash P... | 1.6 TB | 4       | 92    | 0     | 0.25   |
 | WDC       | PC SN520 SDAPNU... | 256 GB | 1       | 87    | 0     | 0.24   |
 | Samsung   | SSD 983 DCT M.2    | 960 GB | 5       | 84    | 0     | 0.23   |
+| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 19      | 81    | 0     | 0.22   |
 | Crucial   | CT1000P2SSD8       | 1 TB   | 3       | 81    | 0     | 0.22   |
 | Samsung   | SSD 980 PRO        | 250 GB | 4       | 81    | 0     | 0.22   |
 | SK hynix  | VO000960KXAVL      | 960 GB | 2       | 80    | 0     | 0.22   |
 | Samsung   | MT001600KWHAC 1... | 1.6 TB | 1       | 77    | 0     | 0.21   |
 | Wester... | WUS4BB038D7P3E1    | 3.8 TB | 71      | 76    | 0     | 0.21   |
-| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 19      | 75    | 0     | 0.21   |
 | ADATA     | SX6000PNP          | 256 GB | 2       | 74    | 0     | 0.20   |
 | SK hynix  | BC501 HFM512GDJ... | 512 GB | 1       | 73    | 0     | 0.20   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 1       | 70    | 0     | 0.19   |
@@ -316,6 +317,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SKC2500M82000G     | 2 TB   | 3       | 44    | 0     | 0.12   |
 | WDC       | WUS4BB096D7P3E4    | 960 GB | 4       | 43    | 0     | 0.12   |
 | Dell      | Ent NVMe AGN RI... | 1.9 TB | 3       | 41    | 0     | 0.11   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 41    | 0     | 0.11   |
 | WDC       | WUS4BB076D7P3E3    | 7.6 TB | 124     | 35    | 0     | 0.10   |
 | WDC       | PC SN530 SDBPMP... | 512 GB | 1       | 34    | 0     | 0.09   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 1       | 33    | 0     | 0.09   |
@@ -323,8 +325,6 @@ MTBF - avg. MTBF in years per sample.
 | Silico... | NV900-1T           | 1 TB   | 1       | 30    | 0     | 0.08   |
 | ADATA     | SX6000LNP          | 512 GB | 1       | 30    | 0     | 0.08   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
-| Micron    | 7300_MTFDHBE7T6TDF | 7.6 TB | 5       | 29    | 0     | 0.08   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 28    | 0     | 0.08   |
 | Micron    | MTFDHBA1T0TDV-1... | 1 TB   | 1       | 21    | 0     | 0.06   |
 | SK hynix  | BC501A NVMe        | 128 GB | 3       | 21    | 0     | 0.06   |
 | Crucial   | CT1000P5PSSD8      | 1 TB   | 3       | 20    | 0     | 0.06   |

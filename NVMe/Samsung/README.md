@@ -62,7 +62,7 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 970 PRO        | 512 GB | 84      | 333   | 0     | 0.91   |
 | Samsung   | MZPLJ1T6HBJR-000H3 | 1.6 TB | 8       | 333   | 0     | 0.91   |
 | Samsung   | MZSLW1T0HMLH-000L1 | 1 TB   | 2       | 328   | 0     | 0.90   |
-| Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 182     | 326   | 1     | 0.88   |
+| Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 182     | 329   | 1     | 0.89   |
 | Samsung   | MZVLW128HEGR-000L1 | 128 GB | 1       | 316   | 0     | 0.87   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | 118     | 323   | 1     | 0.85   |
 | Samsung   | MZPJB960HMGC-0BW07 | 960 GB | 12      | 301   | 0     | 0.83   |
@@ -86,15 +86,15 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 35      | 98    | 0     | 0.27   |
 | Samsung   | MZQL2960HCJR-00A07 | 960 GB | 83      | 95    | 0     | 0.26   |
 | Samsung   | SSD 983 DCT M.2    | 960 GB | 5       | 84    | 0     | 0.23   |
+| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 19      | 81    | 0     | 0.22   |
 | Samsung   | SSD 980 PRO        | 250 GB | 4       | 81    | 0     | 0.22   |
 | Samsung   | MT001600KWHAC 1... | 1.6 TB | 1       | 77    | 0     | 0.21   |
-| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 19      | 75    | 0     | 0.21   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 1       | 70    | 0     | 0.19   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 10      | 60    | 0     | 0.17   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5       | 54    | 0     | 0.15   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 41    | 0     | 0.11   |
 | Samsung   | MZVLB256HBHQ-000L2 | 256 GB | 1       | 33    | 0     | 0.09   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 28    | 0     | 0.08   |
 | Samsung   | MZVL2512HCJQ-00B07 | 512 GB | 8       | 11    | 0     | 0.03   |
 | Samsung   | MZQLB960HAJR-000AZ | 960 GB | 11      | 10    | 0     | 0.03   |
 | Samsung   | MZVLB256HBHQ-000L7 | 256 GB | 3       | 4     | 0     | 0.01   |
