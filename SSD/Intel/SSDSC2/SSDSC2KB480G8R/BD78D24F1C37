@@ -1,4 +1,4 @@
-smartctl 7.1 2019-12-30 r5022 [x86_64-linux-3.10.0-1062...] (local build)
+smartctl 7.1 2020-06-20 r5066 [x86_64-linux-3.10.0-1160...] (local build)
 Copyright (C) 2002-19, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
@@ -15,7 +15,7 @@ Form Factor:      2.5 inches
 Device is:        In smartctl database [for details use: -P show]
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Feb ... 2022 UTC
+Local Time is:    Fri Mar ... 2023 UTC
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 
@@ -59,32 +59,32 @@ SCT capabilities: 	       (0x003d)	SCT Status supported.
 SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    2507327930
+  1 Raw_Read_Error_Rate     -OSR--   130   130   039    -    307746054
   5 Reallocated_Sector_Ct   PO--CK   100   100   001    -    0
-  9 Power_On_Hours          -O--CK   100   100   000    -    5881
- 12 Power_Cycle_Count       -O--CK   100   100   000    -    92
- 13 Read_Soft_Error_Rate    -OSRC-   087   083   000    -    125918063544762
+  9 Power_On_Hours          -O--CK   100   100   000    -    15408
+ 12 Power_Cycle_Count       -O--CK   100   100   000    -    111
+ 13 Read_Soft_Error_Rate    -OSRC-   087   073   000    -    26109413938438
 170 Available_Reservd_Space PO--CK   100   100   010    -    0
-173 Unknown_Attribute       -O--C-   100   100   000    -    31
-174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    62
-175 Program_Fail_Count_Chip -O--C-   100   100   010    -    29
+173 Unknown_Attribute       -O--C-   100   100   000    -    83
+174 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    77
+175 Program_Fail_Count_Chip -O--C-   100   100   010    -    82
 179 Used_Rsvd_Blk_Cnt_Tot   PO--CK   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot -O--CK   100   100   000    -    3187
 181 Program_Fail_Cnt_Total  -O-RCK   100   100   000    -    0
 182 Erase_Fail_Count_Total  -O-RCK   100   100   000    -    0
 184 End-to-End_Error        -O--CK   100   100   000    -    0
-194 Temperature_Celsius     -O---K   100   100   000    -    27
+194 Temperature_Celsius     -O---K   100   100   000    -    19
 195 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
 197 Current_Pending_Sector  -O--C-   100   100   000    -    0
 198 Offline_Uncorrectable   ----C-   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
-201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2502 (96 65535)
+201 Power_Loss_Cap_Test     PO--CK   100   100   010    -    2543 (115 65535)
 202 End_of_Life             POS--K   100   100   000    -    0
-233 Total_LBAs_Written      -O--CK   100   100   000    -    284178
+233 Total_LBAs_Written      -O--CK   100   100   000    -    621748
 234 Thermal_Throttle_Status -O--CK   100   100   000    -    0/0
-235 Unknown_Attribute       PO-R--   100   100   000    -    284178
-241 Total_LBAs_Written      -O--CK   100   100   000    -    284178
-242 Total_LBAs_Read         -O--CK   100   100   000    -    515264
+235 Unknown_Attribute       PO-R--   100   100   000    -    621748
+241 Total_LBAs_Written      -O--CK   100   100   000    -    621748
+242 Total_LBAs_Read         -O--CK   100   100   000    -    845010
 245 Percent_Life_Remaining  -O--CK   100   100   000    -    100
                             ||||||_ K auto-keep
                             |||||__ C event count
@@ -117,7 +117,38 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      8  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (20 sectors)
-No Errors Logged
+Device Error Count: 1
+	CR     = Command Register
+	FEATR  = Features Register
+	COUNT  = Count (was: Sector Count) Register
+	LBA_48 = Upper bytes of LBA High/Mid/Low Registers ]  ATA-8
+	LH     = LBA High (was: Cylinder High) Register    ]   LBA
+	LM     = LBA Mid (was: Cylinder Low) Register      ] Register
+	LL     = LBA Low (was: Sector Number) Register     ]
+	DV     = Device (was: Device/Head) Register
+	DC     = Device Control Register
+	ER     = Error register
+	ST     = Status register
+Powered_Up_Time is measured from power on, and printed as
+DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
+SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 1 [0] occurred at disk power-on lifetime: 8363 hours (348 days + 11 hours)
+  When the command that caused the error occurred, the device was active or idle.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  84 -- 41 00 00 00 00 27 28 31 c0 40 00  Error: ICRC, ABRT at LBA = 0x272831c0 = 656945600
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+  60 00 20 00 00 00 00 27 28 31 c0 40 00 38d+ ...          READ FPDMA QUEUED
+  61 00 e8 00 10 00 00 19 e9 02 18 40 00 38d+ ...          WRITE FPDMA QUEUED
+  61 02 00 00 08 00 00 19 e9 00 18 40 00 38d+ ...          WRITE FPDMA QUEUED
+  60 00 20 00 00 00 00 27 28 31 a0 40 00 38d+ ...          READ FPDMA QUEUED
+  61 00 03 00 08 00 00 00 20 10 10 c0 00 38d+ ...          WRITE FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -127,9 +158,9 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 SCT Status Version:                  3
 SCT Version (vendor specific):       1 (0x0001)
 Device State:                        Active (0)
-Current Temperature:                    27 Celsius
-Power Cycle Min/Max Temperature:     26/31 Celsius
-Lifetime    Min/Max Temperature:     15/31 Celsius
+Current Temperature:                    19 Celsius
+Power Cycle Min/Max Temperature:     10/22 Celsius
+Lifetime    Min/Max Temperature:      8/31 Celsius
 Specified Max Operating Temperature:    73 Celsius
 Under/Over Temperature Limit Count:   0/0
 Vendor specific:
@@ -141,7 +172,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/73 Celsius
 Min/Max Temperature Limit:            0/73 Celsius
-Temperature History Size (Index):    478 (84)
+Temperature History Size (Index):    478 (78)
 
 SCT Error Recovery Control:
            Read:     80 (8.0 seconds)
@@ -150,25 +181,25 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              92  ---  Lifetime Power-On Resets
-0x01  0x018  6     18623930948  ---  Logical Sectors Written
-0x01  0x020  6       578647239  ---  Number of Write Commands
-0x01  0x028  6     33768403525  ---  Logical Sectors Read
-0x01  0x030  6       144264322  ---  Number of Read Commands
-0x01  0x038  6      3995299250  ---  Date and Time TimeStamp
+0x01  0x008  4             111  ---  Lifetime Power-On Resets
+0x01  0x018  6     40746923470  ---  Logical Sectors Written
+0x01  0x020  6      1514418729  ---  Number of Write Commands
+0x01  0x028  6     55378582023  ---  Logical Sectors Read
+0x01  0x030  6       230270109  ---  Number of Read Commands
+0x01  0x038  6      3932284613  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              27  ---  Current Temperature
-0x05  0x010  1              27  ---  Average Short Term Temperature
-0x05  0x018  1              26  ---  Average Long Term Temperature
+0x05  0x008  1              19  ---  Current Temperature
+0x05  0x010  1              20  ---  Average Short Term Temperature
+0x05  0x018  1              16  ---  Average Long Term Temperature
 0x05  0x020  1              31  ---  Highest Temperature
-0x05  0x028  1              22  ---  Lowest Temperature
+0x05  0x028  1              14  ---  Lowest Temperature
 0x05  0x030  1              28  ---  Highest Average Short Term Temperature
-0x05  0x038  1              25  ---  Lowest Average Short Term Temperature
+0x05  0x038  1              14  ---  Lowest Average Short Term Temperature
 0x05  0x040  1              27  ---  Highest Average Long Term Temperature
-0x05  0x048  1              26  ---  Lowest Average Long Term Temperature
+0x05  0x048  1              15  ---  Lowest Average Long Term Temperature
 0x05  0x050  4               0  ---  Time in Over-Temperature
 0x05  0x058  1              73  ---  Specified Maximum Operating Temperature
 0x05  0x060  4               0  ---  Time in Under-Temperature
