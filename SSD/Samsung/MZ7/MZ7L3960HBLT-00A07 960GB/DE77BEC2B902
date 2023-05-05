@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Mon Mar ... 2023 UTC
+Local Time is:    Mon Apr ... 2023 UTC
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
@@ -57,9 +57,9 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    350
+  9 Power_On_Hours          -O--CK   099   099   000    -    1023
  12 Power_Cycle_Count       -O--CK   099   099   000    -    8
-177 Wear_Leveling_Count     PO--C-   100   100   005    -    0
+177 Wear_Leveling_Count     PO--C-   099   099   005    -    2
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
 180 Unused_Rsvd_Blk_Cnt_Tot PO--C-   100   100   010    -    1745
 181 Program_Fail_Cnt_Total  -O--CK   100   100   010    -    0
@@ -74,14 +74,14 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 199 UDMA_CRC_Error_Count    -OSRCK   100   100   000    -    0
 202 Unknown_SSD_Attribute   PO--CK   100   100   010    -    0
 235 Unknown_Attribute       -O--C-   099   099   000    -    6
-241 Total_LBAs_Written      -O--CK   099   099   000    -    656848477
-242 Total_LBAs_Read         -O--CK   099   099   000    -    3034760957
+241 Total_LBAs_Written      -O--CK   099   099   000    -    4085306503
+242 Total_LBAs_Read         -O--CK   099   099   000    -    10674076408
 243 Unknown_Attribute       -O--CK   100   100   000    -    0
 244 Unknown_Attribute       -O--CK   100   100   000    -    0
 245 Unknown_Attribute       -O--CK   100   100   000    -    65535
 246 Unknown_Attribute       -O--CK   100   100   000    -    65535
 247 Unknown_Attribute       -O--CK   100   100   000    -    65535
-251 Unknown_Attribute       -O--CK   100   100   000    -    657549248
+251 Unknown_Attribute       -O--CK   100   100   000    -    4112849152
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -144,7 +144,7 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (58)
+Temperature History Size (Index):    128 (127)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -154,12 +154,12 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4               8  ---  Lifetime Power-On Resets
-0x01  0x010  4             350  ---  Power-on Hours
-0x01  0x018  6       656848477  ---  Logical Sectors Written
-0x01  0x020  6         2113524  ---  Number of Write Commands
-0x01  0x028  6      3034760957  ---  Logical Sectors Read
-0x01  0x030  6         3853386  ---  Number of Read Commands
-0x01  0x038  6          917000  ---  Date and Time TimeStamp
+0x01  0x010  4            1023  ---  Power-on Hours
+0x01  0x018  6      4085306503  ---  Logical Sectors Written
+0x01  0x020  6        72027540  ---  Number of Write Commands
+0x01  0x028  6     10674076408  ---  Logical Sectors Read
+0x01  0x030  6        12595637  ---  Number of Read Commands
+0x01  0x038  6           98000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
