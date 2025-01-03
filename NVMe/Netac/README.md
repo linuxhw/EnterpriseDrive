@@ -18,4 +18,3 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Netac     | NVMe SSD           | 256 GB | 3       | 5     | 0     | 0.01   |
-| Netac     | NVMe SSD           | 1 TB   | 1       | 0     | 0     | 0.00   |

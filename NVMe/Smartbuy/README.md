@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Smartbuy  | m.2 PS5013T-2280T  | 128 GB | 1       | 493   | 0     | 1.35   |
+| Smartbuy  | m.2 PS5013-2280T   | 512 GB | 3       | 252   | 0     | 0.69   |

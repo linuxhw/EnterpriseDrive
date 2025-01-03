@@ -1,10 +1,10 @@
-Gigabyte NVMe Drives
-====================
+SNR Solid State Drives
+======================
 
-This is a list of all tested Gigabyte NVMe drive models and their MTBFs. See more
-info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
+This is a list of all tested SNR solid state drive models and their MTBFs. See
+more info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
 
-NVME by Model
+SSD by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Gigabyte  | GP-GSM2NE3256GNTD  | 256 GB | 3       | 42    | 0     | 0.12   |
+| SNR       | ML1T               | 960 GB | 3       | 237   | 0     | 0.65   |

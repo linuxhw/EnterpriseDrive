@@ -24,7 +24,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Dell      | SSDSCKJB120G7R     | 120 GB | 6       | 1375  | 1     | 3.25   |
-| Dell      | SSDSCKKB240G8R     | 240 GB | 13      | 454   | 0     | 1.25   |
+| Dell      | SSDSCKKB240G8R     | 240 GB | 16      | 648   | 0     | 1.78   |
 
 SSD by Family
 -------------
@@ -40,4 +40,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Dell      | Certified Intel S35... | 1      | 6       | 1375  | 1     | 3.25   |
-| Dell      | Certified Intel S4x... | 1      | 13      | 454   | 0     | 1.25   |
+| Dell      | Certified Intel S4x... | 1      | 16      | 648   | 0     | 1.78   |
