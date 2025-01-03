@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Mar ... 2023 UTC
+Local Time is:    Tue Mar ... 2024 UTC
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
@@ -52,22 +52,22 @@ recommended polling time: 	 (  76) minutes.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   001   001   006    NOW  30616654
-  5 Reallocated_Sector_Ct   PO--CK   093   093   036    -    722
-  9 Power_On_Hours          -O--CK   042   042   000    -    51523
- 12 Power_Cycle_Count       -O--CK   100   100   020    -    18
+  1 Raw_Read_Error_Rate     -OSR--   001   001   006    NOW  184888902
+  5 Reallocated_Sector_Ct   PO--CK   082   082   036    -    1847
+  9 Power_On_Hours          -O--CK   032   032   000    -    60381
+ 12 Power_Cycle_Count       -O--CK   100   100   020    -    20
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
-172 Unknown_Attribute       -O--CK   100   100   000    -    49
+172 Unknown_Attribute       -O--CK   100   100   000    -    91
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    49
-194 Temperature_Celsius     -O---K   028   000   000    -    28 (Min/Max 0/60)
-201 Unknown_SSD_Attribute   -O--CK   100   089   000    -    891
-204 Soft_ECC_Correction     -O--CK   001   001   000    -    24188203
-231 Temperature_Celsius     PO--C-   082   082   010    -    19
-234 Unknown_Attribute       -O--CK   100   100   000    -    325737
-241 Total_LBAs_Written      -O--CK   100   100   000    -    19171
-242 Total_LBAs_Read         -O--CK   100   100   000    -    40635
-250 Read_Error_Retry_Rate   -O--CK   100   100   000    -    32131443
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    91
+194 Temperature_Celsius     -O---K   035   000   000    -    35 (Min/Max 0/60)
+201 Unknown_SSD_Attribute   -O--CK   100   089   000    -    1593
+204 Soft_ECC_Correction     -O--CK   001   001   000    -    141698702
+231 Temperature_Celsius     PO--C-   031   031   010    -    70
+234 Unknown_Attribute       -O--CK   100   100   000    -    1676825
+241 Total_LBAs_Written      -O--CK   100   100   000    -    24456
+242 Total_LBAs_Read         -O--CK   100   100   000    -    42975
+250 Read_Error_Retry_Rate   -O--CK   100   099   000    -    190421585
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,7 +90,7 @@ Address    Access  R/W   Size  Description
 0xb7       GPL,SL  VS       4  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 41487 (device log contains only the most recent 20 errors)
+Device Error Count: 41537 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -106,7 +106,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 41487 [6] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41537 [16] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -117,13 +117,13 @@ Error 41487 [6] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 a6 00 40 00 46d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 46d+ ...          FLUSH CACHE EXT
-  61 00 88 00 00 00 00 19 ea 06 38 40 00 46d+ ...          WRITE FPDMA QUEUED
-  61 00 10 00 00 00 00 2a bd 88 70 40 00 46d+ ...          WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 2b 3e 4b 00 40 00  1d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  1d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 2b 3e 4b 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 4a 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 49 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41486 [5] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41536 [15] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -134,13 +134,13 @@ Error 41486 [5] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 a6 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 a5 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 a4 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 a3 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 a2 00 40 00 46d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 4b 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 4a 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 49 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 48 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 2b 3e 47 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41485 [4] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41535 [14] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -151,13 +151,13 @@ Error 41485 [4] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 99 00 40 00 46d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 46d+ ...          FLUSH CACHE EXT
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 30 91 99 00 40 00 46d+ ...          READ FPDMA QUEUED
-  61 00 80 00 00 00 00 30 91 98 80 40 00 46d+ ...          WRITE FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ad 00 40 00  1d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  1d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 1c 5e ad 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ac 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ab 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41484 [3] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41534 [13] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -168,13 +168,13 @@ Error 41484 [3] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 99 00 40 00 46d+ ...          READ FPDMA QUEUED
-  61 00 80 00 00 00 00 30 91 98 80 40 00 46d+ ...          WRITE FPDMA QUEUED
-  61 00 01 00 00 00 00 00 20 10 08 c0 00 46d+ ...          WRITE FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 46d+ ...          FLUSH CACHE EXT
-  61 00 03 00 00 00 00 00 20 10 10 c0 00 46d+ ...          WRITE FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ad 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ac 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e ab 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e aa 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 5e a9 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41483 [2] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41533 [12] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -185,13 +185,13 @@ Error 41483 [2] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 98 00 40 00 46d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 46d+ ...          FLUSH CACHE EXT
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 30 91 98 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 97 00 40 00 46d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 12 00 40 00  1d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  1d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 1c 1c 12 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 11 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 10 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41482 [1] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41532 [11] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -202,13 +202,13 @@ Error 41482 [1] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 91 98 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 97 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 96 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 95 00 40 00 46d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 30 91 94 00 40 00 46d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 12 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 11 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 10 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 0f 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 0e 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41481 [0] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41531 [10] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -219,13 +219,13 @@ Error 41481 [0] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 h
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 90 d3 00 40 00 46d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 30 90 d3 00 40 00 46d+ ...          READ FPDMA QUEUED
-  61 01 00 00 00 00 00 30 90 d2 00 40 00 46d+ ...          WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 1c 1c 08 00 40 00  1d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  1d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 1c 1c 08 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 07 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 06 00 40 00  1d+ ...          READ FPDMA QUEUED
 
-Error 41480 [19] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 hours)
+Error 41530 [9] occurred at disk power-on lifetime: 59573 hours (2482 days + 5 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -236,11 +236,11 @@ Error 41480 [19] occurred at disk power-on lifetime: 51483 hours (2145 days + 3 
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 30 90 d3 00 40 00 46d+ ...          READ FPDMA QUEUED
-  61 01 00 00 00 00 00 30 90 d2 00 40 00 46d+ ...          WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 30 90 d2 00 40 00 46d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 46d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 1c 1c 08 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 07 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 06 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 05 00 40 00  1d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 1c 1c 04 00 40 00  1d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
@@ -249,7 +249,7 @@ Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 2) ==
-0x01  0x008  4              18  ---  Lifetime Power-On Resets
+0x01  0x008  4              20  ---  Lifetime Power-On Resets
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value

@@ -13,7 +13,7 @@ Form Factor:      2.5 inches
 Device is:        Not in smartctl database [for details use: -P showall]
 ATA Version is:   ATA8-ACS T13/1699-D revision 4
 SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Sun Apr ... 2023 UTC
+Local Time is:    Thu May ... 2023 UTC
 Rd look-ahead is: Enabled
 Write cache is:   Enabled
 ATA Security is:  Disabled, NOT FROZEN [SEC1]
@@ -52,22 +52,22 @@ recommended polling time: 	 (  76) minutes.
 SMART Attributes Data Structure revision number: 0
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
-  1 Raw_Read_Error_Rate     -OSR--   001   001   006    NOW  123587086
-  5 Reallocated_Sector_Ct   PO--CK   085   085   036    -    1582
-  9 Power_On_Hours          -O--CK   031   031   000    -    61500
+  1 Raw_Read_Error_Rate     -OSR--   001   001   006    NOW  154992148
+  5 Reallocated_Sector_Ct   PO--CK   084   084   036    -    1663
+  9 Power_On_Hours          -O--CK   031   031   000    -    61775
  12 Power_Cycle_Count       -O--CK   100   100   020    -    67
 171 Unknown_Attribute       -O--CK   100   100   000    -    0
-172 Unknown_Attribute       -O--CK   100   100   000    -    106
+172 Unknown_Attribute       -O--CK   100   100   000    -    115
 181 Program_Fail_Cnt_Total  -O--CK   100   100   000    -    0
-182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    106
-194 Temperature_Celsius     -O---K   026   000   000    -    26 (Min/Max 0/59)
-201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    3697
-204 Soft_ECC_Correction     -O--CK   001   001   000    -    123505558
-231 Temperature_Celsius     PO--C-   040   040   010    -    61
-234 Unknown_Attribute       -O--CK   100   100   000    -    1071696
-241 Total_LBAs_Written      -O--CK   100   100   000    -    55777
-242 Total_LBAs_Read         -O--CK   100   100   000    -    196429
-250 Read_Error_Retry_Rate   -O--CK   099   099   000    -    128938453
+182 Erase_Fail_Count_Total  -O--CK   100   100   000    -    115
+194 Temperature_Celsius     -O---K   024   000   000    -    24 (Min/Max 0/59)
+201 Unknown_SSD_Attribute   -O--CK   100   100   000    -    3779
+204 Soft_ECC_Correction     -O--CK   001   001   000    -    154910538
+231 Temperature_Celsius     PO--C-   039   039   010    -    62
+234 Unknown_Attribute       -O--CK   100   100   000    -    1112482
+241 Total_LBAs_Written      -O--CK   100   100   000    -    55947
+242 Total_LBAs_Read         -O--CK   100   100   000    -    196877
+250 Read_Error_Retry_Rate   -O--CK   100   099   000    -    160918814
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -90,7 +90,7 @@ Address    Access  R/W   Size  Description
 0xb7       GPL,SL  VS       4  Device vendor specific log
 
 SMART Extended Comprehensive Error Log Version: 1 (5 sectors)
-Device Error Count: 245 (device log contains only the most recent 20 errors)
+Device Error Count: 259 (device log contains only the most recent 20 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -106,7 +106,7 @@ Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
 
-Error 245 [4] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 259 [18] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -117,13 +117,13 @@ Error 245 [4] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 31 18 72 00 40 00 27d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 27d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 31 18 72 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 71 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 70 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a4 00 40 00  8d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  8d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 18 f8 a4 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a3 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a2 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 244 [3] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 258 [17] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -134,13 +134,13 @@ Error 244 [3] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 31 18 72 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 71 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 70 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 6f 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 31 18 6e 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a4 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a3 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a2 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a1 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 f8 a0 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 243 [2] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 257 [16] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -151,13 +151,13 @@ Error 243 [2] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f f8 c2 00 40 00 27d+ ...          READ FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 27d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 2f f8 c2 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 c1 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 c0 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 29 00 40 00  8d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  8d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 18 90 29 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 28 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 27 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 242 [1] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 256 [15] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -168,13 +168,13 @@ Error 242 [1] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f f8 c2 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 c1 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 c0 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 bf 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f f8 be 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 29 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 28 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 27 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 26 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 90 25 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 241 [0] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 255 [14] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -185,13 +185,13 @@ Error 241 [0] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hou
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f d3 10 00 40 00 27d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 27d+ ...          FLUSH CACHE EXT
-  61 00 08 00 00 00 00 18 0f 68 60 40 00 27d+ ...          WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 27d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 2f d3 10 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d6 00 40 00  8d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  8d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 18 8c d6 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d5 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d4 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 240 [19] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 254 [13] occurred at disk power-on lifetime: 61681 hours (2570 days + 1 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -202,13 +202,13 @@ Error 240 [19] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f d3 10 00 40 00 27d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 27d+ ...          FLUSH CACHE EXT
-  60 01 00 00 08 00 00 2f d3 0f 00 40 00 27d+ ...          READ FPDMA QUEUED
-  61 00 08 00 00 00 00 18 0f 68 58 40 00 27d+ ...          WRITE FPDMA QUEUED
-  60 01 00 00 00 00 00 2f d3 0e 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d6 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d5 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d4 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d3 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 18 8c d2 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 239 [18] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 253 [12] occurred at disk power-on lifetime: 61680 hours (2570 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -219,13 +219,13 @@ Error 239 [18] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f 2e 56 00 40 00 27d+ ...          READ FPDMA QUEUED
-  ea 00 00 00 00 00 00 00 00 00 00 00 00 27d+ ...          FLUSH CACHE EXT
-  61 00 08 00 00 00 00 1a 85 10 b8 40 00 27d+ ...          WRITE FPDMA QUEUED
-  2f 00 00 00 01 00 00 00 00 00 10 00 00 27d+ ...          READ LOG EXT
-  60 01 00 00 00 00 00 2f 2e 56 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 15 00 40 00  8d+ ...          READ FPDMA QUEUED
+  2f 00 00 00 01 00 00 00 00 00 10 00 00  8d+ ...          READ LOG EXT
+  60 01 00 00 00 00 00 06 1f 15 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 14 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 13 00 40 00  8d+ ...          READ FPDMA QUEUED
 
-Error 238 [17] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 hours)
+Error 252 [11] occurred at disk power-on lifetime: 61680 hours (2570 days + 0 hours)
   When the command that caused the error occurred, the device was active or idle.
 
   After command completion occurred, registers were:
@@ -236,11 +236,11 @@ Error 238 [17] occurred at disk power-on lifetime: 60961 hours (2540 days + 1 ho
   Commands leading to the command that caused the error were:
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-  60 01 00 00 00 00 00 2f 2e 56 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f 2e 55 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f 2e 54 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f 2e 53 00 40 00 27d+ ...          READ FPDMA QUEUED
-  60 01 00 00 00 00 00 2f 2e 52 00 40 00 27d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 15 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 14 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 13 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 12 00 40 00  8d+ ...          READ FPDMA QUEUED
+  60 01 00 00 00 00 00 06 1f 11 00 40 00  8d+ ...          READ FPDMA QUEUED
 
 SMART Extended Self-test Log Version: 1 (2 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
