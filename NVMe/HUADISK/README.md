@@ -1,10 +1,10 @@
-Synology Solid State Drives
-===========================
+HUADISK NVMe Drives
+===================
 
-This is a list of all tested Synology solid state drive models and their MTBFs. See
-more info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
+This is a list of all tested HUADISK NVMe drive models and their MTBFs. See more
+info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
 
-SSD by Model
+NVME by Model
 ------------
 
 Please take all columns into account when reading the table. Pay attention on the
@@ -17,5 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| Synology  | SAT5200-480G       | 480 GB | 12      | 240   | 0     | 0.66   |
-| Synology  | SAT5221-1920G      | 1.9 TB | 2       | 179   | 0     | 0.49   |
+| HUADISK   | HYV128X3(HXY)      | 128 GB | 6       | 4     | 0     | 0.01   |

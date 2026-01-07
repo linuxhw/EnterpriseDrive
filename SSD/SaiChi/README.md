@@ -17,4 +17,4 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
-| SaiChi    | K300 SSD           | 2 TB   | 6       | 232   | 0     | 0.64   |
+| SaiChi    | K300 SSD           | 2 TB   | 6       | 537   | 0     | 1.47   |

@@ -27,7 +27,7 @@ MTBF - avg. MTBF in years per sample.
 | Toshiba   | THNSNJ960PCSZ      | 960 GB | 42      | 1953  | 1     | 5.24   |
 | Toshiba   | THNSN8240PCSE      | 240 GB | 2       | 1717  | 0     | 4.70   |
 | Toshiba   | VX500              | 1 TB   | 6       | 1649  | 0     | 4.52   |
-| Toshiba   | THNSN8960PCSE      | 960 GB | 36      | 1357  | 1     | 3.67   |
+| Toshiba   | THNSN8960PCSE      | 960 GB | 36      | 1366  | 1     | 3.70   |
 | Toshiba   | THNSF8200CCSE      | 200 GB | 20      | 1129  | 1     | 2.82   |
 | Toshiba   | THNSF8240CCSE      | 240 GB | 10      | 952   | 0     | 2.61   |
 | Toshiba   | THNSN81Q92CSE      | 1.9 TB | 7       | 812   | 0     | 2.23   |
@@ -52,4 +52,4 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Toshiba   | OCZ                    | 1      | 6       | 1649  | 0     | 4.52   |
-| Toshiba   | HK4R Series SSD        | 3      | 45      | 1288  | 1     | 3.49   |
+| Toshiba   | HK4R Series SSD        | 3      | 45      | 1296  | 1     | 3.51   |

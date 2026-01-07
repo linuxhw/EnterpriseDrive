@@ -18,5 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | HUAWEI    | HWE36P43016M000N   | 1.6 TB | 2       | 741   | 0     | 2.03   |
+| HUAWEI    | HWE52P434T0L002N   | 4 TB   | 3       | 428   | 0     | 1.17   |
 | HUAWEI    | HWE52P431T6M002N   | 1.6 TB | 2       | 108   | 0     | 0.30   |
 | HUAWEI    | HWE56P43800M005N   | 800 GB | 3       | 48    | 0     | 0.13   |

@@ -17,5 +17,6 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| SanDisk   | WD_BLACK SN770     | 1 TB   | 2       | 522   | 0     | 1.43   |
 | SanDisk   | WD Red SN700       | 500 GB | 3       | 59    | 0     | 0.16   |
 | SanDisk   | WD_BLACK SN750 SE  | 1 TB   | 24      | 32    | 0     | 0.09   |

@@ -18,6 +18,6 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | HP        | SSD EX950          | 2 TB   | 10      | 403   | 0     | 1.10   |
+| HP        | SSD FX900 Plus M.2 | 1 TB   | 8       | 386   | 0     | 1.06   |
 | HP        | SSD EX950          | 512 GB | 7       | 242   | 0     | 0.67   |
-| HP        | SSD FX900 Plus M.2 | 1 TB   | 6       | 59    | 0     | 0.16   |
 | HP        | SSD EX900          | 1 TB   | 2       | 20    | 0     | 0.06   |

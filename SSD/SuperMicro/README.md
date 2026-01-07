@@ -4,6 +4,12 @@ SuperMicro Solid State Drives
 This is a list of all tested SuperMicro solid state drive models and their MTBFs. See
 more info on reliability test in the [README](https://github.com/linuxhw/EnterpriseDrive).
 
+Contents
+--------
+
+1. [ SSD by Model  ](#ssd-by-model)
+2. [ SSD by Family ](#ssd-by-family)
+
 SSD by Model
 ------------
 
@@ -17,4 +23,21 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| SuperM... | SSD                | 64 GB  | 3       | 497   | 0     | 1.36   |
 | SuperM... | SSD                | 128 GB | 2       | 402   | 0     | 1.10   |
+
+SSD by Family
+-------------
+
+Please take all columns into account when reading the table. Pay attention on the
+number of tested samples and power-on days. Simultaneous high values of both MTBF
+and errors are possible if only rare drives in the subset encounter errors.
+
+Days - avg. days per sample,
+Err  - avg. errors per sample,
+MTBF - avg. MTBF in years per sample.
+
+| MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
+|-----------|------------------------|--------|---------|-------|-------|------|
+| SuperM... | SATA DOM (SuperDOM)    | 1      | 3       | 497   | 0     | 1.36   |
+| SuperM... | Silicon Motion base... | 1      | 2       | 402   | 0     | 1.10   |

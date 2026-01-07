@@ -50,6 +50,7 @@ MTBF - avg. MTBF in years per sample.
 | SanDisk   | SDSSDH3 2T00       | 2 TB   | 8       | 273   | 1     | 0.69   |
 | SanDisk   | SSD PLUS           | 120 GB | 24      | 268   | 1     | 0.68   |
 | SanDisk   | SDSSDH3512G        | 512 GB | 3       | 90    | 0     | 0.25   |
+| SanDisk   | WD Blue SA510 2.5  | 500 GB | 3       | 81    | 0     | 0.22   |
 | SanDisk   | 64G SSD            | 64 GB  | 2       | 5     | 0     | 0.01   |
 | SanDisk   | SD8SBAT256G1122    | 256 GB | 2       | 297   | 921   | 0.00   |
 

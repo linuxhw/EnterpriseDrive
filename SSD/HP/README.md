@@ -20,11 +20,12 @@ MTBF - avg. MTBF in years per sample.
 | HP        | VK0240GECQN        | 240 GB | 8       | 1861  | 0     | 5.10   |
 | HP        | VK0800GDJYA        | 800 GB | 32      | 1982  | 2     | 4.97   |
 | HP        | VK000960GWEZD      | 960 GB | 5       | 1925  | 1     | 4.57   |
-| HP        | VK003840GWSXL      | 3.8 TB | 47      | 1484  | 1     | 3.20   |
-| HP        | VK000240GWSRQ      | 240 GB | 40      | 1120  | 0     | 3.07   |
+| HP        | VK003840GWSXL      | 3.8 TB | 47      | 1731  | 1     | 3.73   |
+| HP        | VK000240GWSRQ      | 240 GB | 40      | 1189  | 0     | 3.26   |
+| HP        | VK003840GXAWP      | 3.8 TB | 24      | 1362  | 1     | 2.95   |
 | HP        | VK000240GWCNP      | 240 GB | 6       | 988   | 0     | 2.71   |
 | HP        | VK0240GDJXU        | 240 GB | 2       | 1452  | 1     | 2.62   |
-| HP        | VK003840GXAWP      | 3.8 TB | 24      | 1183  | 1     | 2.56   |
+| HP        | VK003840GWJPK      | 3.8 TB | 2       | 1932  | 6     | 2.56   |
 | HP        | VK000480GWSRR      | 480 GB | 4       | 932   | 0     | 2.56   |
 | HP        | VK000240GWCFD      | 240 GB | 3       | 925   | 0     | 2.53   |
 | HP        | SSD M700           | 120 GB | 3       | 902   | 0     | 2.47   |

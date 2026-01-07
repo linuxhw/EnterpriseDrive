@@ -44,7 +44,7 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SV300S37A480G      | 480 GB | 11      | 1169  | 39    | 1.96   |
 | Kingston  | SA400M8120G        | 120 GB | 3       | 714   | 0     | 1.96   |
 | Kingston  | SHSS37A240G        | 240 GB | 3       | 661   | 0     | 1.81   |
-| Kingston  | SUV400S37120G      | 120 GB | 12      | 680   | 3     | 1.78   |
+| Kingston  | SUV400S37120G      | 120 GB | 13      | 656   | 2     | 1.72   |
 | Kingston  | SEDC500M960G       | 960 GB | 15      | 596   | 1     | 1.57   |
 | Kingston  | SUV400S37240G      | 240 GB | 53      | 565   | 1     | 1.50   |
 | Kingston  | SA400S37120G       | 120 GB | 54      | 520   | 1     | 1.36   |
@@ -53,20 +53,20 @@ MTBF - avg. MTBF in years per sample.
 | Kingston  | SUV500960G         | 960 GB | 8       | 425   | 0     | 1.17   |
 | Kingston  | SEDC500R480G       | 480 GB | 11      | 387   | 0     | 1.06   |
 | Kingston  | SEDC500M1920G      | 1.9 TB | 44      | 406   | 1     | 1.01   |
-| Kingston  | SA400S37960G       | 960 GB | 8       | 364   | 0     | 1.00   |
+| Kingston  | SA400S37960G       | 960 GB | 9       | 332   | 0     | 0.91   |
 | Kingston  | SEDC500R1920G      | 1.9 TB | 49      | 395   | 1     | 0.79   |
-| Kingston  | SA400S37240G       | 240 GB | 152     | 220   | 4     | 0.59   |
+| Kingston  | SA400S37240G       | 240 GB | 152     | 221   | 4     | 0.60   |
 | Kingston  | SEDC500M480G       | 480 GB | 27      | 212   | 1     | 0.54   |
 | Kingston  | SEDC500M3840G      | 3.8 TB | 13      | 237   | 1     | 0.44   |
 | Kingston  | SEDC500R3840G      | 3.8 TB | 42      | 187   | 1     | 0.42   |
 | Kingston  | SEDC450R480G       | 480 GB | 3       | 152   | 0     | 0.42   |
+| Kingston  | SEDC600M7680G      | 7.6 TB | 24      | 139   | 0     | 0.38   |
 | Kingston  | SKC6001024G        | 1 TB   | 2       | 136   | 0     | 0.37   |
 | Kingston  | SUV500M8240G       | 240 GB | 3       | 108   | 0     | 0.30   |
 | Kingston  | SEDC450R1920G      | 1.9 TB | 10      | 106   | 0     | 0.29   |
 | Kingston  | SEDC450R3840G      | 3.8 TB | 4       | 86    | 0     | 0.24   |
 | Kingston  | SKC600256G         | 256 GB | 27      | 32    | 0     | 0.09   |
 | Kingston  | SEDC450R7680G      | 7.6 TB | 2       | 30    | 0     | 0.08   |
-| Kingston  | SEDC600M7680G      | 7.6 TB | 16      | 11    | 0     | 0.03   |
 | Kingston  | SHPM2280P2H-480G   | 480 GB | 3       | 1138  | 743   | 0.01   |
 
 SSD by Family
@@ -83,7 +83,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Family                 | Models | Samples | Days  | Err   | MTBF |
 |-----------|------------------------|--------|---------|-------|-------|------|
 | Kingston  | SandForce Driven SSDs  | 11     | 197     | 1569  | 12    | 3.53   |
-| Kingston  | SSDNow UV400           | 2      | 65      | 586   | 1     | 1.56   |
+| Kingston  | SSDNow UV400           | 2      | 66      | 583   | 1     | 1.55   |
 | Kingston  | SSDNow UV400/500       | 3      | 16      | 514   | 0     | 1.41   |
-| Kingston  | Phison Driven SSDs     | 25     | 513     | 395   | 3     | 0.97   |
+| Kingston  | Phison Driven SSDs     | 25     | 514     | 395   | 3     | 0.97   |
 | Kingston  | Silicon Motion base... | 2      | 29      | 40    | 0     | 0.11   |

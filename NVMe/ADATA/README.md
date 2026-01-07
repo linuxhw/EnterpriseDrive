@@ -19,9 +19,10 @@ MTBF - avg. MTBF in years per sample.
 |-----------|--------------------|--------|---------|-------|-------|------|
 | ADATA     | SX8200PNP          | 256 GB | 2       | 463   | 0     | 1.27   |
 | ADATA     | SX8200PNP          | 1 TB   | 2       | 243   | 0     | 0.67   |
+| ADATA     | LEGEND 900         | 2 TB   | 3       | 188   | 0     | 0.52   |
 | ADATA     | SX8200PNP          | 512 GB | 5       | 117   | 0     | 0.32   |
+| ADATA     | LEGEND 960         | 2 TB   | 5       | 105   | 0     | 0.29   |
 | ADATA     | SX8200PNP          | 2 TB   | 3       | 96    | 0     | 0.26   |
 | ADATA     | SX6000LNP          | 1 TB   | 3       | 85    | 0     | 0.23   |
 | ADATA     | SX6000PNP          | 256 GB | 2       | 74    | 0     | 0.20   |
-| ADATA     | LEGEND 900         | 2 TB   | 3       | 63    | 0     | 0.17   |
 | ADATA     | SX6000PNP          | 512 GB | 2       | 24    | 0     | 0.07   |

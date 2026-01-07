@@ -33,7 +33,7 @@ MTBF - avg. MTBF in years per sample.
 | Seagate   | XA480ME10063       | 480 GB | 13      | 584   | 0     | 1.60   |
 | Seagate   | XA480LE10063       | 480 GB | 14      | 520   | 0     | 1.43   |
 | Seagate   | XA960LE10063       | 960 GB | 110     | 509   | 0     | 1.39   |
-| Seagate   | BarraCuda 120 S... | 1 TB   | 3       | 387   | 0     | 1.06   |
+| Seagate   | BarraCuda 120 S... | 1 TB   | 4       | 423   | 0     | 1.16   |
 | Seagate   | XA240ME10003       | 240 GB | 5       | 361   | 0     | 0.99   |
 | Seagate   | BarraCuda 120 S... | 250 GB | 3       | 175   | 0     | 0.48   |
 | Seagate   | XA240LE10003       | 240 GB | 10      | 166   | 0     | 0.46   |

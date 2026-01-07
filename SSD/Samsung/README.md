@@ -18,6 +18,7 @@ MTBF - avg. MTBF in years per sample.
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
 | Samsung   | SSD 840 EVO        | 120 GB | 11      | 2574  | 0     | 7.05   |
+| Samsung   | MZ7KM1T9HAJM-0E005 | 1.9 TB | 2       | 2432  | 0     | 6.66   |
 | Samsung   | SSD 840 EVO        | 500 GB | 13      | 3101  | 237   | 6.48   |
 | Samsung   | MZ7LM120HCFD-00003 | 120 GB | 4       | 2312  | 0     | 6.34   |
 | Samsung   | SSD 830 Series     | 512 GB | 12      | 3084  | 253   | 6.33   |
@@ -40,8 +41,8 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 840 EVO        | 250 GB | 10      | 2674  | 5     | 4.69   |
 | Samsung   | SSD 850 PRO        | 256 GB | 42      | 1765  | 1     | 4.68   |
 | Samsung   | MZ7KM480HAHP-00005 | 480 GB | 92      | 1694  | 0     | 4.64   |
+| Samsung   | SSD 850 PRO        | 512 GB | 63      | 1728  | 1     | 4.63   |
 | Samsung   | MZ7WD960HAGP-00003 | 960 GB | 3       | 1681  | 0     | 4.61   |
-| Samsung   | SSD 850 PRO        | 512 GB | 63      | 1693  | 1     | 4.53   |
 | Samsung   | MZ7WD240HCFV-00003 | 240 GB | 7       | 1653  | 0     | 4.53   |
 | Samsung   | MZ7LM960HCHP-00005 | 960 GB | 24      | 1633  | 0     | 4.48   |
 | Samsung   | MZ7GE960HMHP-00003 | 960 GB | 24      | 2270  | 109   | 4.42   |
@@ -72,31 +73,33 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 EVO M.2    | 2 TB   | 2       | 1225  | 0     | 3.36   |
 | Samsung   | SSD 850 EVO M.2    | 250 GB | 2       | 1186  | 0     | 3.25   |
 | Samsung   | SSD 850 EVO M.2    | 500 GB | 5       | 1168  | 0     | 3.20   |
-| Samsung   | SSD 850 EVO        | 1 TB   | 206     | 1509  | 67    | 3.18   |
+| Samsung   | SSD 850 EVO        | 1 TB   | 206     | 1513  | 67    | 3.19   |
 | Samsung   | MZ7LM240HCGR-00005 | 240 GB | 4       | 1125  | 0     | 3.08   |
 | Samsung   | MZ7GE240HMGR-00003 | 240 GB | 4       | 1234  | 89    | 3.08   |
 | Samsung   | MZ7KM240HMHQ-00005 | 240 GB | 65      | 1115  | 12    | 3.04   |
 | Samsung   | MZ7KM1T9HMJP-00005 | 1.9 TB | 86      | 1103  | 0     | 3.02   |
+| Samsung   | SSD 850            | 120 GB | 5       | 1083  | 0     | 2.97   |
 | Samsung   | MZ7LM960HCHP-00003 | 960 GB | 33      | 1083  | 0     | 2.97   |
 | Samsung   | MZ7LM1T9HCJM-00003 | 1.9 TB | 7       | 1070  | 0     | 2.93   |
+| Samsung   | MZ7KM480HMHQ-00005 | 480 GB | 172     | 1048  | 0     | 2.87   |
 | Samsung   | SSD 850 EVO        | 250 GB | 97      | 1165  | 40    | 2.83   |
 | Samsung   | MZ7LM960HMJP0D3    | 960 GB | 46      | 1073  | 1     | 2.83   |
-| Samsung   | MZ7KM480HMHQ-00005 | 480 GB | 169     | 1023  | 0     | 2.80   |
 | Samsung   | SSD 750 EVO        | 250 GB | 4       | 979   | 0     | 2.68   |
+| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 65      | 956   | 0     | 2.62   |
 | Samsung   | MZ7KH3T8HALS-00005 | 3.8 TB | 7       | 947   | 0     | 2.60   |
 | Samsung   | MZ7LM960HMJP-00005 | 960 GB | 343     | 1295  | 26    | 2.59   |
 | Samsung   | MZ7LH1T9HMLT0D3    | 1.9 TB | 35      | 930   | 0     | 2.55   |
 | Samsung   | SSD 840 Series     | 120 GB | 7       | 1862  | 86    | 2.54   |
-| Samsung   | SSD 860 DCT        | 960 GB | 5       | 906   | 0     | 2.48   |
+| Samsung   | SSD 860 DCT        | 960 GB | 5       | 923   | 0     | 2.53   |
 | Samsung   | MZNLN512HMJP-00000 | 512 GB | 11      | 891   | 0     | 2.44   |
 | Samsung   | SSD 860 PRO        | 256 GB | 57      | 887   | 0     | 2.43   |
 | Samsung   | SSD 860 EVO        | 4 TB   | 11      | 875   | 0     | 2.40   |
 | Samsung   | SSD 860 DCT 1.92TB | 1.9 TB | 20      | 868   | 0     | 2.38   |
+| Samsung   | MZ7KH240HAHQ-00005 | 240 GB | 85      | 850   | 0     | 2.33   |
 | Samsung   | SSD 860 PRO        | 4 TB   | 14      | 847   | 0     | 2.32   |
 | Samsung   | SSD 883 DCT 1.92TB | 1.9 TB | 236     | 806   | 1     | 2.20   |
 | Samsung   | SSD 860 PRO        | 2 TB   | 158     | 791   | 1     | 2.17   |
 | Samsung   | SSD 883 DCT        | 960 GB | 43      | 789   | 0     | 2.16   |
-| Samsung   | MZ7KH240HAHQ-00005 | 240 GB | 85      | 784   | 0     | 2.15   |
 | Samsung   | SSD 850 EVO mSATA  | 250 GB | 6       | 775   | 0     | 2.12   |
 | Samsung   | MZ7LM1T9HMJP-00005 | 1.9 TB | 113     | 1215  | 19    | 2.10   |
 | Samsung   | SSD 860 EVO M.2    | 500 GB | 9       | 760   | 0     | 2.08   |
@@ -106,71 +109,70 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | SSD 860 QVO        | 2 TB   | 29      | 728   | 0     | 2.00   |
 | Samsung   | MZ7KM960HMJP-00005 | 960 GB | 99      | 684   | 0     | 1.87   |
 | Samsung   | MZ7KM480HMHQ-000MV | 480 GB | 37      | 675   | 0     | 1.85   |
+| Samsung   | MZ7L3480HBLT-00A07 | 480 GB | 31      | 708   | 1     | 1.85   |
 | Samsung   | MZ7LH960HAJR0D3    | 960 GB | 20      | 672   | 0     | 1.84   |
-| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 67      | 669   | 0     | 1.84   |
+| Samsung   | SSD 860 PRO        | 1 TB   | 114     | 658   | 0     | 1.81   |
 | Samsung   | MZ7LM1T9HMJP0D3    | 1.9 TB | 2       | 656   | 0     | 1.80   |
-| Samsung   | SSD 860 PRO        | 1 TB   | 113     | 650   | 0     | 1.78   |
+| Samsung   | MZ7KH960HAJR-00005 | 960 GB | 73      | 648   | 0     | 1.78   |
 | Samsung   | MZ7LM960HMJP-000MV | 960 GB | 4       | 641   | 0     | 1.76   |
 | Samsung   | MZ7LN128HCHP-000H1 | 128 GB | 2       | 633   | 0     | 1.74   |
-| Samsung   | MZ7L3960HBLT-00A07 | 960 GB | 65      | 618   | 0     | 1.69   |
 | Samsung   | MZ7LM480HMHQ-00005 | 480 GB | 73      | 1242  | 28    | 1.69   |
 | Samsung   | MZ7KH1T9HAJR-00005 | 1.9 TB | 117     | 605   | 1     | 1.65   |
 | Samsung   | MZ7LH480HAHQ-000V3 | 480 GB | 5       | 599   | 0     | 1.64   |
 | Samsung   | SSD 860 EVO        | 500 GB | 291     | 580   | 1     | 1.58   |
-| Samsung   | SSD 883 DCT 3.84TB | 3.8 TB | 165     | 578   | 3     | 1.57   |
+| Samsung   | SSD 883 DCT 3.84TB | 3.8 TB | 167     | 580   | 3     | 1.58   |
 | Samsung   | MZ7LM240HMHQ-00005 | 240 GB | 79      | 1000  | 138   | 1.57   |
 | Samsung   | SSD 860 EVO        | 250 GB | 119     | 574   | 2     | 1.57   |
 | Samsung   | SSD 845DC PRO      | 800 GB | 4       | 2276  | 3     | 1.56   |
 | Samsung   | SSD 860 EVO        | 1 TB   | 472     | 562   | 1     | 1.54   |
+| Samsung   | MZ7L3480HCHQ-00A07 | 480 GB | 81      | 539   | 0     | 1.48   |
 | Samsung   | SSD 860 QVO        | 1 TB   | 58      | 537   | 0     | 1.47   |
 | Samsung   | MZ7LH240HAHQ0D3    | 240 GB | 6       | 534   | 0     | 1.46   |
 | Samsung   | MZ7LM240HMHQ-00003 | 240 GB | 2       | 513   | 0     | 1.41   |
+| Samsung   | MZ7KH960HAJR0D3    | 960 GB | 163     | 512   | 0     | 1.40   |
 | Samsung   | MZ7LH7T6HMLA-00005 | 7.6 TB | 125     | 509   | 0     | 1.40   |
-| Samsung   | MZ7KH960HAJR0D3    | 960 GB | 163     | 508   | 0     | 1.39   |
+| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 155     | 499   | 0     | 1.37   |
 | Samsung   | MZ7LH1T9HALT0D3    | 1.9 TB | 45      | 482   | 0     | 1.32   |
 | Samsung   | MZ7KH480HAHQ-00005 | 480 GB | 83      | 482   | 0     | 1.32   |
 | Samsung   | SSD 860 EVO mSATA  | 250 GB | 3       | 481   | 0     | 1.32   |
 | Samsung   | MZ7LH480HAHQ0D3    | 480 GB | 2       | 475   | 0     | 1.30   |
-| Samsung   | SSD 850            | 120 GB | 2       | 474   | 0     | 1.30   |
-| Samsung   | MZ7LH960HAJR-00005 | 960 GB | 1149    | 473   | 0     | 1.30   |
-| Samsung   | MZ7LH1T9HMLT-00005 | 1.9 TB | 788     | 473   | 0     | 1.30   |
+| Samsung   | MZ7LH960HAJR-00005 | 960 GB | 1170    | 471   | 0     | 1.29   |
+| Samsung   | MZ7LH1T9HMLT-00005 | 1.9 TB | 844     | 465   | 0     | 1.28   |
 | Samsung   | SSD 860 QVO        | 4 TB   | 6       | 464   | 0     | 1.27   |
 | Samsung   | MZ7KH480HAHQ0D3    | 480 GB | 23      | 461   | 0     | 1.26   |
+| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 250     | 462   | 1     | 1.26   |
 | Samsung   | SSD 840 EVO 250... | 250 GB | 4       | 456   | 0     | 1.25   |
 | Samsung   | SSD 883 DCT        | 240 GB | 42      | 453   | 0     | 1.24   |
 | Samsung   | SSD 883 DCT        | 480 GB | 7       | 446   | 0     | 1.22   |
-| Samsung   | MZ7L3480HBLT-00A07 | 480 GB | 31      | 464   | 1     | 1.21   |
-| Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 503     | 437   | 0     | 1.20   |
+| Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 88      | 445   | 0     | 1.22   |
+| Samsung   | MZ7L3960HCJR-00A07 | 960 GB | 25      | 444   | 0     | 1.22   |
+| Samsung   | MZ7LH240HAHQ-00005 | 240 GB | 520     | 440   | 0     | 1.21   |
 | Samsung   | SSD 870 QVO        | 8 TB   | 35      | 435   | 0     | 1.19   |
-| Samsung   | MZ7LH480HAHQ-00005 | 480 GB | 139     | 410   | 0     | 1.13   |
+| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 51      | 429   | 1     | 1.16   |
+| Samsung   | SSD 860 PRO        | 512 GB | 67      | 404   | 0     | 1.11   |
 | Samsung   | MZ7LH3T8HALT0D3    | 3.8 TB | 8       | 397   | 0     | 1.09   |
-| Samsung   | SSD 860 PRO        | 512 GB | 67      | 393   | 0     | 1.08   |
 | Samsung   | MZ7KM480HMHQ0D3    | 480 GB | 3       | 382   | 0     | 1.05   |
 | Samsung   | SSD 870 QVO        | 2 TB   | 6       | 382   | 0     | 1.05   |
+| Samsung   | MZ7L31T9HBNA-00... | 1.9 TB | 2       | 373   | 0     | 1.02   |
 | Samsung   | MZ7LM960HMJP-00003 | 960 GB | 2       | 678   | 12    | 0.97   |
 | Samsung   | MZ7WD480HMHP-00003 | 480 GB | 8       | 1956  | 66    | 0.96   |
+| Samsung   | SSD 870 EVO        | 250 GB | 4       | 348   | 0     | 0.95   |
 | Samsung   | MZNLH1T0HALB-00000 | 1 TB   | 12      | 336   | 0     | 0.92   |
 | Samsung   | MZ7LH3T8HMLT0D3    | 3.8 TB | 40      | 325   | 0     | 0.89   |
 | Samsung   | MZ7LH480HBHQ0D3    | 480 GB | 19      | 313   | 0     | 0.86   |
-| Samsung   | MZ7L3240HCHQ-00A07 | 240 GB | 45      | 305   | 0     | 0.84   |
-| Samsung   | MZ7L3960HCJR-00A07 | 960 GB | 23      | 304   | 0     | 0.83   |
-| Samsung   | MZ7L3480HCHQ-00A07 | 480 GB | 66      | 293   | 0     | 0.80   |
-| Samsung   | MZ7L37T6HBLA-00A07 | 7.6 TB | 156     | 296   | 1     | 0.80   |
-| Samsung   | SSD 870 EVO        | 250 GB | 4       | 256   | 0     | 0.70   |
-| Samsung   | MZ7LH3T8HMLT-00005 | 3.8 TB | 106     | 246   | 0     | 0.68   |
-| Samsung   | MZ7L31T9HBNA-00... | 1.9 TB | 2       | 222   | 0     | 0.61   |
+| Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 95      | 292   | 1     | 0.79   |
+| Samsung   | MZ7L33T8HBLT-00... | 3.8 TB | 14      | 276   | 0     | 0.76   |
+| Samsung   | MZ7LH3T8HMLT-00005 | 3.8 TB | 124     | 243   | 0     | 0.67   |
+| Samsung   | SSD 870 QVO        | 1 TB   | 20      | 233   | 0     | 0.64   |
 | Samsung   | MZ7LM960HCHP-000MV | 960 GB | 6       | 220   | 0     | 0.60   |
-| Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 65      | 195   | 0     | 0.54   |
-| Samsung   | SSD 870 QVO        | 1 TB   | 19      | 187   | 0     | 0.51   |
 | Samsung   | MZ7WD960HMHP-00003 | 960 GB | 4       | 2322  | 48    | 0.50   |
 | Samsung   | SSD 870 EVO        | 1 TB   | 109     | 181   | 5     | 0.42   |
-| Samsung   | MZ7L31T9HBLT-00... | 1.9 TB | 88      | 122   | 0     | 0.34   |
+| Samsung   | SSD 870 EVO        | 500 GB | 21      | 156   | 7     | 0.35   |
 | Samsung   | MZ7LN1T0HAJQ-00000 | 1 TB   | 2       | 119   | 0     | 0.33   |
+| Samsung   | MZ7L3480HCHQ-00B7C | 480 GB | 11      | 111   | 0     | 0.31   |
 | Samsung   | SSD 870 EVO        | 4 TB   | 11      | 150   | 8     | 0.28   |
 | Samsung   | SSD 870 EVO        | 2 TB   | 66      | 134   | 3     | 0.26   |
-| Samsung   | SSD 870 EVO        | 500 GB | 21      | 121   | 7     | 0.25   |
-| Samsung   | MZ7L33T8HBLT-00... | 3.8 TB | 2       | 78    | 0     | 0.21   |
-| Samsung   | MZ7L33T8HBNA-00... | 3.8 TB | 47      | 73    | 0     | 0.20   |
+| Samsung   | MZ7L33T8HBNA-00... | 3.8 TB | 47      | 93    | 0     | 0.25   |
 | Samsung   | MZYTY128HDHP-000L2 | 128 GB | 3       | 61    | 0     | 0.17   |
 | Samsung   | MZ7KH1T9HAJR0D3    | 1.9 TB | 18      | 37    | 0     | 0.10   |
 | Samsung   | SSD 870 QVO        | 4 TB   | 12      | 6     | 0     | 0.02   |

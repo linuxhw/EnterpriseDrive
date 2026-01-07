@@ -17,8 +17,9 @@ MTBF - avg. MTBF in years per sample.
 
 | MFG       | Model              | Size   | Samples | Days  | Err   | MTBF |
 |-----------|--------------------|--------|---------|-------|-------|------|
+| SATADOM   | MV 3SE             | 64 GB  | 4       | 2062  | 0     | 5.65   |
+| SATADOM   | SL 3IE3 V2         | 64 GB  | 11      | 1308  | 0     | 3.59   |
 | SATADOM   | ML 3MG-P           | 32 GB  | 2       | 1215  | 0     | 3.33   |
-| SATADOM   | SL 3IE3 V2         | 64 GB  | 7       | 854   | 0     | 2.34   |
 | SATADOM   | SL 3SE             | 32 GB  | 3       | 556   | 0     | 1.52   |
 | SATADOM   | SH Type D 3TE7     | 120 GB | 8       | 191   | 0     | 0.52   |
 | SATADOM   | SL 3TE7            | 120 GB | 6       | 139   | 0     | 0.38   |

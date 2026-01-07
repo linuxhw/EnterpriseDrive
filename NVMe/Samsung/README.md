@@ -27,10 +27,12 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZPLL3T2HMLS-00003 | 3.2 TB | 6       | 887   | 0     | 2.43   |
 | Samsung   | SSD 960 EVO        | 500 GB | 10      | 830   | 8     | 2.24   |
 | Samsung   | MZPLL6T4HMLA-00005 | 6.4 TB | 6       | 817   | 0     | 2.24   |
+| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 26      | 790   | 0     | 2.17   |
 | Samsung   | MZWLL12THMLA-00005 | 12.... | 2       | 780   | 0     | 2.14   |
 | Samsung   | MZPLL6T4HMLS-00003 | 6.4 TB | 16      | 742   | 0     | 2.04   |
 | Samsung   | MZVKW512HMJP-00000 | 512 GB | 5       | 932   | 202   | 2.01   |
 | Samsung   | MZPLL6T4HMLS-000MV | 6.4 TB | 4       | 717   | 0     | 1.97   |
+| Samsung   | MZPLJ12THALA-00007 | 12.... | 12      | 703   | 0     | 1.93   |
 | Samsung   | MZQLW960HMJP-00003 | 960 GB | 20      | 1027  | 130   | 1.88   |
 | Samsung   | MZPLL1T6HAJQ-00005 | 1.6 TB | 6       | 659   | 0     | 1.81   |
 | Samsung   | MZQLW1T9HMJP-00003 | 1.9 TB | 5       | 658   | 0     | 1.81   |
@@ -39,20 +41,23 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZPLL3T2HAJQ-00005 | 3.2 TB | 24      | 620   | 0     | 1.70   |
 | Samsung   | SSD 960 EVO        | 250 GB | 4       | 594   | 0     | 1.63   |
 | Samsung   | MZWLL800HEHP-00003 | 800 GB | 14      | 864   | 4     | 1.60   |
+| Samsung   | MZQL23T8HCLS-00... | 1.9 TB | 6       | 580   | 0     | 1.59   |
 | Samsung   | SSD 970 EVO        | 500 GB | 3       | 563   | 0     | 1.54   |
 | Samsung   | MZQLB3T8HALS-000AZ | 3.8 TB | 24      | 556   | 0     | 1.52   |
 | Samsung   | SSD 983 DCT        | 960 GB | 6       | 544   | 0     | 1.49   |
 | Samsung   | MZQLW1T9HMJP-000AZ | 1.9 TB | 7       | 591   | 1     | 1.49   |
 | Samsung   | VO001920KWVMT 1... | 1.9 TB | 36      | 537   | 0     | 1.47   |
-| Samsung   | MZ1L2960HCJR-00A07 | 960 GB | 22      | 526   | 0     | 1.44   |
+| Samsung   | MZWLJ3T8HBLS-00007 | 3.8 TB | 3       | 512   | 0     | 1.40   |
 | Samsung   | MZWLJ7T6HALA-00007 | 7.6 TB | 2       | 502   | 0     | 1.38   |
 | Samsung   | MZWLL1T6HAJQ-00005 | 1.6 TB | 10      | 501   | 0     | 1.37   |
-| Samsung   | MZPLJ12THALA-00007 | 12.... | 12      | 448   | 0     | 1.23   |
+| Samsung   | MZ1L21T9HCLS-00A07 | 1.9 TB | 7       | 494   | 0     | 1.35   |
+| Samsung   | MZPLJ1T6HBJR-00007 | 736 GB | 10      | 505   | 101   | 1.27   |
 | Samsung   | MZ4LB3T8HALS-00003 | 3.8 TB | 6       | 443   | 0     | 1.22   |
 | Samsung   | MZWLL1T6HEHP-00003 | 1.6 TB | 8       | 436   | 0     | 1.20   |
 | Samsung   | MZVLQ512HALU-00000 | 512 GB | 2       | 417   | 0     | 1.14   |
 | Samsung   | SSD 960 PRO        | 512 GB | 3       | 416   | 0     | 1.14   |
-| Samsung   | MZQL23T8HCLS-00... | 1.9 TB | 2       | 405   | 0     | 1.11   |
+| Samsung   | MZ1L21T9HCLS-00A07 | 960 GB | 3       | 411   | 0     | 1.13   |
+| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 171     | 404   | 0     | 1.11   |
 | Samsung   | SSD 970 PRO        | 1 TB   | 39      | 396   | 0     | 1.09   |
 | Samsung   | MZPJB480HMGC-0BW07 | 480 GB | 16      | 395   | 0     | 1.08   |
 | Samsung   | MZ1LB3T8HMLA-00007 | 3.8 TB | 12      | 417   | 1     | 1.08   |
@@ -66,37 +71,40 @@ MTBF - avg. MTBF in years per sample.
 | Samsung   | MZPLJ1T6HBJR-000H3 | 1.6 TB | 8       | 333   | 0     | 0.91   |
 | Samsung   | MZSLW1T0HMLH-000L1 | 1 TB   | 2       | 328   | 0     | 0.90   |
 | Samsung   | MZQLB3T8HALS-00007 | 3.8 TB | 182     | 329   | 1     | 0.89   |
+| Samsung   | MZQL21T9HCJR-00A07 | 240 GB | 48      | 324   | 0     | 0.89   |
 | Samsung   | MZQL23T8HCLS-00A07 | 368 GB | 2       | 321   | 0     | 0.88   |
 | Samsung   | MZQLB7T6HMLA-00007 | 7.6 TB | 118     | 323   | 1     | 0.85   |
-| Samsung   | MZQL23T8HCLS-00... | 3.8 TB | 99      | 303   | 0     | 0.83   |
 | Samsung   | MZPJB960HMGC-0BW07 | 960 GB | 12      | 301   | 0     | 0.83   |
+| Samsung   | MZQL21T9HCJR-00... | 1.9 TB | 87      | 286   | 0     | 0.79   |
+| Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 77      | 282   | 0     | 0.77   |
 | Samsung   | MZPLJ3T2HBJR-000H3 | 3.2 TB | 6       | 278   | 0     | 0.76   |
 | Samsung   | SSD 970 EVO        | 250 GB | 3       | 387   | 1     | 0.72   |
-| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 124     | 247   | 0     | 0.68   |
+| Samsung   | MZQL2960HCJR-00A07 | 960 GB | 315     | 255   | 0     | 0.70   |
 | Samsung   | MZVLB256HAHQ-00000 | 256 GB | 14      | 237   | 0     | 0.65   |
 | Samsung   | MZPLJ1T6HBJR-00007 | 1.6 TB | 4       | 228   | 0     | 0.62   |
 | Samsung   | MZPLJ6T4HALA-00007 | 6.4 TB | 41      | 224   | 0     | 0.61   |
-| Samsung   | MZ1L21T9HCLS-00A07 | 480 GB | 6       | 212   | 0     | 0.58   |
 | Samsung   | SSD 970 EVO        | 1 TB   | 9       | 416   | 2     | 0.57   |
 | Samsung   | SSD 970 EVO Plus   | 1 TB   | 80      | 204   | 0     | 0.56   |
 | Samsung   | MZ1L21T9HCLS-00A07 | 472 GB | 4       | 200   | 0     | 0.55   |
+| Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 57      | 196   | 0     | 0.54   |
 | Samsung   | MZQLB1T9HAJR-000AZ | 1.9 TB | 4       | 189   | 0     | 0.52   |
-| Samsung   | MZ1L21T9HCLS-00A07 | 1.9 TB | 2       | 186   | 0     | 0.51   |
 | Samsung   | SSD 970 EVO Plus   | 500 GB | 27      | 185   | 0     | 0.51   |
+| Samsung   | MZQL23T8HCLS-00... | 3.2 TB | 2       | 185   | 0     | 0.51   |
 | Samsung   | SSD 970 EVO Plus   | 250 GB | 35      | 169   | 0     | 0.47   |
 | Samsung   | MZVLB512HBJQ-00000 | 512 GB | 25      | 160   | 0     | 0.44   |
-| Samsung   | MZQL21T9HCJR-00... | 1.9 TB | 53      | 156   | 0     | 0.43   |
-| Samsung   | MZPLJ1T6HBJR-00007 | 736 GB | 10      | 153   | 0     | 0.42   |
+| Samsung   | MZQLB7T6HALA-00W07 | 7.6 TB | 48      | 153   | 0     | 0.42   |
 | Samsung   | MZVLB1T0HBLR-00000 | 1 TB   | 56      | 149   | 0     | 0.41   |
-| Samsung   | SSD 980            | 500 GB | 5       | 140   | 0     | 0.39   |
-| Samsung   | MZPLJ3T2HBJR-00007 | 3.2 TB | 57      | 133   | 0     | 0.37   |
+| Samsung   | MZ1L21T9HCLS-00A07 | 480 GB | 13      | 147   | 0     | 0.40   |
+| Samsung   | SSD 980            | 500 GB | 5       | 142   | 0     | 0.39   |
 | Samsung   | MZVLB256HBHQ-00000 | 256 GB | 6       | 107   | 0     | 0.29   |
-| Samsung   | MZQL27T6HBLA-00A07 | 7.6 TB | 35      | 98    | 0     | 0.27   |
+| Samsung   | MZ1L2960HCJR-00A07 | 240 GB | 7       | 105   | 0     | 0.29   |
+| Samsung   | MZQL21T9HCJR-00... | 1.6 TB | 6       | 98    | 0     | 0.27   |
 | Samsung   | SSD 983 DCT M.2    | 960 GB | 5       | 84    | 0     | 0.23   |
 | Samsung   | SSD 980 PRO        | 250 GB | 4       | 81    | 0     | 0.22   |
 | Samsung   | MZVL21T0HCLR-00B00 | 1 TB   | 10      | 60    | 0     | 0.17   |
 | Samsung   | MZVLB256HAHQ-000L7 | 256 GB | 5       | 54    | 0     | 0.15   |
 | Samsung   | MZVLW256HEHP-000L7 | 256 GB | 2       | 41    | 0     | 0.11   |
+| Samsung   | MZVL21T0HDLU-00B07 | 1 TB   | 10      | 40    | 0     | 0.11   |
 | Samsung   | SSD 970 EVO Plus   | 2 TB   | 60      | 29    | 0     | 0.08   |
 | Samsung   | SSD 980            | 250 GB | 6       | 19    | 0     | 0.05   |
 | Samsung   | MZVL2512HCJQ-00B07 | 512 GB | 8       | 11    | 0     | 0.03   |
