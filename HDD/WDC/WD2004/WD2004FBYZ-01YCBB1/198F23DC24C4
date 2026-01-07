@@ -14,7 +14,7 @@ Form Factor:      3.5 inches
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 T13/2161-D revision 5
 SATA Version is:  SATA 3.1, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Thu Dec ... 2024 UTC
+Local Time is:    Tue May ... 2025 UTC
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 APM level is:     96 (intermediate level with standby)
@@ -64,19 +64,19 @@ SMART Attributes Data Structure revision number: 16
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   1 Raw_Read_Error_Rate     POSR-K   100   253   051    -    0
-  3 Spin_Up_Time            POS--K   181   181   021    -    3950
-  4 Start_Stop_Count        -O--CK   099   099   000    -    1827
+  3 Spin_Up_Time            POS--K   200   181   021    -    2958
+  4 Start_Stop_Count        -O--CK   099   099   000    -    1831
   5 Reallocated_Sector_Ct   PO--CK   200   200   140    -    0
   7 Seek_Error_Rate         -OSR-K   100   253   000    -    0
-  9 Power_On_Hours          -O--CK   074   074   000    -    19149
+  9 Power_On_Hours          -O--CK   070   070   000    -    22448
  10 Spin_Retry_Count        -O--CK   100   100   000    -    0
  11 Calibration_Retry_Count -O--CK   100   100   000    -    0
- 12 Power_Cycle_Count       -O--CK   099   099   000    -    1244
- 16 Total_LBAs_Read         -O---K   000   200   000    -    577688949
+ 12 Power_Cycle_Count       -O--CK   099   099   000    -    1248
+ 16 Total_LBAs_Read         -O---K   000   200   000    -    701193750
 183 Runtime_Bad_Block       -O--CK   100   100   000    -    0
-192 Power-Off_Retract_Count -O--CK   200   200   000    -    724
-193 Load_Cycle_Count        -O--CK   198   198   000    -    7594
-194 Temperature_Celsius     -O---K   126   107   000    -    21
+192 Power-Off_Retract_Count -O--CK   200   200   000    -    727
+193 Load_Cycle_Count        -O--CK   197   197   000    -    9747
+194 Temperature_Celsius     -O---K   116   107   000    -    31
 196 Reallocated_Event_Count -O--CK   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   200   200   000    -    0
 198 Offline_Uncorrectable   ----CK   100   253   000    -    0
@@ -117,7 +117,7 @@ Address    Access  R/W   Size  Description
 0xe1       GPL,SL  R/W      1  SCT Data Transfer
 
 SMART Extended Comprehensive Error Log Version: 1 (6 sectors)
-Device Error Count: 23
+Device Error Count: 26 (device log contains only the most recent 24 errors)
 	CR     = Command Register
 	FEATR  = Features Register
 	COUNT  = Count (was: Sector Count) Register
@@ -132,6 +132,42 @@ Device Error Count: 23
 Powered_Up_Time is measured from power on, and printed as
 DDd+hh:mm:SS.sss where DD=days, hh=hours, mm=minutes,
 SS=sec, and sss=millisec. It "wraps" after 49.710 days.
+
+Error 26 [1] occurred at disk power-on lifetime: 22309 hours (929 days + 13 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 25 [0] occurred at disk power-on lifetime: 19987 hours (832 days + 19 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
+
+Error 24 [23] occurred at disk power-on lifetime: 19576 hours (815 days + 16 hours)
+  When the command that caused the error occurred, the device was in an unknown state.
+
+  After command completion occurred, registers were:
+  ER -- ST COUNT  LBA_48  LH LM LL DV DC
+  -- -- -- == -- == == == -- -- -- -- --
+  00 -- 00 00 00 00 00 00 00 00 00 00 00
+
+  Commands leading to the command that caused the error were:
+  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
+  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
 Error 23 [22] occurred at disk power-on lifetime: 14296 hours (595 days + 16 hours)
   When the command that caused the error occurred, the device was in an unknown state.
@@ -193,42 +229,6 @@ Error 19 [18] occurred at disk power-on lifetime: 13933 hours (580 days + 13 hou
   CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
   -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
 
-Error 18 [17] occurred at disk power-on lifetime: 13244 hours (551 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
-Error 17 [16] occurred at disk power-on lifetime: 13244 hours (551 days + 20 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
-Error 16 [15] occurred at disk power-on lifetime: 13243 hours (551 days + 19 hours)
-  When the command that caused the error occurred, the device was in an unknown state.
-
-  After command completion occurred, registers were:
-  ER -- ST COUNT  LBA_48  LH LM LL DV DC
-  -- -- -- == -- == == == -- -- -- -- --
-  00 -- 00 00 00 00 00 00 00 00 00 00 00
-
-  Commands leading to the command that caused the error were:
-  CR FEATR COUNT  LBA_48  LH LM LL DV DC  Powered_Up_Time  Command/Feature_Name
-  -- == -- == -- == == == -- -- -- -- --  ---------------  --------------------
-
 SMART Extended Self-test Log Version: 1 (1 sectors)
 No self-tests have been logged.  [To run self-tests, use: smartctl -t]
 
@@ -246,8 +246,8 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       258 (0x0102)
 Device State:                        Active (0)
-Current Temperature:                    21 Celsius
-Power Cycle Min/Max Temperature:     20/40 Celsius
+Current Temperature:                    31 Celsius
+Power Cycle Min/Max Temperature:     30/31 Celsius
 Lifetime    Min/Max Temperature:     18/40 Celsius
 Specified Max Operating Temperature:    60 Celsius
 Under/Over Temperature Limit Count:   0/0
@@ -260,7 +260,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/60 Celsius
 Min/Max Temperature Limit:           -41/85 Celsius
-Temperature History Size (Index):    478 (66)
+Temperature History Size (Index):    478 (17)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -269,34 +269,34 @@ SCT Error Recovery Control:
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
-0x01  0x008  4            1244  -D-  Lifetime Power-On Resets
-0x01  0x010  4           19149  -D-  Power-on Hours
-0x01  0x018  6       555796807  -D-  Logical Sectors Written
-0x01  0x020  6          573770  -D-  Number of Write Commands
-0x01  0x028  6        21892142  -D-  Logical Sectors Read
-0x01  0x030  6          465739  -D-  Number of Read Commands
-0x01  0x038  6       216923264  -D-  Date and Time TimeStamp
+0x01  0x008  4            1248  -D-  Lifetime Power-On Resets
+0x01  0x010  4           22448  -D-  Power-on Hours
+0x01  0x018  6       678626380  -D-  Logical Sectors Written
+0x01  0x020  6          698605  -D-  Number of Write Commands
+0x01  0x028  6        22567370  -D-  Logical Sectors Read
+0x01  0x030  6          487967  -D-  Number of Read Commands
+0x01  0x038  6      3503388672  -D-  Date and Time TimeStamp
 0x01  0x048  2               1  ND-  Workload Utilization
 0x03  =====  =               =  ===  == Rotating Media Statistics (rev 1) ==
-0x03  0x008  4           18895  -D-  Spindle Motor Power-on Hours
-0x03  0x010  4            9179  -D-  Head Flying Hours
-0x03  0x018  4            8318  -D-  Head Load Events
+0x03  0x008  4           22194  -D-  Spindle Motor Power-on Hours
+0x03  0x010  4            9587  -D-  Head Flying Hours
+0x03  0x018  4           10475  -D-  Head Load Events
 0x03  0x020  4               0  -D-  Number of Reallocated Logical Sectors
 0x03  0x028  4               0  -D-  Read Recovery Attempts
 0x03  0x030  4               0  -D-  Number of Mechanical Start Failures
 0x03  0x038  4               0  -D-  Number of Realloc. Candidate Logical Sectors
-0x03  0x040  4             723  -D-  Number of High Priority Unload Events
+0x03  0x040  4             727  -D-  Number of High Priority Unload Events
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  -D-  Number of Reported Uncorrectable Errors
 0x04  0x010  4               1  -D-  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              21  -D-  Current Temperature
-0x05  0x010  1              23  -D-  Average Short Term Temperature
-0x05  0x018  1              29  -D-  Average Long Term Temperature
+0x05  0x008  1              31  -D-  Current Temperature
+0x05  0x010  1              28  -D-  Average Short Term Temperature
+0x05  0x018  1              28  -D-  Average Long Term Temperature
 0x05  0x020  1              41  -D-  Highest Temperature
 0x05  0x028  1              20  -D-  Lowest Temperature
 0x05  0x030  1              36  -D-  Highest Average Short Term Temperature
-0x05  0x038  1              22  -D-  Lowest Average Short Term Temperature
+0x05  0x038  1              21  -D-  Lowest Average Short Term Temperature
 0x05  0x040  1              34  -D-  Highest Average Long Term Temperature
 0x05  0x048  1              22  -D-  Lowest Average Long Term Temperature
 0x05  0x050  4               0  -D-  Time in Over-Temperature
@@ -304,7 +304,7 @@ Page  Offset Size        Value Flags Description
 0x05  0x060  4               0  -D-  Time in Under-Temperature
 0x05  0x068  1               0  -D-  Specified Minimum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
-0x06  0x008  4             758  -D-  Number of Hardware Resets
+0x06  0x008  4             764  -D-  Number of Hardware Resets
 0x06  0x010  4              78  -D-  Number of ASR Events
 0x06  0x018  4               0  -D-  Number of Interface CRC Errors
                                 |||_ C monitored condition met

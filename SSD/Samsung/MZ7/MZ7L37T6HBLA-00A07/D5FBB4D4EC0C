@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-4 T13/BSR INCITS 529 revision 5
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Tue Aug ... 2024 MSK
+Local Time is:    Sat Oct ... 2025 MSK
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 Rd look-ahead is: Enabled
@@ -62,7 +62,7 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   PO--CK   100   100   010    -    0
-  9 Power_On_Hours          -O--CK   099   099   000    -    1014
+  9 Power_On_Hours          -O--CK   097   097   000    -    11353
  12 Power_Cycle_Count       -O--CK   099   099   000    -    17
 177 Wear_Leveling_Count     PO--C-   100   100   005    -    0
 179 Used_Rsvd_Blk_Cnt_Tot   PO--C-   100   100   010    -    0
@@ -72,21 +72,21 @@ ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
 183 Runtime_Bad_Block       PO--C-   100   100   010    -    0
 184 End-to-End_Error        PO--CK   100   100   097    -    0
 187 Uncorrectable_Error_Cnt -O--CK   100   100   000    -    0
-190 Airflow_Temperature_Cel -O--CK   074   061   000    -    26
-194 Temperature_Celsius     -O---K   074   060   000    -    26 (Min/Max 23/40)
+190 Airflow_Temperature_Cel -O--CK   076   061   000    -    24
+194 Temperature_Celsius     -O---K   076   060   000    -    24 (Min/Max 22/40)
 195 ECC_Error_Rate          -O-RC-   200   200   000    -    0
 197 Current_Pending_Sector  -O--CK   100   100   000    -    0
 199 CRC_Error_Count         -OSRCK   100   100   000    -    0
 202 Exception_Mode_Status   PO--CK   100   100   010    -    0
 235 POR_Recovery_Count      -O--C-   099   099   000    -    13
-241 Total_LBAs_Written      -O--CK   099   099   000    -    358651344
-242 Total_LBAs_Read         -O--CK   099   099   000    -    677579
+241 Total_LBAs_Written      -O--CK   099   099   000    -    364205680
+242 Total_LBAs_Read         -O--CK   099   099   000    -    792003
 243 SATA_Downshift_Ct       -O--CK   100   100   000    -    0
 244 Thermal_Throttle_St     -O--CK   100   100   000    -    0
 245 Timed_Workld_Media_Wear -O--CK   100   100   000    -    65535
 246 Timed_Workld_RdWr_Ratio -O--CK   100   100   000    -    65535
 247 Timed_Workld_Timer      -O--CK   100   100   000    -    65535
-251 NAND_Writes             -O--CK   100   100   000    -    362083712
+251 NAND_Writes             -O--CK   100   100   000    -    368182528
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -137,9 +137,9 @@ If Selective self-test is pending on power-up, resume after 0 minute delay.
 SCT Status Version:                  3
 SCT Version (vendor specific):       256 (0x0100)
 Device State:                        Active (0)
-Current Temperature:                    26 Celsius
-Power Cycle Min/Max Temperature:     23/40 Celsius
-Lifetime    Min/Max Temperature:     23/40 Celsius
+Current Temperature:                    24 Celsius
+Power Cycle Min/Max Temperature:     22/40 Celsius
+Lifetime    Min/Max Temperature:     22/40 Celsius
 Specified Max Operating Temperature:    70 Celsius
 Under/Over Temperature Limit Count:   0/0
 SMART Status:                        0xc24f (PASSED)
@@ -149,25 +149,25 @@ Temperature Sampling Period:         10 minutes
 Temperature Logging Interval:        10 minutes
 Min/Max recommended Temperature:      0/70 Celsius
 Min/Max Temperature Limit:            0/70 Celsius
-Temperature History Size (Index):    128 (88)
+Temperature History Size (Index):    128 (39)
 
 Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              17  ---  Lifetime Power-On Resets
-0x01  0x010  4            1014  ---  Power-on Hours
-0x01  0x018  6       358651344  ---  Logical Sectors Written
-0x01  0x020  6          388619  ---  Number of Write Commands
-0x01  0x028  6          677579  ---  Logical Sectors Read
-0x01  0x030  6           51748  ---  Number of Read Commands
-0x01  0x038  6         3447000  ---  Date and Time TimeStamp
+0x01  0x010  4           11353  ---  Power-on Hours
+0x01  0x018  6       364205680  ---  Logical Sectors Written
+0x01  0x020  6          494395  ---  Number of Write Commands
+0x01  0x028  6          792003  ---  Logical Sectors Read
+0x01  0x030  6           66051  ---  Number of Read Commands
+0x01  0x038  6         1710000  ---  Date and Time TimeStamp
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
 0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4               0  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
-0x05  0x008  1              26  ---  Current Temperature
+0x05  0x008  1              24  ---  Current Temperature
 0x05  0x020  1              40  ---  Highest Temperature
-0x05  0x028  1              23  ---  Lowest Temperature
+0x05  0x028  1              22  ---  Lowest Temperature
 0x05  0x058  1              70  ---  Specified Maximum Operating Temperature
 0x06  =====  =               =  ===  == Transport Statistics (rev 1) ==
 0x06  0x008  4              59  ---  Number of Hardware Resets

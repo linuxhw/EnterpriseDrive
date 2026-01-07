@@ -15,7 +15,7 @@ TRIM Command:     Available, deterministic, zeroed
 Device is:        In smartctl database 7.3/5528
 ATA Version is:   ACS-3 (minor revision not indicated)
 SATA Version is:  SATA 3.2, 6.0 Gb/s (current: 6.0 Gb/s)
-Local Time is:    Fri Dec ... 2024 +08
+Local Time is:    Sun Dec ... 2025 +08
 SMART support is: Available - device has SMART capability.
 SMART support is: Enabled
 APM level is:     254 (maximum performance)
@@ -62,30 +62,30 @@ SMART Attributes Data Structure revision number: 1
 Vendor Specific SMART Attributes with Thresholds:
 ID# ATTRIBUTE_NAME          FLAGS    VALUE WORST THRESH FAIL RAW_VALUE
   5 Reallocated_Sector_Ct   -O--CK   100   100   000    -    1
-  9 Power_On_Hours          -O--CK   100   100   000    -    11307
+  9 Power_On_Hours          -O--CK   100   100   000    -    17407
  12 Power_Cycle_Count       -O--CK   100   100   000    -    47
 170 Unknown_Attribute       PO--CK   099   099   010    -    0
 171 Program_Fail_Count      -O--CK   100   100   000    -    1
 172 Erase_Fail_Count        -O--CK   100   100   000    -    0
-173 Unknown_Attribute       PO--CK   096   096   005    -    292063084559
+173 Unknown_Attribute       PO--CK   091   091   005    -    627074990144
 174 Unexpect_Power_Loss_Ct  -O--CK   100   100   000    -    41
 183 SATA_Downshift_Count    -O--CK   100   100   000    -    11
 184 End-to-End_Error        PO--CK   100   100   090    -    0
 187 Reported_Uncorrect      -O--CK   100   100   000    -    0
-190 Temperature_Case        -O--CK   029   034   000    -    29 (Min/Max 17/34)
+190 Temperature_Case        -O--CK   029   035   000    -    29 (Min/Max 17/35)
 192 Unsafe_Shutdown_Count   -O--CK   100   100   000    -    41
 199 CRC_Error_Count         -O--CK   100   100   000    -    654
-225 Host_Writes_32MiB       -O--CK   100   100   000    -    1315582
+225 Host_Writes_32MiB       -O--CK   100   100   000    -    2644418
 226 Workld_Media_Wear_Indic -O--CK   100   100   000    -    0
 227 Workld_Host_Reads_Perc  -O--CK   100   100   000    -    0
 228 Workload_Minutes        -O--CK   100   100   000    -    0
 232 Available_Reservd_Space PO--CK   099   099   010    -    0
-233 Media_Wearout_Indicator -O--CK   069   069   000    -    0
-236 Unknown_Attribute       -O--CK   069   069   000    -    0
-241 Host_Writes_32MiB       -O--CK   100   100   000    -    1315582
-242 Host_Reads_32MiB        -O--CK   100   100   000    -    1617934
-249 NAND_Writes_1GiB        -O--CK   100   100   000    -    34833
-252 Unknown_Attribute       -O--CK   100   100   000    -    68
+233 Media_Wearout_Indicator -O--CK   028   028   000    -    0
+236 Unknown_Attribute       -O--CK   028   028   000    -    0
+241 Host_Writes_32MiB       -O--CK   100   100   000    -    2644418
+242 Host_Reads_32MiB        -O--CK   100   100   000    -    1624077
+249 NAND_Writes_1GiB        -O--CK   100   100   000    -    75024
+252 Unknown_Attribute       -O--CK   100   100   000    -    146
                             ||||||_ K auto-keep
                             |||||__ C event count
                             ||||___ R error rate
@@ -133,8 +133,8 @@ SCT Status Version:                  3
 SCT Version (vendor specific):       0 (0x0000)
 Device State:                        Active (0)
 Current Temperature:                    36 Celsius
-Power Cycle Min/Max Temperature:     29/42 Celsius
-Lifetime    Min/Max Temperature:     23/42 Celsius
+Power Cycle Min/Max Temperature:     29/43 Celsius
+Lifetime    Min/Max Temperature:     23/43 Celsius
 Under/Over Temperature Limit Count:   0/0
 
 SCT Temperature History Version:     2
@@ -142,7 +142,7 @@ Temperature Sampling Period:         1 minute
 Temperature Logging Interval:        1 minute
 Min/Max recommended Temperature:      0/100 Celsius
 Min/Max Temperature Limit:            0/100 Celsius
-Temperature History Size (Index):    128 (78)
+Temperature History Size (Index):    128 (3)
 
 SCT Error Recovery Control:
            Read:     70 (7.0 seconds)
@@ -152,13 +152,13 @@ Device Statistics (GP Log 0x04)
 Page  Offset Size        Value Flags Description
 0x01  =====  =               =  ===  == General Statistics (rev 1) ==
 0x01  0x008  4              47  ---  Lifetime Power-On Resets
-0x01  0x010  4           11307  ---  Power-on Hours
-0x01  0x018  6     86218036355  ---  Logical Sectors Written
-0x01  0x020  6      3356431620  ---  Number of Write Commands
-0x01  0x028  6    106032931084  ---  Logical Sectors Read
-0x01  0x030  6       455351708  ---  Number of Read Commands
+0x01  0x010  4           17407  ---  Power-on Hours
+0x01  0x018  6    173304598142  ---  Logical Sectors Written
+0x01  0x020  6      7521240097  ---  Number of Write Commands
+0x01  0x028  6    106435519708  ---  Logical Sectors Read
+0x01  0x030  6       463225202  ---  Number of Read Commands
 0x04  =====  =               =  ===  == General Errors Statistics (rev 1) ==
-0x04  0x008  4               0  ---  Number of Reported Uncorrectable Errors
+0x04  0x008  4               1  ---  Number of Reported Uncorrectable Errors
 0x04  0x010  4              41  ---  Resets Between Cmd Acceptance and Completion
 0x05  =====  =               =  ===  == Temperature Statistics (rev 1) ==
 0x05  0x008  1              36  ---  Current Temperature
@@ -178,7 +178,7 @@ Page  Offset Size        Value Flags Description
 0x06  0x008  4             838  ---  Number of Hardware Resets
 0x06  0x018  4             654  ---  Number of Interface CRC Errors
 0x07  =====  =               =  ===  == Solid State Device Statistics (rev 1) ==
-0x07  0x008  1               4  ---  Percentage Used Endurance Indicator
+0x07  0x008  1               9  ---  Percentage Used Endurance Indicator
                                 |||_ C monitored condition met
                                 ||__ D supports DSN
                                 |___ N normalized value
